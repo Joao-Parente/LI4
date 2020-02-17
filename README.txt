@@ -1,3 +1,2 @@
-Dream works makes the Thanos Cock
-Hello there!!!
+Parente é um Otário!
 
