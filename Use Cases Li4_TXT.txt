@@ -5,9 +5,9 @@
 - Efetuar Pedido; -> Feito
 - Visualizar Pedidos Anteriores; -> Feito
 - Alterar Pedido; (Enquanto o pedido ainda estiver por preparar) -> Feito
-- Consulta o nº do último pedido e do pedido a ser atendido;
-- Acrescentar um Produto à lista de Favoritos;
-- Consultar a taxa da afluência da empresa; (Ver a que horas a empresa têm mais gente)
+- Consultar o nº do último pedido e do pedido a ser atendido; -> Feito
+- Acrescentar um Produto à lista de Favoritos; -> Feito
+- Consultar a taxa da afluência da empresa; (Ver a que horas a empresa têm mais gente) -> Feito
 - Ver informações da Empresa;
 - Avaliação de Produtos;
 - Reclamações; (Referentes a pedidos) -> Feito
