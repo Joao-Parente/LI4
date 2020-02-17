@@ -1,0 +1,27 @@
+﻿Use Cases:
+(Cliente)
+- Autenticação;
+- Visualizar Produtos Disponíveis;
+- Efetuar Pedido;
+- Visualizar Pedidos Anteriores;
+- Alterar Pedido; (Enquanto o pedido ainda estiver por preparar)
+- Consulta o nº do último pedido e do pedido a ser atendido;
+- Acrescentar um Produto à lista de Favoritos;
+- Consultar a taxa da afluência da empresa; (Ver a que horas a empresa têm mais gente)
+- Ver informações da Empresa;
+- Avaliação de Produtos;
+- Reclamações; (Referentes a pedidos)
+- Logout;
+(Empresa)
+- Autenticação; (Por parte de um empregado ou gestor)
+- Inicializar o Sistema; (Está pronta a aceitar pedidos)
+- Adicionar Produtos;
+- Editar o Produto; (Nome, preço, foto, disponibilidade)
+- Visualizar Pedidos por preparar;
+- Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto)
+- Notificar Clientes; (Do estado do pedido quer esteja pronto ou não)
+- Consultas Estatísticas;
+- Visualização do Feedback; (Avaliações e Reclamações)
+- Gerir contas de empregados; (Para o gestor)
+- Logout;
+
