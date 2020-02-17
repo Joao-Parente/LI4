@@ -15,7 +15,7 @@
 (Empresa)
 - Autenticação; (Por parte de um empregado ou gestor) -> Feito
 - Inicializar o Sistema; (Está pronta a aceitar pedidos) -> A FAZER
-- Adicionar Produtos; -> A FAZER
+- Adicionar Produtos; -> Feito
 - Editar o Produto; (Nome, preço, foto, disponibilidade)
 - Visualizar Pedidos por preparar;
 - Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto)
