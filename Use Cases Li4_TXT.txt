@@ -14,10 +14,10 @@
 - Logout; -> Feito
 (Empresa)
 - Autenticação; (Por parte de um empregado ou gestor) -> Feito
-- Inicializar o Sistema; (Está pronta a aceitar pedidos) -> A FAZER
+- Inicializar o Sistema; (Está pronta a aceitar pedidos) -> Feito
 - Adicionar Produtos; -> Feito
-- Editar o Produto; (Nome, preço, foto, disponibilidade)
-- Visualizar Pedidos por preparar;
+- Editar o Produto; (Nome, preço, foto, disponibilidade) -> A FAZER
+- Visualizar Pedidos por preparar; -> A FAZER
 - Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto)
 - Notificar Clientes; (Do estado do pedido quer esteja pronto ou não)
 - Consultas Estatísticas;
