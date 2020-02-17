@@ -9,7 +9,7 @@
 - Acrescentar um Produto à lista de Favoritos; -> Feito
 - Consultar a taxa da afluência da empresa; (Ver a que horas a empresa têm mais gente) -> Feito
 - Ver informações da Empresa; -> Feito
-- Avaliação de Produtos; -> A FAZER
+- Avaliação de Produtos; -> Feito
 - Reclamações; (Referentes a pedidos) -> Feito
 - Logout; -> Feito
 (Empresa)
@@ -18,7 +18,7 @@
 - Adicionar Produtos; -> Feito
 - Editar o Produto; (Nome, preço, foto, disponibilidade) -> A FAZER
 - Visualizar Pedidos por preparar; -> A FAZER
-- Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto)
+- Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto) -> A fazer
 - Notificar Clientes; (Do estado do pedido quer esteja pronto ou não)
 - Consultas Estatísticas;
 - Visualização do Feedback; (Avaliações e Reclamações)
