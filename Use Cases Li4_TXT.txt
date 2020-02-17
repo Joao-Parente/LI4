@@ -11,11 +11,11 @@
 - Ver informações da Empresa; -> Feito
 - Avaliação de Produtos; -> A FAZER
 - Reclamações; (Referentes a pedidos) -> Feito
-- Logout;
+- Logout; -> Feito
 (Empresa)
-- Autenticação; (Por parte de um empregado ou gestor)
-- Inicializar o Sistema; (Está pronta a aceitar pedidos)
-- Adicionar Produtos;
+- Autenticação; (Por parte de um empregado ou gestor) -> Feito
+- Inicializar o Sistema; (Está pronta a aceitar pedidos) -> A FAZER
+- Adicionar Produtos; -> A FAZER
 - Editar o Produto; (Nome, preço, foto, disponibilidade)
 - Visualizar Pedidos por preparar;
 - Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto)
@@ -23,5 +23,5 @@
 - Consultas Estatísticas;
 - Visualização do Feedback; (Avaliações e Reclamações)
 - Gerir contas de empregados; (Para o gestor)
-- Logout;
+- Logout; -> Feito
 
