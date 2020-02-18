@@ -18,10 +18,10 @@
 - Adicionar Produtos; -> Feito
 - Editar o Produto; (Nome, preço, foto, disponibilidade) -> Feito
 - Visualizar Pedidos por preparar; -> Feito
-- Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto) -> A FAZER
+- Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto) -> Feito
 - Notificar Clientes; (Do estado do pedido quer esteja pronto ou não) -> Feito
-- Consultas Estatísticas; -> A FAZER_G
-- Visualização do Feedback; (Avaliações e Reclamações)
-- Gerir contas de empregados; (Para o gestor)
+- Consultas Estatísticas; -> Feito
+- Visualização do Feedback; (Avaliações e Reclamações) -> Feito
+- Gerir contas de empregados; (Para o gestor) -> Feito
 - Logout; -> Feito
 
