@@ -16,12 +16,12 @@
 - Autenticação; (Por parte de um empregado ou gestor) -> Feito
 - Inicializar o Sistema; (Está pronta a aceitar pedidos) -> Feito
 - Adicionar Produtos; -> Feito
-- Editar o Produto; (Nome, preço, foto, disponibilidade) -> A FAZER
+- Editar o Produto; (Nome, preço, foto, disponibilidade) -> Feito
 - Visualizar Pedidos por preparar; -> A FAZER
-- Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto) -> A fazer
-- Notificar Clientes; (Do estado do pedido quer esteja pronto ou não)
-- Consultas Estatísticas;
-- Visualização do Feedback; (Avaliações e Reclamações)
-- Gerir contas de empregados; (Para o gestor)
+- Mudar o estado do pedido; (Está por preparar, está em preparação, está pronto) -> Feito
+- Notificar Clientes; (Do estado do pedido quer esteja pronto ou não) -> Feito
+- Consultas Estatísticas; -> Feito
+- Visualização do Feedback; (Avaliações e Reclamações)-> Feito
+- Gerir contas de empregados; (Para o gestor) -> Feito
 - Logout; -> Feito
 
