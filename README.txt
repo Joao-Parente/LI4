@@ -1,2 +1,0 @@
-Parente é um Otário!
-
