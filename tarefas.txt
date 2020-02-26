@@ -1,14 +1,20 @@
 
-Tarefa                                           |         Atomica
+Tarefa                                            |         Atomica
 ________________________________________________________________________________________________________________________
 
 
-Criar Base Dados                                          Modelação Conceptual- D,R,G; Modelação Lógica + fisíca - J,N
+Criar Base Dados                                           Modelação Conceptual- D,R,G; 
+                                                           Modelação Lógica + fisíca - J,N
 ________________________________________________________________________________________________________________________
-Implementação do diag Classes + conexao base dados        Imp App. Cliente-R; Imp App. gestor/func -N,D; Imp Serv;Concetar-BD-G,J
+Implementação do diag Classes + conexao base dados         Imp App. Cliente-R; 
+                                                           Imp App. gestor/func -N,D; 
+                                                           Imp Serv e Concetar á BD -G,J;
 ________________________________________________________________________________________________________________________
-Criar Interface Gráfica                                   Implementar mock ups no xamarim
+Criar Interface Gráfica                                    interf. Cliente -R,G,N; 
+                                                           interf Gestor/Func- J,D;
 ________________________________________________________________________________________________________________________
-Implementar use cases
+Implementar use cases                                      uses cases relacionados com  app cliente -R,G,N;
+                                                           use cases relacionados com app Gestor/Func - J,D;
 ________________________________________________________________________________________________________________________
-Test & deployment + relatório                             Test & deployment -G,J,R ; relatorio N,D;
+Test & deployment + relatório                              Test & deployment -G,J,R ; 
+                                                           relatorio N,D;
