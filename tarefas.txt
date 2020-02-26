@@ -11,4 +11,4 @@ Criar Interface Gráfica                                   Implementar mock ups 
 ________________________________________________________________________________________________________________________
 Implementar use cases
 ________________________________________________________________________________________________________________________
-Test & deployment + relatório
+Test & deployment + relatório                             Test & deployment -G,J,R ; relatorio N,D;
