@@ -3,9 +3,9 @@ Tarefa                                           |         Atomica
 ________________________________________________________________________________________________________________________
 
 
-Criar Base Dados                                          Modelação Conceptual;Modelação Lógica + fisíca
+Criar Base Dados                                          Modelação Conceptual- D,R,G; Modelação Lógica + fisíca - J,N
 ________________________________________________________________________________________________________________________
-Implementação do diag Classes + conexao base dados        Imp App. Cliente; Imp App. gestor; Imp App. func; Imp Serv;Concetar-BD
+Implementação do diag Classes + conexao base dados        Imp App. Cliente-R; Imp App. gestor/func -N,D; Imp Serv;Concetar-BD-G,J
 ________________________________________________________________________________________________________________________
 Criar Interface Gráfica                                   Implementar mock ups no xamarim
 ________________________________________________________________________________________________________________________
