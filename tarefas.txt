@@ -18,3 +18,10 @@ Implementar use cases                                      uses cases relacionad
 ________________________________________________________________________________________________________________________
 Test & deployment + relatório                              Test & deployment -G,J,R ; 
                                                            relatorio N,D;
+
+
+J-João Pedro Araújo Parente
+N-José Nuno Martins da Costa
+D-Diogo Paulo Lopes de Vasconcelos
+R-Ricardo Filipe Dantas Costa
+G-Gonçalo Rodrigues Pinto
