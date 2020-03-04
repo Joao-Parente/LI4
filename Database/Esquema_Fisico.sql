@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `LI_Database`.`Produto` (
   `tipo` VARCHAR(50) NOT NULL,
   `nome` VARCHAR(100) NOT NULL,
   `detalhes` VARCHAR(150) NULL,
-  `disponibilidade` INT NOT NULL,
+  `disponibilidade` TINYINT NOT NULL,
   `preco` DECIMAL(5,2) NOT NULL,
   `imagem` TINYBLOB NULL,
   PRIMARY KEY (`idProduto`))
