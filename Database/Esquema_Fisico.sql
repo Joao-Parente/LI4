@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `LI_Database`.`Empregado` (
   `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(100) NOT NULL,
   `nome` VARCHAR(100) NULL,
+  `eGestor` TINYINT NULL,
   PRIMARY KEY (`idEmpregado`))
 ENGINE = InnoDB;
 
