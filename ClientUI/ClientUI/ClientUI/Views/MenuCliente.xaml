@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell   xmlns="http://xamarin.com/schemas/2014/forms"
+         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:local="clr-namespace:ClientUI"
+         mc:Ignorable="d"
+         BackgroundColor="SandyBrown"  
+         x:Class="ClientUI.MenuCliente">
+    
+        <FlyoutItem Title="Ver Produtos" Icon="fastfoodIcon.png"> 
+            <ShellContent ContentTemplate="{DataTemplate local:VerProdutosPage}"/>
+        </FlyoutItem>
+
+        <FlyoutItem Title="Lista de Favoritos" Icon="starIcon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ListaDeFavoritos}"/>
+        </FlyoutItem>
+
+        <FlyoutItem Title="Histórico" Icon="clockBack.png">
+            <ShellContent ContentTemplate="{DataTemplate local:HistoricoPage}"/>
+        </FlyoutItem>
+
+        <FlyoutItem Title="Avaliações" Icon="barchart.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AvaliacaoPage}"/>
+        </FlyoutItem>
+
+        <FlyoutItem Title="Sobre" Icon="infoIcon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SobrePage}"/>
+        </FlyoutItem>
+
+</Shell>
