@@ -1,0 +1,11 @@
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/bin/Debug/netcoreapp3.1/AppGestor
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/bin/Debug/netcoreapp3.1/AppGestor.deps.json
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/bin/Debug/netcoreapp3.1/AppGestor.runtimeconfig.json
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/bin/Debug/netcoreapp3.1/AppGestor.runtimeconfig.dev.json
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/bin/Debug/netcoreapp3.1/AppGestor.dll
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/bin/Debug/netcoreapp3.1/AppGestor.pdb
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.csprojAssemblyReference.cache
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.AssemblyInfoInputs.cache
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.AssemblyInfo.cs
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.dll
+/home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.pdb

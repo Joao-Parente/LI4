@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d92b2dfc-2aa3-4c90-a77f-2248a42d6e8c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="LI_Database@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="LI_Database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="LI_Database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="LI_Database: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ServerMyBar" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CDAE4105-7E89-4723-8979-C3C1D3936A03/1D8/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppGestor/comum/Pedido.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppFunc/comum/Pedido.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppClient/AppClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppClient/comum/Pedido.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/testes/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverCliente/ClienteDAO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverFunc/EmpregadoDAO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverCliente/Cliente.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppFunc/AppFunc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverFunc/Empregado.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/testes/Data.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppGestor/AppClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/Server.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/testes/Data2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverCliente/StarterClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/ServerGestor/ThreadServerGestor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverFunc/ServerFunc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/ServerGestor/ServerGestor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/34C73F2C-EDCD-4513-B43B-7E90566D70F0/1E/Socket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Gestor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverCliente/ThreadServerClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Pedido.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverCliente/ServerClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Produto.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ServerMyBar/Program.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/ThreadServer.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/AppFunc.cs" />
+        <option value="$PROJECT_DIR$/AppFunc/Pedido.cs" />
+        <option value="$PROJECT_DIR$/AppClient/Produto.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/Produto.cs" />
+        <option value="$PROJECT_DIR$/testes/Data2.cs" />
+        <option value="$PROJECT_DIR$/testes/Data.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/Pedido.cs" />
+        <option value="$PROJECT_DIR$/testes/Program.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/ServerFunc.cs" />
+        <option value="$PROJECT_DIR$/AppClient/Pedido.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/ServerMyBar.csproj" />
+        <option value="$PROJECT_DIR$/ServerMyBar/Cliente.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/Gestor.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/31c96384-1873-47b7-bd65-87ee0a405d19/console.sql" />
+        <option value="$PROJECT_DIR$/ServerMyBar/ClienteDAO.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/ThreadServerFunc.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/ThreadServerGestor.cs" />
+        <option value="$PROJECT_DIR$/AppClient/AppClient.cs" />
+        <option value="$PROJECT_DIR$/AppClient/Program.cs" />
+        <option value="$PROJECT_DIR$/AppGestor/AppGest.cs" />
+        <option value="$PROJECT_DIR$/AppGestor/Program.cs" />
+        <option value="$PROJECT_DIR$/AppGestor/comum/Pedido.cs" />
+        <option value="$PROJECT_DIR$/AppGestor/AppClient.cs" />
+        <option value="$PROJECT_DIR$/AppFunc/Program.cs" />
+        <option value="$PROJECT_DIR$/AppFunc/AppFUnc.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/ServerGestor/ServerGestor.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/serverFunc/ServerFunc.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/ServerGestor/ThreadServerGestor.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Gestor.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/serverCliente/ClienteDAO.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/serverFunc/Empregado.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/serverFunc/EmpregadoDAO.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Produto.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Pedido.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/serverCliente/ThreadServerClient.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/serverCliente/StarterClient.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/Server.cs" />
+        <option value="$PROJECT_DIR$/AppFunc/AppFunc.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/serverCliente/ServerClient.cs" />
+        <option value="$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="riderModule/invalid/Default Android Facet" />
+    </ignored-facets>
+  </component>
+  <component name="ProjectId" id="1YP9E5WkMDCjaYLuIKrLlEkhN3W" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-net-8.0.19-noinstall/v4.8/MySql.Data.dll" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.XML" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="AppFunc" />
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.AppFunc">
+    <configuration name="AppClient" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/AppClient/AppClient.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppFunc" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/AppFunc/AppFunc.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppGestor" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/AppGestor/AppGestor.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerMyBar" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ServerMyBar/ServerMyBar.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testes" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/testes/testes.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.ServerMyBar" />
+      <item itemvalue=".NET Project.AppClient" />
+      <item itemvalue=".NET Project.AppGestor" />
+      <item itemvalue=".NET Project.testes" />
+      <item itemvalue=".NET Project.AppFunc" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Project.AppFunc" />
+        <item itemvalue=".NET Project.AppClient" />
+        <item itemvalue=".NET Project.AppGestor" />
+        <item itemvalue=".NET Project.testes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:LI_Database@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:LI_Database@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@95667d9" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d92b2dfc-2aa3-4c90-a77f-2248a42d6e8c" name="Default Changelist" comment="" />
+      <created>1582833247394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582833247394</updated>
+      <workItem from="1582833248619" duration="3746000" />
+      <workItem from="1582840056972" duration="64000" />
+      <workItem from="1583177894002" duration="2774000" />
+      <workItem from="1583180828093" duration="135000" />
+      <workItem from="1583180981594" duration="5558000" />
+      <workItem from="1583233056204" duration="2790000" />
+      <workItem from="1583238248415" duration="8089000" />
+      <workItem from="1583247739736" duration="4190000" />
+      <workItem from="1583255120660" duration="4443000" />
+      <workItem from="1583266205478" duration="5936000" />
+      <workItem from="1583319788287" duration="6072000" />
+      <workItem from="1583335765434" duration="3189000" />
+      <workItem from="1583343210793" duration="1271000" />
+      <workItem from="1583344652539" duration="1527000" />
+      <workItem from="1583346498677" duration="960000" />
+      <workItem from="1583347559279" duration="575000" />
+      <workItem from="1583348668854" duration="493000" />
+      <workItem from="1583349190481" duration="156000" />
+      <workItem from="1583351588898" duration="2967000" />
+      <workItem from="1583395283741" duration="1911000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="WindowStateProjectService">
+    <state x="583" y="179" width="671" height="659" key="#AppFunc" timestamp="1583347603432">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="583" y="179" width="671" height="659" key="#AppFunc/0.32.1920.1048@0.32.1920.1048" timestamp="1583347603432" />
+    <state x="421" y="101" width="878" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583349224628">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="421" y="101" width="878" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1583349224628" />
+    <state x="678" y="361" width="553" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583258477211">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="678" y="361" width="553" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.32.1920.1048@0.32.1920.1048" timestamp="1583258477211" />
+    <state width="389" height="466" key="DebuggerActiveHint" timestamp="1583239022966">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="389" height="466" key="DebuggerActiveHint/0.32.1920.1048@0.32.1920.1048" timestamp="1583239022966" />
+    <state x="743" y="313" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583346465637">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="743" y="313" width="424" height="491" key="FileChooserDialogImpl/0.32.1920.1048@0.32.1920.1048" timestamp="1583346465637" />
+    <state width="1878" height="340" key="GridCell.Tab.0.bottom" timestamp="1583397194934">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.0.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194934" />
+    <state width="1878" height="340" key="GridCell.Tab.0.center" timestamp="1583397194934">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.0.center/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194934" />
+    <state width="1878" height="340" key="GridCell.Tab.0.left" timestamp="1583397194933">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.0.left/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194933" />
+    <state width="1878" height="340" key="GridCell.Tab.0.right" timestamp="1583397194934">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.0.right/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194934" />
+    <state width="1878" height="340" key="GridCell.Tab.1.bottom" timestamp="1583397194935">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.1.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194935" />
+    <state width="1878" height="340" key="GridCell.Tab.1.center" timestamp="1583397194935">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.1.center/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194935" />
+    <state width="1878" height="340" key="GridCell.Tab.1.left" timestamp="1583397194935">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.1.left/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194935" />
+    <state width="1878" height="340" key="GridCell.Tab.1.right" timestamp="1583397194935">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.1.right/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194935" />
+    <state width="1878" height="340" key="GridCell.Tab.2.bottom" timestamp="1583397194937">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.2.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194937" />
+    <state width="1878" height="340" key="GridCell.Tab.2.center" timestamp="1583397194936">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.2.center/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194936" />
+    <state width="1878" height="340" key="GridCell.Tab.2.left" timestamp="1583397194936">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.2.left/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194936" />
+    <state width="1878" height="340" key="GridCell.Tab.2.right" timestamp="1583397194937">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.2.right/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194937" />
+    <state width="1878" height="340" key="GridCell.Tab.3.bottom" timestamp="1583397194938">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.3.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194938" />
+    <state width="1878" height="340" key="GridCell.Tab.3.center" timestamp="1583397194937">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.3.center/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194937" />
+    <state width="1878" height="340" key="GridCell.Tab.3.left" timestamp="1583397194937">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.3.left/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194937" />
+    <state width="1878" height="340" key="GridCell.Tab.3.right" timestamp="1583397194938">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.3.right/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194938" />
+    <state width="1878" height="340" key="GridCell.Tab.4.bottom" timestamp="1583397194939">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.4.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194939" />
+    <state width="1878" height="340" key="GridCell.Tab.4.center" timestamp="1583397194939">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.4.center/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194939" />
+    <state width="1878" height="340" key="GridCell.Tab.4.left" timestamp="1583397194939">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.4.left/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194939" />
+    <state width="1878" height="340" key="GridCell.Tab.4.right" timestamp="1583397194939">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="1878" height="340" key="GridCell.Tab.4.right/0.32.1920.1048@0.32.1920.1048" timestamp="1583397194939" />
+    <state x="555" y="290" width="800" height="537" key="Rider.ProjectTemplateDialog.Size" timestamp="1583349144647">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="555" y="290" width="800" height="537" key="Rider.ProjectTemplateDialog.Size/0.32.1920.1048@0.32.1920.1048" timestamp="1583349144647" />
+    <state x="636" y="239" width="637" height="639" key="RiderGenerateDialog" timestamp="1583353329174">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="636" y="239" width="637" height="639" key="RiderGenerateDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1583353329174" />
+    <state x="464" y="190" width="992" height="737" key="SettingsEditor" timestamp="1583258003885">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="464" y="190" width="992" height="737" key="SettingsEditor/0.32.1920.1048@0.32.1920.1048" timestamp="1583258003885" />
+    <state x="643" y="313" width="624" height="491" key="WebReferenceSession.Dialog" timestamp="1583267304457">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="643" y="313" width="624" height="491" key="WebReferenceSession.Dialog/0.32.1920.1048@0.32.1920.1048" timestamp="1583267304457" />
+    <state width="960" height="524" key="XDebugger.FullValuePopup" timestamp="1583344265075">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state width="960" height="524" key="XDebugger.FullValuePopup/0.32.1920.1048@0.32.1920.1048" timestamp="1583344265075" />
+    <state x="100" y="131" width="1720" height="849" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1583257930531">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="100" y="131" width="1720" height="849" key="com.android.tools.idea.avdmanager.AvdListDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1583257930531" />
+    <state x="717" y="312" width="476" height="493" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1583258209944">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="717" y="312" width="476" height="493" key="com.intellij.database.run.ParametersPanel.Standalone/0.32.1920.1048@0.32.1920.1048" timestamp="1583258209944" />
+    <state x="624" y="208" width="662" height="702" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583178544603">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="624" y="208" width="662" height="702" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.32.1920.1048@0.32.1920.1048" timestamp="1583178544603" />
+    <state x="624" y="253" width="672" height="677" key="run.anything.popup" timestamp="1583348057295">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="624" y="253" width="672" height="677" key="run.anything.popup/0.32.1920.1048@0.32.1920.1048" timestamp="1583348057295" />
+    <state x="623" y="262" width="672" height="678" key="search.everywhere.popup" timestamp="1582835814795">
+      <screen x="0" y="32" width="1920" height="1048" />
+    </state>
+    <state x="623" y="262" width="672" height="678" key="search.everywhere.popup/0.32.1920.1048@0.32.1920.1048" timestamp="1582835814795" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/testes/Program.cs</url>
+          <line>14</line>
+          <properties documentPath="$PROJECT_DIR$/testes/Program.cs" initialLine="14">
+            <startOffsets>
+              <option value="301" />
+            </startOffsets>
+            <endOffsets>
+              <option value="302" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AppClient/AppClient.cs</url>
+          <line>16</line>
+          <properties documentPath="$PROJECT_DIR$/AppClient/AppClient.cs" initialLine="16">
+            <startOffsets>
+              <option value="307" />
+            </startOffsets>
+            <endOffsets>
+              <option value="308" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs</url>
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs" initialLine="47">
+            <startOffsets>
+              <option value="1181" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1210" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs</url>
+          <line>48</line>
+          <properties documentPath="$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs" initialLine="48">
+            <startOffsets>
+              <option value="1262" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1268" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
