@@ -1,4 +1,4 @@
-# LI IV
+# LI4
 Trabalho prático da U.C. de Laboratórios de Informática IV (2019/20)
 
 Mestrado Integrado em Eng. Informática - 3º ano - Universidade do Minho
