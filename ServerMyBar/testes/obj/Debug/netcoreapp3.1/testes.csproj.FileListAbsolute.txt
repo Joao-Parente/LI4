@@ -1,0 +1,11 @@
+/home/jpedro/RiderProjects/ServerMyBar/testes/bin/Debug/netcoreapp3.1/testes
+/home/jpedro/RiderProjects/ServerMyBar/testes/bin/Debug/netcoreapp3.1/testes.deps.json
+/home/jpedro/RiderProjects/ServerMyBar/testes/bin/Debug/netcoreapp3.1/testes.runtimeconfig.json
+/home/jpedro/RiderProjects/ServerMyBar/testes/bin/Debug/netcoreapp3.1/testes.runtimeconfig.dev.json
+/home/jpedro/RiderProjects/ServerMyBar/testes/bin/Debug/netcoreapp3.1/testes.dll
+/home/jpedro/RiderProjects/ServerMyBar/testes/bin/Debug/netcoreapp3.1/testes.pdb
+/home/jpedro/RiderProjects/ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.csprojAssemblyReference.cache
+/home/jpedro/RiderProjects/ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.AssemblyInfoInputs.cache
+/home/jpedro/RiderProjects/ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.AssemblyInfo.cs
+/home/jpedro/RiderProjects/ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.dll
+/home/jpedro/RiderProjects/ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.pdb
