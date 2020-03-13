@@ -8,24 +8,33 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "/home/jpedro/.nuget/packages/": {}
+    "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jpedro/RiderProjects/ServerMyBar/AppGestor/AppGestor.csproj",
+      "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj",
       "projectName": "AppGestor",
-      "projectPath": "/home/jpedro/RiderProjects/ServerMyBar/AppGestor/AppGestor.csproj",
-      "packagesPath": "/home/jpedro/.nuget/packages/",
-      "outputPath": "/home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/",
+      "projectPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj",
+      "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppGestor\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/home/jpedro/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -56,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
