@@ -17,7 +17,7 @@ namespace ServerMyBar
            
            ServerClient x= new ServerClient(gestor);
            x.run();
-           /*StarterClient st= new StarterClient(gestor);
+           StarterClient st= new StarterClient(gestor);
 
            
            
@@ -34,7 +34,7 @@ namespace ServerMyBar
 
            tf.Join();
            tg.Join();
-*/
+
            // /testing
            // ServerClient c= new ServerClient(gestor);
            //c.run();

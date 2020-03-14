@@ -29,19 +29,42 @@ namespace AppClient{
                 // 11 RegistarNovoCliente
                 // 12 Reclamacao
 
-                Console.WriteLine("Insira: \n 4 para Fazer um pedido \n 5 para NoUlitmoPedido \n 9 para Fazer login  \n 11 para Registar");
+                Console.WriteLine("Insira: \n 3 para Alterar um pedido \n 4 para Fazer um pedido \n 5 para NoUlitmoPedido \n 9 para Fazer login  \n 11 para Registar");
                 input = Convert.ToInt32(Console.ReadLine());
 
                 switch (input){
                     case 1: //VerProdutos
                         ln.verProdutos();
                         break;
+                    case 3: //Alterar Pedido
+                        String produtos;
+                        Console.WriteLine("Insira o ID do pedido");
+                        int id = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Pretende adicionar produtos? (S/N)");
+                        string res = Console.ReadLine();
+                        if (res.Equals("S"))
+                        {
+                            Console.WriteLine("Indique os produtos que pretende adicionar (separados por um espaço)");
+                            produtos = Console.ReadLine();
+                            ln.alterarPedido(0, id, produtos);
+                        }
+
+                        Console.WriteLine("Pretende remover produtos? (S/N)");
+                        res = Console.ReadLine();
+                        if (res.Equals("S"))
+                        {
+                            Console.WriteLine("Indique os produtos que pretende remover (separados por um espaço)");
+                            produtos = Console.ReadLine();
+                            ln.alterarPedido(1, id, produtos);
+                        }
+                        break;
+
                     case 4: //Novo_Pedido
                         ln.EfetuarPedido(new Pedido());
                         break;
                     case 5: // NoUlitmoPedido
                         List<int> numeros = ln.NoUltimoPedido();
-                        break;
+                        break;                    
                     case 9: // Login
                         Console.WriteLine("Starting authentication");
                         //Parse email e password

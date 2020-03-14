@@ -74,6 +74,31 @@ namespace AppClient
         // +VerPedidosAnteriores() : Lista Pedidos
 
         // +AlterarPedido(idPedido : int, produtos : Lista Produtos) : boolean
+        public Boolean alterarPedido(int a, int idPedido, String produtos)
+        {
+            //envia id operacao
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(3);
+            master.Send(id);
+
+            //envia id do pedido
+            byte[] idPed = new byte[8];
+            idPed = BitConverter.GetBytes(idPedido);
+            master.Send(idPed);
+
+            //envia 0 ou 1 para adicionar ou remover produtos respetivamente
+            byte[] opcao = new byte[4];
+            opcao = BitConverter.GetBytes(a);
+            master.Send(opcao);
+
+            //envia string com todos os produtos
+            byte[] msg = new byte[512];
+            msg = Encoding.ASCII.GetBytes(produtos);
+            master.Send(msg);
+
+            return true;
+
+        }
 
         public List<int> NoUltimoPedido()
         {

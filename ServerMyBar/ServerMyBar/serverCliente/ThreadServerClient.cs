@@ -61,6 +61,31 @@ namespace ServerMyBar.serverCliente
                 
                 switch (msg)
                 {
+                     case 3: //Alterar Pedido
+                        socket.Receive(data, 0, 4, SocketFlags.None);
+                        int idPedido = BitConverter.ToInt32(data, 0);
+
+                        socket.Receive(data, 0, 4, SocketFlags.None);
+                        int a = BitConverter.ToInt32(data, 0);
+
+                        socket.Receive(data, 0, 512, SocketFlags.None);
+                        string produtos = System.Text.Encoding.UTF8.GetString(data);
+
+                        String[] listProdutos = produtos.Split(" ", StringSplitOptions.None);
+
+                        if (a == 0)
+                        {
+                            Console.WriteLine("A adicionar produtos ao pedido");
+                            gestor.adicionarProdutos(idPedido, listProdutos);
+                        }
+                        else if (a == 1)
+                        {
+                            Console.WriteLine("A remover produtos ao pedido");
+                            gestor.removerProdutos(idPedido, listProdutos);
+                        }
+                        break;
+
+
                      case 4: //Novo pedido
                          
                          Pedido x = RecebePedido();

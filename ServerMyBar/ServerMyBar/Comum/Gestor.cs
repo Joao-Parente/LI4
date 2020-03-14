@@ -82,8 +82,39 @@ namespace ServerMyBar.comum
         //+getProduto(id : int) : Produto
 
         //+addProduct(p : Produto) : int
+        public void adicionarProdutos(int idPedido, String[] produtos)
+        {
+            lock (this)
+            {
+                foreach (Pedido x in por_preparar)
+                {
+
+                    if (x.id == idPedido)
+                    {
+                        for (int i = 0; i < produtos.Length; i++)
+                            x.adicionarProduto(produtos[i]);
+                    }
+                }
+            }
+        }
+
 
         //+removeProduct(id : int)
+        public void removerProdutos(int idPedido, String[] produtos)
+        {
+            lock (this)
+            {
+                foreach (Pedido x in por_preparar)
+                {
+
+                    if (x.id == idPedido)
+                    {
+                        for (int i = 0; i < produtos.Length; i++)
+                            x.removerProduto(produtos[i]);
+                    }
+                }
+            }
+        }
 
         public int addPedido(Pedido p)
         {

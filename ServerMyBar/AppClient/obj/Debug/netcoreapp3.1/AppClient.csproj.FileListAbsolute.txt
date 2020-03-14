@@ -9,3 +9,14 @@
 /home/jpedro/RiderProjects/ServerMyBar/AppClient/obj/Debug/netcoreapp3.1/AppClient.AssemblyInfo.cs
 /home/jpedro/RiderProjects/ServerMyBar/AppClient/obj/Debug/netcoreapp3.1/AppClient.dll
 /home/jpedro/RiderProjects/ServerMyBar/AppClient/obj/Debug/netcoreapp3.1/AppClient.pdb
+F:\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.exe
+F:\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.deps.json
+F:\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.runtimeconfig.json
+F:\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.runtimeconfig.dev.json
+F:\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.dll
+F:\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.pdb
+F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.csprojAssemblyReference.cache
+F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfoInputs.cache
+F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfo.cs
+F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.dll
+F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.pdb
