@@ -119,7 +119,9 @@ namespace ServerMyBar.serverCliente
                         
                          
                          break;
-                       
+                       case 10:
+                            flag = false;
+                           break;
                      case 11: // Registo
                          
                          Console.WriteLine("Starting Register" + msg);
