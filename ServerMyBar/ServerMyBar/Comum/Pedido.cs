@@ -48,7 +48,6 @@ namespace ServerMyBar.comum
             {
                 Produto p = new Produto(4, produto, "tags", 1, 3); //para teste
                 produtos.Add(p);
-                
             }
 
 

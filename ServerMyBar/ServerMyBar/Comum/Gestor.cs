@@ -175,9 +175,15 @@ namespace ServerMyBar.comum
             }
         }
 
-
-        //+PedidosAnteriores(idCLiente : int) : List Pedido
-
+        public List<Pedido> pedidosAnteriores (string idCliente)
+        {
+            lock (this)
+            {
+                List<Pedido> lp = new List<Pedido>();
+                lp = PedidoDAO.anteriores(idCliente);
+                return lp;
+            }
+        }
 
         public List<int> NoUltimoPedido()
         {
@@ -199,6 +205,13 @@ namespace ServerMyBar.comum
 
         //+avaliarProduto(idCliente : int, idProduto : int, avaliacao : int)
 
+        public void avaliarProduto(string idCliente, int idProduto, int avaliacao)
+        {
+            lock (this)
+            {
+                PedidoDAO.avaliar(idCliente, idProduto, avaliacao);
+            }
+        }
 
         public bool registarCliente(string email, string password, string nome)
         {
