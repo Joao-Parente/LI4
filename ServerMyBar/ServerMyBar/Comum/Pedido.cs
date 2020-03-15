@@ -10,7 +10,7 @@ namespace ServerMyBar.comum
         public class Pedido
         {
             public int id { get; set; }
-            public int idCliente { get; set; }
+            public string idCliente { get; set; }
             public string detalhes { get; set; }
             public int avaliacao { get; set; }
             public DateTime data_hora { get; set; }
@@ -18,7 +18,7 @@ namespace ServerMyBar.comum
             public List<Produto> produtos { get; set; }
 
 
-            public Pedido(int id, int idCliente, string detalhes, int avaliacao, DateTime dataHora,List<Produto> produto)
+            public Pedido(int id, string idCliente, string detalhes, int avaliacao, DateTime dataHora, List<Produto> produto)
             {
                 this.id = id;
                 this.idCliente = idCliente;
@@ -50,6 +50,10 @@ namespace ServerMyBar.comum
                 produtos.Add(p);
             }
 
+            public void addProduto(Produto p)
+            {
+                this.produtos.Add(p);
+            }
 
             public void removerProduto(String produto)
             {

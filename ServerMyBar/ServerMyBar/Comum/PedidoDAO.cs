@@ -34,9 +34,9 @@ namespace ServerMyBar.comum
             return null;
         }
 
-        public List<Pedido> anteriores(string idCliente)
+        public Dictionary<int,Pedido> anteriores(string idCliente)
         {
-            List<Pedido> lp = new List<Pedido>();
+            Dictionary<int,Pedido> dp = new Dictionary<int,Pedido>();
             MySqlConnection conn;
             string myConnectionString;
             myConnectionString = @"server=127.0.0.1;uid=root;" +
@@ -60,9 +60,21 @@ namespace ServerMyBar.comum
                 {
                     while (reader.Read())
                     {
-                        //agrupar os pedidos pondo os produtos no mesmo...
+                        Produto pr = ProdutoDAO.getProduto((int) reader.GetInt64(1));
+                        if (dp.ContainsKey((int) reader.GetInt64(0))){
+                            Pedido pe = new Pedido();
+                            dp.TryGetValue(reader.GetString(0), out pe);
+                            pe.addProduto(pr);
+                            dp.Add((int) reader.GetInt64(0),pe);
+                        }
+                        else{
+                            List<Produto> lp = new List<Produto>();
+                            lp.Add(pr);
+                            Pedido pe = new Pedido((int) reader.GetInt64(0),reader.GetString(3),"",(int)reader.GetInt64(4),(DateTime)reader.GetDateTime(6),lp);
+                            dp.Add((int) reader.GetInt64(0),pe);
+                        }
                     }
-                    return dic;
+                    return dp;
                 }
                 else
                 {

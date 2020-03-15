@@ -170,7 +170,7 @@ namespace ServerMyBar.comum
             lock (this)
             {
                 Dictionary<string, List<Produto>> map = new Dictionary<string, List<Produto>>();
-                map = ProdutoDAO.VerTodos();
+                map = ProdutoDAO.getAllProdutos();
                 return map;
             }
         }
@@ -179,8 +179,8 @@ namespace ServerMyBar.comum
         {
             lock (this)
             {
-                List<Pedido> lp = new List<Pedido>();
-                lp = PedidoDAO.anteriores(idCliente);
+                Dictionary<int,Pedido> dp = new Dictionary<int,Pedido>();
+                dp = PedidoDAO.anteriores(idCliente);
                 return lp;
             }
         }

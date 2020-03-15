@@ -10,7 +10,7 @@ namespace ServerMyBar.comum
         // +getProduto(id : int) : Produto
 
 
-        public static Dictionary<string, List<Produto>> VerTodos()
+        public static Dictionary<string, List<Produto>> getAllProdutos()
         {
             Dictionary<string, List<Produto>> dic = new Dictionary<string, List<Produto>>();
             MySqlConnection conn;

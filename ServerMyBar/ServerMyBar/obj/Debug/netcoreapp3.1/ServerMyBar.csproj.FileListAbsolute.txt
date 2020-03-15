@@ -45,3 +45,8 @@ F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.
 F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csproj.CopyComplete
 F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
 F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\Gonçalo Pinto\Source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csprojAssemblyReference.cache
+C:\Users\Gonçalo Pinto\Source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfoInputs.cache
+C:\Users\Gonçalo Pinto\Source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.cs
+C:\Users\Gonçalo Pinto\Source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\Gonçalo Pinto\Source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
