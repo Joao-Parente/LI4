@@ -18,6 +18,7 @@ namespace AppGestor
 
             }
 
+
             public override string ToString()
             {
                 return ("Id: " + id +

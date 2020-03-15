@@ -21,51 +21,41 @@ namespace ServerMyBar.comum
         }
 
         public static Empregado getInfoEmpregado(string e, string p)
-        {
-           
-        MySqlConnection conn;
-        string myConnectionString;
+        {           
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                    "pwd=password;database=LI_Database";
+            try{
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
 
-        myConnectionString = @"server=127.0.0.1;uid=root;" +
-        "pwd=password;database=LI_Database";
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;         
 
-        try{
-            conn = new MySqlConnection(myConnectionString);
-            conn.Open();
+                string query = "SELECT * FROM LI_Database.Empregado where email='" + e + "' and password='" + p + "';";
+                cmd.CommandText = query;
+                cmd.Prepare();
 
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = conn;
-         
-            string query = "SELECT * FROM LI_Database.Empregado where email='" + e + "' and password='" + p + "';";
-            cmd.CommandText = query;
-            cmd.Prepare();
-
-
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    Console.WriteLine( reader.GetInt32(0)+ "| "+ reader.GetString(1) +"| "+ reader.GetString(2) +"| "+ reader.GetString(3));
-                    return new Empregado(reader.GetInt32(0),reader.GetString(1),reader.GetString(2),reader.GetString(3),reader.GetBoolean(4));
-
-
+                    while (reader.Read())
+                    {
+                        Console.WriteLine( reader.GetInt32(0)+ "| "+ reader.GetString(1) +"| "+ reader.GetString(2) +"| "+ reader.GetString(3));
+                        return new Empregado(reader.GetInt32(0),reader.GetString(1),reader.GetString(2),reader.GetString(3),reader.GetBoolean(4));
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(" !!no rows found.!!");
                 }
             }
-            else
+            catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                Console.WriteLine(" !!no rows found.!!");
+                Console.WriteLine("Exception "+ex.Message);
             }
+            return null;
         }
-
-        catch (MySql.Data.MySqlClient.MySqlException ex)
-        {
-            Console.WriteLine("Exception "+ex.Message);
-        }
-
-        return null;
-    }
-
     }
 }

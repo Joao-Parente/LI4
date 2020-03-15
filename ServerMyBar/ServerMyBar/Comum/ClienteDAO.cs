@@ -27,45 +27,34 @@ namespace ServerMyBar.comum
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
 
-               string query = "SELECT * FROM LI_Database.Cliente where email='" + e + "' and password='" + p + "';";
-               cmd.CommandText = query;
+                string query = "SELECT * FROM LI_Database.Cliente where email='" + e + "' and password='" + p + "';";
+                cmd.CommandText = query;
                 cmd.Prepare();
 
-
                 MySqlDataReader reader = cmd.ExecuteReader();
-
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
                         Console.WriteLine( reader.GetString(0)+ "| "+ reader.GetString(1) );
                         return new Cliente(reader.GetString(0),reader.GetString(1),reader.GetString(2));
-
-
                     }
                 }
                 else
                 {
-                    Console.WriteLine(" !!no rows found.!!");
+                    Console.WriteLine(" !!no rows found!!");
                 }
             }
-
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
                 Console.WriteLine("Exception "+ex.Message);
             }
-
             return null;
         }
         
-        
-        
-        
-        
-        
+
         public static Boolean registaCliente(string email, string password, string nome)
         {
-            
             Console.WriteLine("Nome no dao "+nome);
             MySqlConnection conn;
             string myConnectionString;
@@ -78,7 +67,6 @@ namespace ServerMyBar.comum
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
               
-              
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = "INSERT INTO Cliente VALUES('"   +  email+"','"+password+"','"+nome+"')";
@@ -86,9 +74,6 @@ namespace ServerMyBar.comum
            
                 //cmd.Parameters.AddWithValue("@Name", "Trygve Gulbranssen");
                 cmd.ExecuteNonQuery();
-              
-              
-              
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
@@ -97,8 +82,5 @@ namespace ServerMyBar.comum
             }
             return  true;
         }
-        
-        
-        
     }
 }

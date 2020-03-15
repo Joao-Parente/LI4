@@ -10,9 +10,7 @@ namespace AppFunc
         
         private List<Pedido> por_preparar;
         
-
-        
-        // +visualizarPedido(idPedido : int) : Diagrama Classes Funcionario.Pedido
+        //+visualizarPedido(idPedido : int) : Diagrama Classes Funcionario.Pedido
 
         //+mudarEstadoPedido(idPedido : int) : void
 

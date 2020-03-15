@@ -9,7 +9,11 @@ namespace ServerMyBar.comum
         
         public Cliente()
         {
+            email = "";
+            password = "";
+            nome = "";
         }
+
 
         public Cliente(string e,string p,string n)
         {
@@ -17,8 +21,5 @@ namespace ServerMyBar.comum
             password = p;
             nome = n;
         }
-        
-        
-        
     }
 }

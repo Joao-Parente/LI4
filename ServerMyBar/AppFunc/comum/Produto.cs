@@ -7,6 +7,7 @@ namespace AppFunc{
             public string tags { get; set; }
             public string imagem { get; set; }
             
+
             public Produto()
             {
                 id = 1;
@@ -16,6 +17,7 @@ namespace AppFunc{
                 imagem = "muitos bytes";
 
             }
+
 
             public override string ToString()
             {

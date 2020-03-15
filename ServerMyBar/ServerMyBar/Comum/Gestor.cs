@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 namespace ServerMyBar.comum
 {
-
-
     public class Gestor
 
 

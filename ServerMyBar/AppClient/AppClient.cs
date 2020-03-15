@@ -9,6 +9,8 @@ namespace AppClient{
     public class AppClient{
 
         private static Socket master;
+
+
         static void Main(string[] args){
             int input;
             byte[] msg = new byte[4];
@@ -58,7 +60,6 @@ namespace AppClient{
                             ln.alterarPedido(1, id, produtos);
                         }
                         break;
-
                     case 4: //Novo_Pedido
                         ln.EfetuarPedido(new Pedido());
                         break;

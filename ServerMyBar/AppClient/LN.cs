@@ -9,11 +9,8 @@ namespace AppClient
     public class LN
     {
         private Dictionary<string, List<Produto>> produtos;
-
         private List<Produto> favoritos;
-
         private List<Pedido> historico;
-
         private Socket master;
 
 
@@ -21,7 +18,6 @@ namespace AppClient
         {
             master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12344);
-
             try
             {
                 master.Connect(ipe);
@@ -41,12 +37,10 @@ namespace AppClient
             id = BitConverter.GetBytes(11);
             master.Send(id);
 
-
             byte[] msg = new byte[512];
             string email_pw_nome = email + "|" + password + "|" + nome + "|";
             msg = Encoding.ASCII.GetBytes(email_pw_nome);
             master.Send(msg);
-
 
             byte[] log = new byte[30];
             master.Receive(log);
@@ -55,25 +49,29 @@ namespace AppClient
             if (login) Console.WriteLine("Sign me in");
             else Console.WriteLine("Dont mess with the system");
 
-
             return login;
         }
 
-        public Dictionary<string,List<Produto>> verProdutos()
+
+        public Dictionary<string, List<Produto>> verProdutos()
         {
             Dictionary<string, List<Produto>> dic = new Dictionary<string, List<Produto>>();
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(1);
             master.Send(id);
 
-
+            //Falta receber o dicionario
 
             return dic;
         }
 
+
         // +VerPedidosAnteriores() : Lista Pedidos
 
+
         // +AlterarPedido(idPedido : int, produtos : Lista Produtos) : boolean
+
+
         public Boolean alterarPedido(int a, int idPedido, String produtos)
         {
             //envia id operacao
@@ -97,12 +95,11 @@ namespace AppClient
             master.Send(msg);
 
             return true;
-
         }
+
 
         public List<int> NoUltimoPedido()
         {
-
             List<int> r = new List<int>();
 
             //envia id operacao
@@ -114,16 +111,14 @@ namespace AppClient
             master.Receive(num, 4, SocketFlags.None);
             int x = BitConverter.ToInt32(num);
 
-
             num = new byte[4];
             master.Receive(num, 4, SocketFlags.None);
             int y = BitConverter.ToInt32(num);
 
-            r.Add(x); r.Add(y);
+            r.Add(x); 
+            r.Add(y);
 
             Console.WriteLine("Numero ultimo pedido" + x + "e o outro " + y);
-
-
             return r;
         }
 
@@ -138,31 +133,28 @@ namespace AppClient
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(4);
             master.Send(id);
-
             enviaPedido(p);
             return 1;
         }
 
 
-        // +InfoEmpresa() : Lista String
+        //+InfoEmpresa() : Lista String
+
 
         //+AvaliarProduto(idProduto : int, idCliente : int, nota : int) : void
 
 
         public void IniciarSessao(string email, string password)
         {
-
             //envia id operacao
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(9);
             master.Send(id);
 
-
             byte[] msg = new byte[512];
             string email_pw = email + "|" + password + "|";
             msg = Encoding.ASCII.GetBytes(email_pw);
             master.Send(msg);
-
 
             byte[] log = new byte[30];
             master.Receive(log);
@@ -170,7 +162,6 @@ namespace AppClient
 
             if (login) Console.WriteLine("i'm in you crazy bastard");
             else Console.WriteLine("we will get em next time");
-
         }
 
 
@@ -179,25 +170,17 @@ namespace AppClient
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(10);
             master.Send(id);
-            
         }
 
+
         //+reclamacao(idCliente : int, idPedido : int, comentario : string) : boolean
-
-
-
-
 
 
         public void enviaPedido(Pedido p)
         {
             byte[] pedido = p.SavetoBytes();
-
             master.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
             master.Send(pedido);
-
         }
-
     }
-
 }

@@ -5,24 +5,17 @@ namespace AppGestor
     public class LN
     {
         private Dictionary<int, Empregado> empregados;
-        
         private Dictionary<int, Reclamacao> reclamacoes;
-        
         private List<Pedido> preparados;
-        
         private List<Pedido> em_preparacao;
-        
         private List<Pedido> por_preparar;
         
-        
-     
-        
+
         //+visualizarPedido(idPedido : int) : Pedido
         
         //+alternarEstadoSistema() : void
         
         //+notificarClientes(idCliente : int, mensagem : string) : void
-        
         
         //+mudarEstadoPedido(idPedido : int) : void
         
@@ -31,7 +24,6 @@ namespace AppGestor
         //+editarProduto(idProduto : int, novoProduto : Produto) : void
         
         //+consultasEstatisticas() : lista string
-        
         
         //+visualizacaoFeedback() : lista string
         

@@ -17,6 +17,7 @@ namespace AppFunc
             [DataMember]
             public List<Produto> produtos { get; set; }
 
+
             public Pedido(int id, int idCliente, string detalhes, int avaliacao, DateTime dataHora,List<Produto> produto)
             {
                 this.id = id;
@@ -26,7 +27,6 @@ namespace AppFunc
                 this.data_hora = dataHora;
                 this.produtos = produto;
             }
-
 
 
             public Pedido()
@@ -44,18 +44,17 @@ namespace AppFunc
             }
 
 
-
-
             public void imprimePedido()
             {
                 Console.Write(this.ToString());
                 int i;
                 for (i = 0; i < produtos.Count; i++)
                 {
-                    Console.WriteLine("          i: "+produtos[i].ToString());
+                    Console.WriteLine("i: "+produtos[i].ToString());
                 }
 
             }
+
 
             public string toString()
             {
@@ -67,29 +66,25 @@ namespace AppFunc
                     );
             }
 
+
             public byte[] SavetoBytes()
             {
                 BinaryFormatter bf = new BinaryFormatter();
                 MemoryStream ms = new MemoryStream();
                 XmlSerializer XML = new XmlSerializer(typeof(Pedido));
                 XML.Serialize(ms, this);
-
                 ms.Close();
                 return ms.ToArray();
 
             }
 
+
             public static Pedido loadFromBytes(byte[] data)
             {
-
                 BinaryFormatter bf = new BinaryFormatter();
                 MemoryStream ms = new MemoryStream(data);
-
                 XmlSerializer XML = new XmlSerializer(typeof(Pedido));
                 return (Pedido) XML.Deserialize(ms);
             }
-
-
-
         }
     }
