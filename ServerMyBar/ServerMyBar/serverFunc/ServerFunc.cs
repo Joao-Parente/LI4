@@ -26,10 +26,8 @@ namespace ServerMyBar.serverFunc
 
             Socket socket;
             
-            
             while(true)
             {    
-                
                 Console.WriteLine("ServerFunc á espera de chamadas!\n ");
                 socket = server.AcceptSocket();
                 
@@ -37,10 +35,8 @@ namespace ServerMyBar.serverFunc
                 
                 ThreadServerFunc obj= new ThreadServerFunc(gestor,socket,start_client);
                 Thread a = new Thread(obj.run); 
-                a.Start();
-                            
+                a.Start();           
             }
-
          }
     }
 }

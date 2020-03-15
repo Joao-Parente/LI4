@@ -1,6 +1,5 @@
 namespace ServerMyBar.comum
 {
-
     public class Produto
     {
         public int id { get; set; }
@@ -10,6 +9,7 @@ namespace ServerMyBar.comum
         public int disponibilidade { get; set; }
         public string imagem { get; set; }
 
+
         public Produto()
         {
             id = 1;
@@ -17,8 +17,8 @@ namespace ServerMyBar.comum
             preco = 3.5f;
             tags = "glutenfree vegan";
             imagem = "muitos bytes";
-
         }
+
 
         public Produto(int i, string n, string d, int di, float p)
         {
@@ -29,13 +29,14 @@ namespace ServerMyBar.comum
             disponibilidade = di;
         }
 
-            public override string ToString()
+
+        public override string ToString()
         {
             return ("Id: " + id +
-                    "\n Nome: " + nome +
-                    "\n Preço: " + preco +
-                    "\n Tags: " + tags +
-                    "\n Imagem: " + imagem);
+                        "\n Nome: " + nome +
+                        "\n Preço: " + preco +
+                        "\n Tags: " + tags +
+                        "\n Imagem: " + imagem);
         }
     }
 }

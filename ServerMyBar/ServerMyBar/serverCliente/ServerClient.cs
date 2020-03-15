@@ -9,15 +9,16 @@ namespace ServerMyBar.serverCliente
 {
     public class ServerClient
     {
-
         private Gestor gestor;
         private List<ThreadServerClient> clientes;
         private Socket socket;
+
 
         public ServerClient(Gestor g)
         {
             gestor = g;
         }
+
 
         public void off()
         {
@@ -25,7 +26,6 @@ namespace ServerMyBar.serverCliente
             foreach (ThreadServerClient x in clientes)
             {
                 x.close();
-                
             }
         }
         
@@ -35,12 +35,8 @@ namespace ServerMyBar.serverCliente
             TcpListener server = new TcpListener(12344);
             server.Start();
 
-           
-
-            
             while(true)
-            {    
-                
+            {                    
                 Console.WriteLine("ServerClient á espera de chamadas!\n ");
                 socket = server.AcceptSocket();
                 
@@ -48,10 +44,8 @@ namespace ServerMyBar.serverCliente
                 
                 ThreadServerClient obj= new ThreadServerClient(gestor,socket);
                 Thread a = new Thread(obj.run); 
-                a.Start();
-                            
+                a.Start();            
             }
-
         }
     }
 }
