@@ -28,6 +28,7 @@ namespace ServerMyBar.serverCliente
             }
         }
 
+
         public void onCliente()
         {
             if (estado != true)
@@ -41,8 +42,7 @@ namespace ServerMyBar.serverCliente
             
             
          public void notificarCliente(  int idCliente, string msg  )
-         {
-                
+         {    
          }
     }
 }

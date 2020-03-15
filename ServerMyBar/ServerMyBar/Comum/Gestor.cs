@@ -4,16 +4,10 @@ using System.Collections.Generic;
 namespace ServerMyBar.comum
 {
     public class Gestor
-
-
-
     {
-
         private List<Pedido> por_preparar;
         private List<Pedido> em_preparacao;
         private List<Pedido> preparado;
-
-
         private int counter;
         private int ticket;
 
@@ -25,68 +19,55 @@ namespace ServerMyBar.comum
             preparado = new List<Pedido>();
             counter = 0;
             ticket = 0;
-
         }
-
 
 
         public bool loginCliente(string email, string pw)
         {
-
-
-
             bool r = false;
             lock (this)
             {
-
                 if (ClienteDAO.getInfoCliente(email, pw) != null) r = true;
-
             }
             return r;
 
         }
+
 
         public bool loginGestor(string email, string pw)
         {
-
-
-
             bool r = false;
             lock (this)
             {
-
                 if (ClienteDAO.getInfoCliente(email, pw) != null) r = true;
-
             }
             return r;
-
         }
+
+
         public bool loginFunc(string email, string pw)
         {
-
-
-
             bool r = false;
             lock (this)
             {
-
                 if (EmpregadoDAO.getInfoEmpregado(email, pw) != null) r = true;
-
             }
             return r;
-
         }
+
 
         //+getProduto(id : int) : Produto
 
+
         //+addProduct(p : Produto) : int
+
+
         public void adicionarProdutos(int idPedido, String[] produtos)
         {
             lock (this)
             {
                 foreach (Pedido x in por_preparar)
                 {
-
                     if (x.id == idPedido)
                     {
                         for (int i = 0; i < produtos.Length; i++)
@@ -98,13 +79,14 @@ namespace ServerMyBar.comum
 
 
         //+removeProduct(id : int)
+
+
         public void removerProdutos(int idPedido, String[] produtos)
         {
             lock (this)
             {
                 foreach (Pedido x in por_preparar)
                 {
-
                     if (x.id == idPedido)
                     {
                         for (int i = 0; i < produtos.Length; i++)
@@ -113,6 +95,7 @@ namespace ServerMyBar.comum
                 }
             }
         }
+
 
         public int addPedido(Pedido p)
         {
@@ -126,13 +109,9 @@ namespace ServerMyBar.comum
                     ticket++;
                     por_preparar.Add(p);
                     Console.WriteLine("VALOR " + p.id);
-
-
                 }
-
                 return r;
             }
-
         }
 
 
@@ -145,42 +124,46 @@ namespace ServerMyBar.comum
             {
                 foreach (Pedido x in por_preparar)
                 {
-
                     if (x.id == idPedido)
                     {
                         int i = por_preparar.IndexOf(x);
                         por_preparar.Remove(x);
-
                         np.id = idPedido;
                         por_preparar.Insert(i, np);
-
                         return true;
-
                     }
                 }
-
-
                 return false;
             }
         }
 
+
         //+estatisticas(mes : int, ano : int)
+
 
         //+feedback(idPedido : int) : string
 
+
         //+editProduct(id : in, p : Server.Produto) : bool
+
 
         //+addEmpregado(emp : Server.Empregado) : int
 
+
         //+editEmpregado(id : int, emp : Emp) : bool
+
 
         //+removeEmpregado(id : int) : bool
 
+
         //+addReclamacao(idPedido int, motivo : string, reclamacao : string) : bool
+
 
         //+getEmpregado(id : int) : Server.Empregado
 
+
         //+getReclamacao(int id) : Server.Reclamacao
+
 
         public Dictionary<string, List<Produto>> VerProdutos()
         {
@@ -192,7 +175,9 @@ namespace ServerMyBar.comum
             }
         }
 
+
         //+PedidosAnteriores(idCLiente : int) : List Pedido
+
 
         public List<int> NoUltimoPedido()
         {
@@ -205,11 +190,15 @@ namespace ServerMyBar.comum
             }
         }
 
+
         //+AddFavoritoProduto(idProduto : int, idCliente : int) : bool
+
 
         //+verInfoEmpresa() : List sring
 
+
         //+avaliarProduto(idCliente : int, idProduto : int, avaliacao : int)
+
 
         public bool registarCliente(string email, string password, string nome)
         {
@@ -222,4 +211,3 @@ namespace ServerMyBar.comum
 
 
 }
-

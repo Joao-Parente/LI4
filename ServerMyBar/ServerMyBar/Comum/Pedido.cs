@@ -7,7 +7,6 @@ using System.Xml.Serialization;
 
 namespace ServerMyBar.comum
 {
-
         public class Pedido
         {
             public int id { get; set; }
@@ -18,6 +17,7 @@ namespace ServerMyBar.comum
             [DataMember]
             public List<Produto> produtos { get; set; }
 
+
             public Pedido(int id, int idCliente, string detalhes, int avaliacao, DateTime dataHora,List<Produto> produto)
             {
                 this.id = id;
@@ -27,7 +27,6 @@ namespace ServerMyBar.comum
                 this.data_hora = dataHora;
                 this.produtos = produto;
             }
-
 
 
             public Pedido()
@@ -44,12 +43,14 @@ namespace ServerMyBar.comum
                 produtos.Add(new Produto());
             }
 
+
             public void adicionarProduto(String produto)
             {
                 Produto p = new Produto(4, produto, "tags", 1, 3); //para teste
                 produtos.Add(p);
                 
             }
+
 
             public void removerProduto(String produto)
             {
@@ -69,6 +70,7 @@ namespace ServerMyBar.comum
 
             }
 
+
             public string ToString()
             {
                 return (" Pedido: " +id+
@@ -79,29 +81,24 @@ namespace ServerMyBar.comum
                     );
             }
 
+
             public byte[] SavetoBytes()
             {
                 BinaryFormatter bf = new BinaryFormatter();
                 MemoryStream ms = new MemoryStream();
                 XmlSerializer XML = new XmlSerializer(typeof(Pedido));
                 XML.Serialize(ms, this);
-
                 ms.Close();
                 return ms.ToArray();
-
             }
+
 
             public static Pedido loadFromBytes(byte[] data)
             {
-
                 BinaryFormatter bf = new BinaryFormatter();
                 MemoryStream ms = new MemoryStream(data);
-
                 XmlSerializer XML = new XmlSerializer(typeof(Pedido));
                 return (Pedido) XML.Deserialize(ms);
             }
-
-
-
         }
     }

@@ -9,15 +9,16 @@ namespace ServerMyBar.serverGestor
 {
     public class ServerGestor
     {
-        
         private Gestor gestor;
         private StarterClient start_client;
         
+
         public ServerGestor(Gestor g,StarterClient s)
         {
             gestor = g;
             start_client = s;
         }
+
 
         public void run() 
         {
@@ -25,12 +26,9 @@ namespace ServerMyBar.serverGestor
             server.Start();
 
             Socket socket;
-            
 
-            
             while(true)
             {    
-                
                 Console.WriteLine("ServerGestor á espera de chamadas!\n ");
                 socket = server.AcceptSocket();
                 
@@ -38,10 +36,8 @@ namespace ServerMyBar.serverGestor
                 
                 ThreadServerGestor obj= new ThreadServerGestor(gestor,socket,start_client);
                 Thread a = new Thread(obj.run); 
-                a.Start();
-                            
+                a.Start();           
             }
-
         }
     }
 }

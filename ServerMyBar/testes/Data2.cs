@@ -8,6 +8,7 @@ namespace testes
     {
         //[DataMember] 
         public int arroz { get; set; }
+        
 
         public Data2()
         {
