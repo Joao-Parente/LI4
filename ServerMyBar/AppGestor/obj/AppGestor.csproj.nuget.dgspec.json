@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj": {}
+    "D:\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj": {
+    "D:\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj",
+        "projectUniqueName": "D:\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj",
         "projectName": "AppGestor",
-        "projectPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj",
-        "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppGestor\\obj\\",
+        "projectPath": "D:\\LI4\\ServerMyBar\\AppGestor\\AppGestor.csproj",
+        "packagesPath": "C:\\Users\\jnuno\\.nuget\\packages\\",
+        "outputPath": "D:\\LI4\\ServerMyBar\\AppGestor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jnuno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

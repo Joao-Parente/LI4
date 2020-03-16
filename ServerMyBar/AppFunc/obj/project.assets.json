@@ -8,25 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\jnuno\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppFunc\\AppFunc.csproj",
+      "projectUniqueName": "D:\\LI4\\ServerMyBar\\AppFunc\\AppFunc.csproj",
       "projectName": "AppFunc",
-      "projectPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppFunc\\AppFunc.csproj",
-      "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\Joao-Parente\\LI4\\ServerMyBar\\AppFunc\\obj\\",
+      "projectPath": "D:\\LI4\\ServerMyBar\\AppFunc\\AppFunc.csproj",
+      "packagesPath": "C:\\Users\\jnuno\\.nuget\\packages\\",
+      "outputPath": "D:\\LI4\\ServerMyBar\\AppFunc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jnuno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

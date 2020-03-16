@@ -32,10 +32,10 @@
         </Grid.ColumnDefinitions>
 
         <Label Text="Ultimo Pedido" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Grid.Row="1" Grid.Column="1"/>
-        <Label x:Name="ultimoPedido" Text="5" TextColor="Black" FontSize="Medium" Grid.Row="1" Grid.Column="2"/>
+        <Label x:Name="ultimoPedido" TextColor="Black" FontSize="Medium" Grid.Row="1" Grid.Column="2"/>
 
         <Label Text="Meu Pedido" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
-        <Label x:Name="meuPedido" Text="9" TextColor="Black" FontSize="Medium" Grid.Row="2" Grid.Column="2"/>
+        <Label x:Name="meuPedido" TextColor="Black" FontSize="Medium" Grid.Row="2" Grid.Column="2"/>
         
         <ListView x:Name="ProdutosCarrinho" ItemsSource="{Binding ListaDeProdutos}" CachingStrategy="RecycleElement" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="6">
             <ListView.ItemTemplate>

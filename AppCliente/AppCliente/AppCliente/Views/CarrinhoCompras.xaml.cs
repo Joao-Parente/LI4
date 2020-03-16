@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -17,6 +18,9 @@ namespace AppCliente
         public CarrinhoCompras()
         {
             InitializeComponent();
+            ThreadPedidosTracker tpt = new ThreadPedidosTracker(ultimoPedido, meuPedido);
+            Thread a = new Thread(tpt.run);
+            a.Start();
 
             Produto p = new Produto("Baguete de Atum", (float)0.9);
             Produto p2 = new Produto("Baguete de Frango", (float)0.95);
