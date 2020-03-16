@@ -7,7 +7,41 @@ namespace ServerMyBar.comum
     public class ProdutoDAO
     {
 
-        // +getProduto(id : int) : Produto
+        public static Produto getProduto(int idProduto)
+        {
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                 "pwd=password;database=LI_Database";
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+
+                string query = "SELECT * FROM LI_Database.Produto WHERE idProduto = " + idProduto + " ;";
+                cmd.CommandText = query;
+                cmd.Prepare();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    Produto prod = new Produto(reader.GetInt64(0),reader.GetString(2),reader.GetString(3),reader.GetInt64(4),reader.GetFloat(5));
+                    return prod;
+                }
+                else
+                {
+                    Console.WriteLine(" !!no rows found!!");
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine("Exception " + ex.Message);
+            }
+            return null;
+        }
 
 
         public static Dictionary<string, List<Produto>> getAllProdutos()
