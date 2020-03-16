@@ -50,6 +50,13 @@ namespace AppCliente
             produtos.Add(p19); produtos.Add(p20); produtos.Add(p21); produtos.Add(p22); produtos.Add(p23); produtos.Add(p24);
 
             ProdutosCarrinho.ItemsSource = produtos;
+            float total = 0;
+            for(int i = 0; i<produtos.Count; i++)
+            {
+                total += produtos[i].Preco;
+            }
+
+            quantiaTotal.Text = "Total = " + total + "€";
         }
     }
 }
