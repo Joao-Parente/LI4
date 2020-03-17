@@ -6,6 +6,9 @@
              mc:Ignorable="d"
              BackgroundColor="Beige"
              x:Class="AppCliente.VerProdutosPage">
+    
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height=".2*"/>
@@ -29,11 +32,17 @@
             <ColumnDefinition Width=".8*"/>
             <ColumnDefinition Width=".2*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="updateButton" Text="" ImageSource="shoppingCart.png" Clicked="ServerFetch" BackgroundColor="LightSeaGreen" Grid.Column="2" Grid.Row="12" BorderRadius="10"/>
-        <ListView x:Name="ViewProdutos" ItemsSource="{Binding ListaDeProdutos}" CachingStrategy="RecycleElement" Grid.Column="1" Grid.Row="1" Grid.RowSpan="12">
+
+        <Button x:Name="updateButton" Text="" ImageSource="shoppingCart.png" Clicked="ServerFetch" BackgroundColor="LightSeaGreen" Grid.Column="2" Grid.Row="10" BorderRadius="20"/>
+
+        <ListView x:Name="ViewProdutos" ItemsSource="{Binding ListaDeProdutos}" SelectionMode="None" ItemTapped="Handle_ItemTapped" Grid.Column="1" Grid.Row="1" Grid.RowSpan="12">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Hello"/>
+                            <MenuItem Text="Delet" IsDestructive="True"/>
+                        </ViewCell.ContextActions>
                         <StackLayout>
                             <Label Text="{Binding Nome}" />
                             <Label Text="{Binding Preco}" />

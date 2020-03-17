@@ -22,8 +22,8 @@ namespace AppCliente
         {
             ultimoPedido = a;
             meuPedido = b;
-            u = 0;
-            m = 0;
+            u = 2;
+            m = 5;
         }
 
         public void run()
@@ -35,7 +35,7 @@ namespace AppCliente
                     ultimoPedido.Text = "" + u;
                     meuPedido.Text = "" + m;
                 });
-                u++; m++;
+                u++; m+=2;
                 Thread.Sleep(2000);
             }
         }

@@ -8,6 +8,7 @@ using Xamarin.Forms.Xaml;
 using System.Threading;
 using System.Net;
 using Rg.Plugins.Popup.Services;
+using System.Collections.ObjectModel;
 
 namespace AppCliente
 {
@@ -15,6 +16,7 @@ namespace AppCliente
     public partial class VerProdutosPage : ContentPage
     {
         List<Produto> produtos { get; set; }
+
         public VerProdutosPage()
         {
             InitializeComponent();
@@ -53,8 +55,25 @@ namespace AppCliente
             ViewProdutos.ItemsSource = produtos;
         }
 
+        private async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e.Item == null)
+                return;
+
+            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+
+            //var p = ((ListView)sender).SelectedItem;
+
+            Produto asasa = (Produto)e.Item;
+
+            //Deselect Item
+            ((ListView)sender).SelectedItem = null;
+        }
+
         private void ServerFetch(object sender, EventArgs e)
-        {/*
+        {
+            
+            /*
             //Socket master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             //IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12345);
             //master.Connect(ipe);

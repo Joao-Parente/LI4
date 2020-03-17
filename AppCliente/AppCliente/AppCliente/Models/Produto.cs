@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace AppCliente
@@ -25,4 +26,5 @@ namespace AppCliente
         }
 
     }
+
 }
