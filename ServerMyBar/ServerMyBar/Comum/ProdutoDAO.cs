@@ -28,7 +28,7 @@ namespace ServerMyBar.comum
 
                 if (reader.HasRows)
                 {
-                    Produto prod = new Produto(reader.GetInt64(0),reader.GetString(2),reader.GetString(3),reader.GetInt64(4),reader.GetFloat(5));
+                    Produto prod = new Produto((int) reader.GetInt64(0),reader.GetString(2),reader.GetString(3),(int) reader.GetInt64(4),reader.GetFloat(5));
                     return prod;
                 }
                 else

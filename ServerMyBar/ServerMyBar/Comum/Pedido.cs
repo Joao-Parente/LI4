@@ -32,7 +32,7 @@ namespace ServerMyBar.comum
             public Pedido()
             {
                 id = 2;
-                idCliente = 100;
+                idCliente = ""+100;
                 detalhes = "arroz man";
                 avaliacao = 51;
                 data_hora = new DateTime();

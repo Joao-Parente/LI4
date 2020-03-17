@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace ServerMyBar.comum
 {
-    public class ProdutoDAO
+    public class PedidoDAO
     {
-        public void avaliar(string idCliente, int idPedido, int aval)
+        public static void avaliar(string idCliente, int idPedido, int aval)
         {
             MySqlConnection conn;
             string myConnectionString;
@@ -34,7 +34,7 @@ namespace ServerMyBar.comum
             return null;
         }
 
-        public Dictionary<int,Pedido> anteriores(string idCliente)
+        public static Dictionary<int,Pedido> anteriores(string idCliente)
         {
             Dictionary<int,Pedido> dp = new Dictionary<int,Pedido>();
             MySqlConnection conn;
@@ -63,7 +63,7 @@ namespace ServerMyBar.comum
                         Produto pr = ProdutoDAO.getProduto((int) reader.GetInt64(1));
                         if (dp.ContainsKey((int) reader.GetInt64(0))){
                             Pedido pe = new Pedido();
-                            dp.TryGetValue(reader.GetString(0), out pe);
+                            dp.TryGetValue(int.Parse(reader.GetString(0)), out pe);
                             pe.addProduto(pr);
                             dp.Add((int) reader.GetInt64(0),pe);
                         }
@@ -86,7 +86,6 @@ namespace ServerMyBar.comum
                 Console.WriteLine("Exception " + ex.Message);
             }
             return null;
-            return lp;
         }
     }
 }

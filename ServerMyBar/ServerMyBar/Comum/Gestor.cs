@@ -181,7 +181,7 @@ namespace ServerMyBar.comum
             {
                 Dictionary<int,Pedido> dp = new Dictionary<int,Pedido>();
                 dp = PedidoDAO.anteriores(idCliente);
-                return lp;
+                return new List<Pedido> (dp.Values);
             }
         }
 
