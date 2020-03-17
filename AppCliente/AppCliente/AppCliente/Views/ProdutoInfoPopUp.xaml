@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppCliente.ProdutoInfoPopUp">
+    <Grid Margin="64" BackgroundColor="Aquamarine">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="1.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".8*"/>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width=".8*"/>
+            <ColumnDefinition Width=".8*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="NomeProduto" Text="" FontSize="Medium" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="Preco" Text="" FontSize="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+        
+    </Grid>
+</pages:PopupPage>

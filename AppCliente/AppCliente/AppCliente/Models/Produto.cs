@@ -12,6 +12,7 @@ namespace AppCliente
 
         public float Preco { get; set; }
 
+
         public Produto()
         {
             this.Nome = "hello";

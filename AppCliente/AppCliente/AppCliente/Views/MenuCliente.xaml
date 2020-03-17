@@ -5,11 +5,14 @@
          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
          xmlns:local="clr-namespace:AppCliente"
          mc:Ignorable="d"
-         BackgroundColor="SandyBrown"  
-         x:Class="AppCliente.MenuCliente">
+         x:Class="AppCliente.MenuCliente"
+         BackgroundColor="SandyBrown"
+         ForegroundColor="Firebrick"
+         TitleColor="Firebrick">
     
+
         <FlyoutItem Title="Ver Produtos" Icon="fastfoodIcon.png"> 
-            <ShellContent ContentTemplate="{DataTemplate local:VerProdutosPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:VerCategorias}"/>
         </FlyoutItem>
 
         <FlyoutItem Title="Lista de Favoritos" Icon="starIcon.png">

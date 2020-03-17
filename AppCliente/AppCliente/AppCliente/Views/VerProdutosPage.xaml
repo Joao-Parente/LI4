@@ -4,52 +4,35 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             x:Name="ContentPageTeste"
              BackgroundColor="Beige"
              x:Class="AppCliente.VerProdutosPage">
-    
-    
-    
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height=".2*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height=".2*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".2*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width=".8*"/>
-            <ColumnDefinition Width=".2*"/>
-        </Grid.ColumnDefinitions>
 
-        <Button x:Name="updateButton" Text="" ImageSource="shoppingCart.png" Clicked="ServerFetch" BackgroundColor="LightSeaGreen" Grid.Column="2" Grid.Row="10" BorderRadius="20"/>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="ToolbarProdutos" IconImageSource="shoppingCart.png" Clicked="CarrinhoComprasBotao"/>
+    </ContentPage.ToolbarItems>
 
-        <ListView x:Name="ViewProdutos" ItemsSource="{Binding ListaDeProdutos}" SelectionMode="None" ItemTapped="Handle_ItemTapped" Grid.Column="1" Grid.Row="1" Grid.RowSpan="12">
+    <StackLayout>
+
+        <ListView x:Name="ViewProdutos" ItemsSource="{Binding Produtos}" ItemTapped="Handle_ItemTapped" CachingStrategy="RecycleElement" SelectionMode="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Text="Hello"/>
-                            <MenuItem Text="Delet" IsDestructive="True"/>
-                        </ViewCell.ContextActions>
-                        <StackLayout>
-                            <Label Text="{Binding Nome}" />
-                            <Label Text="{Binding Preco}" />
-                        </StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".5*"/>
+                                <ColumnDefinition Width=".3*"/>
+                                <ColumnDefinition Width=".2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Nome}" FontSize="Medium" Grid.Column="0"/>
+                            <Label Text="{Binding Preco}" FontSize="Medium" Grid.Column="1"/>
+                            <Button BackgroundColor="Transparent" ImageSource="addShoppingCart.png" Grid.Column="2"/>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </Grid>
+
+    </StackLayout>
+
 </ContentPage>
