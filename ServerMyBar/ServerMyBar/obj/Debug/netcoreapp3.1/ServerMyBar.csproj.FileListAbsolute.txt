@@ -68,3 +68,5 @@ C:\Users\Gonçalo Pinto\source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\bi
 C:\Users\Gonçalo Pinto\source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Gonçalo Pinto\source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csproj.CopyComplete
 C:\Users\Gonçalo Pinto\source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.genruntimeconfig.cache
+D:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+D:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb

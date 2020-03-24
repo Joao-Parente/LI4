@@ -38,6 +38,11 @@ namespace AppClient{
                     case 1: //VerProdutos
                         ln.verProdutos();
                         break;
+                    case 2: //pedidos anterioresString produtos;
+                        Console.WriteLine("Insira o ID do cliente");
+                        int idCliente = Convert.ToInt32(Console.ReadLine());
+                        ln.PedidosAnteriores(idCliente);
+                        break;
                     case 3: //Alterar Pedido
                         String produtos;
                         Console.WriteLine("Insira o ID do pedido");

@@ -57,6 +57,11 @@ namespace ServerMyBar.serverCliente
                         map = gestor.VerProdutos();
                         //enviar o dicionario
                         break;
+                    case 2: //Pedidos Anteriores
+                        socket.Receive(data, 0, 4, SocketFlags.None);
+                        int idCliente = BitConverter.ToInt32(data, 0);
+
+                        break;
                     case 3: //Alterar Pedido
                         socket.Receive(data, 0, 4, SocketFlags.None);
                         int idPedido = BitConverter.ToInt32(data, 0);

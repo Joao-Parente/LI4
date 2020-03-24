@@ -66,7 +66,13 @@ namespace AppClient
         }
 
 
-        // +VerPedidosAnteriores() : Lista Pedidos
+        //+VerPedidosAnteriores() : Lista Pedidos
+
+        public List<Pedido> PedidosAnteriores(int idCliente) {
+            List<Pedido> anteriores = new List<Pedido>();
+
+            return anteriores;
+        }
 
 
         // +AlterarPedido(idPedido : int, produtos : Lista Produtos) : boolean
@@ -182,5 +188,7 @@ namespace AppClient
             master.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
             master.Send(pedido);
         }
+
+        
     }
 }

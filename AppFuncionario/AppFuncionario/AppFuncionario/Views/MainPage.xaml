@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Visual="Material"
+             x:Class="AppFuncionario.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height=".1*"/>
+        </Grid.RowDefinitions>
+        <Image Source="logo.jpg" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <Label Text="Inicio de Sessão" FontSize="60" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="2" TextColor="Brown" FontAttributes="Bold"/>
+
+        <Label Text="Email" TextColor="Black" Grid.Row="4" Grid.Column="3" FontSize="30" FontAttributes="Bold"/>
+        <Entry x:Name="EntryEmail" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" FontSize="25" Visual="Material"/>
+
+        <Label Text="Password" TextColor="Black" Grid.Row="6" Grid.Column="3" FontSize="30" FontAttributes="Bold"/>
+        <Entry x:Name="EntryPassword" Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2" FontSize="25" IsPassword="True" Visual="Material"/>
+
+        <Button Text="Confirmar" TextColor="Black" FontAttributes="Bold" FontSize="25" BackgroundColor="Beige" Grid.Row="9" Grid.Column="4" Clicked="CarregueiBotaoIniciarSessao"/>
+    </Grid>
+
+</ContentPage>
