@@ -10,6 +10,9 @@ namespace ServerMyBar
     {
         static void Main(string[] args)
         {
+
+            ProdutoDAO.registaProduto("baguetes", "atum",(float) 2.0, "sem gluten", 100);
+
             Gestor gestor = new Gestor();
   
             ServerClient x= new ServerClient(gestor);
@@ -30,9 +33,10 @@ namespace ServerMyBar
 
             // /testing
             // ServerClient c= new ServerClient(gestor);
-            //c.run();
+            // c.run();
             //Cliente x=ClienteDAO.getInfoCliente("augusto","manuel");
-            //ClienteDAO.registaCliente("goncalo", "ez","arroz");
+
+            //ClienteDAO.registaCliente("goncalo", "ez", "arroz");
         }
     }
 }

@@ -31,7 +31,6 @@ namespace ServerMyBar.comum
             {
                 Console.WriteLine("Exception " + ex.Message);
             }
-            return null;
         }
 
         public static Dictionary<int,Pedido> anteriores(string idCliente)

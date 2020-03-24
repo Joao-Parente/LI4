@@ -6,6 +6,36 @@ namespace ServerMyBar.comum
 {
     public class ProdutoDAO
     {
+        public static Boolean registaProduto(string tipo, string nome, float preco, string tags, int disponibilidade)
+        {
+            Console.WriteLine("Nome no dao " + nome);
+            MySqlConnection conn;
+            string myConnectionString;
+
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                 "pwd=basedados;database=LI_Database";
+
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "INSERT INTO Produto (tipo,nome,detalhes,disponibilidade,preco) values('" + tipo + "','" + nome + "','" + tags + "'," + disponibilidade + "," + preco + ")";
+                cmd.Prepare();
+
+                //cmd.Parameters.AddWithValue("@Name", "Trygve Gulbranssen");
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine("Exception" + ex.Message);
+                return false;
+            }
+            return true;
+        }
+
 
         public static Produto getProduto(int idProduto)
         {
@@ -28,7 +58,7 @@ namespace ServerMyBar.comum
 
                 if (reader.HasRows)
                 {
-                    Produto prod = new Produto((int) reader.GetInt64(0),reader.GetString(2),reader.GetString(3),(int) reader.GetInt64(4),reader.GetFloat(5));
+                    Produto prod = new Produto((int) reader.GetInt64(0),reader.GetString(1),reader.GetString(2),reader.GetString(3),(int) reader.GetInt64(4),reader.GetFloat(5));
                     return prod;
                 }
                 else
@@ -69,7 +99,7 @@ namespace ServerMyBar.comum
                 {
                     while (reader.Read())
                     {
-                        Produto p = new Produto((int) reader.GetInt64(0), (string) reader.GetString(2), (string) reader.GetString(3), (int) reader.GetUInt64(4), (float) reader.GetFloat(5));
+                        Produto p = new Produto((int) reader.GetInt64(0), (string) reader.GetString(1), (string) reader.GetString(2), (string) reader.GetString(3), (int) reader.GetUInt64(4), (float) reader.GetFloat(5));
                         if (dic.ContainsKey(reader.GetString(1)))
                         {
                             List<Produto> lp = new List<Produto>();
