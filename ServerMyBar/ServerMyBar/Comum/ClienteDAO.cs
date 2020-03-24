@@ -60,7 +60,7 @@ namespace ServerMyBar.comum
             string myConnectionString;
 
             myConnectionString = @"server=127.0.0.1;uid=root;" +
-                                 "pwd=password;database=LI_Database";
+                                 "pwd=basedados;database=LI_Database";
 
             try
             {

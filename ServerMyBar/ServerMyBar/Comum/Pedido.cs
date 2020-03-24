@@ -46,7 +46,7 @@ namespace ServerMyBar.comum
 
             public void adicionarProduto(String produto)
             {
-                Produto p = new Produto(4, produto, "tags", 1, 3); //para teste
+                Produto p = new Produto(4,"tipo", produto, "tags", 1, 3); //para teste
                 produtos.Add(p);
             }
 
@@ -57,7 +57,7 @@ namespace ServerMyBar.comum
 
             public void removerProduto(String produto)
             {
-                Produto p = new Produto(4, produto, "tags", 1, 3); //para teste
+                Produto p = new Produto(4,"tipo", produto, "tags", 1, 3); //para teste
                 produtos.Remove(p);
             }   
 
