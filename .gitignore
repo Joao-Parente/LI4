@@ -338,3 +338,26 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+AppCliente/AppCliente/AppCliente.Android/Resources/Resource.designer.cs
+ServerMyBar/testes/obj/testes.csproj.nuget.dgspec.json
+ServerMyBar/testes/obj/project.assets.json
+ServerMyBar/testes/obj/testes.csproj.nuget.g.props
+ServerMyBar/ServerMyBar/obj/ServerMyBar.csproj.nuget.g.props
+ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.csprojAssemblyReference.cache
+ServerMyBar/ServerMyBar/obj/project.assets.json
+ServerMyBar/ServerMyBar/obj/ServerMyBar.csproj.nuget.dgspec.json
+ServerMyBar/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.csprojAssemblyReference.cache
+ServerMyBar/AppGestor/obj/project.assets.json
+ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.csprojAssemblyReference.cache
+ServerMyBar/AppGestor/obj/AppGestor.csproj.nuget.g.props
+ServerMyBar/AppGestor/obj/AppGestor.csproj.nuget.dgspec.json
+ServerMyBar/AppFunc/obj/project.assets.json
+ServerMyBar/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.csprojAssemblyReference.cache
+ServerMyBar/AppFunc/obj/AppFunc.csproj.nuget.g.props
+ServerMyBar/AppFunc/obj/AppFunc.csproj.nuget.dgspec.json
+ServerMyBar/AppClient/obj/Release/netcoreapp3.1/AppClient.assets.cache
+ServerMyBar/AppClient/obj/project.assets.json
+ServerMyBar/AppClient/obj/Debug/netcoreapp3.1/AppClient.csprojAssemblyReference.cache
+ServerMyBar/AppClient/obj/AppClient.csproj.nuget.g.props
+ServerMyBar/AppClient/obj/AppClient.csproj.nuget.dgspec.json
+AppCliente/AppCliente/AppCliente.Android/Resources/Resource.designer.cs
