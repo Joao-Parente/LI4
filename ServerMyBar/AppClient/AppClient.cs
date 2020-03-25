@@ -67,7 +67,7 @@ namespace AppClient{
                         }
                         break;
                     case 4: //Novo_Pedido
-                        ln.EfetuarPedido(new Pedido());
+                        //ln.EfetuarPedido(new Pedido());
                         break;
                     case 5: // NoUlitmoPedido
                         List<int> numeros = ln.NoUltimoPedido();

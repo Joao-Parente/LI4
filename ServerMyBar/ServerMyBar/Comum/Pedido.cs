@@ -31,16 +31,12 @@ namespace ServerMyBar.comum
 
             public Pedido()
             {
-                id = 2;
-                idCliente = ""+100;
-                detalhes = "arroz man";
-                avaliacao = 51;
+                id = 0;
+                idCliente = ""+0;
+                detalhes = "";
+                avaliacao = 0;
                 data_hora = new DateTime();
                 produtos=new List<Produto>();
-                produtos.Add(new Produto());
-                produtos.Add(new Produto());
-                produtos.Add(new Produto());
-                produtos.Add(new Produto());
             }
 
 

@@ -59,17 +59,17 @@ namespace ServerMyBar.serverCliente
                         break;
                     case 2: //Pedidos Anteriores
 
-                        //Recebe id do cliente
+                        //recebe id do cliente
                         socket.Receive(data, 0, 512, SocketFlags.None);
                         string idCliente = System.Text.Encoding.UTF8.GetString(data);
 
                         //vai a base de dados tirar os pedidos todos
-                        //List<Pedido> pedidos = gestor.pedidosAnteriores(idCliente);
-
+                        List<Pedido> pedidos = gestor.pedidosAnteriores(idCliente.Replace("\0", string.Empty));
+                        /*
                         List<Pedido> pedidos = new List<Pedido>();
                         pedidos.Add(new Pedido());
                         pedidos.Add(new Pedido());
-                        pedidos.Add(new Pedido());
+                        pedidos.Add(new Pedido());*/
 
                         //envia o numero de pedidos da lista
                         byte[] id = new byte[4];

@@ -202,9 +202,7 @@ namespace ServerMyBar.comum
         {
             lock (this)
             {
-                Dictionary<int,Pedido> dp = new Dictionary<int,Pedido>();
-                dp = PedidoDAO.anteriores(idCliente);
-                return new List<Pedido> (dp.Values);
+                return PedidoDAO.anteriores(idCliente);
             }
         }
 

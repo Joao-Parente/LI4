@@ -1,4 +1,3 @@
-
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Configuration;
@@ -60,7 +59,7 @@ namespace ServerMyBar.comum
             string myConnectionString;
 
             myConnectionString = @"server=127.0.0.1;uid=root;" +
-                                 "pwd=basedados;database=LI_Database";
+                                 "pwd=password;database=LI_Database";
 
             try
             {

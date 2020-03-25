@@ -13,7 +13,7 @@ namespace ServerMyBar.comum
             string myConnectionString;
 
             myConnectionString = @"server=127.0.0.1;uid=root;" +
-                                 "pwd=basedados;database=LI_Database";
+                                 "pwd=password;database=LI_Database";
 
             try
             {
@@ -50,7 +50,7 @@ namespace ServerMyBar.comum
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
 
-                string query = "SELECT * FROM LI_Database.Produto WHERE idProduto = " + idProduto + " ;";
+                string query = "SELECT * FROM LI_Database.Produto WHERE idProduto = '" + idProduto + "';";
                 cmd.CommandText = query;
                 cmd.Prepare();
 
@@ -58,8 +58,12 @@ namespace ServerMyBar.comum
 
                 if (reader.HasRows)
                 {
-                    Produto prod = new Produto((int) reader.GetInt64(0),reader.GetString(1),reader.GetString(2),reader.GetString(3),(int) reader.GetInt64(4),reader.GetFloat(5));
-                    return prod;
+                    while (reader.Read())
+                    {
+                        Produto prod = new Produto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetFloat(5));
+                        return prod;
+                    }
+                    
                 }
                 else
                 {

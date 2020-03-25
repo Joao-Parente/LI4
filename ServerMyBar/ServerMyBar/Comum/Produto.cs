@@ -13,12 +13,12 @@ namespace ServerMyBar.comum
 
         public Produto()
         {
-            id = 1;
-            tipo = "comida";
-            nome = "Arroz com atum";
-            preco = 3.5f;
-            tags = "glutenfree vegan";
-            imagem = "muitos bytes";
+            id = 0;
+            tipo = "";
+            nome = "";
+            preco = 0;
+            tags = "";
+            imagem = "";
         }
 
 
