@@ -11,8 +11,6 @@ namespace ServerMyBar
         static void Main(string[] args)
         {
 
-            ProdutoDAO.registaProduto("baguetes", "atum",(float) 2.0, "sem gluten", 100);
-
             Gestor gestor = new Gestor();
   
             ServerClient x= new ServerClient(gestor);
