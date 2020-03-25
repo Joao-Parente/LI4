@@ -96,6 +96,15 @@ namespace ServerMyBar.comum
             }
         }
 
+        public void addProdutoFavoritos(int idProduto, string idCliente)
+        {
+            lock (this)
+            {
+                //Mando para onde? idk
+                return;
+            }
+        }
+
 
         public int addPedido(Pedido p)
         {
@@ -113,7 +122,6 @@ namespace ServerMyBar.comum
                 return r;
             }
         }
-
 
         //+getPedido(id : int) : Server.Pedido
 
@@ -156,13 +164,28 @@ namespace ServerMyBar.comum
         //+removeEmpregado(id : int) : bool
 
 
-        //+addReclamacao(idPedido int, motivo : string, reclamacao : string) : bool
-
-
         //+getEmpregado(id : int) : Server.Empregado
 
 
         //+getReclamacao(int id) : Server.Reclamacao
+
+
+        public List<Reclamacao> GetReclamacoes(int idPedido)
+        {
+            lock (this)
+            {
+                return ReclamacaoDAO.getReclamacoes(idPedido);
+            }
+        }
+        
+        public bool AddReclamacao(int idPedido,string motivo,string reclamacao)
+        {
+            lock (this)
+            {
+                return ReclamacaoDAO.addReclamacao(idPedido, motivo, reclamacao);
+            }
+            
+        }
 
 
         public Dictionary<string, List<Produto>> VerProdutos()

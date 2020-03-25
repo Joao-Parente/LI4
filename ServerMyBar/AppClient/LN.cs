@@ -13,6 +13,8 @@ namespace AppClient
         private List<Pedido> historico;
         private Socket master;
 
+        private string email_idCliente;
+
 
         public LN()
         {
@@ -46,7 +48,11 @@ namespace AppClient
             master.Receive(log);
             bool login = BitConverter.ToBoolean(log, 0);
 
-            if (login) Console.WriteLine("Sign me in");
+            if (login)
+            {
+                Console.WriteLine("Sign me in");
+                email_idCliente = email;
+            }
             else Console.WriteLine("Dont mess with the system");
 
             return login;
@@ -65,11 +71,56 @@ namespace AppClient
             return dic;
         }
 
+        public Pedido RecebePedido()
+        {
+            int posicao = 0;
+            int size = 100;
+            byte[] data = new byte[size];
 
-        //+VerPedidosAnteriores() : Lista Pedidos
+            int readBytes = -1;
+            master.Receive(data, 0, 4, SocketFlags.None); // 4bytes ->1 int que é o tamanho de bytes a recebr
+            int numero_total = BitConverter.ToInt32(data, 0);
+            /*
+            while (readBytes != 0 && numero_total - 1 > posicao)
+            {
+                readBytes = master.Receive(data, posicao, size - posicao, SocketFlags.None);
+                posicao += readBytes;
+                if (posicao >= size - 1)
+                {
+                    System.Array.Resize(ref data, size * 2);
+                    size *= 2;
+                }
 
-        public List<Pedido> PedidosAnteriores(int idCliente) {
+            }*/
+
+            data = new byte[numero_total];
+            master.Receive(data, numero_total, SocketFlags.None);
+
+            return Pedido.loadFromBytes(data);
+        }
+
+        public List<Pedido> PedidosAnteriores(string idCliente) {
             List<Pedido> anteriores = new List<Pedido>();
+
+            //id operacao
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(2);
+            master.Send(id);
+
+            //id do cliente
+            byte[] msg = new byte[512];
+            msg = Encoding.ASCII.GetBytes(idCliente);
+            master.Send(msg);
+
+            //recebe o numero de pedidos da lista
+            master.Receive(id, 0, 4, SocketFlags.None);
+            int numPedidos = BitConverter.ToInt32(id, 0);
+
+            //recebe os pedidos todos
+            for(int i = 0; i < numPedidos; i++)
+            {
+                anteriores.Add(RecebePedido());
+            }
 
             return anteriores;
         }
@@ -128,9 +179,22 @@ namespace AppClient
             return r;
         }
 
+        public void AdicionarAosFavoritos(int idProduto)
+        {
+            //envia id operacao
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(6);
+            master.Send(id);
 
-        //+AdicionarAosFavoritos(idProduto : int) : void
+            //envia idProduto
+            id = BitConverter.GetBytes(idProduto);
+            master.Send(id);
 
+            //envia idCliente
+            byte[] msg = new byte[512];
+            msg = Encoding.ASCII.GetBytes(email_idCliente);
+            master.Send(msg);
+        } 
 
         public int EfetuarPedido(Pedido p)
         {
@@ -166,7 +230,11 @@ namespace AppClient
             master.Receive(log);
             bool login = BitConverter.ToBoolean(log, 0);
 
-            if (login) Console.WriteLine("i'm in you crazy bastard");
+            if (login)
+            {
+                Console.WriteLine("i'm in you crazy bastard");
+                email_idCliente = email;
+            }
             else Console.WriteLine("we will get em next time");
         }
 
@@ -179,7 +247,50 @@ namespace AppClient
         }
 
 
-        //+reclamacao(idCliente : int, idPedido : int, comentario : string) : boolean
+        public bool reclamacao(int idPedido, string motivo, string reclamacao)
+        {
+            //envia id operacao
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(12);
+            master.Send(id);
+
+            //envia id pedido
+            id = new byte[4];
+            id = BitConverter.GetBytes(idPedido);
+            master.Send(id);
+
+            //envia tamanho motivo
+            int tamanhoString = motivo.Length;
+            id = BitConverter.GetBytes(tamanhoString);
+            master.Send(id);
+            //envia motivo
+            byte[] msg = new byte[tamanhoString];
+            msg = Encoding.ASCII.GetBytes(motivo);
+            master.Send(msg);
+
+            //envia tamanho reclamacao
+            tamanhoString = reclamacao.Length;
+            id = BitConverter.GetBytes(tamanhoString);
+            master.Send(id);
+            //envia reclamacao
+            msg = new byte[tamanhoString];
+            msg = Encoding.ASCII.GetBytes(reclamacao);
+            master.Send(msg);
+
+            //recebe confirmacao se a reclamacao foi feita com sucesso ou nao
+            master.Receive(id, 0, 4, SocketFlags.None);
+            int confirmacao = BitConverter.ToInt32(id, 0);
+
+            if (confirmacao == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
 
 
         public void enviaPedido(Pedido p)

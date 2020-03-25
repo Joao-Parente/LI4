@@ -31,7 +31,7 @@ namespace AppClient{
                 // 11 RegistarNovoCliente
                 // 12 Reclamacao
 
-                Console.WriteLine("Insira: \n 3 para Alterar um pedido \n 4 para Fazer um pedido \n 5 para NoUlitmoPedido \n 9 para Fazer login  \n 11 para Registar");
+                Console.WriteLine("Insira: \n 1 para Ver Produtos \n 2 para ver os Pedidos Anteriores \n 3 para Alterar um pedido \n 4 para Fazer um pedido \n 5 para NoUlitmoPedido \n 6 para adicionar um novo produto aos favoritos \n 9 para Fazer login  \n 11 para Registar");
                 input = Convert.ToInt32(Console.ReadLine());
 
                 switch (input){
@@ -39,9 +39,10 @@ namespace AppClient{
                         ln.verProdutos();
                         break;
                     case 2: //pedidos anterioresString produtos;
-                        Console.WriteLine("Insira o ID do cliente");
-                        int idCliente = Convert.ToInt32(Console.ReadLine());
-                        ln.PedidosAnteriores(idCliente);
+                        Console.WriteLine("Insira o email do cliente");
+                        string idCliente = Console.ReadLine();
+                        List<Pedido> pAnteriores = ln.PedidosAnteriores(idCliente);
+
                         break;
                     case 3: //Alterar Pedido
                         String produtos;
@@ -70,7 +71,12 @@ namespace AppClient{
                         break;
                     case 5: // NoUlitmoPedido
                         List<int> numeros = ln.NoUltimoPedido();
-                        break;                    
+                        break;
+                    case 6: //Adicionar um produto aos favoritos
+                        Console.WriteLine("Insira o id do produto");
+                        int idProduto = Convert.ToInt32(Console.ReadLine());
+                        ln.AdicionarAosFavoritos(idProduto);
+                        break;
                     case 9: // Login
                         Console.WriteLine("Starting authentication");
                         //Parse email e password
@@ -92,6 +98,30 @@ namespace AppClient{
                         Console.WriteLine("Insira nome");
                         string n = Console.ReadLine();
                         ln.RegistaUtilizador(e, p, n);
+                        break;
+                    case 12: //fazer reclamacao
+
+                        //recebe o id do pedido
+                        Console.WriteLine("Insira o id do pedido");
+                        int idPedidoReclamacao = Convert.ToInt32(Console.ReadLine());
+
+                        //recebe o motivo da reclamacao
+                        Console.WriteLine("Insira o motivo da reclamacao");
+                        string motivo = Console.ReadLine();
+
+                        //recebe a reclamacao propriamente dita
+                        Console.WriteLine("Insira a reclamacao que deseja fazer");
+                        String reclamacao = Console.ReadLine();
+
+                        bool f = ln.reclamacao(idPedidoReclamacao, motivo, reclamacao);
+                        if (f == true)
+                        {
+                            Console.WriteLine("CORREU TUDO BEM!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("CORREU TUDO MAL!");
+                        }
                         break;
                     default:
                         flag = false;

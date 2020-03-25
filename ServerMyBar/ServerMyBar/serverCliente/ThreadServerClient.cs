@@ -58,8 +58,33 @@ namespace ServerMyBar.serverCliente
                         //enviar o dicionario
                         break;
                     case 2: //Pedidos Anteriores
-                        socket.Receive(data, 0, 4, SocketFlags.None);
-                        int idCliente = BitConverter.ToInt32(data, 0);
+
+                        //Recebe id do cliente
+                        socket.Receive(data, 0, 512, SocketFlags.None);
+                        string idCliente = System.Text.Encoding.UTF8.GetString(data);
+
+                        //vai a base de dados tirar os pedidos todos
+                        //List<Pedido> pedidos = gestor.pedidosAnteriores(idCliente);
+
+                        List<Pedido> pedidos = new List<Pedido>();
+                        pedidos.Add(new Pedido());
+                        pedidos.Add(new Pedido());
+                        pedidos.Add(new Pedido());
+
+                        //envia o numero de pedidos da lista
+                        byte[] id = new byte[4];
+                        id = BitConverter.GetBytes(pedidos.Count);
+                        socket.Send(id);
+
+                        //envia os pedidos todos
+                        for(int i = 0; i < pedidos.Count; i++)
+                        {
+                            byte[] pedido = pedidos[i].SavetoBytes();
+                            socket.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
+                            socket.Send(pedido);
+                        }
+
+                        Console.WriteLine("Enviei os pedidos todos");
 
                         break;
                     case 3: //Alterar Pedido
@@ -93,6 +118,19 @@ namespace ServerMyBar.serverCliente
                         socket.Send(BitConverter.GetBytes(r[0]));
                         socket.Send(BitConverter.GetBytes(r[1]));
                         break;
+                    case 6: //Adicionar Produto aos favoritos
+
+                        //recebe o id do produto primeiro
+                        socket.Receive(data, 0, 4, SocketFlags.None);
+                        int idProduto = BitConverter.ToInt32(data, 0);
+
+                        //recebe o email do cliente
+                        socket.Receive(data, 0, 512, SocketFlags.None);
+                        string idCliente2 = System.Text.Encoding.UTF8.GetString(data);
+
+                        gestor.addProdutoFavoritos(idProduto, idCliente2);
+
+                        break;
                     case 9: // Login
                         Console.WriteLine("Starting authentication" + msg);
                         socket.Receive(data, 0, 512, SocketFlags.None);
@@ -115,6 +153,41 @@ namespace ServerMyBar.serverCliente
                         Console.WriteLine("Credencias : '" + cred[0] + "'  --- '" + cred[1] + "'" + "'  --- '" + cred[2] + "'");
                         if (gestor.registarCliente(cred[0], cred[1], cred[2])) { Console.WriteLine("Registation succeed"); socket.Send(BitConverter.GetBytes(true)); }
                         else { Console.WriteLine("Registation failed"); socket.Send(BitConverter.GetBytes(false)); }
+                        break;
+                    case 12: //adicionar Reclamacao
+
+                        //recebe id produto
+                        socket.Receive(data, 0, 4, SocketFlags.None);
+                        int idPedido2 = BitConverter.ToInt32(data, 0);
+
+                        //recebe tamanho motivo
+                        socket.Receive(data, 0, 4, SocketFlags.None);
+                        int tamanhoString = BitConverter.ToInt32(data, 0);
+                        //Recebe motivo
+                        byte[] dados = new byte[tamanhoString];
+                        socket.Receive(dados, tamanhoString, SocketFlags.None);
+                        string motivo = System.Text.Encoding.UTF8.GetString(dados);
+
+                        //recebe tamanho reclamacao
+                        socket.Receive(data, 0, 4, SocketFlags.None);
+                        tamanhoString = BitConverter.ToInt32(data, 0);
+                        //recebe reclamacao
+                        dados = new byte[tamanhoString];
+                        socket.Receive(dados, tamanhoString, SocketFlags.None);
+                        string reclamacao = System.Text.Encoding.UTF8.GetString(dados);
+
+                        //envia para o cliente se a reclamacao foi adicionada com sucesso ou nao
+                        byte[] idreclamacao = new byte[4];
+                        if (gestor.AddReclamacao(idPedido2, motivo, reclamacao) == true)
+                        {
+                            idreclamacao = BitConverter.GetBytes(1);
+                            socket.Send(idreclamacao);
+                        }
+                        else
+                        {
+                            idreclamacao = BitConverter.GetBytes(0);
+                            socket.Send(idreclamacao);
+                        }
                         break;
                     default:
                         flag = false;
