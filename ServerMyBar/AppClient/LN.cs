@@ -12,9 +12,7 @@ namespace AppClient
         private List<Produto> favoritos;
         private List<Pedido> historico;
         private Socket master;
-
         private string email_idCliente;
-
 
         public LN()
         {
@@ -28,9 +26,7 @@ namespace AppClient
             {
                 Console.WriteLine("Exception: " + e.Message);
             }
-
         }
-
 
         public Boolean RegistaUtilizador(string email, string password, string nome)
         {
@@ -59,25 +55,71 @@ namespace AppClient
         }
 
 
+        public Produto RecebeProduto()
+        {
+            int size = 100;
+            byte[] data = new byte[size];
+
+      
+            master.Receive(data, 0, 4, SocketFlags.None);
+            int numero_total = BitConverter.ToInt32(data, 0);
+
+            data = new byte[numero_total];
+            master.Receive(data, numero_total, SocketFlags.None);
+
+            return Produto.loadFromBytes(data);
+        }
+
         public Dictionary<string, List<Produto>> verProdutos()
         {
             Dictionary<string, List<Produto>> dic = new Dictionary<string, List<Produto>>();
+
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(1);
             master.Send(id);
 
-            //Falta receber o dicionario
+            byte[] tamT = new byte[4];
+            master.Receive(tamT, 0, 4, SocketFlags.None);
+            int numTipos = BitConverter.ToInt32(tamT, 0);
 
+            for (int i = 0; i < numTipos; i++)
+            {
+                byte[] nome = new byte[512];
+                master.Receive(nome, 0, 512, SocketFlags.None);
+                string nom = BitConverter.ToString(nome, 0);
+
+                byte[] tamN = new byte[4];
+                master.Receive(tamN, 0, 4, SocketFlags.None);
+                int numNom = BitConverter.ToInt32(tamN, 0);
+
+                for (int j = 0; j < numNom; j++)
+                {
+                    if (dic.ContainsKey(nom))
+                    {
+                        Produto p = RecebeProduto();
+                        List<Produto> lp = new List<Produto>();
+                        dic.TryGetValue(nom, out lp);
+                        lp.Add(p);
+                        dic.Add(nom, lp);
+                    }
+                    else
+                    {
+                        Produto p = RecebeProduto();
+                        List<Produto> lp = new List<Produto>();
+                        lp.Add(p);
+                        dic.Add(nom, lp);
+                    }
+                }
+
+            }
             return dic;
         }
 
         public Pedido RecebePedido()
         {
-            int posicao = 0;
             int size = 100;
             byte[] data = new byte[size];
 
-            int readBytes = -1;
             master.Receive(data, 0, 4, SocketFlags.None); // 4bytes ->1 int que é o tamanho de bytes a recebr
             int numero_total = BitConverter.ToInt32(data, 0);
             /*
@@ -92,14 +134,14 @@ namespace AppClient
                 }
 
             }*/
-
             data = new byte[numero_total];
             master.Receive(data, numero_total, SocketFlags.None);
 
             return Pedido.loadFromBytes(data);
         }
 
-        public List<Pedido> PedidosAnteriores(string idCliente) {
+        public List<Pedido> PedidosAnteriores(string idCliente)
+        {
             List<Pedido> anteriores = new List<Pedido>();
 
             //id operacao
@@ -117,7 +159,7 @@ namespace AppClient
             int numPedidos = BitConverter.ToInt32(id, 0);
 
             //recebe os pedidos todos
-            for(int i = 0; i < numPedidos; i++)
+            for (int i = 0; i < numPedidos; i++)
             {
                 anteriores.Add(RecebePedido());
             }
@@ -167,7 +209,7 @@ namespace AppClient
             master.Receive(num, 4, SocketFlags.None);
             int y = BitConverter.ToInt32(num);
 
-            r.Add(x); 
+            r.Add(x);
             r.Add(y);
 
             Console.WriteLine("Numero ultimo pedido" + x + "e o outro " + y);
@@ -202,7 +244,7 @@ namespace AppClient
             {
                 return false;
             }
-        } 
+        }
 
         public int EfetuarPedido(Pedido p)
         {
@@ -300,14 +342,11 @@ namespace AppClient
 
         }
 
-
         public void enviaPedido(Pedido p)
         {
             byte[] pedido = p.SavetoBytes();
             master.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
             master.Send(pedido);
         }
-
-        
     }
 }

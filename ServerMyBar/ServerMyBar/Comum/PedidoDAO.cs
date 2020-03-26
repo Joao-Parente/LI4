@@ -10,7 +10,7 @@ namespace ServerMyBar.comum
         public string idEmpregado { get; set; }
         public DateTime datahora { get; set; }
 
-        public AnterioresAuxiliar(int i,string ie,DateTime da)
+        public AnterioresAuxiliar(int i, string ie, DateTime da)
         {
             idPedido = i;
             idEmpregado = ie;
@@ -20,33 +20,6 @@ namespace ServerMyBar.comum
 
     public class PedidoDAO
     {
-        public static void avaliar(string idCliente, int idPedido, int aval)
-        {
-            MySqlConnection conn;
-            string myConnectionString;
-            myConnectionString = @"server=127.0.0.1;uid=root;" +
-                                 "pwd=password;database=LI_Database";
-            try
-            {
-                conn = new MySqlConnection(myConnectionString);
-                conn.Open();
-
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;
-
-                string query = "UPDATE LI_Database.Pedido SET avaliacao=" + aval + " WHERE idPedido=" + idPedido + " AND idCliente='" + idCliente + "';";
-
-                cmd.CommandText = query;
-                cmd.Prepare();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                Console.WriteLine("Exception " + ex.Message);
-            }
-        }
-
         public static List<Pedido> anteriores(string idCliente)
         {
             List<Pedido> ret = new List<Pedido>();
@@ -69,7 +42,7 @@ namespace ServerMyBar.comum
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                
+
                 if (reader.HasRows)
                 {/*
                     while (reader.Read())
@@ -140,7 +113,7 @@ namespace ServerMyBar.comum
 
                     reader.Close();
 
-                    for(int i= 0; i < auxy.Count; i++)
+                    for (int i = 0; i < auxy.Count; i++)
                     {
                         query = "SELECT * FROM listapedidos WHERE idPedido=" + auxy[i].idPedido + ";";
                         cmd.CommandText = query;

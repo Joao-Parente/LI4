@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace AppGestor
     {
-    {
+    
         public class Pedido
         {
             public int id { get; set; }

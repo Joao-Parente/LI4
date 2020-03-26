@@ -21,17 +21,18 @@ namespace ServerMyBar.comum
         }
 
         public static Empregado getInfoEmpregado(string e, string p)
-        {           
+        {
             MySqlConnection conn;
             string myConnectionString;
             myConnectionString = @"server=127.0.0.1;uid=root;" +
                                     "pwd=password;database=LI_Database";
-            try{
+            try
+            {
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
 
                 MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;         
+                cmd.Connection = conn;
 
                 string query = "SELECT * FROM LI_Database.Empregado where email='" + e + "' and password='" + p + "';";
                 cmd.CommandText = query;
@@ -42,8 +43,8 @@ namespace ServerMyBar.comum
                 {
                     while (reader.Read())
                     {
-                        Console.WriteLine( reader.GetInt32(0)+ "| "+ reader.GetString(1) +"| "+ reader.GetString(2) +"| "+ reader.GetString(3));
-                        return new Empregado(reader.GetInt32(0),reader.GetString(1),reader.GetString(2),reader.GetString(3),reader.GetBoolean(4));
+                        Console.WriteLine(reader.GetInt32(0) + "| " + reader.GetString(1) + "| " + reader.GetString(2) + "| " + reader.GetString(3));
+                        return new Empregado(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetBoolean(4));
                     }
                 }
                 else
@@ -53,7 +54,7 @@ namespace ServerMyBar.comum
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                Console.WriteLine("Exception "+ex.Message);
+                Console.WriteLine("Exception " + ex.Message);
             }
             return null;
         }
