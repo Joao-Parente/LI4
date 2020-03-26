@@ -125,10 +125,6 @@ namespace AppClient
             return anteriores;
         }
 
-
-        // +AlterarPedido(idPedido : int, produtos : Lista Produtos) : boolean
-
-
         public Boolean alterarPedido(int a, int idPedido, String produtos)
         {
             //envia id operacao
@@ -154,7 +150,6 @@ namespace AppClient
             return true;
         }
 
-
         public List<int> NoUltimoPedido()
         {
             List<int> r = new List<int>();
@@ -179,7 +174,7 @@ namespace AppClient
             return r;
         }
 
-        public void AdicionarAosFavoritos(int idProduto)
+        public bool AdicionarAosFavoritos(int idProduto)
         {
             //envia id operacao
             byte[] id = new byte[4];
@@ -191,9 +186,22 @@ namespace AppClient
             master.Send(id);
 
             //envia idCliente
-            byte[] msg = new byte[512];
-            msg = Encoding.ASCII.GetBytes(email_idCliente);
+            byte[] msg = new byte[512]; //falta por o email dele aqui
+            msg = Encoding.ASCII.GetBytes("aaa");
             master.Send(msg);
+
+            //recebe confirmacao se o produto foi adicionado com sucesso ou nao
+            master.Receive(id, 0, 4, SocketFlags.None);
+            int confirmacao = BitConverter.ToInt32(id, 0);
+
+            if (confirmacao == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         } 
 
         public int EfetuarPedido(Pedido p)

@@ -77,6 +77,35 @@ namespace ServerMyBar.comum
             return null;
         }
 
+        public static bool addProdutoFavoritos(int idProduto,string idCliente)
+        {
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                 "pwd=password;database=LI_Database";
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+
+                string query = "insert into produtosfavoritos values ('" + idCliente + "'," + idProduto + ");";
+                cmd.CommandText = query;
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+                return true;
+
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine("Exception " + ex.Message);
+                return false;
+            }
+        }
+
 
         public static Dictionary<string, List<Produto>> getAllProdutos()
         {

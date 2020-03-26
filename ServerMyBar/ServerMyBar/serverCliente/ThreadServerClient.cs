@@ -65,11 +65,6 @@ namespace ServerMyBar.serverCliente
 
                         //vai a base de dados tirar os pedidos todos
                         List<Pedido> pedidos = gestor.pedidosAnteriores(idCliente.Replace("\0", string.Empty));
-                        /*
-                        List<Pedido> pedidos = new List<Pedido>();
-                        pedidos.Add(new Pedido());
-                        pedidos.Add(new Pedido());
-                        pedidos.Add(new Pedido());*/
 
                         //envia o numero de pedidos da lista
                         byte[] id = new byte[4];
@@ -120,7 +115,7 @@ namespace ServerMyBar.serverCliente
                         break;
                     case 6: //Adicionar Produto aos favoritos
 
-                        //recebe o id do produto primeiro
+                        //recebe o id do produto
                         socket.Receive(data, 0, 4, SocketFlags.None);
                         int idProduto = BitConverter.ToInt32(data, 0);
 
@@ -128,7 +123,17 @@ namespace ServerMyBar.serverCliente
                         socket.Receive(data, 0, 512, SocketFlags.None);
                         string idCliente2 = System.Text.Encoding.UTF8.GetString(data);
 
-                        gestor.addProdutoFavoritos(idProduto, idCliente2);
+                        byte[] idaddProdFav = new byte[4];
+                        if (gestor.addProdutoFavoritos(idProduto, idCliente2.Replace("\0", string.Empty)) == true)
+                        {
+                            idaddProdFav = BitConverter.GetBytes(1);
+                            socket.Send(idaddProdFav);
+                        }
+                        else
+                        {
+                            idaddProdFav = BitConverter.GetBytes(0);
+                            socket.Send(idaddProdFav);
+                        }
 
                         break;
                     case 9: // Login

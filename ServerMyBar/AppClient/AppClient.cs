@@ -31,7 +31,7 @@ namespace AppClient{
                 // 11 RegistarNovoCliente
                 // 12 Reclamacao
 
-                Console.WriteLine("Insira: \n 1 para Ver Produtos \n 2 para ver os Pedidos Anteriores \n 3 para Alterar um pedido \n 4 para Fazer um pedido \n 5 para NoUlitmoPedido \n 6 para adicionar um novo produto aos favoritos \n 9 para Fazer login  \n 11 para Registar");
+                Console.WriteLine("Insira: \n 1 para Ver Produtos \n 2 para ver os Pedidos Anteriores \n 3 para Alterar um pedido \n 4 para Fazer um pedido \n 5 para NoUlitmoPedido \n 6 para adicionar um novo produto aos favoritos \n 9 para Fazer login  \n 11 para Registar \n 12 para fazer uma reclamacao");
                 input = Convert.ToInt32(Console.ReadLine());
 
                 switch (input){
@@ -67,7 +67,7 @@ namespace AppClient{
                         }
                         break;
                     case 4: //Novo_Pedido
-                        //ln.EfetuarPedido(new Pedido());
+                        ln.EfetuarPedido(new Pedido());
                         break;
                     case 5: // NoUlitmoPedido
                         List<int> numeros = ln.NoUltimoPedido();
@@ -75,7 +75,15 @@ namespace AppClient{
                     case 6: //Adicionar um produto aos favoritos
                         Console.WriteLine("Insira o id do produto");
                         int idProduto = Convert.ToInt32(Console.ReadLine());
-                        ln.AdicionarAosFavoritos(idProduto);
+                        bool response6 = ln.AdicionarAosFavoritos(idProduto);
+                        if (response6 == true)
+                        {
+                            Console.WriteLine("CORREU TUDO BEM!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("CORREU TUDO MAL!");
+                        }
                         break;
                     case 9: // Login
                         Console.WriteLine("Starting authentication");

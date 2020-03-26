@@ -1,13 +1,12 @@
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 
 namespace ServerMyBar.comum
 {
     public class ReclamacaoDAO
     {
 
-        public static List<Reclamacao> getReclamacoes(int idPedido)
+        public static Reclamacao getReclamacao(int idPedido)
         {
             MySqlConnection conn;
             string myConnectionString;
@@ -31,12 +30,11 @@ namespace ServerMyBar.comum
 
                 if (reader.HasRows)
                 {
-                    List<Reclamacao> ret = new List<Reclamacao>();
                     while (reader.Read())
                     {
-                        ret.Add(new Reclamacao((int)reader.GetInt64(0), reader.GetString(1), reader.GetString(2)));
+                        Reclamacao ret=new Reclamacao((int)reader.GetInt64(0), reader.GetString(1), reader.GetString(2),reader.GetDateTime(3));
+                        return ret;
                     }
-                    return ret;
                 }
                 else
                 {
@@ -66,7 +64,7 @@ namespace ServerMyBar.comum
 
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn; //pode haver problema no reclamacao comecar por letra minuscula
-                cmd.CommandText = "INSERT INTO reclamacao values("+idPedido+",'" + motivo + "','" + reclamacao + "');";
+                cmd.CommandText = "INSERT INTO reclamacao values("+idPedido+",'" + motivo + "','" + reclamacao + "',now());";
                 cmd.Prepare();
 
                 cmd.ExecuteNonQuery();

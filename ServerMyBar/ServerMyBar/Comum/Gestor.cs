@@ -96,12 +96,11 @@ namespace ServerMyBar.comum
             }
         }
 
-        public void addProdutoFavoritos(int idProduto, string idCliente)
+        public bool addProdutoFavoritos(int idProduto, string idCliente)
         {
             lock (this)
             {
-                //Mando para onde? idk
-                return;
+                return ProdutoDAO.addProdutoFavoritos(idProduto,idCliente);
             }
         }
 
@@ -170,11 +169,11 @@ namespace ServerMyBar.comum
         //+getReclamacao(int id) : Server.Reclamacao
 
 
-        public List<Reclamacao> GetReclamacoes(int idPedido)
+        public Reclamacao GetReclamacoes(int idPedido)
         {
             lock (this)
             {
-                return ReclamacaoDAO.getReclamacoes(idPedido);
+                return ReclamacaoDAO.getReclamacao(idPedido);
             }
         }
         
