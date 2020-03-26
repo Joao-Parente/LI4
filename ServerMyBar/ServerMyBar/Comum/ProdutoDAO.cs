@@ -63,7 +63,7 @@ namespace ServerMyBar.comum
                         Produto prod = new Produto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetFloat(5));
                         return prod;
                     }
-                    
+
                 }
                 else
                 {
@@ -77,7 +77,7 @@ namespace ServerMyBar.comum
             return null;
         }
 
-        public static bool addProdutoFavoritos(int idProduto,string idCliente)
+        public static bool addProdutoFavoritos(int idProduto, string idCliente)
         {
             MySqlConnection conn;
             string myConnectionString;
@@ -132,7 +132,7 @@ namespace ServerMyBar.comum
                 {
                     while (reader.Read())
                     {
-                        Produto p = new Produto((int) reader.GetInt64(0), (string) reader.GetString(1), (string) reader.GetString(2), (string) reader.GetString(3), (int) reader.GetUInt64(4), (float) reader.GetFloat(5));
+                        Produto p = new Produto((int)reader.GetInt64(0), (string)reader.GetString(1), (string)reader.GetString(2), (string)reader.GetString(3), reader.GetInt32(4), reader.GetFloat(5));
                         if (dic.ContainsKey(reader.GetString(1)))
                         {
                             List<Produto> lp = new List<Produto>();
@@ -151,12 +151,12 @@ namespace ServerMyBar.comum
                 }
                 else
                 {
-                    Console.WriteLine(" !!no rows found.!!");
+                    Console.WriteLine(" !!no rows found!!");
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                Console.WriteLine("Exception " + ex.Message);
+                Console.WriteLine("MySqlException: " + ex.Message);
             }
             return null;
         }

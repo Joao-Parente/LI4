@@ -62,7 +62,7 @@ namespace ServerMyBar.comum
         //+addProduct(p : Produto) : int
 
 
-        public void adicionarProdutos(int idPedido, String[] produtos)
+        public void adicionarProdutos(int idPedido, string[] produtos)
         {
             lock (this)
             {
@@ -81,7 +81,7 @@ namespace ServerMyBar.comum
         //+removeProduct(id : int)
 
 
-        public void removerProdutos(int idPedido, String[] produtos)
+        public void removerProdutos(int idPedido, string[] produtos)
         {
             lock (this)
             {
@@ -100,7 +100,7 @@ namespace ServerMyBar.comum
         {
             lock (this)
             {
-                return ProdutoDAO.addProdutoFavoritos(idProduto,idCliente);
+                return ProdutoDAO.addProdutoFavoritos(idProduto, idCliente);
             }
         }
 
@@ -176,14 +176,14 @@ namespace ServerMyBar.comum
                 return ReclamacaoDAO.getReclamacao(idPedido);
             }
         }
-        
-        public bool AddReclamacao(int idPedido,string motivo,string reclamacao)
+
+        public bool AddReclamacao(int idPedido, string motivo, string reclamacao)
         {
             lock (this)
             {
                 return ReclamacaoDAO.addReclamacao(idPedido, motivo, reclamacao);
             }
-            
+
         }
 
 
@@ -197,7 +197,7 @@ namespace ServerMyBar.comum
             }
         }
 
-        public List<Pedido> pedidosAnteriores (string idCliente)
+        public List<Pedido> pedidosAnteriores(string idCliente)
         {
             lock (this)
             {
@@ -222,16 +222,6 @@ namespace ServerMyBar.comum
 
         //+verInfoEmpresa() : List sring
 
-
-        //+avaliarProduto(idCliente : int, idProduto : int, avaliacao : int)
-
-        public void avaliarProduto(string idCliente, int idProduto, int avaliacao)
-        {
-            lock (this)
-            {
-                PedidoDAO.avaliar(idCliente, idProduto, avaliacao);
-            }
-        }
 
         public bool registarCliente(string email, string password, string nome)
         {

@@ -12,13 +12,10 @@ namespace ServerMyBar.comum
     {
         public static Cliente getInfoCliente(string e, string p)
         {
-           
             MySqlConnection conn;
             string myConnectionString;
-
             myConnectionString = @"server=127.0.0.1;uid=root;" +
                                  "pwd=password;database=LI_Database";
-
             try{
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
@@ -46,7 +43,7 @@ namespace ServerMyBar.comum
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                Console.WriteLine("Exception "+ex.Message);
+                Console.WriteLine("MySqlException: " + ex.Message);
             }
             return null;
         }
@@ -65,18 +62,17 @@ namespace ServerMyBar.comum
             {
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
-              
+                
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = "INSERT INTO Cliente VALUES('"   +  email+"','"+password+"','"+nome+"')";
                 cmd.Prepare();
            
-                //cmd.Parameters.AddWithValue("@Name", "Trygve Gulbranssen");
                 cmd.ExecuteNonQuery();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                Console.WriteLine("Exception"+ex.Message);
+                Console.WriteLine("MySqlException: " + ex.Message);
                 return false;
             }
             return  true;

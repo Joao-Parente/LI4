@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using System.Text;
 using ServerMyBar.comum;
 
 
@@ -55,7 +56,32 @@ namespace ServerMyBar.serverCliente
                     case 1: //VerProdutos
                         Dictionary<string, List<Produto>> map = new Dictionary<string, List<Produto>>();
                         map = gestor.VerProdutos();
-                        //enviar o dicionario
+
+                        byte[] tamT = new byte[4];
+                        tamT = BitConverter.GetBytes(map.Count);
+                        socket.Send(tamT);
+
+                        foreach (string name in map.Keys)
+                        {
+                            byte[] nome = new byte[512];
+                            nome = Encoding.ASCII.GetBytes(name);
+                            socket.Send(nome);
+
+                            List<Produto> lp = new List<Produto>();
+                            map.TryGetValue(name, out lp);
+
+                            byte[] tamN = new byte[4];
+                            tamN = BitConverter.GetBytes(lp.Count);
+                            socket.Send(tamN);
+
+                            for (int j = 0; j < lp.Count; j++)
+                            {
+                                byte[] produto = lp[j].SavetoBytes();
+                                socket.Send(BitConverter.GetBytes(produto.Length));
+                                socket.Send(produto);
+                            }
+                        }
+
                         break;
                     case 2: //Pedidos Anteriores
 
@@ -72,7 +98,7 @@ namespace ServerMyBar.serverCliente
                         socket.Send(id);
 
                         //envia os pedidos todos
-                        for(int i = 0; i < pedidos.Count; i++)
+                        for (int i = 0; i < pedidos.Count; i++)
                         {
                             byte[] pedido = pedidos[i].SavetoBytes();
                             socket.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
