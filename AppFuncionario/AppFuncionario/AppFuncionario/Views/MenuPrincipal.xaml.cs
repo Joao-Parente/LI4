@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -13,7 +15,7 @@ namespace AppFuncionario
     public partial class MenuPrincipal : ContentPage
     {
 
-        public List<Pedido> Pedidos { get; set; }
+        public ObservableCollection<Pedido> Pedidos { get; set; }
 
         public MenuPrincipal()
         {
@@ -22,9 +24,9 @@ namespace AppFuncionario
             Produto p2 = new Produto("Folhado Misto", (float)0.8);
             List<Produto> ps = new List<Produto>();
             ps.Add(p);ps.Add(p2);
-            Pedidos = new List<Pedido>();
-            Pedidos.Add(new Pedido(1, 4, "zulmiramail", "Gluten Free", DateTime.Now, ps));
-            Pedidos.Add(new Pedido(1, 4, "acaciomail", "Vegan", DateTime.Now, ps));
+            Pedidos = new ObservableCollection<Pedido>();
+            Pedidos.Add(new Pedido(1, "zulmiramail", "Sem atum", DateTime.Now, ps));
+            Pedidos.Add(new Pedido(2, "acaciomail", "Sem fiambre", DateTime.Now, ps));
             ViewPedido.ItemsSource = Pedidos;
         }
 
@@ -47,7 +49,10 @@ namespace AppFuncionario
 
         private void CarregueiBotaoMagico(object sender, EventArgs e)
         {
-            
+            ThreadNovosPedidos tnp = new ThreadNovosPedidos(ViewPedido, Pedidos);
+            Thread a = new Thread(tnp.run);
+            a.Start();
+            BotaoMagico.IsVisible = false;
         }
     }
 }

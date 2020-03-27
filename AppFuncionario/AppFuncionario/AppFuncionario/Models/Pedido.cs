@@ -8,17 +8,16 @@ namespace AppFuncionario
     public class Pedido : ViewCell
     {
         public int IdPedido { get; set; }
-        public int IdCliente { get; set; }
         public string EmailCliente { get; set; }
         public string Detalhes { get; set; }
         public DateTime DataHora { get; set; }
         public List<Produto> Produtos { get; set; }
         public string PreviewProdutos { get; set; }
+        public string EstadoPreparacao { get; set; }
 
-        public Pedido(int idP,int idC,string eC,string d,DateTime dH,List<Produto> ps)
+        public Pedido(int idP,string eC,string d,DateTime dH,List<Produto> ps)
         {
             this.IdPedido = idP;
-            this.IdCliente = idC;
             this.EmailCliente = eC;
             this.Detalhes = d;
             this.DataHora = dH;
@@ -40,6 +39,7 @@ namespace AppFuncionario
                 }               
             }
             this.PreviewProdutos = sb.ToString();
+            this.EstadoPreparacao = "Por Preparar";
         }
 
 
