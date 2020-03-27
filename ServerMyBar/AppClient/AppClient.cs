@@ -40,7 +40,7 @@ namespace AppClient
                 switch (input)
                 {
                     case 1: //VerProdutos
-                        ln.verProdutos();
+                        Dictionary<string, List<Produto>>  map = ln.verProdutos();
                         break;
                     case 2: //pedidos anterioresString produtos;
                         Console.WriteLine("Insira o email do cliente");

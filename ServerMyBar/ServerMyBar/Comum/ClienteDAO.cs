@@ -16,7 +16,8 @@ namespace ServerMyBar.comum
             string myConnectionString;
             myConnectionString = @"server=127.0.0.1;uid=root;" +
                                  "pwd=password;database=LI_Database";
-            try{
+            try
+            {
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
 
@@ -32,8 +33,8 @@ namespace ServerMyBar.comum
                 {
                     while (reader.Read())
                     {
-                        Console.WriteLine( reader.GetString(0)+ "| "+ reader.GetString(1) );
-                        return new Cliente(reader.GetString(0),reader.GetString(1),reader.GetString(2));
+                        Console.WriteLine(reader.GetString(0) + "| " + reader.GetString(1));
+                        return new Cliente(reader.GetString(0), reader.GetString(1), reader.GetString(2));
                     }
                 }
                 else
@@ -47,11 +48,11 @@ namespace ServerMyBar.comum
             }
             return null;
         }
-        
+
 
         public static Boolean registaCliente(string email, string password, string nome)
         {
-            Console.WriteLine("Nome no dao "+nome);
+            Console.WriteLine("Nome no dao " + nome);
             MySqlConnection conn;
             string myConnectionString;
 
@@ -62,12 +63,12 @@ namespace ServerMyBar.comum
             {
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
-                
+
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO Cliente VALUES('"   +  email+"','"+password+"','"+nome+"')";
+                cmd.CommandText = "INSERT INTO Cliente VALUES('" + email + "','" + password + "','" + nome + "')";
                 cmd.Prepare();
-           
+
                 cmd.ExecuteNonQuery();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -75,7 +76,7 @@ namespace ServerMyBar.comum
                 Console.WriteLine("MySqlException: " + ex.Message);
                 return false;
             }
-            return  true;
+            return true;
         }
     }
 }
