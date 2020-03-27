@@ -23,7 +23,7 @@ namespace AppCliente
             this.Password = passwordEntry.Text;
             if(this.LN.RegistaUtilizador(this.Email, this.Password, this.Nome) == true)
             {
-                Application.Current.MainPage = new MenuCliente();
+                Application.Current.MainPage = new MenuCliente(this.LN);
             }
             else
             {

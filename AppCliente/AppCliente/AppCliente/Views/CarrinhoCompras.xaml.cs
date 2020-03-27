@@ -13,7 +13,7 @@ namespace AppCliente
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CarrinhoCompras
     {
-        List<Produto> produtos { get; set; }
+        List<ProdutoCell> produtos { get; set; }
 
         public CarrinhoCompras()
         {
@@ -22,31 +22,31 @@ namespace AppCliente
             Thread a = new Thread(tpt.run);
             a.Start();
 
-            Produto p = new Produto("Baguete de Atum", (float)0.9);
-            Produto p2 = new Produto("Baguete de Frango", (float)0.95);
-            Produto p3 = new Produto("Hamburguer", (float)1.5);
-            Produto p4 = new Produto("Cachorro", (float)1.2);
-            Produto p5 = new Produto("Folhado Misto", (float)0.8);
-            Produto p6 = new Produto("Folhado Carne", (float)0.8);
-            Produto p7 = new Produto("Folhado Chaves", (float)0.8);
-            Produto p8 = new Produto("Folhado Frango", (float)0.8);
-            Produto p9 = new Produto("Baguete de Atum", (float)0.9);
-            Produto p10 = new Produto("Baguete de Frango", (float)0.95);
-            Produto p11 = new Produto("Hamburguer", (float)1.5);
-            Produto p12 = new Produto("Cachorro", (float)1.2);
-            Produto p13 = new Produto("Folhado Misto", (float)0.8);
-            Produto p14 = new Produto("Folhado Carne", (float)0.8);
-            Produto p15 = new Produto("Folhado Chaves", (float)0.8);
-            Produto p16 = new Produto("Folhado Frango", (float)0.8);
-            Produto p17 = new Produto("Baguete de Atum", (float)0.9);
-            Produto p18 = new Produto("Baguete de Frango", (float)0.95);
-            Produto p19 = new Produto("Hamburguer", (float)1.5);
-            Produto p20 = new Produto("Cachorro", (float)1.2);
-            Produto p21 = new Produto("Folhado Misto", (float)0.8);
-            Produto p22 = new Produto("Folhado Carne", (float)0.8);
-            Produto p23 = new Produto("Folhado Chaves", (float)0.8);
-            Produto p24 = new Produto("Folhado Frango", (float)0.8);
-            produtos = new List<Produto>();
+            ProdutoCell p = new ProdutoCell("Baguete de Atum", (float)0.9);
+            ProdutoCell p2 = new ProdutoCell("Baguete de Frango", (float)0.95);
+            ProdutoCell p3 = new ProdutoCell("Hamburguer", (float)1.5);
+            ProdutoCell p4 = new ProdutoCell("Cachorro", (float)1.2);
+            ProdutoCell p5 = new ProdutoCell("Folhado Misto", (float)0.8);
+            ProdutoCell p6 = new ProdutoCell("Folhado Carne", (float)0.8);
+            ProdutoCell p7 = new ProdutoCell("Folhado Chaves", (float)0.8);
+            ProdutoCell p8 = new ProdutoCell("Folhado Frango", (float)0.8);
+            ProdutoCell p9 = new ProdutoCell("Baguete de Atum", (float)0.9);
+            ProdutoCell p10 = new ProdutoCell("Baguete de Frango", (float)0.95);
+            ProdutoCell p11 = new ProdutoCell("Hamburguer", (float)1.5);
+            ProdutoCell p12 = new ProdutoCell("Cachorro", (float)1.2);
+            ProdutoCell p13 = new ProdutoCell("Folhado Misto", (float)0.8);
+            ProdutoCell p14 = new ProdutoCell("Folhado Carne", (float)0.8);
+            ProdutoCell p15 = new ProdutoCell("Folhado Chaves", (float)0.8);
+            ProdutoCell p16 = new ProdutoCell("Folhado Frango", (float)0.8);
+            ProdutoCell p17 = new ProdutoCell("Baguete de Atum", (float)0.9);
+            ProdutoCell p18 = new ProdutoCell("Baguete de Frango", (float)0.95);
+            ProdutoCell p19 = new ProdutoCell("Hamburguer", (float)1.5);
+            ProdutoCell p20 = new ProdutoCell("Cachorro", (float)1.2);
+            ProdutoCell p21 = new ProdutoCell("Folhado Misto", (float)0.8);
+            ProdutoCell p22 = new ProdutoCell("Folhado Carne", (float)0.8);
+            ProdutoCell p23 = new ProdutoCell("Folhado Chaves", (float)0.8);
+            ProdutoCell p24 = new ProdutoCell("Folhado Frango", (float)0.8);
+            produtos = new List<ProdutoCell>();
             produtos.Add(p);
             produtos.Add(p2);
             produtos.Add(p3); produtos.Add(p4); produtos.Add(p5); produtos.Add(p6); produtos.Add(p7); produtos.Add(p8); produtos.Add(p9); produtos.Add(p10);

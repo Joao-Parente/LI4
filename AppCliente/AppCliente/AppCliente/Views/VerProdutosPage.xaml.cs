@@ -15,9 +15,9 @@ namespace AppCliente
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VerProdutosPage : ContentPage
     {
-        List<Produto> Produtos { get; set; }
+        List<ProdutoCell> Produtos { get; set; }
 
-        public VerProdutosPage(List<Produto> Lista,string NomeCategoria)
+        public VerProdutosPage(List<ProdutoCell> Lista,string NomeCategoria)
         {
             InitializeComponent();
             
@@ -35,7 +35,7 @@ namespace AppCliente
 
             //var p = ((ListView)sender).SelectedItem;
 
-            Produto PSelecionado = (Produto) e.Item;
+            ProdutoCell PSelecionado = (ProdutoCell) e.Item;
 
             PopupNavigation.Instance.PushAsync(new ProdutoInfoPopUp(PSelecionado));
 

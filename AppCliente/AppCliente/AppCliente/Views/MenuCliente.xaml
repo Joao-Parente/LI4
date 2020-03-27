@@ -12,23 +12,23 @@
     
 
         <FlyoutItem Title="Ver Produtos" Icon="fastfoodIcon.png"> 
-            <ShellContent ContentTemplate="{DataTemplate local:VerCategorias}"/>
+            <ShellContent x:Name="VerCategorias"/>
         </FlyoutItem>
 
         <FlyoutItem Title="Lista de Favoritos" Icon="starIcon.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ListaDeFavoritos}"/>
+            <ShellContent x:Name="VerProdutosFavoritos"/>
         </FlyoutItem>
 
         <FlyoutItem Title="Histórico" Icon="clockBack.png">
-            <ShellContent ContentTemplate="{DataTemplate local:HistoricoPage}"/>
+            <ShellContent x:Name="VerHistoricoPedidos"/>
         </FlyoutItem>
 
         <FlyoutItem Title="Avaliações" Icon="barchart.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AvaliacaoPage}"/>
+            <ShellContent x:Name="VerAvaliacoes"/>
         </FlyoutItem>
 
         <FlyoutItem Title="Sobre" Icon="infoIcon.png">
-            <ShellContent ContentTemplate="{DataTemplate local:SobrePage}"/>
+            <ShellContent x:Name="VerSobre"/>
         </FlyoutItem>
 
 </Shell>

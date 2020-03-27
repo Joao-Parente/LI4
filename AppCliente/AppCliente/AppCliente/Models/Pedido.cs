@@ -9,57 +9,77 @@ namespace AppCliente
 {
     public class Pedido
     {
-        private int Id { get; set; }
-        private int IdCliente { get; set; }
-        private string Detalhes { get; set; }
-        private int Avaliacao { get; set; }
-        private DateTime DataHora { get; set; }
+        public int id { get; set; }
+        public string idCliente { get; set; }
+        public string detalhes { get; set; }
+        public int avaliacao { get; set; }
+        public DateTime data_hora { get; set; }
         [DataMember]
-        private List<Produto> Produtos { get; set; }
+        public List<Produto> produtos { get; set; }
+
+
+        public Pedido(int id, string idCliente, string detalhes, int avaliacao, DateTime dataHora, List<Produto> produto)
+        {
+            this.id = id;
+            this.idCliente = idCliente;
+            this.detalhes = detalhes;
+            this.avaliacao = avaliacao;
+            this.data_hora = dataHora;
+            this.produtos = produto;
+        }
+
 
         public Pedido()
         {
-            this.Id = 0;
-            this.IdCliente = 0;
-            this.Detalhes = "tard";
-            this.Avaliacao = 0;
-            this.DataHora = DateTime.Now;
-            this.Produtos = new List<Produto>();
-            this.Produtos.Add(new Produto());
-            this.Produtos.Add(new Produto());
-            this.Produtos.Add(new Produto());
+            id = 0;
+            idCliente = "" + 0;
+            detalhes = "";
+            avaliacao = 0;
+            data_hora = new DateTime();
+            produtos = new List<Produto>();
         }
 
-        public Pedido(int id,int idcliente,string detalhes,int aval,DateTime d,List<Produto> p)
+
+        public void adicionarProduto(String produto)
         {
-            this.Id = id;
-            this.IdCliente = idcliente;
-            this.Detalhes = detalhes;
-            this.Avaliacao = aval;
-            this.DataHora = d;
-            this.Produtos = p;
+            Produto p = new Produto(4, "tipo", produto, "tags", 1, 3); //para teste
+            produtos.Add(p);
         }
+
+        public void addProduto(Produto p)
+        {
+            this.produtos.Add(p);
+        }
+
+        public void removerProduto(String produto)
+        {
+            Produto p = new Produto(4, "tipo", produto, "tags", 1, 3); //para teste
+            produtos.Remove(p);
+        }
+
 
         public void imprimePedido()
         {
             Console.Write(this.ToString());
             int i;
-            for (i = 0; i < Produtos.Count; i++)
+            for (i = 0; i < produtos.Count; i++)
             {
-                Console.WriteLine("          i: " + Produtos[i].ToString());
+                Console.WriteLine("          i: " + produtos[i].ToString());
             }
 
         }
 
-        public string toString()
+        override
+        public string ToString()
         {
-            return (" Pedido: " + Id +
-                   "\n     idCliente: " + IdCliente +
-                   "\n     detalhes: " + Detalhes + " " +
-                   "\n     Avaliação: " + Avaliacao + "\n" +
-                   "\n     Produtos::  #" + Produtos.Count
+            return (" Pedido: " + id +
+                   "\n     idCliente: " + idCliente +
+                   "\n     detalhes: " + detalhes + " " +
+                   "\n     Avaliação: " + avaliacao + "\n" +
+                   "\n     Produtos::  #" + produtos.Count
                 );
         }
+
 
         public byte[] SavetoBytes()
         {
@@ -67,23 +87,17 @@ namespace AppCliente
             MemoryStream ms = new MemoryStream();
             XmlSerializer XML = new XmlSerializer(typeof(Pedido));
             XML.Serialize(ms, this);
-
             ms.Close();
             return ms.ToArray();
-
         }
+
 
         public static Pedido loadFromBytes(byte[] data)
         {
-
             BinaryFormatter bf = new BinaryFormatter();
             MemoryStream ms = new MemoryStream(data);
-
             XmlSerializer XML = new XmlSerializer(typeof(Pedido));
             return (Pedido)XML.Deserialize(ms);
         }
-
-
-
     }
 }

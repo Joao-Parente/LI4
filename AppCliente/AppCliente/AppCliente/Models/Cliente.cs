@@ -2,23 +2,22 @@ namespace AppCliente
 {
     public class Cliente
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string Nome { get; set; }
-
+        public string email { get; set; }
+        public string password { get; set; }
+        public string nome { get; set; }
 
         public Cliente()
         {
-            this.Email = "joao";
-            this.Password = "parente";
-            this.Nome = "tardnation";
+            email = "";
+            password = "";
+            nome = "";
         }
 
         public Cliente(string e, string p, string n)
         {
-            this.Email = e;
-            this.Password = p;
-            this.Nome = n;
+            email = e;
+            password = p;
+            nome = n;
         }
     }
 }

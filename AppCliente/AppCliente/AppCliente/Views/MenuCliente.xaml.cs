@@ -12,9 +12,20 @@ namespace AppCliente
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuCliente : Shell
     {
-        public MenuCliente()
+
+        private AppClienteLN LN;
+
+        public MenuCliente(AppClienteLN ln)
         {
+            this.LN = ln;
+
             InitializeComponent();
+
+            VerCategorias.Content = new VerCategorias(this.LN);
+            VerProdutosFavoritos.Content = new ListaDeFavoritos();
+            VerHistoricoPedidos.Content = new HistoricoPage();
+            VerAvaliacoes.Content = new AvaliacaoPage();
+            VerSobre.Content = new SobrePage();
         }
 
     }

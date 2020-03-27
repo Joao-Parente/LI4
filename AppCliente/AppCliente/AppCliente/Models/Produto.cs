@@ -1,31 +1,68 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using Xamarin.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace AppCliente
 {
-    public class Produto : ViewCell
+    public class Produto
     {
-        public string Nome { get; set; }
-
-        //private Image Imagem { get; set; }
-
-        public float Preco { get; set; }
+        private int id { get; set; }
+        private string tipo { get; set; }
+        private string nome { get; set; }
+        private string detalhes { get; set; }
+        private int disponibilidade { get; set; }
+        private float preco { get; set; }
+        private string imagem { get; set; }
 
 
         public Produto()
         {
-            this.Nome = "hello";
-            this.Preco = (float) 69.9;
+            id = 0;
+            tipo = "";
+            nome = "";
+            detalhes = "";
+            disponibilidade = 0;
+            preco = 0;
+            imagem = "";
         }
 
-        public Produto(String n/*,Image i*/,float p)
+        public Produto(int i, string t, string n, string de, int di, float p)
         {
-            this.Nome = n;
-            //this.Imagem = i;
-            this.Preco = p;
+            id = i;
+            tipo = t;
+            nome = n;
+            detalhes = de;
+            disponibilidade = di;
+            preco = p;
         }
 
-    }
+        public byte[] SavetoBytes()
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            MemoryStream ms = new MemoryStream();
+            XmlSerializer XML = new XmlSerializer(typeof(Produto));
+            XML.Serialize(ms, this);
+            ms.Close();
+            return ms.ToArray();
+        }
 
+        public static Produto loadFromBytes(byte[] data)
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            MemoryStream ms = new MemoryStream(data);
+            XmlSerializer XML = new XmlSerializer(typeof(Produto));
+            return (Produto)XML.Deserialize(ms);
+        }
+
+        public override string ToString()
+        {
+            return ("Id: " + id +
+                        "\n Tipo: " + tipo +
+                        "\n Nome: " + nome +
+                        "\n Detalhes: " + detalhes +
+                        "\n Disponibilidade: " + disponibilidade +
+                        "\n Preço: " + preco +
+                        "\n Imagem: " + imagem);
+        }
+    }
 }

@@ -21,7 +21,7 @@ namespace AppCliente
             this.Password = passwordEntry.Text;
             if(LN.IniciarSessao(this.Email,this.Password) == true)
             {
-                Application.Current.MainPage = new MenuCliente();
+                Application.Current.MainPage = new MenuCliente(this.LN);
             }
             else
             {
@@ -32,7 +32,7 @@ namespace AppCliente
         private void BotaoVoltar(object sender, EventArgs e)
         {
             //await Navigation.PushModalAsync(new MainPage());
-            Application.Current.MainPage = new MenuCliente();
+            Application.Current.MainPage = new MenuCliente(this.LN);
         }
 
 

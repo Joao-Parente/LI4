@@ -12,7 +12,7 @@ namespace AppCliente
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProdutoInfoPopUp
     {
-        public ProdutoInfoPopUp(Produto p)
+        public ProdutoInfoPopUp(ProdutoCell p)
         {
             InitializeComponent();
             NomeProduto.Text = p.Nome;
