@@ -15,5 +15,13 @@ namespace AppGestor
             motivo = "";
             assunto = "";
         }
+
+        public Reclamacao(int id, string m, string a, DateTime d)
+        {
+            this.idPedido = id;
+            this.motivo = m;
+            this.assunto = a;
+            this.data_hora = d;
+        }
     }
 }
