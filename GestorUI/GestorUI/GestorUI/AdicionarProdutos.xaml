@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GestorUI.AdicionarProdutos">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width=".3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Adicionar Produto" TextColor="Black" FontSize="Title" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <Label Text="Nome" TextColor="Black" FontSize="Small" Grid.Row="3" Grid.Column="1"/>
+        <Entry x:Name="nomeEntry" TextColor="Gray" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <Label Text="Preco" TextColor="Black" FontSize="Small" Grid.Row="6" Grid.Column="1"/>
+        <Entry x:Name="precoEntry" TextColor="Gray" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" IsPassword="True"/>
+
+        <Label Text="Imagem" TextColor="Black" FontSize="Small" Grid.Row="9" Grid.Column="1"/>
+        <Entry x:Name="imagemEntry" TextColor="Gray" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" IsPassword="True"/>
+
+        <Button Text="Criar" BackgroundColor="LightSeaGreen" Grid.Row="11" Grid.Column="1" Clicked="BotaoCriar"/>
+        <!--<Button Text="Voltar" BackgroundColor="SandyBrown" Grid.Row="12" Grid.Column="1" Clicked="BotaoVoltar"/>-->
+
+    </Grid>
+
+
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="Beige"
+             x:Class="GestorUI.SobrePage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/> 
+            <RowDefinition Height="*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width=".2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Sobre" TextColor="Black" FontSize="Title" Grid.Row="1" Grid.Column="1"/>
+
+        <Image x:Name="ImagemSobre" Source="logo.jpg" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"/>
+
+        <Label x:Name="nome"  Text="Bar Gualtar" TextDecorations="Underline" TextColor="Black" FontSize="Large" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="horariosemanal" Text="Segunda a Sexta-Feira: 8:00h - 19:00h" TextColor="Black" FontSize="Small" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="horariofimsemana" Text="Sábado: 9:00h - 14:00h" TextColor="Black" FontSize="Small" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="endereco" Text="Endereço: Rua da Universidade Nº50, 4710-365 Gualtar, Braga" TextColor="Black" FontSize="Small" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="website" Text="Website: www.bargualtar.pt" TextColor="Black" FontSize="Small" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="contactos" Text="Telefone: 253 000 111" TextColor="Black" FontSize="Small" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+
+        <Button Text="Editar" FontSize="Small"  BackgroundColor="SandyBrown" Grid.Row="8" Grid.Column="4" Clicked="BotaoEditar"/>
+    </Grid>
+</ContentPage>

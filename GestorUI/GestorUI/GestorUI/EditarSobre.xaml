@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GestorUI.EditarSobre">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width=".2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Sobre" TextColor="Black" FontSize="Title" Grid.Row="1" Grid.Column="1"/>
+
+        <Image x:Name="ImagemSobre" Source="logo.jpg" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"/>
+
+        <Entry x:Name="nomeEntry"  Text=""  TextColor="Black" FontSize="Large" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Entry x:Name="horariosemanalEntry" Text="" TextColor="Black" FontSize="Small" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Entry x:Name="horariofimsemanaEntry" Text="" TextColor="Black" FontSize="Small" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Entry x:Name="enderecoEntry" Text="" TextColor="Black" FontSize="Small" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Entry x:Name="websiteEntry" Text="" TextColor="Black" FontSize="Small" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Entry x:Name="contactosEntry" Text="" TextColor="Black" FontSize="Small" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+
+        <Button Text="Guardar" FontSize="Small"  BackgroundColor="SandyBrown" Grid.Row="1" Grid.Column="3" Clicked="BotaoGuardar"/>
+        <Button Text="Cancelar" FontSize="Small" BackgroundColor="SandyBrown" Grid.Row="2" Grid.Column="3" Clicked="BotaoCancelar"/>
+        
+    </Grid>
+</ContentPage>
