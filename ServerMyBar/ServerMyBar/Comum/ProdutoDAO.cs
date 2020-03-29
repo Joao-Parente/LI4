@@ -135,10 +135,12 @@ namespace ServerMyBar.comum
                         Produto p = new Produto((int)reader.GetInt64(0), (string)reader.GetString(1), (string)reader.GetString(2), (string)reader.GetString(3), reader.GetInt32(4), reader.GetFloat(5));
                         if (dic.ContainsKey(reader.GetString(1)))
                         {
-                            List<Produto> lp = new List<Produto>();
-                            dic.TryGetValue(reader.GetString(1), out lp);
-                            lp.Add(p);
-                            dic.Add(reader.GetString(1), lp);
+                            //List<Produto> lp = new List<Produto>();
+                            //dic.TryGetValue(reader.GetString(1), out lp);
+                            //lp.Add(p);
+                            //dic.Add(reader.GetString(1), lp);
+                            List<Produto> lps = dic[reader.GetString(1)];
+                            lps.Add(p);
                         }
                         else
                         {

@@ -54,16 +54,21 @@ namespace ServerMyBar.serverCliente
                 switch (msg)
                 {
                     case 1: //VerProdutos
-                        Dictionary<string, List<Produto>> map = new Dictionary<string, List<Produto>>();
-                        map = gestor.VerProdutos();
+                        Dictionary<string, List<Produto>> map = gestor.VerProdutos();
 
+                        //envia o numero de chaves
                         byte[] tamT = new byte[4];
                         tamT = BitConverter.GetBytes(map.Count);
                         socket.Send(tamT);
 
                         foreach (string name in map.Keys)
                         {
-                            byte[] nome = new byte[512];
+                            //envia o tamanho em bytes da chave
+                            tamT = BitConverter.GetBytes(name.Length);
+                            socket.Send(tamT);
+
+                            //envia os bytes da string
+                            byte[] nome = new byte[name.Length];
                             nome = Encoding.ASCII.GetBytes(name);
                             socket.Send(nome);
 
@@ -79,6 +84,7 @@ namespace ServerMyBar.serverCliente
                                 byte[] produto = lp[j].SavetoBytes();
                                 socket.Send(BitConverter.GetBytes(produto.Length));
                                 socket.Send(produto);
+                                //EnviaProdutoManual(lp[j]);
                             }
                         }
 
@@ -230,6 +236,48 @@ namespace ServerMyBar.serverCliente
             Console.WriteLine("Thread: Terminei o comunicação com o cliente, a desligar.");
         }
 
+        public void EnviaProdutoManual(Produto p)
+        {
+            //envia o id do produto
+            byte[] dataNum = new byte[4];
+            dataNum = BitConverter.GetBytes(p.id);
+            socket.Send(dataNum, 4, SocketFlags.None);
+
+            byte[] dataString;
+            //envia o num de bytes do tipo
+            dataNum = BitConverter.GetBytes(p.tipo.Length);
+            socket.Send(dataNum, 4, SocketFlags.None);
+            //envia os bytes do tipo
+            dataString = Encoding.UTF8.GetBytes(p.tipo);
+            socket.Send(dataString, dataString.Length, SocketFlags.None);
+
+            //envia o num de bytes do nome
+            dataNum = BitConverter.GetBytes(p.nome.Length);
+            socket.Send(dataNum, 4, SocketFlags.None);
+            //envia os bytes do nome
+            dataString = Encoding.UTF8.GetBytes(p.nome);
+            socket.Send(dataString, dataString.Length, SocketFlags.None);
+
+            //envia o num de bytes do detalhes
+            dataNum = BitConverter.GetBytes(p.detalhes.Length);
+            socket.Send(dataNum, 4, SocketFlags.None);
+            //envia os bytes do detalhes
+            dataString = Encoding.UTF8.GetBytes(p.detalhes);
+            socket.Send(dataString, dataString.Length, SocketFlags.None);
+
+            //envia a disponibilidade
+            dataNum = BitConverter.GetBytes(p.disponibilidade);
+            socket.Send(dataNum, 4, SocketFlags.None);
+
+            //envia o preco
+            byte[] dataFloat = BitConverter.GetBytes(p.preco);
+            dataNum = BitConverter.GetBytes(dataFloat.Length);
+            socket.Send(dataNum, 4, SocketFlags.None);//envia num bytes
+            socket.Send(dataFloat, dataFloat.Length, SocketFlags.None);//envia os bytes
+
+            //envia imagem --- por completar
+
+        }
 
         public Pedido RecebePedido()
         {

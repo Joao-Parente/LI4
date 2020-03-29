@@ -191,9 +191,7 @@ namespace ServerMyBar.comum
         {
             lock (this)
             {
-                Dictionary<string, List<Produto>> map = new Dictionary<string, List<Produto>>();
-                map = ProdutoDAO.getAllProdutos();
-                return map;
+                return ProdutoDAO.getAllProdutos();
             }
         }
 
