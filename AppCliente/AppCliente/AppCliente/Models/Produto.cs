@@ -6,13 +6,13 @@ namespace AppCliente
 {
     public class Produto
     {
-        private int id { get; set; }
-        private string tipo { get; set; }
-        private string nome { get; set; }
-        private string detalhes { get; set; }
-        private int disponibilidade { get; set; }
-        private float preco { get; set; }
-        private string imagem { get; set; }
+        public int id { get; set; }
+        public string tipo { get; set; }
+        public string nome { get; set; }
+        public string detalhes { get; set; }
+        public int disponibilidade { get; set; }
+        public float preco { get; set; }
+        public string imagem { get; set; }
 
 
         public Produto()
@@ -25,6 +25,7 @@ namespace AppCliente
             preco = 0;
             imagem = "";
         }
+
 
         public Produto(int i, string t, string n, string de, int di, float p)
         {
@@ -45,7 +46,6 @@ namespace AppCliente
             ms.Close();
             return ms.ToArray();
         }
-
         public static Produto loadFromBytes(byte[] data)
         {
             BinaryFormatter bf = new BinaryFormatter();
@@ -60,8 +60,8 @@ namespace AppCliente
                         "\n Tipo: " + tipo +
                         "\n Nome: " + nome +
                         "\n Detalhes: " + detalhes +
-                        "\n Disponibilidade: " + disponibilidade +
                         "\n Preço: " + preco +
+                        "\n Disponibilidade: " + disponibilidade + 
                         "\n Imagem: " + imagem);
         }
     }

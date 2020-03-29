@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -9,14 +10,21 @@ namespace AppCliente
     public class AppClienteLN
     {
         private Dictionary<string, List<Produto>> Produtos;
+        private Dictionary<int, Produto> IdsProdutos;
         private List<Produto> Favoritos;
         private List<Pedido> Historico;
+        private List<Produto> Carrinho;
+        private ObservableCollection<ProdutoCell> CarrinhoOC;
+        private Dictionary<int, Produto> IdsProdutosCarrinho;
         private Socket Master;
 
         private string EmailCliente;
 
         public AppClienteLN()
         {
+            Carrinho = new List<Produto>();
+            CarrinhoOC = new ObservableCollection<ProdutoCell>();
+            IdsProdutosCarrinho = new Dictionary<int, Produto>();
             Master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("192.168.1.69"), 12344);
 
@@ -29,6 +37,72 @@ namespace AppCliente
                 Console.WriteLine("Exception: " + e.Message);
             }
 
+        }
+
+        public void RefreshProdutos()
+        {
+            this.Produtos = VerProdutos();
+            IdsProdutos = new Dictionary<int, Produto>();
+            
+            foreach(List<Produto> lps in Produtos.Values)
+            {
+                for(int i = 0; i < lps.Count; i++)
+                {
+                    IdsProdutos.Add(lps[i].id, lps[i]);
+                }
+            }
+
+        }
+
+        public Dictionary<string, List<Produto>> GetProdutos()
+        {
+            return this.Produtos;
+        }
+
+        public Produto GetProduto(ProdutoCell p)
+        {
+            return IdsProdutos[p.id];
+        }
+
+        public bool ProdutoCarrinho(Produto p)
+        {
+            if (IdsProdutosCarrinho.ContainsKey(p.id))
+            {
+                return false;
+            }
+            else
+            {
+                IdsProdutosCarrinho.Add(p.id, p);
+                Carrinho.Add(p);
+                CarrinhoOC.Add(new ProdutoCell(p.id, p.nome, ""+p.preco+"€"));
+                return true;
+            }
+        }
+
+        public List<Produto> GetCarrinho()
+        {
+            return this.Carrinho;
+        }
+
+        public ObservableCollection<ProdutoCell> GetCarrinhoOC()
+        {
+            return this.CarrinhoOC;
+        }
+
+        public ObservableCollection<ProdutoCell> GetCarrinhoCell()
+        {
+            ObservableCollection<ProdutoCell> ret = new ObservableCollection<ProdutoCell>();
+            for(int i = 0; i < Carrinho.Count; i++)
+            {
+                ret.Add(new ProdutoCell(Carrinho[i].id, Carrinho[i].nome, "" + Carrinho[i].preco + "€"));
+            }
+            return ret;
+        }
+
+        public void RemoveCarrinho(ProdutoCell p)
+        {
+            CarrinhoOC.Remove(p);
+            IdsProdutosCarrinho.Remove(p.id);
         }
 
         public Boolean RegistaUtilizador(string email, string password, string nome)
@@ -60,9 +134,7 @@ namespace AppCliente
 
         public Produto RecebeProduto()
         {
-            int size = 100;
-            byte[] data = new byte[size];
-
+            byte[] data = new byte[4];
 
             Master.Receive(data, 0, 4, SocketFlags.None);
             int numero_total = BitConverter.ToInt32(data, 0);
@@ -73,13 +145,67 @@ namespace AppCliente
             return Produto.loadFromBytes(data);
         }
 
-        public Dictionary<string, List<Produto>> verProdutos()
+        public Produto RecebeProduto2()
+        {
+            int id, disponibilidade;
+            string tipo, nome, detalhes;
+            float preco;
+
+            byte[] dataNumerica = new byte[4];
+            byte[] dataString;
+            byte[] dataFloat;
+            int tamanhoString,tamanhoFloat;
+
+            //recebe id
+            Master.Receive(dataNumerica, 4, SocketFlags.None);
+            id = BitConverter.ToInt32(dataNumerica, 0);
+
+            //recebe tipo
+            Master.Receive(dataNumerica, 4, SocketFlags.None);
+            tamanhoString = BitConverter.ToInt32(dataNumerica, 0);
+            dataString = new byte[tamanhoString];
+            Master.Receive(dataString, tamanhoString, SocketFlags.None);
+            tipo = Encoding.UTF8.GetString(dataString);
+
+            //recebe nome
+            Master.Receive(dataNumerica, 4, SocketFlags.None);
+            tamanhoString = BitConverter.ToInt32(dataNumerica, 0);
+            dataString = new byte[tamanhoString];
+            Master.Receive(dataString, tamanhoString, SocketFlags.None);
+            nome = Encoding.UTF8.GetString(dataString);
+
+            //recebe detalhes
+            Master.Receive(dataNumerica, 4, SocketFlags.None);
+            tamanhoString = BitConverter.ToInt32(dataNumerica, 0);
+            dataString = new byte[tamanhoString];
+            Master.Receive(dataString, tamanhoString, SocketFlags.None);
+            detalhes = Encoding.UTF8.GetString(dataString);
+
+            //recebe disponibilidade
+            Master.Receive(dataNumerica, 4, SocketFlags.None);
+            disponibilidade = BitConverter.ToInt32(dataNumerica, 0);
+
+            //recebe preco
+            Master.Receive(dataNumerica, 4, SocketFlags.None);
+            tamanhoFloat = BitConverter.ToInt32(dataNumerica, 0);
+            dataFloat = new byte[tamanhoFloat];
+            Master.Receive(dataFloat, tamanhoFloat, SocketFlags.None);
+            preco = BitConverter.ToSingle(dataFloat, 0);
+
+            //recebe imagem --- por completar
+
+            return new Produto(id,tipo,nome,detalhes,disponibilidade,preco);
+        }
+
+        public Dictionary<string, List<Produto>> VerProdutos()
         {
             Dictionary<string, List<Produto>> dic = new Dictionary<string, List<Produto>>();
 
+            //envia o id da operacao
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(1);
             Master.Send(id);
+
 
             byte[] tamT = new byte[4];
             Master.Receive(tamT, 0, 4, SocketFlags.None);
@@ -87,9 +213,15 @@ namespace AppCliente
 
             for (int i = 0; i < numTipos; i++)
             {
-                byte[] nome = new byte[512];
-                Master.Receive(nome, 0, 512, SocketFlags.None);
-                string nom = BitConverter.ToString(nome, 0);
+
+                //recebe o tamanho da string categoria
+                Master.Receive(tamT, 4, SocketFlags.None);
+                int tamanho = BitConverter.ToInt32(tamT, 0);
+
+                //recebe os bytes da string
+                byte[] nome = new byte[tamanho];
+                Master.Receive(nome,tamanho,SocketFlags.None);
+                string nomeCategoria = Encoding.UTF8.GetString(nome);
 
                 byte[] tamN = new byte[4];
                 Master.Receive(tamN, 0, 4, SocketFlags.None);
@@ -97,20 +229,18 @@ namespace AppCliente
 
                 for (int j = 0; j < numNom; j++)
                 {
-                    if (dic.ContainsKey(nom))
+                    if (dic.ContainsKey(nomeCategoria))
                     {
                         Produto p = RecebeProduto();
-                        List<Produto> lp = new List<Produto>();
-                        dic.TryGetValue(nom, out lp);
-                        lp.Add(p);
-                        dic.Add(nom, lp);
+                        List<Produto> lps = dic[nomeCategoria];
+                        lps.Add(p);
                     }
                     else
                     {
                         Produto p = RecebeProduto();
                         List<Produto> lp = new List<Produto>();
                         lp.Add(p);
-                        dic.Add(nom, lp);
+                        dic.Add(nomeCategoria, lp);
                     }
                 }
 
@@ -170,7 +300,7 @@ namespace AppCliente
             return anteriores;
         }
 
-        public Boolean alterarPedido(int a, int idPedido, String produtos)
+        public Boolean AlterarPedido(int a, int idPedido, String produtos)
         {
             //envia id operacao
             byte[] id = new byte[4];
@@ -251,12 +381,11 @@ namespace AppCliente
 
         public int EfetuarPedido(Pedido p)
         {
-
             //envia id operacao
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(4);
             Master.Send(id);
-            enviaPedido(p);
+            EnviaPedido(p);
             return 1;
         }
 
@@ -305,7 +434,7 @@ namespace AppCliente
         }
 
 
-        public bool reclamacao(int idPedido, string motivo, string reclamacao)
+        public bool Reclamacao(int idPedido, string motivo, string reclamacao)
         {
             //envia id operacao
             byte[] id = new byte[4];
@@ -350,7 +479,7 @@ namespace AppCliente
 
         }
 
-        public void enviaPedido(Pedido p)
+        public void EnviaPedido(Pedido p)
         {
             byte[] pedido = p.SavetoBytes();
             Master.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    

@@ -26,7 +26,7 @@
                             </Grid.ColumnDefinitions>
                             <Label Text="{Binding Nome}" FontSize="Medium" Grid.Column="0"/>
                             <Label Text="{Binding Preco}" FontSize="Medium" Grid.Column="1"/>
-                            <Button BackgroundColor="Transparent" ImageSource="addShoppingCart.png" Grid.Column="2"/>
+                            <Button BackgroundColor="Transparent" ImageSource="addShoppingCart.png" Grid.Column="2" Clicked="AdicionaCarrinhoBotao"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

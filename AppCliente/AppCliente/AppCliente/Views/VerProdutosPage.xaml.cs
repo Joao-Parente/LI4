@@ -17,10 +17,12 @@ namespace AppCliente
     {
         List<ProdutoCell> Produtos { get; set; }
 
-        public VerProdutosPage(List<ProdutoCell> Lista,string NomeCategoria)
+        AppClienteLN LN { get; set; }
+
+        public VerProdutosPage(AppClienteLN ln,List<ProdutoCell> Lista,string NomeCategoria)
         {
             InitializeComponent();
-            
+            this.LN = ln;
             this.Produtos = Lista;
             ViewProdutos.ItemsSource = Produtos;
             this.ContentPageTeste.Title = NomeCategoria;
@@ -37,7 +39,7 @@ namespace AppCliente
 
             ProdutoCell PSelecionado = (ProdutoCell) e.Item;
 
-            PopupNavigation.Instance.PushAsync(new ProdutoInfoPopUp(PSelecionado));
+            PopupNavigation.Instance.PushAsync(new ProdutoInfoPopUp(this.LN,PSelecionado));
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
@@ -45,54 +47,21 @@ namespace AppCliente
 
         private void CarrinhoComprasBotao(object sender, EventArgs e)
         {
-            
-            /*
-            //Socket master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            //IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12345);
-            //master.Connect(ipe);
-            try
+            PopupNavigation.Instance.PushAsync(new CarrinhoCompras(this.LN));
+        }
+
+        private void AdicionaCarrinhoBotao(object sender, EventArgs e)
+        {
+            ProdutoCell p = (ProdutoCell) ((Button)sender).BindingContext;
+
+            if (this.LN.ProdutoCarrinho(LN.GetProduto(p)) == true)
             {
-                //TcpClient client = new TcpClient("127.0.0.1", 12345);
-                //client.Connect("127.0.0.1",12345);
-                //client.Connect("10.0.2.2", 12345);
-                Socket master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("10.0.2.2"), 12345);
-                master.Connect(ipe);
-                NetworkStream s = new NetworkStream(master);
-                StreamReader input = new StreamReader(s, Encoding.UTF8);
-                StreamWriter output = new StreamWriter(s);
-
-                output.WriteLine("GetListaProdutos");
-                output.Flush();
-                Thread.Sleep(500);
-                string prods = input.ReadLine();
-                int a = 567;
-                String[] partes = prods.Split('|');
-                List<Produto> hello = new List<Produto>();
-                for(int i = 0; i < partes.Length; i++)
-                {
-                    String[] pr = partes[i].Split('_');
-                    //Produto pro = new Produto(pr[0], float.Parse(pr[1]));
-                    hello.Add(new Produto(pr[0], float.Parse(pr[1])));
-                }
-                ViewProdutos.ItemsSource = hello;
+                DisplayAlert("Sucesso", "Produto Adicionado com Sucesso!", "OK");
             }
-            catch(Exception ee)
+            else
             {
-                Console.WriteLine(ee.Message);
+                DisplayAlert("Erro", "Já têm esse Produto no seu carrinho", "OK");
             }
-            
-            NetworkStream s = new NetworkStream(master);
-            StreamReader input = new StreamReader(s, Encoding.UTF8);
-            StreamWriter output = new StreamWriter(s);
-
-            output.WriteLine("GetListaProdutos");
-            output.Flush();
-            Thread.Sleep(500);
-            string prods = input.ReadLine();
-            int a = 567;*/
-
-            PopupNavigation.Instance.PushAsync(new CarrinhoCompras());
         }
     }
 }

@@ -18,6 +18,7 @@ namespace AppCliente
         {
             InitializeComponent();
             this.ln = new AppClienteLN();
+            this.ln.RefreshProdutos();
         }
 
         private void CarregueiBotaoIniciarSessao(object sender, EventArgs e)

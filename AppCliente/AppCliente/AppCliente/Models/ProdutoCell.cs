@@ -6,24 +6,25 @@ namespace AppCliente
 {
     public class ProdutoCell : ViewCell
     {
+        public int id { get; set; }
         public string Nome { get; set; }
-
-        //private Image Imagem { get; set; }
-
-        public float Preco { get; set; }
-
+        public string Preco { get; set; }
+        public int Quantidades { get; set; }
 
         public ProdutoCell()
         {
+            this.id = 0;
             this.Nome = "hello";
-            this.Preco = (float) 69.9;
+            this.Preco = "69.9€";
+            this.Quantidades = 1;
         }
 
-        public ProdutoCell(String n/*,Image i*/,float p)
+        public ProdutoCell(int i,string n,string p)
         {
+            this.id = i;
             this.Nome = n;
-            //this.Imagem = i;
             this.Preco = p;
+            this.Quantidades = 1;
         }
 
     }

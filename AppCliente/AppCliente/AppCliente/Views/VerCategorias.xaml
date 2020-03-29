@@ -4,7 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             x:Name="VerCategoriasPage"
              x:Class="AppCliente.VerCategorias">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="ToolbarProdutos" IconImageSource="shoppingCart.png" Clicked="CarrinhoComprasBotao"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -26,7 +32,7 @@
             <Button Text="Folhados" Clicked="FolhadosBotao" Grid.Row="1" Grid.Column="3"/>
 
             <Button Text="Hamburgueres" Clicked="HamburgueresBotao" Grid.Row="3" Grid.Column="1"/>
-            <Button Text="Cachorros" Clicked="CachorrosBotao" Grid.Row="3" Grid.Column="3"/>
+            <Button Text="Bebidas" Clicked="BebidasBotao" Grid.Row="3" Grid.Column="3"/>
 
         </Grid>
     </ContentPage.Content>
