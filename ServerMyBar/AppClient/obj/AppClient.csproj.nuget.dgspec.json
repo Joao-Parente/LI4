@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {}
+    "F:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {
+    "F:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
+        "projectUniqueName": "F:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
         "projectName": "AppClient",
-        "projectPath": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
-        "packagesPath": "C:\\Users\\jpedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\obj\\",
+        "projectPath": "F:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
+        "packagesPath": "C:\\Users\\RicardoFilipeDantasC\\.nuget\\packages\\",
+        "outputPath": "F:\\LI4\\ServerMyBar\\AppClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\jpedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\RicardoFilipeDantasC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

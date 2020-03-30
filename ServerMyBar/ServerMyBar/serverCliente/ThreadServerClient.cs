@@ -156,7 +156,7 @@ namespace ServerMyBar.serverCliente
                         string idCliente2 = System.Text.Encoding.UTF8.GetString(data);
 
                         byte[] idaddProdFav = new byte[4];
-                        if (gestor.addProdutoFavoritos(idProduto, idCliente2.Replace("\0", string.Empty)) == true)
+                        if (gestor.addProdutoFavorito(idProduto, idCliente2.Replace("\0", string.Empty)) == true)
                         {
                             idaddProdFav = BitConverter.GetBytes(1);
                             socket.Send(idaddProdFav);
@@ -166,6 +166,11 @@ namespace ServerMyBar.serverCliente
                             idaddProdFav = BitConverter.GetBytes(0);
                             socket.Send(idaddProdFav);
                         }
+
+                        break;
+                    case 7: //infoEmpresa
+
+                        //chamar função no Gestor para buscar as informações da Empresa?
 
                         break;
                     case 9: // Login

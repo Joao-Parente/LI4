@@ -34,7 +34,7 @@ namespace AppClient
                 // 11 RegistarNovoCliente
                 // 12 Reclamacao
 
-                Console.WriteLine("Insira: \n 1 para Ver Produtos \n 2 para ver os Pedidos Anteriores \n 3 para Alterar um pedido \n 4 para Fazer um pedido \n 5 para NoUlitmoPedido \n 6 para adicionar um novo produto aos favoritos \n 9 para Fazer login  \n 11 para Registar \n 12 para fazer uma reclamacao");
+                Console.WriteLine("Insira: \n 1 para Ver Produtos \n 2 para ver os Pedidos Anteriores \n 3 para Alterar um pedido \n 4 para Fazer um pedido \n 5 para NoUlitmoPedido \n 6 para adicionar um novo produto aos favoritos \n 7 para ver informações da empresa \n 9 para Fazer login  \n 11 para Registar \n 12 para fazer uma reclamacao");
                 input = Convert.ToInt32(Console.ReadLine());
 
                 switch (input)
@@ -86,6 +86,10 @@ namespace AppClient
                         {
                             Console.WriteLine("CORREU TUDO MAL!");
                         }
+                        break;
+                    case 7: //infoEmpresa
+                        string info = ln.InfoEmpresa();
+                        Console.WriteLine("As informações da empresa são as seguintes: \n" + info);
                         break;
                     case 9: // Login
                         Console.WriteLine("Starting authentication");

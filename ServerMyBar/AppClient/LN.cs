@@ -264,7 +264,19 @@ namespace AppClient
         }
 
 
-        //+InfoEmpresa() : Lista String
+        public String InfoEmpresa()
+        {
+            //envia id operacao
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(7);
+            master.Send(id);
+
+            byte[] infoBytes = new byte[128];
+            master.Receive(infoBytes);
+            string info = BitConverter.ToString(infoBytes);
+
+            return info;
+        }
 
 
         //+AvaliarProduto(idProduto : int, idCliente : int, nota : int) : void

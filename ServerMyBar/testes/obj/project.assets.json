@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\jpedro\\.nuget\\packages\\": {},
+    "C:\\Users\\RicardoFilipeDantasC\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\testes\\testes.csproj",
+      "projectUniqueName": "F:\\LI4\\ServerMyBar\\testes\\testes.csproj",
       "projectName": "testes",
-      "projectPath": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\testes\\testes.csproj",
-      "packagesPath": "C:\\Users\\jpedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\testes\\obj\\",
+      "projectPath": "F:\\LI4\\ServerMyBar\\testes\\testes.csproj",
+      "packagesPath": "C:\\Users\\RicardoFilipeDantasC\\.nuget\\packages\\",
+      "outputPath": "F:\\LI4\\ServerMyBar\\testes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jpedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RicardoFilipeDantasC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
