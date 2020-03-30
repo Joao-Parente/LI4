@@ -74,9 +74,11 @@ namespace AppClient
         {
             Dictionary<string, List<Produto>> dic = new Dictionary<string, List<Produto>>();
 
+            //envia o id da operacao
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(1);
             master.Send(id);
+
 
             byte[] tamT = new byte[4];
             master.Receive(tamT, 0, 4, SocketFlags.None);
@@ -84,9 +86,15 @@ namespace AppClient
 
             for (int i = 0; i < numTipos; i++)
             {
-                byte[] nome = new byte[512];
-                master.Receive(nome, 0, 512, SocketFlags.None);
-                string nom = BitConverter.ToString(nome, 0);
+
+                //recebe o tamanho da string categoria
+                master.Receive(tamT, 4, SocketFlags.None);
+                int tamanho = BitConverter.ToInt32(tamT, 0);
+
+                //recebe os bytes da string
+                byte[] nome = new byte[tamanho];
+                master.Receive(nome,tamanho,SocketFlags.None);
+                string nomeCategoria = Encoding.UTF8.GetString(nome);
 
                 byte[] tamN = new byte[4];
                 master.Receive(tamN, 0, 4, SocketFlags.None);
@@ -94,20 +102,18 @@ namespace AppClient
 
                 for (int j = 0; j < numNom; j++)
                 {
-                    if (dic.ContainsKey(nom))
+                    if (dic.ContainsKey(nomeCategoria))
                     {
                         Produto p = RecebeProduto();
-                        List<Produto> lp = new List<Produto>();
-                        dic.TryGetValue(nom, out lp);
-                        lp.Add(p);
-                        dic.Add(nom, lp);
+                        List<Produto> lps = dic[nomeCategoria];
+                        lps.Add(p);
                     }
                     else
                     {
                         Produto p = RecebeProduto();
                         List<Produto> lp = new List<Produto>();
                         lp.Add(p);
-                        dic.Add(nom, lp);
+                        dic.Add(nomeCategoria, lp);
                     }
                 }
 
@@ -120,7 +126,7 @@ namespace AppClient
             int size = 100;
             byte[] data = new byte[size];
 
-            master.Receive(data, 0, 4, SocketFlags.None); // 4bytes ->1 int que é o tamanho de bytes a recebr
+            master.Receive(data, 0, 4, SocketFlags.None); // 4bytes ->1 int que ï¿½ o tamanho de bytes a recebr
             int numero_total = BitConverter.ToInt32(data, 0);
             /*
             while (readBytes != 0 && numero_total - 1 > posicao)
@@ -216,7 +222,7 @@ namespace AppClient
             return r;
         }
 
-        public bool AdicionarAosFavoritos(int idProduto)
+        public bool NovoProdutoFavorito(int idProduto)
         {
             //envia id operacao
             byte[] id = new byte[4];

@@ -27,8 +27,8 @@ namespace AppClient
                 // 4 Efetuar Pedido <
                 // 5 NoUlitmoPedido
                 // 6 NovoProdutoFavorito
-                // 7 InfoEmpresa
-                // 8 AvaliarProduto
+                // 7 InfoEmpresa -----------------------------------------------------------
+                // 8 AvaliarProduto.--------------------------------------------------------
                 // 9 IniciarSessao  <
                 // 10 TerminarSessao
                 // 11 RegistarNovoCliente
@@ -55,7 +55,7 @@ namespace AppClient
                         string res = Console.ReadLine();
                         if (res.Equals("S"))
                         {
-                            Console.WriteLine("Indique os produtos que pretende adicionar (separados por um espaço)");
+                            Console.WriteLine("Indique os produtos que pretende adicionar (separados por um espaï¿½o)");
                             produtos = Console.ReadLine();
                             ln.alterarPedido(0, id, produtos);
                         }
@@ -63,7 +63,7 @@ namespace AppClient
                         res = Console.ReadLine();
                         if (res.Equals("S"))
                         {
-                            Console.WriteLine("Indique os produtos que pretende remover (separados por um espaço)");
+                            Console.WriteLine("Indique os produtos que pretende remover (separados por um espaï¿½o)");
                             produtos = Console.ReadLine();
                             ln.alterarPedido(1, id, produtos);
                         }
@@ -77,7 +77,7 @@ namespace AppClient
                     case 6: //Adicionar um produto aos favoritos
                         Console.WriteLine("Insira o id do produto");
                         int idProduto = Convert.ToInt32(Console.ReadLine());
-                        bool response6 = ln.AdicionarAosFavoritos(idProduto);
+                        bool response6 = ln.NovoProdutoFavorito(idProduto);
                         if (response6 == true)
                         {
                             Console.WriteLine("CORREU TUDO BEM!");

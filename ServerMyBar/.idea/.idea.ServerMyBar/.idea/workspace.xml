@@ -1,7 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d92b2dfc-2aa3-4c90-a77f-2248a42d6e8c" name="Default Changelist" comment="" />
+    <list default="true" id="3607a7eb-eb67-41ff-8e50-f5a894c71565" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Database/EsquemaLogico.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/EsquemaLogicov2.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/Esquema_Conceptual.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/Esquema_Fisico.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/Esquema_Logico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Especificacao_UseCases.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gantt.ods" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/bell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/doubleArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/pencil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/product.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/shoppingCart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Icons/welcome.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LEI-LI-PropostaProjeto.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LI4-Relatório.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Li4.vpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/1Mockups.epgz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/AdicionarProdutos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Autenticar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Avaliacoes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Criar_Conta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Estatisticas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Feedback.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/GerirEmpregados.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Historico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Lista_Favoritos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Menu_Cliente.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Menu_Funcionario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Menu_GestorEmpresa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Menu_Inicial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/PedidoCliente.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Reclamacoes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Sobre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Sobre_GE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/TaxaAfluencia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Ver_produtos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockups/Ver_produtos_GE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Relatorio.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/dataSources/31c96384-1873-47b7-bd65-87ee0a405d19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/dataSources/31c96384-1873-47b7-bd65-87ee0a405d19/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServerMyBar/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/AppClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/AppClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/LN.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/LN.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/bin/Debug/netcoreapp3.1/AppClient" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/bin/Debug/netcoreapp3.1/mono_crash.mem.13367.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/bin/Debug/netcoreapp3.1/mono_crash.mem.20239.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/bin/Debug/netcoreapp3.1/mono_crash.mem.5423.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/AppClient.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/AppClient.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/AppClient.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/AppClient.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/AppClient.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/AppClient.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/Debug/netcoreapp3.1/AppClient.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/Debug/netcoreapp3.1/AppClient.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/Debug/netcoreapp3.1/AppClient.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/Debug/netcoreapp3.1/AppClient.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/Debug/netcoreapp3.1/AppClient.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/Debug/netcoreapp3.1/AppClient.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/Debug/netcoreapp3.1/AppClient.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/Debug/netcoreapp3.1/AppClient.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppClient/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/bin/Debug/netcoreapp3.1/AppFunc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/bin/Debug/netcoreapp3.1/AppFunc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/bin/Debug/netcoreapp3.1/AppFunc.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/AppFunc.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppFunc/obj/AppFunc.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/AppFunc.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppFunc/obj/AppFunc.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/AppFunc.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AppFunc/obj/AppFunc.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppFunc/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppFunc/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppFunc/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/bin/Debug/netcoreapp3.1/AppGestor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/bin/Debug/netcoreapp3.1/AppGestor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/bin/Debug/netcoreapp3.1/AppGestor.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/AppGestor.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppGestor/obj/AppGestor.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/AppGestor.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppGestor/obj/AppGestor.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/AppGestor.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AppGestor/obj/AppGestor.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppGestor/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGestor/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppGestor/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/System.Security.AccessControl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/System.Security.Principal.Windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.13836.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.14137.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.14891.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.17126.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.1719.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.6397.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.8508.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.8566.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/mono_crash.mem.9336.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/ServerMyBar.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ServerMyBar/obj/ServerMyBar.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/ServerMyBar.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ServerMyBar/obj/ServerMyBar.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/ServerMyBar.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ServerMyBar/obj/ServerMyBar.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ServerMyBar/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerMyBar/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ServerMyBar/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/bin/Debug/netcoreapp3.1/mono_crash.mem.16986.1.blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/bin/Debug/netcoreapp3.1/testes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/bin/Debug/netcoreapp3.1/testes.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/bin/Debug/netcoreapp3.1/testes.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/Debug/netcoreapp3.1/testes.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/testes/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/testes/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/testes.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/testes/obj/testes.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/testes.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/testes/obj/testes.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testes/obj/testes.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/testes/obj/testes.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../icons_xamarin/addShoppingCart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../icons_xamarin/barchart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../icons_xamarin/clockBack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../icons_xamarin/exitToApp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../icons_xamarin/fastfoodIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../icons_xamarin/infoIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../icons_xamarin/shoppingCart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../icons_xamarin/starIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tarefas.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,208 +163,46 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LI_Database@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LI_Database@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LI_Database@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="LI_Database: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="ServerMyBar" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AppClient/comum/Cliente.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CDAE4105-7E89-4723-8979-C3C1D3936A03/1D8/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppGestor/comum/Reclamacao.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppGestor/comum/Empregado.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppGestor/LN.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppFunc/LN.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppClient/LN.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Reclamacao.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppGestor/comum/Produto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppGestor/comum/Pedido.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppFunc/comum/Produto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppFunc/comum/Pedido.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppClient/AppClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppClient/comum/Produto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppClient/comum/Pedido.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/testes/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/ClienteDAO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/EmpregadoDAO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Cliente.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/ReclamacaoDAO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/ProdutoDAO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppFunc/AppFunc.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Empregado.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/testes/Data.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppGestor/AppGestor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Server.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/testes/Data2.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverCliente/StarterClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ServerMyBar/ServerGestor/ThreadServerGestor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverFunc/ServerFunc.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/ServerGestor/ServerGestor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/34C73F2C-EDCD-4513-B43B-7E90566D70F0/1E/Socket.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Gestor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ServerMyBar/serverCliente/ThreadServerClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Pedido.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/serverCliente/ServerClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ServerMyBar/Comum/Produto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ServerMyBar/Server.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppClient/comum/Produto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppClient/AppClient.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ServerMyBar/ServerFunc.cs" />
-        <option value="$PROJECT_DIR$/AppClient/Pedido.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/ServerMyBar.csproj" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Cliente.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Gestor.cs" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/31c96384-1873-47b7-bd65-87ee0a405d19/console.sql" />
-        <option value="$PROJECT_DIR$/ServerMyBar/ClienteDAO.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/ThreadServerFunc.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/ThreadServerGestor.cs" />
-        <option value="$PROJECT_DIR$/AppClient/Program.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/AppGest.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/Program.cs" />
-        <option value="$PROJECT_DIR$/AppFunc/Program.cs" />
-        <option value="$PROJECT_DIR$/AppFunc/AppFUnc.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/serverCliente/ClienteDAO.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/serverFunc/Empregado.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/serverFunc/EmpregadoDAO.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/serverCliente/ServerClient.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Produto.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Pedido.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/serverCliente/StarterClient.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/serverFunc/ServerFunc.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/ServerGestor/ServerGestor.cs" />
-        <option value="$PROJECT_DIR$/AppClient/comum/Produto.cs" />
-        <option value="$PROJECT_DIR$/AppClient/comum/Pedido.cs" />
-        <option value="$PROJECT_DIR$/AppFunc/comum/Produto.cs" />
-        <option value="$PROJECT_DIR$/AppFunc/comum/Pedido.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/comum/Produto.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/comum/Pedido.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/AppClient.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Empregado.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/EmpregadoDAO.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/comum/Empregado.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/ReclamacaoDAO.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Reclamacao.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/comum/Reclamacao.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Cliente.cs" />
-        <option value="$PROJECT_DIR$/AppClient/comum/Cliente.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/ProdutoDAO.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/ServerGestor/ThreadServerGestor.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/LN.cs" />
-        <option value="$PROJECT_DIR$/AppGestor/AppGestor.cs" />
-        <option value="$PROJECT_DIR$/AppFunc/AppFunc.cs" />
-        <option value="$PROJECT_DIR$/AppFunc/LN.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/serverCliente/ThreadServerClient.cs" />
-        <option value="$PROJECT_DIR$/AppClient/AppClient.cs" />
         <option value="$PROJECT_DIR$/AppClient/LN.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/ClienteDAO.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Server.cs" />
-        <option value="$PROJECT_DIR$/ServerMyBar/Comum/Gestor.cs" />
+        <option value="$PROJECT_DIR$/AppClient/AppClient.cs" />
       </list>
     </option>
   </component>
-  <component name="InvalidFacetManager">
-    <ignored-facets>
-      <facet id="riderModule/invalid/Default Android Facet" />
-    </ignored-facets>
-  </component>
-  <component name="ProjectId" id="1YP9E5WkMDCjaYLuIKrLlEkhN3W" />
+  <component name="ProjectId" id="1ZqedPVBMwahHHaKrtnt7NZahfi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-net-8.0.19-noinstall/v4.8/MySql.Data.dll" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.XML" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="AppFunc" />
-    </option>
-  </component>
-  <component name="RunManager" selected=".NET Project.AppClient">
-    <configuration name="AppClient" type="DotNetProject" factoryName=".NET Project" temporary="true">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/AppClient/AppClient.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
-      <method v="2">
-        <option name="Build" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppFunc" type="DotNetProject" factoryName=".NET Project" temporary="true">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/AppFunc/AppFunc.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
-      <method v="2">
-        <option name="Build" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppGestor" type="DotNetProject" factoryName=".NET Project" temporary="true">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/AppGestor/AppGestor.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
-      <method v="2">
-        <option name="Build" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="ServerMyBar" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar.dll" />
+      <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ServerMyBar/bin/Debug/netcoreapp3.1" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -229,293 +212,29 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="PROJECT_TFM" value="" />
       <method v="2">
         <option name="Build" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testes" type="DotNetProject" factoryName=".NET Project" temporary="true">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/testes/testes.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
-      <method v="2">
-        <option name="Build" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue=".NET Project.ServerMyBar" />
-      <item itemvalue=".NET Project.AppClient" />
-      <item itemvalue=".NET Project.AppGestor" />
-      <item itemvalue=".NET Project.testes" />
-      <item itemvalue=".NET Project.AppFunc" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue=".NET Project.AppClient" />
-        <item itemvalue=".NET Project.AppFunc" />
-        <item itemvalue=".NET Project.AppGestor" />
-        <item itemvalue=".NET Project.testes" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:LI_Database@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:LI_Database@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@95667d9" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d92b2dfc-2aa3-4c90-a77f-2248a42d6e8c" name="Default Changelist" comment="" />
-      <created>1582833247394</created>
+      <changelist id="3607a7eb-eb67-41ff-8e50-f5a894c71565" name="Default Changelist" comment="" />
+      <created>1585571137697</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582833247394</updated>
-      <workItem from="1582833248619" duration="3746000" />
-      <workItem from="1582840056972" duration="64000" />
-      <workItem from="1583177894002" duration="2774000" />
-      <workItem from="1583180828093" duration="135000" />
-      <workItem from="1583180981594" duration="5558000" />
-      <workItem from="1583233056204" duration="2790000" />
-      <workItem from="1583238248415" duration="8089000" />
-      <workItem from="1583247739736" duration="4190000" />
-      <workItem from="1583255120660" duration="4443000" />
-      <workItem from="1583266205478" duration="5936000" />
-      <workItem from="1583319788287" duration="6072000" />
-      <workItem from="1583335765434" duration="3189000" />
-      <workItem from="1583343210793" duration="1271000" />
-      <workItem from="1583344652539" duration="1527000" />
-      <workItem from="1583346498677" duration="960000" />
-      <workItem from="1583347559279" duration="575000" />
-      <workItem from="1583348668854" duration="493000" />
-      <workItem from="1583349190481" duration="156000" />
-      <workItem from="1583351588898" duration="2967000" />
-      <workItem from="1583395283741" duration="1911000" />
-      <workItem from="1583752302090" duration="17000" />
-      <workItem from="1584022820147" duration="9595000" />
-      <workItem from="1584090608668" duration="5691000" />
+      <updated>1585571137697</updated>
+      <workItem from="1585571138975" duration="1978000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="WindowStateProjectService">
-    <state x="583" y="179" width="671" height="659" key="#AppFunc" timestamp="1583347603432">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="583" y="179" width="671" height="659" key="#AppFunc/0.32.1920.1048@0.32.1920.1048" timestamp="1583347603432" />
-    <state x="421" y="101" width="878" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583349224628">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="421" y="101" width="878" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1583349224628" />
-    <state x="678" y="361" width="553" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583258477211">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="678" y="361" width="553" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.32.1920.1048@0.32.1920.1048" timestamp="1583258477211" />
-    <state width="389" height="466" key="DebuggerActiveHint" timestamp="1583239022966">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="389" height="466" key="DebuggerActiveHint/0.32.1920.1048@0.32.1920.1048" timestamp="1583239022966" />
-    <state x="743" y="313" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583346465637">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="743" y="313" width="424" height="491" key="FileChooserDialogImpl/0.32.1920.1048@0.32.1920.1048" timestamp="1583346465637" />
-    <state width="1878" height="192" key="GridCell.Tab.0.bottom" timestamp="1584096268346">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="192" key="GridCell.Tab.0.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1584096268346" />
-    <state width="1878" height="192" key="GridCell.Tab.0.center" timestamp="1584096268346">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="192" key="GridCell.Tab.0.center/0.32.1920.1048@0.32.1920.1048" timestamp="1584096268346" />
-    <state width="1878" height="192" key="GridCell.Tab.0.left" timestamp="1584096268346">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="192" key="GridCell.Tab.0.left/0.32.1920.1048@0.32.1920.1048" timestamp="1584096268346" />
-    <state width="1878" height="192" key="GridCell.Tab.0.right" timestamp="1584096268346">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="192" key="GridCell.Tab.0.right/0.32.1920.1048@0.32.1920.1048" timestamp="1584096268346" />
-    <state width="1878" height="340" key="GridCell.Tab.1.bottom" timestamp="1584092408318">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.1.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408318" />
-    <state width="1878" height="340" key="GridCell.Tab.1.center" timestamp="1584092408317">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.1.center/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408317" />
-    <state width="1878" height="340" key="GridCell.Tab.1.left" timestamp="1584092408317">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.1.left/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408317" />
-    <state width="1878" height="340" key="GridCell.Tab.1.right" timestamp="1584092408318">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.1.right/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408318" />
-    <state width="1878" height="340" key="GridCell.Tab.2.bottom" timestamp="1584092408319">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.2.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408319" />
-    <state width="1878" height="340" key="GridCell.Tab.2.center" timestamp="1584092408318">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.2.center/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408318" />
-    <state width="1878" height="340" key="GridCell.Tab.2.left" timestamp="1584092408318">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.2.left/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408318" />
-    <state width="1878" height="340" key="GridCell.Tab.2.right" timestamp="1584092408319">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.2.right/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408319" />
-    <state width="1878" height="340" key="GridCell.Tab.3.bottom" timestamp="1584092408320">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.3.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408320" />
-    <state width="1878" height="340" key="GridCell.Tab.3.center" timestamp="1584092408319">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.3.center/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408319" />
-    <state width="1878" height="340" key="GridCell.Tab.3.left" timestamp="1584092408319">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.3.left/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408319" />
-    <state width="1878" height="340" key="GridCell.Tab.3.right" timestamp="1584092408319">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.3.right/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408319" />
-    <state width="1878" height="340" key="GridCell.Tab.4.bottom" timestamp="1584092408323">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.4.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408323" />
-    <state width="1878" height="340" key="GridCell.Tab.4.center" timestamp="1584092408323">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.4.center/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408323" />
-    <state width="1878" height="340" key="GridCell.Tab.4.left" timestamp="1584092408320">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.4.left/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408320" />
-    <state width="1878" height="340" key="GridCell.Tab.4.right" timestamp="1584092408323">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="1878" height="340" key="GridCell.Tab.4.right/0.32.1920.1048@0.32.1920.1048" timestamp="1584092408323" />
-    <state x="555" y="290" width="800" height="537" key="Rider.ProjectTemplateDialog.Size" timestamp="1583349144647">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="555" y="290" width="800" height="537" key="Rider.ProjectTemplateDialog.Size/0.32.1920.1048@0.32.1920.1048" timestamp="1583349144647" />
-    <state x="636" y="239" width="637" height="639" key="RiderGenerateDialog" timestamp="1583353329174">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="636" y="239" width="637" height="639" key="RiderGenerateDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1583353329174" />
-    <state x="464" y="190" width="992" height="737" key="SettingsEditor" timestamp="1583258003885">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="464" y="190" width="992" height="737" key="SettingsEditor/0.32.1920.1048@0.32.1920.1048" timestamp="1583258003885" />
-    <state x="643" y="313" width="624" height="491" key="WebReferenceSession.Dialog" timestamp="1583267304457">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="643" y="313" width="624" height="491" key="WebReferenceSession.Dialog/0.32.1920.1048@0.32.1920.1048" timestamp="1583267304457" />
-    <state width="960" height="524" key="XDebugger.FullValuePopup" timestamp="1583344265075">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state width="960" height="524" key="XDebugger.FullValuePopup/0.32.1920.1048@0.32.1920.1048" timestamp="1583344265075" />
-    <state x="100" y="131" width="1720" height="849" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1583257930531">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="100" y="131" width="1720" height="849" key="com.android.tools.idea.avdmanager.AvdListDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1583257930531" />
-    <state x="717" y="312" width="476" height="493" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1583258209944">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="717" y="312" width="476" height="493" key="com.intellij.database.run.ParametersPanel.Standalone/0.32.1920.1048@0.32.1920.1048" timestamp="1583258209944" />
-    <state x="624" y="208" width="662" height="702" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583178544603">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="624" y="208" width="662" height="702" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.32.1920.1048@0.32.1920.1048" timestamp="1583178544603" />
-    <state x="624" y="253" width="672" height="677" key="run.anything.popup" timestamp="1583348057295">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="624" y="253" width="672" height="677" key="run.anything.popup/0.32.1920.1048@0.32.1920.1048" timestamp="1583348057295" />
-    <state x="623" y="262" width="672" height="678" key="search.everywhere.popup" timestamp="1582835814795">
-      <screen x="0" y="32" width="1920" height="1048" />
-    </state>
-    <state x="623" y="262" width="672" height="678" key="search.everywhere.popup/0.32.1920.1048@0.32.1920.1048" timestamp="1582835814795" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/testes/Program.cs</url>
-          <line>14</line>
-          <properties documentPath="$PROJECT_DIR$/testes/Program.cs" initialLine="14">
-            <startOffsets>
-              <option value="301" />
-            </startOffsets>
-            <endOffsets>
-              <option value="302" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs</url>
-          <line>54</line>
-          <properties documentPath="$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs" initialLine="47">
-            <startOffsets>
-              <option value="1437" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1466" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs</url>
-          <line>55</line>
-          <properties documentPath="$PROJECT_DIR$/ServerMyBar/serverFunc/ThreadServerFunc.cs" initialLine="48">
-            <startOffsets>
-              <option value="1518" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1524" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>

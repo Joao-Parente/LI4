@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/jpedro/RiderProjects/ServerMyBar/AppGestor/AppGestor.csproj",
+    "projectUniqueName": "/home/jpedro/Documentos/MIEI/Miei MEU/3 Ano/2 Semestre/Laboratórios de Informática IV/Projeto/ServerMyBar/AppGestor/AppGestor.csproj",
     "projectName": "AppGestor",
-    "projectPath": "/home/jpedro/RiderProjects/ServerMyBar/AppGestor/AppGestor.csproj",
-    "outputPath": "/home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/",
+    "projectPath": "/home/jpedro/Documentos/MIEI/Miei MEU/3 Ano/2 Semestre/Laboratórios de Informática IV/Projeto/ServerMyBar/AppGestor/AppGestor.csproj",
+    "outputPath": "/home/jpedro/Documentos/MIEI/Miei MEU/3 Ano/2 Semestre/Laboratórios de Informática IV/Projeto/ServerMyBar/AppGestor/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
