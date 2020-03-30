@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              x:Class="AppCliente.CarrinhoCompras">
     
-    <Grid Margin="32" BackgroundColor="Tan">
+    <Grid Margin="32" BackgroundColor="Gray">
         <Grid.RowDefinitions>
             <RowDefinition Height=".1*"/>
             <RowDefinition Height=".3*"/>
@@ -32,11 +32,11 @@
             <ColumnDefinition Width=".1*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Text="Ultimo Pedido" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Grid.Row="1" Grid.Column="1"/>
-        <Label x:Name="ultimoPedido" TextColor="Black" FontSize="Medium" Grid.Row="1" Grid.Column="2"/>
+        <Label Text="Ultimo Pedido" FontAttributes="Bold" FontSize="Medium" TextColor="White" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="ultimoPedido" TextColor="White" FontSize="Medium" Grid.Row="1" Grid.Column="2"/>
 
-        <Label Text="Meu Pedido" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
-        <Label x:Name="meuPedido" TextColor="Black" FontSize="Medium" Grid.Row="2" Grid.Column="2"/>
+        <Label Text="Meu Pedido" FontAttributes="Bold" FontSize="Medium" TextColor="White" Grid.Row="2" Grid.Column="1"/>
+        <Label x:Name="meuPedido" TextColor="White" FontSize="Medium" Grid.Row="2" Grid.Column="2"/>
 
         <ListView x:Name="ProdutosCarrinho" VerticalScrollBarVisibility="Never" 
                   HorizontalScrollBarVisibility="Never" SeparatorVisibility="None"
@@ -48,29 +48,10 @@
                 <DataTemplate>
                     <ViewCell>
                         <Frame HasShadow="true" Margin="5">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height=".1*"/>
-                                    <RowDefinition Height=".8*"/>
-                                    <RowDefinition Height=".6*"/>
-                                    <RowDefinition Height=".1*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width=".6*"/>
-                                    <ColumnDefinition Width=".2*"/>
-                                    <ColumnDefinition Width=".1*"/>
-                                    <ColumnDefinition Width=".1*"/>
-                                    <ColumnDefinition Width=".1*"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Nome}" Grid.Row="1" Grid.Column="0"/>
-                                <Label Text="{Binding Preco}" Grid.Row="2" Grid.Column="0"/>
-                                <Button BackgroundColor="White" ImageSource="plusIcon.png"
-                                    Grid.Column="3" Grid.Row="1" Clicked="MaisQuantidadeBotao"/>
-                                <Label Text="Q: " Grid.Row="2" Grid.Column="3"/>
-                                <Label Text="{Binding Quantidades}" Grid.Column="4" Grid.Row="2"/>
-                                <Button BackgroundColor="White" ImageSource="removeIcon.png" 
-                                    Grid.Column="4" Grid.Row="1" Clicked="MenosQuantidadeBotao"/>
-                            </Grid>
+                            <StackLayout>
+                                <Label Text="{Binding Nome}" TextColor="Black"/>
+                                <Label Text="{Binding Preco}" TextColor="Black"/>
+                            </StackLayout>
                         </Frame>
                     </ViewCell>
                 </DataTemplate>

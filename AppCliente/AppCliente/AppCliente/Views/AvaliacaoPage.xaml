@@ -4,11 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundColor="Beige"
+             BackgroundColor="Gray"
              x:Class="AppCliente.AvaliacaoPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Avaliacoes aqui"
+            <Label Text="Avaliacoes aqui" TextColor="White"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

@@ -7,7 +7,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AppCliente.ProdutoInfoPopUp">
-    <Grid Margin="64" BackgroundColor="DarkSlateGray">
+    <Grid Margin="64" BackgroundColor="Gray">
         <Grid.RowDefinitions>
             <RowDefinition Height=".6*"/>
             <RowDefinition Height=".5*"/>
@@ -23,8 +23,8 @@
             <ColumnDefinition Width=".2*"/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="NomeProduto" Text="" FontSize="Medium" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Label x:Name="Preco" Text="" FontSize="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="NomeProduto" Text="" TextColor="White" FontSize="Medium" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="Preco" Text="" TextColor="White" FontSize="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         <Button Text="Adicionar Ao Carrinho" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Clicked="AdicionaCarrinhoBotao"/>
 

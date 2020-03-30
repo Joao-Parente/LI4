@@ -30,8 +30,8 @@
                                     <ColumnDefinition Width=".3*"/>
                                     <ColumnDefinition Width=".2*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Nome}" FontSize="Medium" Grid.Column="0"/>
-                                <Label Text="{Binding Preco}" FontSize="Medium" Grid.Column="1"/>
+                                <Label Text="{Binding Nome}" TextColor="Black" FontSize="Medium" Grid.Column="0"/>
+                                <Label Text="{Binding Preco}" TextColor="Black" FontSize="Medium" Grid.Column="1"/>
                                 <Button BackgroundColor="Transparent" ImageSource="addShoppingCart.png" 
                                         Grid.Column="2" Clicked="AdicionaCarrinhoBotao"/>
                             </Grid>

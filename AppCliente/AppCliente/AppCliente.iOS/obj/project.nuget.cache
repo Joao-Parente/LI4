@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "x4g1MrmlyozgReWIzvUh1bK8IS4RXCgCVE5b6lxqsPIrZiz4apP8juAlYfCt0l75E2SdkcEA9saKmRKVvutEFg==",
+  "success": true,
+  "projectFilePath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.iOS\\AppCliente.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jnuno\\.nuget\\packages\\rg.plugins.popup\\1.2.0.223\\rg.plugins.popup.1.2.0.223.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
+  ],
+  "logs": []
+}
