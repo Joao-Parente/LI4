@@ -30,12 +30,12 @@ namespace AppFunc
                         
                         while (flag)
                         {                 
-                            // 1 Visualizar Pedido
+                            // 1 Visualizar Pedido  
                             // 2 MudarEstadoPedido
                             // 3 AlternarEstadodoSistema
                             // 4 NotificarClientes
-                            // 10 IniciarSessao
-                            // 11 TerminarSessao
+                            // 5 IniciarSessao
+                            // 6 TerminarSessao
 
                             Console.WriteLine("Insira: \n 1 Start/Off clientServer \n 2 para Fazer login");
                             input = Convert.ToInt32(Console.ReadLine());

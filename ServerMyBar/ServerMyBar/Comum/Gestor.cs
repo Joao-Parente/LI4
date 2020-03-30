@@ -96,11 +96,11 @@ namespace ServerMyBar.comum
             }
         }
 
-        public bool addProdutoFavoritos(int idProduto, string idCliente)
+        public bool addProdutoFavorito(int idProduto, string idCliente)
         {
             lock (this)
             {
-                return ProdutoDAO.addProdutoFavoritos(idProduto, idCliente);
+                return ProdutoDAO.addProdutoFavorito(idProduto, idCliente);
             }
         }
 
@@ -148,7 +148,7 @@ namespace ServerMyBar.comum
         //+estatisticas(mes : int, ano : int)
 
 
-        //+feedback(idPedido : int) : string
+        //+feedback(idPedido : int) : string 
 
 
         //+editProduct(id : in, p : Server.Produto) : bool
@@ -169,7 +169,7 @@ namespace ServerMyBar.comum
         //+getReclamacao(int id) : Server.Reclamacao
 
 
-        public Reclamacao GetReclamacoes(int idPedido)
+        public Reclamacao GetReclamacao(int idPedido)
         {
             lock (this)
             {
@@ -208,8 +208,8 @@ namespace ServerMyBar.comum
             lock (this)
             {
                 List<int> r = new List<int>();
-                r.Add(42);
-                r.Add(36);
+                r.Add(counter); 
+                r.Add(ticket);
                 return r;
             }
         }

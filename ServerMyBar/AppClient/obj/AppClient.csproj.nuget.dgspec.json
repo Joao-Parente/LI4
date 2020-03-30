@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/jpedro/Documentos/MIEI/Miei MEU/3 Ano/2 Semestre/Laboratórios de Informática IV/Projeto/ServerMyBar/AppClient/AppClient.csproj": {}
+    "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {}
   },
   "projects": {
-    "/home/jpedro/Documentos/MIEI/Miei MEU/3 Ano/2 Semestre/Laboratórios de Informática IV/Projeto/ServerMyBar/AppClient/AppClient.csproj": {
+    "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jpedro/Documentos/MIEI/Miei MEU/3 Ano/2 Semestre/Laboratórios de Informática IV/Projeto/ServerMyBar/AppClient/AppClient.csproj",
+        "projectUniqueName": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
         "projectName": "AppClient",
-        "projectPath": "/home/jpedro/Documentos/MIEI/Miei MEU/3 Ano/2 Semestre/Laboratórios de Informática IV/Projeto/ServerMyBar/AppClient/AppClient.csproj",
-        "packagesPath": "/home/jpedro/.nuget/packages/",
-        "outputPath": "/home/jpedro/Documentos/MIEI/Miei MEU/3 Ano/2 Semestre/Laboratórios de Informática IV/Projeto/ServerMyBar/AppClient/obj/",
+        "projectPath": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
+        "packagesPath": "C:\\Users\\jpedro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jpedro\\Documents\\GitHub\\LI4\\ServerMyBar\\AppClient\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/home/jpedro/.config/NuGet/NuGet.Config"
+          "C:\\Users\\jpedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

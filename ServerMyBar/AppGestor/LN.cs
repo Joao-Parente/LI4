@@ -25,8 +25,6 @@ namespace AppGestor
 
         //+consultasEstatisticas() : lista string
 
-        //+visualizacaoFeedback() : lista string
-
         //+alterarInfoEmpresa(novaInfo : lista string) : void
 
         //+adicionarEmpregado(idEmpregado : int) : void

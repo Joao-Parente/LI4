@@ -20,7 +20,7 @@ namespace ServerMyBar.comum
 
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                //pode haver problema no reclamacao comecar por letra minuscula
+               
                 string query = "SELECT * FROM reclamacao WHERE idPedido='" + idPedido+"';";
 
                 cmd.CommandText = query;
@@ -63,7 +63,7 @@ namespace ServerMyBar.comum
                 conn.Open();
 
                 MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn; //pode haver problema no reclamacao comecar por letra minuscula
+                cmd.Connection = conn;
                 cmd.CommandText = "INSERT INTO reclamacao values("+idPedido+",'" + motivo + "','" + reclamacao + "',now());";
                 cmd.Prepare();
 

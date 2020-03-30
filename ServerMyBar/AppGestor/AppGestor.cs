@@ -20,10 +20,9 @@ namespace AppGestor
             // 5 AdicionarProduto
             // 6 EditarProduto
             // 7 ConsultasEstatisticas
-            // 8 VisualizarFeedback
-            // 9 AlterarInfoEmpresa
-            // 10 IniciarSessao
-            // 11 TerminarSessao
+            // 8 AlterarInfoEmpresa
+            // 9 IniciarSessao
+            // 10 TerminarSessao
 
             master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12344);
