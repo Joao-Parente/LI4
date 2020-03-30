@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace AppCliente
 {
-    public class ProdutoCell : ViewCell
+    public class ProdutoCell
     {
         public int id { get; set; }
         public string Nome { get; set; }

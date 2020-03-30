@@ -21,7 +21,7 @@ namespace AppCliente
         {
             LN = l;
             InitializeComponent();
-
+            
             produtos = LN.GetCarrinhoOC();
 
             ThreadPedidosTracker tpt = new ThreadPedidosTracker(ultimoPedido, meuPedido);
@@ -38,7 +38,7 @@ namespace AppCliente
 
             quantiaTotal.Text = "Total = "+total+"€";
         }
-
+        
         private void MaisQuantidadeBotao(object sender, EventArgs e)
         {
             ProdutoCell p = (ProdutoCell)((Button)sender).BindingContext;

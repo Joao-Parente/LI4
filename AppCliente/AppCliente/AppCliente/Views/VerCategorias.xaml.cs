@@ -164,6 +164,7 @@ namespace AppCliente
         private void CarrinhoComprasBotao(object sender, EventArgs e)
         {
             PopupNavigation.Instance.PushAsync(new CarrinhoCompras(this.LN));
+            //PopupNavigation.Instance.PushAsync(new CarrinhoCompras(new CarrinhoComprasViewModel { LN = this.LN }));
         }
 
     }
