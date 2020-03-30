@@ -172,6 +172,20 @@ namespace ServerMyBar.serverCliente
 
                         //chamar função no Gestor para buscar as informações da Empresa?
 
+                        /*
+                        byte[] elem = new byte[128];
+                        string info[] = null;
+
+                        //chamar função no gestor para ir buscar as informações para a lista por ordem
+
+                        for(int i = 0; i < 5; i++){
+                          
+                            elem = System.Text.Encoding.UTF8.GetBytes(info[i]);
+                            socket.Send(elem);
+                        }
+
+                         */
+
                         break;
                     case 9: // Login
                         Console.WriteLine("Starting authentication" + msg);

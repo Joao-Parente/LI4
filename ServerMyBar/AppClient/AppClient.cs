@@ -88,7 +88,7 @@ namespace AppClient
                         }
                         break;
                     case 7: //infoEmpresa
-                        string info = ln.InfoEmpresa();
+                        string[] info = ln.InfoEmpresa();
                         Console.WriteLine("As informações da empresa são as seguintes: \n" + info);
                         break;
                     case 9: // Login

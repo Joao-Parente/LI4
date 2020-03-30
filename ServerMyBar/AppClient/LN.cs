@@ -264,17 +264,22 @@ namespace AppClient
         }
 
 
-        public String InfoEmpresa()
+        public String[] InfoEmpresa()
         {
+            string[] info = null;
+
             //envia id operacao
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(7);
             master.Send(id);
 
             byte[] infoBytes = new byte[128];
-            master.Receive(infoBytes);
-            string info = BitConverter.ToString(infoBytes);
 
+            for(int i=0; i < 5; i++) {
+                master.Receive(infoBytes);
+                info[i] = BitConverter.ToString(infoBytes);
+            }
+            
             return info;
         }
 
