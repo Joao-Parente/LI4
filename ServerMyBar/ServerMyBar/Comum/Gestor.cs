@@ -57,7 +57,6 @@ namespace ServerMyBar.comum
         //+getProduto(id : int) : Produto
 
 
-        //+addProduct(p : Produto) : int
 
         public int addProduto(Produto p)
         {
@@ -243,7 +242,7 @@ namespace ServerMyBar.comum
             lock (this)
             {
                 List<int> r = new List<int>();
-                r.Add(counter); 
+                r.Add(counter);
                 r.Add(ticket);
                 return r;
             }
@@ -263,8 +262,8 @@ namespace ServerMyBar.comum
                 return ClienteDAO.registaCliente(email, password, nome);
             }
         }
-        
-        public void notificarCliente(string idCliente,string mensagem)
+
+        public void notificarCliente(string idCliente, string mensagem)
         {
             lock (this)
             {
@@ -272,7 +271,7 @@ namespace ServerMyBar.comum
             }
         }
 
-        public bool editarProduto(int idProduto,Produto p)
+        public bool editarProduto(int idProduto, Produto p)
         {
             lock (this)
             {

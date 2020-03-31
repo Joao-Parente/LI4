@@ -28,23 +28,23 @@ namespace ServerMyBar.serverCliente
                 x.close();
             }
         }
-        
-        
-        public void run() 
+
+
+        public void run()
         {
             TcpListener server = new TcpListener(12344);
             server.Start();
 
-            while(true)
-            {                    
+            while (true)
+            {
                 Console.WriteLine("ServerClient á espera de chamadas!\n ");
                 socket = server.AcceptSocket();
-                
+
                 Console.WriteLine("Ligaram-me, a criar uma thread para tratar do cliente. \n ");
-                
-                ThreadServerClient obj= new ThreadServerClient(gestor,socket);
-                Thread a = new Thread(obj.run); 
-                a.Start();            
+
+                ThreadServerClient obj = new ThreadServerClient(gestor, socket);
+                Thread a = new Thread(obj.run);
+                a.Start();
             }
         }
     }

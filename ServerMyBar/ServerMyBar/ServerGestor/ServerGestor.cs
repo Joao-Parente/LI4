@@ -1,8 +1,8 @@
+using ServerMyBar.comum;
+using ServerMyBar.serverCliente;
 using System;
 using System.Net.Sockets;
 using System.Threading;
-using ServerMyBar.comum;
-using ServerMyBar.serverCliente;
 
 
 namespace ServerMyBar.serverGestor

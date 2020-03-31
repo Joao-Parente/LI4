@@ -14,7 +14,7 @@ namespace ServerMyBar.serverGestor
         private StarterClient start_client;
 
 
-        public ThreadServerGestor(Gestor g, Socket s,  StarterClient sa)
+        public ThreadServerGestor(Gestor g, Socket s, StarterClient sa)
         {
             gestor = g;
             socket = s;
@@ -113,7 +113,7 @@ namespace ServerMyBar.serverGestor
 
                     case 10: //TerminarSessao
                         flag = false;
-                        break;    
+                        break;
 
                     case 11: //editarEmpregado
                         socket.Receive(data, 0, 512, SocketFlags.None);
@@ -137,7 +137,7 @@ namespace ServerMyBar.serverGestor
                         byte[] resultado2 = new byte[30];
                         resultado2 = BitConverter.GetBytes(res2);
                         socket.Send(resultado2, 30, SocketFlags.None);
-                        break;    
+                        break;
                     default:
                         flag = false;
                         break;

@@ -46,6 +46,5 @@ namespace AppGestor
             XmlSerializer XML = new XmlSerializer(typeof(Empregado));
             return (Empregado)XML.Deserialize(ms);
         }
-
     }
 }
