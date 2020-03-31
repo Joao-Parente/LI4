@@ -15,7 +15,7 @@ namespace ServerMyBar.comum
             return true;
         }
 
-        public static bool editEmpregado(int id, Empregado e)
+        public static bool editEmpregado(string email, Empregado e)
         {
             return true;
         }
@@ -34,7 +34,7 @@ namespace ServerMyBar.comum
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
 
-                string query = "SELECT * FROM LI_Database.Empregado where email='" + e + "' and password='" + p + "';";
+                string query = "SELECT * FROM LI_Database.Empregado where LI_Database.Empregado.email='" + e + "' and LI_Database.Empregado.password='" + p + "';";
                 cmd.CommandText = query;
                 cmd.Prepare();
 
@@ -49,14 +49,41 @@ namespace ServerMyBar.comum
                 }
                 else
                 {
-                    Console.WriteLine(" !!no rows found.!!");
+                    Console.WriteLine(" !!! Sorry but no rows found !!!");
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                Console.WriteLine("Exception " + ex.Message);
+                Console.WriteLine("MySqlException: " + ex.Message);
             }
             return null;
         }
+        public static bool RemoveEmpregado(string email)
+        {
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                    "pwd=password;database=LI_Database";
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+
+                cmd.CommandText = "DELETE FROM LI_Database.Empregado where LI_Database.Empregado.email='" + email + "'";
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("MySqlException: " + ex.Message);
+                return false;
+            }
+            return true;
+        }
     }
 }
+

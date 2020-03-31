@@ -13,7 +13,7 @@ namespace ServerMyBar.serverGestor
         private StarterClient start_client;
 
 
-        public ThreadServerGestor(Gestor g, Socket s,  StarterClient sa)
+        public ThreadServerGestor(Gestor g, Socket s, StarterClient sa)
         {
             gestor = g;
             socket = s;
@@ -65,6 +65,34 @@ namespace ServerMyBar.serverGestor
                             socket.Send(BitConverter.GetBytes(false));
                         }
                         break;
+                    case 10: //TerminarSessao
+                        flag = false;
+                        break;
+                    case 11: //editarEmpregado
+                        socket.Receive(data, 0, 512, SocketFlags.None);
+                        string email1 = System.Text.Encoding.UTF8.GetString(data);
+
+                        Empregado e = RecebeEmpregado();
+
+                        bool res1 = gestor.editEmpregado(email1, e);
+
+                        byte[] resultado1 = new byte[30];
+                        resultado1 = BitConverter.GetBytes(res1);
+                        socket.Send(resultado1, 30, SocketFlags.None);
+
+                        break;
+
+                    case 12: //removerEmpregado
+                        socket.Receive(data, 0, 512, SocketFlags.None);
+                        string email2 = System.Text.Encoding.UTF8.GetString(data);
+
+                        bool res2 = gestor.removeEmpregado(email2);
+
+                        byte[] resultado2 = new byte[30];
+                        resultado2 = BitConverter.GetBytes(res2);
+                        socket.Send(resultado2, 30, SocketFlags.None);
+
+                        break;
                     default:
                         flag = false;
                         break;
@@ -96,6 +124,27 @@ namespace ServerMyBar.serverGestor
                 }
             }
             return Pedido.loadFromBytes(data);
+        }
+
+        public Empregado RecebeEmpregado()
+        {
+            int posicao = 0;
+            int size = 100;
+            byte[] data = new byte[size];
+            int readBytes = -1;
+            socket.Receive(data, 0, 4, SocketFlags.None); 
+            int numero_total = BitConverter.ToInt32(data, 0);
+            while (readBytes != 0 && numero_total - 1 > posicao)
+            {
+                readBytes = socket.Receive(data, posicao, size - posicao, SocketFlags.None);
+                posicao += readBytes;
+                if (posicao >= size - 1)
+                {
+                    System.Array.Resize(ref data, size * 2);
+                    size *= 2;
+                }
+            }
+            return Empregado.loadFromBytes(data);
         }
     }
 }

@@ -59,7 +59,15 @@ namespace ServerMyBar.comum
         //+getProduto(id : int) : Produto
 
 
-        //+addProduct(p : Produto) : int
+        public int addProduto(Produto p)
+        {
+            int val = 0;
+            lock (this)
+            {
+                val = ProdutoDAO.registaProduto(p.tipo, p.nome, p.detalhes, p.disponibilidade, p.preco);
+            }
+            return val;
+        }
 
 
         public void adicionarProdutos(int idPedido, string[] produtos)
@@ -157,10 +165,26 @@ namespace ServerMyBar.comum
         //+addEmpregado(emp : Server.Empregado) : int
 
 
-        //+editEmpregado(id : int, emp : Emp) : bool
+        public bool editEmpregado(string email, Empregado e)
+        {
+            bool res = false;
+            lock (this)
+            {
+                if (EmpregadoDAO.editEmpregado(email, e) != false) res = true;
+            }
+            return res;
+        }
 
 
-        //+removeEmpregado(id : int) : bool
+        public bool removeEmpregado(string email)
+        {
+            bool res = false;
+            lock (this)
+            {
+                if (EmpregadoDAO.RemoveEmpregado(email) != false) res = true;
+            }
+            return res;
+        }
 
 
         //+getEmpregado(id : int) : Server.Empregado
@@ -208,7 +232,7 @@ namespace ServerMyBar.comum
             lock (this)
             {
                 List<int> r = new List<int>();
-                r.Add(counter); 
+                r.Add(counter);
                 r.Add(ticket);
                 return r;
             }

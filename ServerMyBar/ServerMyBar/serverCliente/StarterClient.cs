@@ -16,8 +16,8 @@ namespace ServerMyBar.serverCliente
             gestor = g;
             estado = false;
         }
-        
-        
+
+
         public void offCliente()
         {
             if (estado)
@@ -39,10 +39,10 @@ namespace ServerMyBar.serverCliente
                 estado = true;
             }
         }
-            
-            
-         public void notificarCliente(  int idCliente, string msg  )
-         {    
-         }
+
+
+        public void notificarCliente(int idCliente, string msg)
+        {
+        }
     }
 }

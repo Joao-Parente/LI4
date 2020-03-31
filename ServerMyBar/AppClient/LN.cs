@@ -312,11 +312,12 @@ namespace AppClient
         }
 
 
-        public void TerminarSessao()
+        public bool TerminarSessao()
         {
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(10);
             master.Send(id);
+            return false;
         }
 
 

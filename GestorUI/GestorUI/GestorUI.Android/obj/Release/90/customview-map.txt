@@ -4,10 +4,14 @@ android.support.design.widget.TabLayout;obj\Release\90\res\layout\tabbar.xml
 android.support.v7.widget.Toolbar;obj\Release\90\res\layout\toolbar.xml
 background;obj\Release\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Release\90\res\mipmap-anydpi-v26\icon_round.xml
+cache-path;C:\Users\Gonçalo Pinto\Source\Repos\LI4\GestorUI\GestorUI\GestorUI.Android\obj\Release\90\lp\37\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Release\90\res\values\colors.xml
+external-cache-path;C:\Users\Gonçalo Pinto\Source\Repos\LI4\GestorUI\GestorUI\GestorUI.Android\obj\Release\90\lp\37\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\Gonçalo Pinto\Source\Repos\LI4\GestorUI\GestorUI\GestorUI.Android\obj\Release\90\lp\37\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Release\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Release\90\res\mipmap-anydpi-v26\icon_round.xml
 item;obj\Release\90\res\values\styles.xml
+paths;C:\Users\Gonçalo Pinto\Source\Repos\LI4\GestorUI\GestorUI\GestorUI.Android\obj\Release\90\lp\37\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 resources;obj\Release\90\res\values\colors.xml
 resources;obj\Release\90\res\values\styles.xml
 style;obj\Release\90\res\values\styles.xml

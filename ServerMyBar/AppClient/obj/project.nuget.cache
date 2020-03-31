@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SD8nPTl+HlphrcVn9V5gRgOL+sKa4Oq3ekTmh2c/doQU1M6BTHVm+kMdzwqVrd5Njtjg7gpzGjWIeOYLz14MeA==",
+  "dgSpecHash": "eoxdvthc3RGswBitDQSYhTCID7F/07k0N7mtI4jFYLLCLuVWQ2eubg7/JJfeNiSqVStOTGBmQe+hLJpUdzTIJQ==",
   "success": true,
-  "projectFilePath": "D:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
+  "projectFilePath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

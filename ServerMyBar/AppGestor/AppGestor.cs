@@ -23,19 +23,20 @@ namespace AppGestor
             // 8 AlterarInfoEmpresa
             // 9 IniciarSessao
             // 10 TerminarSessao
+            // 11 EditarEmpregado
+            // 12 RemoverProduto
 
-            master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12344);
+            int input;
+            byte[] msg = new byte[4];
+            bool flag = true;
+            LN ln = new LN();
+
+
             try
             {
-                master.Connect(ipe);
                 // testes  
                 // master.Send(BitConverter.GetBytes(1));
                 // enviaPedido(new Pedido());
-
-                int input;
-                byte[] msg = new byte[4];
-                bool flag = true;
 
                 while (flag)
                 {
@@ -66,6 +67,33 @@ namespace AppGestor
                             bool login = BitConverter.ToBoolean(log, 0);
                             if (login) Console.WriteLine("i'm in you crazy bastard");
                             else Console.WriteLine("we will get em next time");
+                            break;
+
+                        case 10:
+                            flag = ln.TerminarSessao();
+                            break;
+                        case 11:
+                            Console.WriteLine("# Starting editarEmpregado #");
+                            Console.WriteLine("Insira o email do empregado a alterar");
+                            string actualmail = Console.ReadLine();
+                            Console.WriteLine("Insira a nova password");
+                            string newpass = Console.ReadLine();
+                            Console.WriteLine("Insira o novo email:");
+                            string newname = Console.ReadLine();
+                            Console.WriteLine("Vai ser gestor? (true/false)");
+                            string ismanager = Console.ReadLine();
+                            bool val = false;
+                            if (ismanager.Equals("true")) val = true;
+                            Empregado e = new Empregado(actualmail, newpass, newname, val);
+                            bool op = ln.editarEmpregado(actualmail,e);
+                            Console.WriteLine(op);
+                            break;
+                        case 12:
+                            Console.WriteLine("# Starting removerEmpregado #");
+                            Console.WriteLine("Insira o email do empregado a remover");
+                            string removemail = Console.ReadLine();
+                            bool res = ln.removerEmpregado(removemail);
+                            Console.WriteLine(res);
                             break;
                         default:
                             flag = false;

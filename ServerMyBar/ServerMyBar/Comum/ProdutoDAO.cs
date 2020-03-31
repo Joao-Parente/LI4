@@ -6,7 +6,8 @@ namespace ServerMyBar.comum
 {
     public class ProdutoDAO
     {
-        public static Boolean registaProduto(string tipo, string nome, float preco, string tags, int disponibilidade)
+
+        public static int registaProduto(string tipo, string nome, string detalhes, int disponibilidade, float preco)
         {
             Console.WriteLine("Nome no dao " + nome);
             MySqlConnection conn;
@@ -22,18 +23,19 @@ namespace ServerMyBar.comum
 
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO Produto (tipo,nome,detalhes,disponibilidade,preco) values('" + tipo + "','" + nome + "','" + tags + "'," + disponibilidade + "," + preco + ")";
+                cmd.CommandText = "INSERT INTO Produto (tipo,nome,detalhes,disponibilidade,preco) values('" + tipo + "','" + nome + "','" + detalhes + "'," + disponibilidade + "," + preco + ")";
                 cmd.Prepare();
 
-                //cmd.Parameters.AddWithValue("@Name", "Trygve Gulbranssen");
                 cmd.ExecuteNonQuery();
+
+                long id = cmd.LastInsertedId; //A Testar...
+                return Convert.ToInt32(id);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
                 Console.WriteLine("Exception" + ex.Message);
-                return false;
             }
-            return true;
+            return 0;
         }
 
 
@@ -135,7 +137,7 @@ namespace ServerMyBar.comum
                         Produto p = new Produto((int)reader.GetInt64(0), (string)reader.GetString(1), (string)reader.GetString(2), (string)reader.GetString(3), reader.GetInt32(4), reader.GetFloat(5));
                         if (dic.ContainsKey(reader.GetString(1)))
                         {
-   
+
                             List<Produto> lps = dic[reader.GetString(1)];
                             lps.Add(p);
                         }

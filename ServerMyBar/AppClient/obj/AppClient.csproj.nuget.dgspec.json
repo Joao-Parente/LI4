@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {}
+    "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {}
   },
   "projects": {
-    "F:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {
+    "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
+        "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
         "projectName": "AppClient",
-        "projectPath": "F:\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
-        "packagesPath": "C:\\Users\\RicardoFilipeDantasC\\.nuget\\packages\\",
-        "outputPath": "F:\\LI4\\ServerMyBar\\AppClient\\obj\\",
+        "projectPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\AppClient\\AppClient.csproj",
+        "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\AppClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\RicardoFilipeDantasC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

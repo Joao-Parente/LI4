@@ -101,7 +101,8 @@ namespace AppClient
                         ln.IniciarSessao(email, pw);
                         break;
                     case 10: //Logout
-                        ln.TerminarSessao();
+                        flag = ln.TerminarSessao();
+                        
                         break;
                     case 11: //RegistarCliente
                         //Parse email e password
