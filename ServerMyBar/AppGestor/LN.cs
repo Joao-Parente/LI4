@@ -37,7 +37,22 @@ namespace AppGestor
 
         //+mudarEstadoPedido(idPedido : int) : void
 
-        //+adicionarProduto(produto : Produto) : int
+        public int adicionarProduto(Produto p)
+        {
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(5);
+            master.Send(id);
+
+            byte[] emp = p.SavetoBytes();
+            master.Send(BitConverter.GetBytes(emp.Length));
+            master.Send(emp);
+
+            byte[] data = new byte[4];
+            master.Receive(data, 4, SocketFlags.None);
+            int idP = BitConverter.ToInt32(data, 0);
+
+            return idP;
+        }
 
         //+editarProduto(idProduto : int, novoProduto : Produto) : void
 

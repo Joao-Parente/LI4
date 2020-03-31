@@ -68,7 +68,24 @@ namespace AppGestor
                             if (login) Console.WriteLine("i'm in you crazy bastard");
                             else Console.WriteLine("we will get em next time");
                             break;
-
+                        case 5: //addProduto
+                            Console.WriteLine("# Starting adicionarProduto #");
+                            Console.WriteLine("Insira o tipo:");
+                            string tipo = Console.ReadLine();
+                            Console.WriteLine("Insira o nome:");
+                            string nome = Console.ReadLine();
+                            Console.WriteLine("Insira detalhes:");
+                            string detalhes = Console.ReadLine();
+                            Console.WriteLine("Insira a disponibilidade:");
+                            int disp = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Insira o preço:");
+                            float preco = float.Parse(Console.ReadLine());
+                            Console.WriteLine("Insira a imagem:");
+                            string imagem = Console.ReadLine();
+                            Produto p = new Produto(0, tipo, nome, detalhes, disp, preco);
+                            int idP = ln.adicionarProduto(p);
+                            Console.WriteLine("ID = " + idP);
+                            break;
                         case 10:
                             flag = ln.TerminarSessao();
                             break;

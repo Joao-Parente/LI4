@@ -65,6 +65,16 @@ namespace ServerMyBar.serverGestor
                             socket.Send(BitConverter.GetBytes(false));
                         }
                         break;
+                    case 5:
+                        Produto p = RecebeProduto();
+
+                        int idP = gestor.addProduto(p);
+
+                        byte[] id = new byte[4];
+                        id = BitConverter.GetBytes(idP);
+                        socket.Send(id);
+
+                        break;
                     case 10: //TerminarSessao
                         flag = false;
                         break;
@@ -132,7 +142,7 @@ namespace ServerMyBar.serverGestor
             int size = 100;
             byte[] data = new byte[size];
             int readBytes = -1;
-            socket.Receive(data, 0, 4, SocketFlags.None); 
+            socket.Receive(data, 0, 4, SocketFlags.None);
             int numero_total = BitConverter.ToInt32(data, 0);
             while (readBytes != 0 && numero_total - 1 > posicao)
             {
@@ -145,6 +155,27 @@ namespace ServerMyBar.serverGestor
                 }
             }
             return Empregado.loadFromBytes(data);
+        }
+
+        public Produto RecebeProduto()
+        {
+            int posicao = 0;
+            int size = 100;
+            byte[] data = new byte[size];
+            int readBytes = -1;
+            socket.Receive(data, 0, 4, SocketFlags.None);
+            int numero_total = BitConverter.ToInt32(data, 0);
+            while (readBytes != 0 && numero_total - 1 > posicao)
+            {
+                readBytes = socket.Receive(data, posicao, size - posicao, SocketFlags.None);
+                posicao += readBytes;
+                if (posicao >= size - 1)
+                {
+                    System.Array.Resize(ref data, size * 2);
+                    size *= 2;
+                }
+            }
+            return Produto.loadFromBytes(data);
         }
     }
 }
