@@ -55,19 +55,11 @@ namespace AppGestor
                             string email = Console.ReadLine();
                             Console.WriteLine("Insira pw");
                             string pw = Console.ReadLine();
-                            msg = new byte[100];
-                            msg = BitConverter.GetBytes(input);
-                            master.Send(msg);
-                            msg = new byte[512]; //senao nao tinha acerteza que o server lia o email antes deste eviar a pw tambem, senoa dps o server lia o email e pw tudo junto.,
-                            email = email + "|" + pw + "|";
-                            msg = Encoding.ASCII.GetBytes(email);
-                            master.Send(msg);
-                            byte[] log = new byte[30];
-                            master.Receive(log);
-                            bool login = BitConverter.ToBoolean(log, 0);
+                            bool login = ln.iniciarSessao(email, pw);
                             if (login) Console.WriteLine("i'm in you crazy bastard");
                             else Console.WriteLine("we will get em next time");
                             break;
+
                         case 5: //addProduto
                             Console.WriteLine("# Starting adicionarProduto #");
                             Console.WriteLine("Insira o tipo:");
@@ -78,7 +70,7 @@ namespace AppGestor
                             string detalhes = Console.ReadLine();
                             Console.WriteLine("Insira a disponibilidade:");
                             int disp = int.Parse(Console.ReadLine());
-                            Console.WriteLine("Insira o preço:");
+                            Console.WriteLine("Insira o preï¿½o:");
                             float preco = float.Parse(Console.ReadLine());
                             Console.WriteLine("Insira a imagem:");
                             string imagem = Console.ReadLine();
@@ -86,6 +78,37 @@ namespace AppGestor
                             int idP = ln.adicionarProduto(p);
                             Console.WriteLine("ID = " + idP);
                             break;
+                        case 6:
+
+                            Console.WriteLine("Id do produto please:");
+                            int id = Convert.ToInt32(Console.ReadLine());
+
+                            Console.WriteLine("Tipo do produto please:");
+                            string tipo = Console.ReadLine();
+
+                            Console.WriteLine("Nome do produto please:");
+                            string nome = Console.ReadLine();
+
+                            Console.WriteLine("Detalhes do produto please:");
+                            string detalhes = Console.ReadLine();
+
+                            Console.WriteLine("Disponibilidade do produto please:");
+                            int disponibilidade = Convert.ToInt32(Console.ReadLine());
+
+                            Console.WriteLine("Preco do produto please");
+                            float preco = Convert.ToSingle(Console.ReadLine());
+
+                            Produto p = new Produto(id, tipo, nome, detalhes, disponibilidade, preco);
+
+                            if (ln.editarProduto(p) == true)
+                            {
+                                Console.WriteLine("FIXE");
+                            }
+                            else
+                            {
+                                Console.WriteLine("FOXE");
+                            }
+                            break;    
                         case 10:
                             flag = ln.TerminarSessao();
                             break;

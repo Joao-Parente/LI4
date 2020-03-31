@@ -6,13 +6,13 @@ namespace AppGestor
 {
     public class Produto
     {
-        private int id { get; set; }
-        private string tipo { get; set; }
-        private string nome { get; set; }
-        private string detalhes { get; set; }
-        private int disponibilidade { get; set; }
-        private float preco { get; set; }
-        private string imagem { get; set; }
+        public int id { get; set; }
+        public string tipo { get; set; }
+        public string nome { get; set; }
+        public string detalhes { get; set; }
+        public int disponibilidade { get; set; }
+        public float preco { get; set; }
+        public string imagem { get; set; }
 
 
         public Produto()

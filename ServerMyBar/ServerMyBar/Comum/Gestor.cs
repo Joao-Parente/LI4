@@ -36,12 +36,10 @@ namespace ServerMyBar.comum
 
         public bool loginGestor(string email, string pw)
         {
-            bool r = false;
             lock (this)
             {
-                if (ClienteDAO.getInfoCliente(email, pw) != null) r = true;
+                return EmpregadoDAO.autenticaGestor(email, pw);
             }
-            return r;
         }
 
 
@@ -58,6 +56,8 @@ namespace ServerMyBar.comum
 
         //+getProduto(id : int) : Produto
 
+
+        //+addProduct(p : Produto) : int
 
         public int addProduto(Produto p)
         {
@@ -165,6 +165,8 @@ namespace ServerMyBar.comum
         //+addEmpregado(emp : Server.Empregado) : int
 
 
+        //+editEmpregado(id : int, emp : Emp) : bool
+
         public bool editEmpregado(string email, Empregado e)
         {
             bool res = false;
@@ -175,6 +177,7 @@ namespace ServerMyBar.comum
             return res;
         }
 
+        //+removeEmpregado(id : int) : bool
 
         public bool removeEmpregado(string email)
         {
@@ -188,6 +191,14 @@ namespace ServerMyBar.comum
 
 
         //+getEmpregado(id : int) : Server.Empregado
+
+        public Empregado getEmpregado(string idEmpregado)
+        {
+            lock (this)
+            {
+                return EmpregadoDAO.getEmpregado(idEmpregado);
+            }
+        }
 
 
         //+getReclamacao(int id) : Server.Reclamacao
@@ -232,7 +243,7 @@ namespace ServerMyBar.comum
             lock (this)
             {
                 List<int> r = new List<int>();
-                r.Add(counter);
+                r.Add(counter); 
                 r.Add(ticket);
                 return r;
             }
@@ -250,6 +261,22 @@ namespace ServerMyBar.comum
             lock (this)
             {
                 return ClienteDAO.registaCliente(email, password, nome);
+            }
+        }
+        
+        public void notificarCliente(string idCliente,string mensagem)
+        {
+            lock (this)
+            {
+                //fazer alguma coisa que nao sei
+            }
+        }
+
+        public bool editarProduto(int idProduto,Produto p)
+        {
+            lock (this)
+            {
+                return ProdutoDAO.editProduto(idProduto, p);
             }
         }
     }

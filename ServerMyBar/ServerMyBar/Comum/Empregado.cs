@@ -46,6 +46,5 @@ namespace ServerMyBar.comum
             XmlSerializer XML = new XmlSerializer(typeof(Empregado));
             return (Empregado)XML.Deserialize(ms);
         }
-
     }
 }

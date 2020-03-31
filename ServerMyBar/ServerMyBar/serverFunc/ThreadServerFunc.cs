@@ -1,5 +1,6 @@
 using System;
 using System.Net.Sockets;
+using System.Text;
 using ServerMyBar.comum;
 using ServerMyBar.serverCliente;
 
@@ -52,13 +53,65 @@ namespace ServerMyBar.serverFunc
                         break;
                      case 2: // Login
                          Console.WriteLine("Starting authentication" + msg);
+                        /*
                          socket.Receive(data,0,512,SocketFlags.None); 
                          string email_pw = System.Text.Encoding.UTF8.GetString(data);
                          string[] credenciais = email_pw.Split('|');
                          Console.WriteLine("Credencias : '" + credenciais[0] + "'  --- '" + credenciais[1]+ "'");
                          if (gestor.loginFunc(credenciais[0], credenciais[1])) {Console.WriteLine("Authentication succeed");socket.Send(BitConverter.GetBytes(true));}
-                         else {Console.WriteLine("Authentication failed");socket.Send(BitConverter.GetBytes(false));}
-                         break;
+                         else {Console.WriteLine("Authentication failed");socket.Send(BitConverter.GetBytes(false));}*/
+                        byte[] numL = new byte[4], msgL;
+
+                        //recebe tamanho email
+                        socket.Receive(numL, 0, 4, SocketFlags.None);
+                        int sizeL = BitConverter.ToInt32(numL, 0);
+                        //recebe email
+                        msgL = new byte[sizeL];
+                        socket.Receive(msgL, sizeL, SocketFlags.None);
+                        string emaiL = Encoding.UTF8.GetString(msgL);
+
+                        //recebe tamanho password
+                        socket.Receive(numL, 0, 4, SocketFlags.None);
+                        sizeL = BitConverter.ToInt32(numL, 0);
+                        //recebe password
+                        msgL = new byte[sizeL];
+                        socket.Receive(msgL, sizeL, SocketFlags.None);
+                        string passL = Encoding.UTF8.GetString(msgL);
+
+                        if(gestor.loginFunc(emaiL, passL) == true)
+                        {
+                            numL = BitConverter.GetBytes(1);
+                            socket.Send(numL);
+                        }
+                        else
+                        {
+                            numL = BitConverter.GetBytes(0);
+                            socket.Send(numL);
+                        }
+
+
+                        break;
+                    case 4: // Notificar Clientes                       
+                        byte[] numNC = new byte[4], msgNC;
+
+                        //recebe tamanho idcliente
+                        socket.Receive(numNC, 0, 4, SocketFlags.None);
+                        int sizeS = BitConverter.ToInt32(numNC, 0);
+                        //recebe idcliente
+                        msgNC = new byte[sizeS];
+                        socket.Receive(msgNC, sizeS, SocketFlags.None);
+                        string idc = Encoding.UTF8.GetString(msgNC);
+
+                        //recebe tamanho mensagem
+                        socket.Receive(numNC, 0, 4, SocketFlags.None);
+                        sizeS = BitConverter.ToInt32(numNC, 0);
+                        //recebe mensagem
+                        msgNC = new byte[sizeS];
+                        socket.Receive(msgNC, sizeS, SocketFlags.None);
+                        string mens = Encoding.UTF8.GetString(msgNC);
+
+                        gestor.notificarCliente(idc, mens);
+                        break;
                      default:
                          flag = false;
                          break;

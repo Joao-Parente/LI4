@@ -1,12 +1,12 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace ServerMyBar.comum
 {
     public class ProdutoDAO
     {
-
         public static int registaProduto(string tipo, string nome, string detalhes, int disponibilidade, float preco)
         {
             Console.WriteLine("Nome no dao " + nome);
@@ -38,6 +38,40 @@ namespace ServerMyBar.comum
             return 0;
         }
 
+        public static bool editProduto(int idProduto,Produto p)
+        {
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                 "pwd=password;database=LI_Database";
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+
+                cmd.Connection = conn;
+                StringBuilder sb = new StringBuilder(); 
+                sb.Append("UPDATE produto SET tipo = '").Append(p.tipo)
+                    .Append("', nome = '").Append(p.nome).Append("', detalhes = '").Append(p.detalhes)
+                    .Append("', disponibilidade = ").Append(p.disponibilidade).Append(", preco = ")
+                    .Append(p.preco.ToString().Replace(',','.')).Append(", imagem = null WHERE(idProduto = ").Append(p.id).Append(");");
+                string query = sb.ToString();
+                cmd.CommandText = query;
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine("Exception " + ex.Message);
+                return false;
+            }
+
+        }
 
         public static Produto getProduto(int idProduto)
         {
@@ -137,7 +171,7 @@ namespace ServerMyBar.comum
                         Produto p = new Produto((int)reader.GetInt64(0), (string)reader.GetString(1), (string)reader.GetString(2), (string)reader.GetString(3), reader.GetInt32(4), reader.GetFloat(5));
                         if (dic.ContainsKey(reader.GetString(1)))
                         {
-
+   
                             List<Produto> lps = dic[reader.GetString(1)];
                             lps.Add(p);
                         }

@@ -19,6 +19,8 @@ namespace AppFunc
                    try
                     {
                         master.Connect(ipe);
+
+                        LN ln = new LN(master);
                         
                     //testes  //  master.Send(BitConverter.GetBytes(1));
                        // enviaPedido(new Pedido());
@@ -37,7 +39,7 @@ namespace AppFunc
                             // 5 IniciarSessao
                             // 6 TerminarSessao
 
-                            Console.WriteLine("Insira: \n 1 Start/Off clientServer \n 2 para Fazer login");
+                            Console.WriteLine("Insira: \n 1 Start/Off clientServer \n 2 para Fazer login \n 4 para notificar");
                             input = Convert.ToInt32(Console.ReadLine());
 
                             switch (input)
@@ -53,6 +55,7 @@ namespace AppFunc
                                     string email = Console.ReadLine();
                                     Console.WriteLine("Insira pw");
                                     string pw = Console.ReadLine();
+                            /*
                                     msg= new byte[100];
                                     msg = BitConverter.GetBytes(input);
                                     master.Send(msg);
@@ -61,10 +64,19 @@ namespace AppFunc
                                     msg = Encoding.ASCII.GetBytes(email);
                                     master.Send(msg);
                                     byte [] log= new byte[30];
-                                    master.Receive(log);
-                                    bool login =BitConverter.ToBoolean(log, 0);
+                                    master.Receive(log);*/
+
+                                    bool login = ln.iniciarSessao(email, pw);
                                     if (login) Console.WriteLine("i'm in you crazy bastard");
                                     else Console.WriteLine("we will get em next time");
+                                    break;
+                                case 4: //Notificar Clientes
+                                    Console.WriteLine("Insira o id do cliente");
+                                    string idCliente = Console.ReadLine();
+                                    Console.WriteLine("Insira a mensagem");
+                                    string mensagem = Console.ReadLine();
+                                    ln.notificarCliente(idCliente, mensagem);
+                                    Console.WriteLine("Succ");
                                     break;
                                 default:
                                     flag = false;

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
@@ -13,29 +12,91 @@ namespace AppGestor
         private List<Pedido> preparados;
         private List<Pedido> em_preparacao;
         private List<Pedido> por_preparar;
+
         private Socket master;
 
-        public LN()
+        public LN(Socket s)
         {
-            master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12344);
-            try
-            {
-                master.Connect(ipe);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception: " + e.Message);
-            }
+            master = s;
         }
+
 
         //+visualizarPedido(idPedido : int) : Pedido
 
         //+alternarEstadoSistema() : void
 
-        //+notificarClientes(idCliente : int, mensagem : string) : void
-
         //+mudarEstadoPedido(idPedido : int) : void
+
+        //+adicionarProduto(produto : Produto) : int
+
+        //+editarProduto(idProduto : int, novoProduto : Produto) : void
+
+        public bool editarProduto(Produto p)
+        {
+            byte[] num = new byte[4];
+            //envia id operacao
+            num = BitConverter.GetBytes(6);
+            master.Send(num);
+
+            EnviaProdutoManual(p);
+
+            master.Receive(num,4,SocketFlags.None);
+            int res = BitConverter.ToInt32(num, 0);
+            if (res == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //+consultasEstatisticas() : lista string
+
+        //+alterarInfoEmpresa(novaInfo : lista string) : void
+
+        //+adicionarEmpregado(idEmpregado : int) : void
+
+        //+removerEmpregado(idEmpregado : int) : void
+
+        //+IniciarSessao(email : string, password : string) : void
+
+        public bool iniciarSessao(string email, string password)
+        {
+            byte[] num = new byte[4], msg;
+            //envia id operacao
+            num = BitConverter.GetBytes(9);
+            master.Send(num);
+
+            //envia numero bytes email
+            num = BitConverter.GetBytes(email.Length);
+            master.Send(num);
+            //envia o email
+            msg = new byte[email.Length];
+            msg = Encoding.UTF8.GetBytes(email);
+            master.Send(msg, email.Length, SocketFlags.None);
+
+            //envia numero bytes password
+            num = BitConverter.GetBytes(password.Length);
+            master.Send(num);
+            //envia a password
+            msg = new byte[password.Length];
+            msg = Encoding.UTF8.GetBytes(password);
+            master.Send(msg, password.Length, SocketFlags.None);
+
+            master.Receive(num, 4, SocketFlags.None);
+            int ret = BitConverter.ToInt32(num, 0);
+
+            if (ret == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public int adicionarProduto(Produto p)
         {
@@ -54,17 +115,7 @@ namespace AppGestor
             return idP;
         }
 
-        //+editarProduto(idProduto : int, novoProduto : Produto) : void
-
-        //+consultasEstatisticas() : lista string
-
-        //+alterarInfoEmpresa(novaInfo : lista string) : void
-
-        //+adicionarEmpregado(idEmpregado : int) : void
-
-        //+removerEmpregado(idEmpregado : int) : void
-
-        //+IniciarSessao(email : string, password : string) : void
+        //+TerminarSessao()
 
         public bool TerminarSessao()
         {
@@ -111,5 +162,51 @@ namespace AppGestor
 
             return val;
         }
+
+
+        public void EnviaProdutoManual(Produto p)
+        {
+            //envia o id do produto
+            byte[] dataNum = new byte[4];
+            dataNum = BitConverter.GetBytes(p.id);
+            master.Send(dataNum, 4, SocketFlags.None);
+
+            byte[] dataString;
+            //envia o num de bytes do tipo
+            dataNum = BitConverter.GetBytes(p.tipo.Length);
+            master.Send(dataNum, 4, SocketFlags.None);
+            //envia os bytes do tipo
+            dataString = Encoding.UTF8.GetBytes(p.tipo);
+            master.Send(dataString, dataString.Length, SocketFlags.None);
+
+            //envia o num de bytes do nome
+            dataNum = BitConverter.GetBytes(p.nome.Length);
+            master.Send(dataNum, 4, SocketFlags.None);
+            //envia os bytes do nome
+            dataString = Encoding.UTF8.GetBytes(p.nome);
+            master.Send(dataString, dataString.Length, SocketFlags.None);
+
+            //envia o num de bytes do detalhes
+            dataNum = BitConverter.GetBytes(p.detalhes.Length);
+            master.Send(dataNum, 4, SocketFlags.None);
+            //envia os bytes do detalhes
+            dataString = Encoding.UTF8.GetBytes(p.detalhes);
+            master.Send(dataString, dataString.Length, SocketFlags.None);
+
+            //envia a disponibilidade
+            dataNum = BitConverter.GetBytes(p.disponibilidade);
+            master.Send(dataNum, 4, SocketFlags.None);
+
+            //envia o preco
+            byte[] dataFloat = BitConverter.GetBytes(p.preco);
+            dataNum = BitConverter.GetBytes(dataFloat.Length);
+            master.Send(dataNum, 4, SocketFlags.None);//envia num bytes
+            master.Send(dataFloat, dataFloat.Length, SocketFlags.None);//envia os bytes
+
+            //envia imagem --- por completar
+
+        }
+
     }
+
 }

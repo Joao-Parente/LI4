@@ -61,7 +61,7 @@ namespace ServerMyBar.comum
                         "\n Nome: " + nome +
                         "\n Detalhes: " + detalhes +
                         "\n Preço: " + preco +
-                        "\n Disponibilidade: " + disponibilidade +
+                        "\n Disponibilidade: " + disponibilidade + 
                         "\n Imagem: " + imagem);
         }
     }
