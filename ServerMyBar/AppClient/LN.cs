@@ -128,22 +128,59 @@ namespace AppClient
 
             master.Receive(data, 0, 4, SocketFlags.None); // 4bytes ->1 int que � o tamanho de bytes a recebr
             int numero_total = BitConverter.ToInt32(data, 0);
-            /*
-            while (readBytes != 0 && numero_total - 1 > posicao)
-            {
-                readBytes = master.Receive(data, posicao, size - posicao, SocketFlags.None);
-                posicao += readBytes;
-                if (posicao >= size - 1)
-                {
-                    System.Array.Resize(ref data, size * 2);
-                    size *= 2;
-                }
-
-            }*/
+            
             data = new byte[numero_total];
             master.Receive(data, numero_total, SocketFlags.None);
 
             return Pedido.loadFromBytes(data);
+        }
+
+        public List<Pedido> RecebePedidosManual(string idCliente)
+        {
+            byte[] num = new byte[4], str;
+
+            master.Receive(num, 4, SocketFlags.None);
+            int numPedidos = BitConverter.ToInt32(num, 0);
+
+            List<Pedido> ret = new List<Pedido>(numPedidos);
+
+            for (int i = 0; i < numPedidos; i++)
+            {
+                str = new byte[8];
+                master.Receive(str, 8, SocketFlags.None);
+                DateTime data = new DateTime(BitConverter.ToInt64(str, 0));
+
+                master.Receive(num, 4, SocketFlags.None);
+                int id = BitConverter.ToInt32(num, 0);
+
+                master.Receive(num, 4, SocketFlags.None);
+                int tamEmpregado = BitConverter.ToInt32(num, 0);
+                str = new byte[tamEmpregado];
+                master.Receive(str, tamEmpregado, SocketFlags.None);
+                string idEmpregado = Encoding.UTF8.GetString(str);
+
+                master.Receive(num, 4, SocketFlags.None);
+                int numProdutos = BitConverter.ToInt32(num, 0);
+
+                List<ProdutoPedido> apr = new List<ProdutoPedido>(numProdutos);
+                for(int j = 0; j < numProdutos; j++)
+                {
+                    master.Receive(num, 4, SocketFlags.None);
+                    int tamanhoProduto = BitConverter.ToInt32(num, 0);
+                    byte[] aux = new byte[tamanhoProduto];
+                    master.Receive(aux, tamanhoProduto, SocketFlags.None);
+                   
+                    master.Receive(num, 4, SocketFlags.None);
+                    int quantidades = BitConverter.ToInt32(num, 0);
+
+                    apr.Add(new ProdutoPedido(Produto.loadFromBytes(aux), quantidades));
+                }
+
+                ret.Add(new Pedido(id, idCliente, idEmpregado, "null", data, apr));
+            }
+
+            return ret;
+
         }
 
         public List<Pedido> PedidosAnteriores(string idCliente)
@@ -160,17 +197,7 @@ namespace AppClient
             msg = Encoding.ASCII.GetBytes(idCliente);
             master.Send(msg);
 
-            //recebe o numero de pedidos da lista
-            master.Receive(id, 0, 4, SocketFlags.None);
-            int numPedidos = BitConverter.ToInt32(id, 0);
-
-            //recebe os pedidos todos
-            for (int i = 0; i < numPedidos; i++)
-            {
-                anteriores.Add(RecebePedido());
-            }
-
-            return anteriores;
+            return RecebePedidosManual(idCliente);
         }
 
         public Boolean alterarPedido(int a, int idPedido, String produtos)

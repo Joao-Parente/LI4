@@ -46,6 +46,7 @@ namespace AppClient
                         Console.WriteLine("Insira o email do cliente");
                         string idCliente = Console.ReadLine();
                         List<Pedido> pAnteriores = ln.PedidosAnteriores(idCliente);
+                        int a = 234;
                         break;
                     case 3: //Alterar Pedido
                         String produtos;

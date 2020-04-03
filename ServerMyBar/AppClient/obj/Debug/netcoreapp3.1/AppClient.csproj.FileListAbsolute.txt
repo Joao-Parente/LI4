@@ -20,3 +20,14 @@ F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfoInput
 F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfo.cs
 F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.dll
 F:\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.pdb
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.exe
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.deps.json
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.runtimeconfig.json
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.runtimeconfig.dev.json
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.pdb
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.csprojAssemblyReference.cache
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfoInputs.cache
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfo.cs
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.pdb

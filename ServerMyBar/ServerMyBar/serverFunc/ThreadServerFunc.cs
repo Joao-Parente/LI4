@@ -40,6 +40,7 @@ namespace ServerMyBar.serverFunc
                 // 2 MudarEstadoPedido
                 // 3 AlternarEstadodoSistema
                 // 4 NotificarClientes
+                // 5 consultasEstatisticas
                 // 10 IniciarSessao
                 // 11 TerminarSessao
 
@@ -111,7 +112,7 @@ namespace ServerMyBar.serverFunc
                         string mens = Encoding.UTF8.GetString(msgNC);
 
                         gestor.notificarCliente(idc, mens);
-                        break;
+                        break;                    
                      default:
                          flag = false;
                          break;

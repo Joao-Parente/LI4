@@ -11,19 +11,19 @@ namespace AppClient
     {
         public int id { get; set; }
         public string idCliente { get; set; }
+        public string idEmpregado { get; set; }
         public string detalhes { get; set; }
-        public int avaliacao { get; set; }
         public DateTime data_hora { get; set; }
         [DataMember]
-        public List<Produto> produtos { get; set; }
+        public List<ProdutoPedido> produtos { get; set; }
 
 
-        public Pedido(int id, string idCliente, string detalhes, int avaliacao, DateTime dataHora, List<Produto> produto)
+        public Pedido(int id, string idCliente, string idEmpregado, string detalhes, DateTime dataHora, List<ProdutoPedido> produto)
         {
             this.id = id;
             this.idCliente = idCliente;
+            this.idEmpregado = idEmpregado;
             this.detalhes = detalhes;
-            this.avaliacao = avaliacao;
             this.data_hora = dataHora;
             this.produtos = produto;
         }
@@ -33,28 +33,28 @@ namespace AppClient
         {
             id = 0;
             idCliente = "" + 0;
+            idEmpregado = "null";
             detalhes = "";
-            avaliacao = 0;
             data_hora = new DateTime();
-            produtos = new List<Produto>();
+            produtos = new List<ProdutoPedido>();
         }
 
 
         public void adicionarProduto(String produto)
         {
             Produto p = new Produto(4, "tipo", produto, "tags", 1, 3); //para teste
-            produtos.Add(p);
+            produtos.Add(new ProdutoPedido(p, 1));
         }
 
         public void addProduto(Produto p)
         {
-            this.produtos.Add(p);
+            this.produtos.Add(new ProdutoPedido(p, 1));
         }
 
         public void removerProduto(String produto)
         {
             Produto p = new Produto(4, "tipo", produto, "tags", 1, 3); //para teste
-            produtos.Remove(p);
+            //produtos.Remove(p);
         }
 
 
@@ -64,18 +64,17 @@ namespace AppClient
             int i;
             for (i = 0; i < produtos.Count; i++)
             {
-                Console.WriteLine("          i: " + produtos[i].ToString());
+                Console.WriteLine("i: " + produtos[i].ToString());
             }
 
         }
 
-        override
-        public string ToString()
+
+        public string toString()
         {
             return (" Pedido: " + id +
                    "\n     idCliente: " + idCliente +
                    "\n     detalhes: " + detalhes + " " +
-                   "\n     Avaliação: " + avaliacao + "\n" +
                    "\n     Produtos::  #" + produtos.Count
                 );
         }
@@ -89,6 +88,7 @@ namespace AppClient
             XML.Serialize(ms, this);
             ms.Close();
             return ms.ToArray();
+
         }
 
 

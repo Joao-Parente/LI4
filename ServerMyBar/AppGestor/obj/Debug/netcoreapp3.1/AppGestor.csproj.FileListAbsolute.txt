@@ -9,3 +9,14 @@
 /home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.AssemblyInfo.cs
 /home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.dll
 /home/jpedro/RiderProjects/ServerMyBar/AppGestor/obj/Debug/netcoreapp3.1/AppGestor.pdb
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.exe
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.deps.json
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.runtimeconfig.json
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.runtimeconfig.dev.json
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.pdb
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.csprojAssemblyReference.cache
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.AssemblyInfoInputs.cache
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.AssemblyInfo.cs
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.pdb

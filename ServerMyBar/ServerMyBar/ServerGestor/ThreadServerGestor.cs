@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
 using ServerMyBar.comum;
@@ -76,6 +77,64 @@ namespace ServerMyBar.serverGestor
                             numEP = BitConverter.GetBytes(0);
                             socket.Send(numEP);
                         }
+
+                        break;
+                    case 7://consultas estatisticas
+
+                        byte[] num7 = new byte[4], msg7;
+
+                        msg7 = new byte[8];
+                        socket.Receive(msg7, 8, SocketFlags.None);
+                        DateTime datainicio = new DateTime(BitConverter.ToInt64(msg7, 0));
+
+                        socket.Receive(msg7, 8, SocketFlags.None);
+                        DateTime datafinal = new DateTime(BitConverter.ToInt64(msg7, 0));
+
+                        List<Pedido> pedidos = gestor.consultasEstatisticas(datainicio, datafinal);
+
+                        //id = new byte[4];
+                        id = BitConverter.GetBytes(pedidos.Count);
+                        socket.Send(id);
+
+                        //envia os pedidos todos
+                        for (int i = 0; i < pedidos.Count; i++)
+                        {
+                            //envia a datahora
+                            id = BitConverter.GetBytes(pedidos[i].data_hora.ToBinary());
+                            socket.Send(id);
+
+                            //envia o id
+                            id = BitConverter.GetBytes(pedidos[i].id);
+                            socket.Send(id);
+
+                            //envia idEmpregado
+                            id = BitConverter.GetBytes(pedidos[i].idEmpregado.Length);
+                            socket.Send(id);
+                            id = Encoding.UTF8.GetBytes(pedidos[i].idEmpregado);
+                            socket.Send(id, pedidos[i].idEmpregado.Length, SocketFlags.None);
+
+                            //envia idCliente
+                            id = BitConverter.GetBytes(pedidos[i].idCliente.Length);
+                            socket.Send(id);
+                            id = Encoding.UTF8.GetBytes(pedidos[i].idCliente);
+                            socket.Send(id, pedidos[i].idCliente.Length, SocketFlags.None);
+
+                            //envia num pedidos
+                            id = BitConverter.GetBytes(pedidos[i].produtos.Count);
+                            socket.Send(id);
+
+                            for (int j = 0; j < pedidos[i].produtos.Count; j++)
+                            {
+                                byte[] hello = pedidos[i].produtos[j].p.SavetoBytes();
+                                socket.Send(BitConverter.GetBytes(hello.Length));
+                                socket.Send(hello);
+
+                                socket.Send(BitConverter.GetBytes(pedidos[i].produtos[j].quantidades));
+                            }
+
+                        }
+
+                        Console.WriteLine("Enviei os pedidos todos");
 
                         break;
 

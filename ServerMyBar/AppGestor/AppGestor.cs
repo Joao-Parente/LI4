@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -29,18 +30,22 @@ namespace AppGestor
             int input;
             byte[] msg = new byte[4];
             bool flag = true;
-            LN ln = new LN();
+            
 
+            master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12346);
 
             try
             {
+                master.Connect(ipe);
+                LN ln = new LN(master);
                 // testes  
                 // master.Send(BitConverter.GetBytes(1));
                 // enviaPedido(new Pedido());
 
                 while (flag)
                 {
-                    Console.WriteLine("Insira: \n 1 para Fazer um pedido \n 2 para Fazer login");
+                    Console.WriteLine("Insira: \n 1 para Fazer um pedido \n 2 para Fazer login \n 5 addProduto \n 6 editarproduto \n 7 consultas estatisticas" );
                     input = Convert.ToInt32(Console.ReadLine());
                     switch (input)
                     {
@@ -70,7 +75,7 @@ namespace AppGestor
                             string detalhes = Console.ReadLine();
                             Console.WriteLine("Insira a disponibilidade:");
                             int disp = int.Parse(Console.ReadLine());
-                            Console.WriteLine("Insira o pre�o:");
+                            Console.WriteLine("Insira o preco:");
                             float preco = float.Parse(Console.ReadLine());
                             Console.WriteLine("Insira a imagem:");
                             string imagem = Console.ReadLine();
@@ -78,29 +83,29 @@ namespace AppGestor
                             int idP = ln.adicionarProduto(p);
                             Console.WriteLine("ID = " + idP);
                             break;
-                        case 6:
+                        case 6: //editar produto
 
                             Console.WriteLine("Id do produto please:");
-                            int id = Convert.ToInt32(Console.ReadLine());
+                            int id6 = Convert.ToInt32(Console.ReadLine());
 
                             Console.WriteLine("Tipo do produto please:");
-                            string tipo = Console.ReadLine();
+                            string tipo6 = Console.ReadLine();
 
                             Console.WriteLine("Nome do produto please:");
-                            string nome = Console.ReadLine();
+                            string nome6 = Console.ReadLine();
 
                             Console.WriteLine("Detalhes do produto please:");
-                            string detalhes = Console.ReadLine();
+                            string detalhes6 = Console.ReadLine();
 
                             Console.WriteLine("Disponibilidade do produto please:");
-                            int disponibilidade = Convert.ToInt32(Console.ReadLine());
+                            int disponibilidade6 = Convert.ToInt32(Console.ReadLine());
 
                             Console.WriteLine("Preco do produto please");
-                            float preco = Convert.ToSingle(Console.ReadLine());
+                            float preco6 = Convert.ToSingle(Console.ReadLine());
 
-                            Produto p = new Produto(id, tipo, nome, detalhes, disponibilidade, preco);
+                            Produto p6 = new Produto(id6, tipo6, nome6, detalhes6, disponibilidade6, preco6);
 
-                            if (ln.editarProduto(p) == true)
+                            if (ln.editarProduto(p6) == true)
                             {
                                 Console.WriteLine("FIXE");
                             }
@@ -108,7 +113,11 @@ namespace AppGestor
                             {
                                 Console.WriteLine("FOXE");
                             }
-                            break;    
+                            break;
+                        case 7: //consultas estatisticas
+                            List<Pedido> a = ln.consultasEstatisticas(new DateTime(2019, 7, 21, 14, 47, 25), new DateTime(2020, 2, 1, 14, 47, 25));
+                            int kk = 99;
+                            break;
                         case 10:
                             flag = ln.TerminarSessao();
                             break;

@@ -278,6 +278,14 @@ namespace ServerMyBar.comum
                 return ProdutoDAO.editProduto(idProduto, p);
             }
         }
+
+        public List<Pedido> consultasEstatisticas(DateTime inicio,DateTime fim)
+        {
+            lock (this)
+            {
+                return PedidoDAO.consultaEstatisticas(inicio,fim);
+            }
+        }
     }
 
 

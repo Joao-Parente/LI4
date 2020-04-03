@@ -52,7 +52,77 @@ namespace AppGestor
             }
         }
 
+        public List<Pedido> RecebePedidosManual()
+        {
+            byte[] num = new byte[4], str;
+
+            master.Receive(num, 4, SocketFlags.None);
+            int numPedidos = BitConverter.ToInt32(num, 0);
+
+            List<Pedido> ret = new List<Pedido>(numPedidos);
+
+            for (int i = 0; i < numPedidos; i++)
+            {
+                str = new byte[8];
+                master.Receive(str, 8, SocketFlags.None);
+                DateTime data = new DateTime(BitConverter.ToInt64(str, 0));
+
+                master.Receive(num, 4, SocketFlags.None);
+                int id = BitConverter.ToInt32(num, 0);
+
+                master.Receive(num, 4, SocketFlags.None);
+                int tamEmpregado = BitConverter.ToInt32(num, 0);
+                str = new byte[tamEmpregado];
+                master.Receive(str, tamEmpregado, SocketFlags.None);
+                string idEmpregado = Encoding.UTF8.GetString(str);
+
+                master.Receive(num, 4, SocketFlags.None);
+                tamEmpregado = BitConverter.ToInt32(num, 0);
+                str = new byte[tamEmpregado];
+                master.Receive(str, tamEmpregado, SocketFlags.None);
+                string idCliente = Encoding.UTF8.GetString(str);
+
+                master.Receive(num, 4, SocketFlags.None);
+                int numProdutos = BitConverter.ToInt32(num, 0);
+
+                List<ProdutoPedido> apr = new List<ProdutoPedido>(numProdutos);
+                for (int j = 0; j < numProdutos; j++)
+                {
+                    master.Receive(num, 4, SocketFlags.None);
+                    int tamanhoProduto = BitConverter.ToInt32(num, 0);
+                    byte[] aux = new byte[tamanhoProduto];
+                    master.Receive(aux, tamanhoProduto, SocketFlags.None);
+
+                    master.Receive(num, 4, SocketFlags.None);
+                    int quantidades = BitConverter.ToInt32(num, 0);
+
+                    apr.Add(new ProdutoPedido(Produto.loadFromBytes(aux), quantidades));
+                }
+
+                ret.Add(new Pedido(id, idCliente, idEmpregado, "null", data, apr));
+            }
+
+            return ret;
+
+        }
+
         //+consultasEstatisticas() : lista string
+        public List<Pedido> consultasEstatisticas(DateTime i,DateTime f)
+        {
+            byte[] num = new byte[4], msg;
+            //envia id operacao
+            num = BitConverter.GetBytes(7);
+            master.Send(num);
+
+            msg = BitConverter.GetBytes(i.ToBinary());
+            master.Send(msg);
+
+            msg = BitConverter.GetBytes(f.ToBinary());
+            master.Send(msg);
+
+
+            return RecebePedidosManual();            
+        }
 
         //+alterarInfoEmpresa(novaInfo : lista string) : void
 

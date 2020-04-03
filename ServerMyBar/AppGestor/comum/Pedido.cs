@@ -7,24 +7,23 @@ using System.Xml.Serialization;
 
 namespace AppGestor
 {
-
     public class Pedido
     {
         public int id { get; set; }
-        public int idCliente { get; set; }
+        public string idCliente { get; set; }
+        public string idEmpregado { get; set; }
         public string detalhes { get; set; }
-        public int avaliacao { get; set; }
         public DateTime data_hora { get; set; }
         [DataMember]
-        public List<Produto> produtos { get; set; }
+        public List<ProdutoPedido> produtos { get; set; }
 
 
-        public Pedido(int id, int idCliente, string detalhes, int avaliacao, DateTime dataHora, List<Produto> produto)
+        public Pedido(int id, string idCliente, string idEmpregado, string detalhes, DateTime dataHora, List<ProdutoPedido> produto)
         {
             this.id = id;
             this.idCliente = idCliente;
+            this.idEmpregado = idEmpregado;
             this.detalhes = detalhes;
-            this.avaliacao = avaliacao;
             this.data_hora = dataHora;
             this.produtos = produto;
         }
@@ -32,16 +31,30 @@ namespace AppGestor
 
         public Pedido()
         {
-            id = 2;
-            idCliente = 100;
-            detalhes = "arroz man";
-            avaliacao = 51;
+            id = 0;
+            idCliente = "" + 0;
+            idEmpregado = "null";
+            detalhes = "";
             data_hora = new DateTime();
-            produtos = new List<Produto>();
-            produtos.Add(new Produto());
-            produtos.Add(new Produto());
-            produtos.Add(new Produto());
-            produtos.Add(new Produto());
+            produtos = new List<ProdutoPedido>();
+        }
+
+
+        public void adicionarProduto(String produto)
+        {
+            Produto p = new Produto(4, "tipo", produto, "tags", 1, 3); //para teste
+            produtos.Add(new ProdutoPedido(p, 1));
+        }
+
+        public void addProduto(Produto p)
+        {
+            this.produtos.Add(new ProdutoPedido(p, 1));
+        }
+
+        public void removerProduto(String produto)
+        {
+            Produto p = new Produto(4, "tipo", produto, "tags", 1, 3); //para teste
+            //produtos.Remove(p);
         }
 
 
@@ -53,6 +66,7 @@ namespace AppGestor
             {
                 Console.WriteLine("i: " + produtos[i].ToString());
             }
+
         }
 
 
@@ -61,7 +75,6 @@ namespace AppGestor
             return (" Pedido: " + id +
                    "\n     idCliente: " + idCliente +
                    "\n     detalhes: " + detalhes + " " +
-                   "\n     Avaliação: " + avaliacao + "\n" +
                    "\n     Produtos::  #" + produtos.Count
                 );
         }

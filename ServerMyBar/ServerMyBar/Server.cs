@@ -14,7 +14,7 @@ namespace ServerMyBar
             Gestor gestor = new Gestor();
   
             ServerClient x= new ServerClient(gestor);
-            x.run();
+            //x.run();
             StarterClient st= new StarterClient(gestor);
 
             ServerFunc func = new ServerFunc(gestor,st);
@@ -23,10 +23,10 @@ namespace ServerMyBar
             ServerGestor sges= new ServerGestor(gestor,st);
             Thread tg = new Thread(sges.run);
             
-            tf.Start();
+            //tf.Start();
             tg.Start();
 
-            tf.Join();
+            //tf.Join();
             tg.Join();
 
             // /testing

@@ -1,18 +1,21 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace ServerMyBar.comum
 {
     public class AnterioresAuxiliar
     {
         public int idPedido { get; set; }
+        public string idCliente { get; set; }
         public string idEmpregado { get; set; }
         public DateTime datahora { get; set; }
 
-        public AnterioresAuxiliar(int i, string ie, DateTime da)
+        public AnterioresAuxiliar(int i,string ic, string ie, DateTime da)
         {
             idPedido = i;
+            idCliente = ic;
             idEmpregado = ie;
             datahora = da;
         }
@@ -20,6 +23,89 @@ namespace ServerMyBar.comum
 
     public class PedidoDAO
     {
+
+        public static List<Pedido> consultaEstatisticas(DateTime inicio,DateTime fim)
+        {
+            List<Pedido> ret = new List<Pedido>();
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                 "pwd=password;database=LI_Database";
+
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+
+                //string query; = "SELECT * FROM pedido WHERE data_hora between '" + inicio + "' and '" + fim +"';";
+                StringBuilder sb = new StringBuilder();
+                sb.Append("SELECT * FROM pedido WHERE data_hora between '")
+                .Append(inicio.Year).Append('-').Append(inicio.Month).Append('-').Append(inicio.Day).Append(' ').Append(inicio.Hour).Append(':').Append(inicio.Minute).Append(':').Append(inicio.Second).Append("' and '")
+                .Append(fim.Year).Append('-').Append(fim.Month).Append('-').Append(fim.Day).Append(' ').Append(fim.Hour).Append(':').Append(fim.Minute).Append(':').Append(fim.Second).Append("';");
+
+                string query = sb.ToString();
+                cmd.CommandText = query;
+                cmd.Prepare();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                if (reader.HasRows)
+                {
+                    //E necessario ler tudo o que o reader tem colocar numa lista de AnterioresAuxiliar e depois ler um a um, e fazer a query um a um de ir ver os produtos
+                    List<AnterioresAuxiliar> auxy = new List<AnterioresAuxiliar>();
+                    while (reader.Read())
+                    {
+                        auxy.Add(new AnterioresAuxiliar(reader.GetInt32(0),reader.GetString(1), reader.GetString(2), reader.GetDateTime(3)));
+                    }
+
+                    reader.Close();
+
+                    for (int i = 0; i < auxy.Count; i++)
+                    {
+                        query = "SELECT * FROM listapedidos WHERE idPedido=" + auxy[i].idPedido + ";";
+                        cmd.CommandText = query;
+                        cmd.Prepare();
+                        reader = cmd.ExecuteReader();
+
+                        List<ProdutoPedido> ListaProdutos = new List<ProdutoPedido>();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                int idProduto = reader.GetInt32(1);
+                                int quantidade = reader.GetInt32(2);
+                                Produto produto = ProdutoDAO.getProduto(idProduto);
+                                ListaProdutos.Add(new ProdutoPedido(produto, quantidade));
+                            }
+                            reader.Close();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Um pedido sem produtos hum..................");
+                        }
+
+                        ret.Add(new Pedido(auxy[i].idPedido, auxy[i].idCliente, auxy[i].idEmpregado, "null", auxy[i].datahora, ListaProdutos));
+                    }
+
+                    return ret;
+                }
+
+                else
+                {
+                    Console.WriteLine(" !!no rows found.!!");
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine("Exception " + ex.Message);
+            }
+            return ret;
+        }
+
         public static List<Pedido> anteriores(string idCliente)
         {
             List<Pedido> ret = new List<Pedido>();
@@ -44,71 +130,14 @@ namespace ServerMyBar.comum
 
 
                 if (reader.HasRows)
-                {/*
-                    while (reader.Read())
-                    {
-                        Produto pr = ProdutoDAO.getProduto((int) reader.GetInt64(1));
-                        if (dp.ContainsKey((int) reader.GetInt64(0))){
-                            Pedido pe = new Pedido();
-                            dp.TryGetValue(int.Parse(reader.GetString(0)), out pe);
-                            pe.addProduto(pr);
-                            dp.Add((int) reader.GetInt64(0),pe);
-                        }
-                        else{
-                            List<Produto> lp = new List<Produto>();
-                            lp.Add(pr);
-                            Pedido pe = new Pedido((int) reader.GetInt64(0),reader.GetString(3),"",(int)reader.GetInt64(4),(DateTime)reader.GetDateTime(6),lp);
-                            dp.Add((int) reader.GetInt64(0),pe);
-                        }
-                    }
-                    return dp;*/
-
-
+                {
                     //E necessario ler tudo o que o reader tem colocar numa lista de AnterioresAuxiliar e depois ler um a um, e fazer a query um a um de ir ver os produtos
                     List<AnterioresAuxiliar> auxy = new List<AnterioresAuxiliar>();
                     while (reader.Read())
                     {
 
-                        auxy.Add(new AnterioresAuxiliar(reader.GetInt32(0), reader.GetString(2), reader.GetDateTime(3)));
+                        auxy.Add(new AnterioresAuxiliar(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3)));
 
-
-                        /*
-                        int idPedido = reader.GetInt32(0);
-                        string idEmpregado = reader.GetString(2);
-                        DateTime datahora = reader.GetDateTime(3);
-
-                        MySqlConnection connProdutos;
-                        string myConnectionStringProdutos;
-                        myConnectionStringProdutos = @"server=127.0.0.1;uid=root;" +
-                                             "pwd=password;database=LI_Database";
-
-                        connProdutos = new MySqlConnection(myConnectionStringProdutos);
-                        connProdutos.Open();
-
-                        MySqlCommand cmdProdutos = new MySqlCommand();
-                        cmdProdutos.Connection = conn;
-
-                        string lista_produtos = "SELECT * FROM listapedidos WHERE idPedido='" + idPedido + "';";
-                        cmdProdutos.CommandText = lista_produtos;
-                        cmdProdutos.Prepare();
-
-                        MySqlDataReader readerProdutos = cmdProdutos.ExecuteReader();
-                        List<Produto> ListaProdutos = new List<Produto>();
-                        if (readerProdutos.HasRows)
-                        {
-                            while (readerProdutos.Read())
-                            {
-                                int idProduto = readerProdutos.GetInt32(1);
-                                int quantidade = readerProdutos.GetInt32(2);
-                                ListaProdutos.Add(ProdutoDAO.getProduto(idProduto));
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Um pedido sem produtos hum..................");
-                        }
-
-                        ret.Add(new Pedido(idPedido, idCliente, "null", 0, datahora, ListaProdutos));*/
                     }
 
                     reader.Close();
@@ -120,14 +149,15 @@ namespace ServerMyBar.comum
                         cmd.Prepare();
                         reader = cmd.ExecuteReader();
 
-                        List<Produto> ListaProdutos = new List<Produto>();
+                        List<ProdutoPedido> ListaProdutos = new List<ProdutoPedido>();
                         if (reader.HasRows)
                         {
                             while (reader.Read())
                             {
                                 int idProduto = reader.GetInt32(1);
                                 int quantidade = reader.GetInt32(2);
-                                ListaProdutos.Add(ProdutoDAO.getProduto(idProduto));
+                                Produto produto = ProdutoDAO.getProduto(idProduto);
+                                ListaProdutos.Add(new ProdutoPedido(produto,quantidade));
                             }
                             reader.Close();
                         }
@@ -136,7 +166,7 @@ namespace ServerMyBar.comum
                             Console.WriteLine("Um pedido sem produtos hum..................");
                         }
 
-                        ret.Add(new Pedido(auxy[i].idPedido, idCliente, "null", 0, auxy[i].datahora, ListaProdutos));
+                        ret.Add(new Pedido(auxy[i].idPedido, idCliente,auxy[i].idEmpregado, "null", auxy[i].datahora, ListaProdutos));
                     }
 
                     return ret;
@@ -151,7 +181,7 @@ namespace ServerMyBar.comum
             {
                 Console.WriteLine("Exception " + ex.Message);
             }
-            return null;
+            return ret;
         }
     }
 }

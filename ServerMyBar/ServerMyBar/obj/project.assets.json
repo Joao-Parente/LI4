@@ -402,23 +402,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\": {},
+    "C:\\Users\\ze_nu\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
+      "projectUniqueName": "C:\\Users\\ze_nu\\Desktop\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
       "projectName": "ServerMyBar",
-      "projectPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
-      "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\ServerMyBar\\obj\\",
+      "projectPath": "C:\\Users\\ze_nu\\Desktop\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
+      "packagesPath": "C:\\Users\\ze_nu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ze_nu\\Desktop\\ServerMyBar\\ServerMyBar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ze_nu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -467,7 +467,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
