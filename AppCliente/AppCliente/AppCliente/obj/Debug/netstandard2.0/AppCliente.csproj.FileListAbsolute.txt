@@ -45,3 +45,28 @@ D:\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.dll
 D:\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\ref\AppCliente.dll
 D:\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.pdb
 D:\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.csprojAssemblyReference.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.deps.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\ref\AppCliente.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.csprojAssemblyReference.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\AvaliacaoPage.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\CarrinhoCompras.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\CriarContaPage.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\HistoricoPage.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\IniciarSessaoPage.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\ListaDeFavoritos.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\MenuCliente.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\ProdutoInfoPopUp.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\SobrePage.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\VerCategorias.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\VerProdutosPage.xaml.g.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.csproj.CoreCompileInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.AssemblyInfoInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.AssemblyInfo.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\ref\AppCliente.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.pdb

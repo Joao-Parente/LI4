@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj": {}
+    "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj": {}
   },
   "projects": {
-    "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj": {
+    "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj",
         "projectName": "AppCliente.Android",
-        "projectPath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj",
-        "packagesPath": "C:\\Users\\jnuno\\.nuget\\packages\\",
-        "outputPath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\obj\\",
+        "projectPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj",
+        "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\jnuno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid81": {
             "projectReferences": {
-              "D:\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj": {
-                "projectPath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj"
+              "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj": {
+                "projectPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj"
               }
             }
           }
@@ -58,20 +58,20 @@
         }
       }
     },
-    "D:\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj": {
+    "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj",
+        "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj",
         "projectName": "AppCliente",
-        "projectPath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj",
-        "packagesPath": "C:\\Users\\jnuno\\.nuget\\packages\\",
-        "outputPath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente\\obj\\",
+        "projectPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj",
+        "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\jnuno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -125,7 +125,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

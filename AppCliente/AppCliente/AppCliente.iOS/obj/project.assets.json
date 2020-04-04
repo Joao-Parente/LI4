@@ -1108,24 +1108,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jnuno\\.nuget\\packages\\": {},
+    "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.iOS\\AppCliente.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.iOS\\AppCliente.iOS.csproj",
       "projectName": "AppCliente.iOS",
-      "projectPath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.iOS\\AppCliente.iOS.csproj",
-      "packagesPath": "C:\\Users\\jnuno\\.nuget\\packages\\",
-      "outputPath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.iOS\\AppCliente.iOS.csproj",
+      "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jnuno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1139,8 +1139,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj": {
-              "projectPath": "D:\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj"
+            "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj": {
+              "projectPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj"
             }
           }
         }

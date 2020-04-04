@@ -47,6 +47,8 @@ namespace ServerMyBar.serverGestor
                 // 8 AlterarInfoEmpresa
                 // 9 IniciarSessao
                 // 10 TerminarSessao
+                // 11 EditarEmpregado
+                // 12 RemoverProduto
 
                 switch (msg)
                 {

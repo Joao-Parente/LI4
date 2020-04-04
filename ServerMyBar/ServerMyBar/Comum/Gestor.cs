@@ -164,8 +164,6 @@ namespace ServerMyBar.comum
         //+addEmpregado(emp : Server.Empregado) : int
 
 
-        //+editEmpregado(id : int, emp : Emp) : bool
-
         public bool editEmpregado(string email, Empregado e)
         {
             bool res = false;
@@ -175,8 +173,6 @@ namespace ServerMyBar.comum
             }
             return res;
         }
-
-        //+removeEmpregado(id : int) : bool
 
         public bool removeEmpregado(string email)
         {
@@ -267,7 +263,7 @@ namespace ServerMyBar.comum
         {
             lock (this)
             {
-                //fazer alguma coisa que nao sei
+                //fazer alguma coisa que nao sei (nuno & goncalo)
             }
         }
 
@@ -279,11 +275,11 @@ namespace ServerMyBar.comum
             }
         }
 
-        public List<Pedido> consultasEstatisticas(DateTime inicio,DateTime fim)
+        public List<Pedido> consultasEstatisticas(DateTime inicio, DateTime fim)
         {
             lock (this)
             {
-                return PedidoDAO.consultaEstatisticas(inicio,fim);
+                return PedidoDAO.consultaEstatisticas(inicio, fim);
             }
         }
     }

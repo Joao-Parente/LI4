@@ -30,7 +30,7 @@ namespace AppGestor
             int input;
             byte[] msg = new byte[4];
             bool flag = true;
-            
+
 
             master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12346);
@@ -45,7 +45,7 @@ namespace AppGestor
 
                 while (flag)
                 {
-                    Console.WriteLine("Insira: \n 1 para Fazer um pedido \n 2 para Fazer login \n 5 addProduto \n 6 editarproduto \n 7 consultas estatisticas" );
+                    Console.WriteLine("Insira: \n 1 para Fazer um pedido \n 2 para Fazer login \n 5 addProduto \n 6 editarproduto \n 7 consultas estatisticas");
                     input = Convert.ToInt32(Console.ReadLine());
                     switch (input)
                     {
@@ -134,10 +134,10 @@ namespace AppGestor
                             bool val = false;
                             if (ismanager.Equals("true")) val = true;
                             Empregado e = new Empregado(actualmail, newpass, newname, val);
-                            bool op = ln.editarEmpregado(actualmail,e);
+                            bool op = ln.editarEmpregado(actualmail, e);
                             Console.WriteLine(op);
                             break;
-                        case 12:
+                        case 12: //removerEmpregado
                             Console.WriteLine("# Starting removerEmpregado #");
                             Console.WriteLine("Insira o email do empregado a remover");
                             string removemail = Console.ReadLine();

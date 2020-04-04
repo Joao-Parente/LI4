@@ -15,7 +15,7 @@ namespace ServerMyBar.comum
             return true;
         }
 
-        public static bool autenticaGestor(string email,string pw)
+        public static bool autenticaGestor(string email, string pw)
         {
             MySqlConnection conn;
             string myConnectionString;
@@ -158,6 +158,6 @@ namespace ServerMyBar.comum
             }
             return true;
         }
-        
+
     }
 }

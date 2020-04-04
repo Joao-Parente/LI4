@@ -129,7 +129,7 @@ namespace ServerMyBar.serverCliente
                             id = BitConverter.GetBytes(pedidos[i].produtos.Count);
                             socket.Send(id);
 
-                            for(int j = 0; j < pedidos[i].produtos.Count; j++)
+                            for (int j = 0; j < pedidos[i].produtos.Count; j++)
                             {
                                 byte[] hello = pedidos[i].produtos[j].p.SavetoBytes();
                                 socket.Send(BitConverter.GetBytes(hello.Length));

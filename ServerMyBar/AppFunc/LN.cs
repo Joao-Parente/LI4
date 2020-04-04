@@ -8,9 +8,9 @@ namespace AppFunc
     public class LN
     {
         private List<Pedido> preparados;
-        
+
         private List<Pedido> em_preparacao;
-        
+
         private List<Pedido> por_preparar;
 
         private Socket master;
@@ -21,7 +21,7 @@ namespace AppFunc
         }
 
 
-        
+
         //+visualizarPedido(idPedido : int) : Diagrama Classes Funcionario.Pedido
 
         //+mudarEstadoPedido(idPedido : int) : void
@@ -30,9 +30,9 @@ namespace AppFunc
 
         //+notificarClientes(idCliente : int, mensagem : string)
 
-        public void notificarCliente(string idCliente,string mensagem) //goncalo, eu nuno, fiz este porque era suposto fazer o notificar clientes da parte do gestor, e depois vi que aquilo nao fazia sentido nenhum
-        {
-            byte[] num = new byte[4],msg;            
+        public void notificarCliente(string idCliente, string mensagem) //goncalo, eu nuno, fiz este porque era suposto fazer o notificar clientes da parte do gestor, e depois vi que aquilo nao fazia sentido nenhum
+        {                                                               // ok, eu ggg,
+            byte[] num = new byte[4], msg;
             //envia id operacao
             num = BitConverter.GetBytes(4);
             master.Send(num);
@@ -52,12 +52,9 @@ namespace AppFunc
             msg = new byte[mensagem.Length];
             msg = Encoding.UTF8.GetBytes(mensagem);
             master.Send(msg, mensagem.Length, SocketFlags.None);
-
         }
-        
-        //+IniciarSessao(email : string, password : string) : void
 
-        public bool iniciarSessao(string email,string password)
+        public bool iniciarSessao(string email, string password)
         {
             byte[] num = new byte[4], msg;
             //envia id operacao
@@ -92,7 +89,13 @@ namespace AppFunc
                 return false;
             }
         }
-        
-        //+TerminarSessao()
+
+        public bool TerminarSessao()
+        {
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(10);
+            master.Send(id);
+            return false;
+        }
     }
 }

@@ -27,8 +27,6 @@ namespace AppGestor
 
         //+mudarEstadoPedido(idPedido : int) : void
 
-        //+adicionarProduto(produto : Produto) : int
-
         //+editarProduto(idProduto : int, novoProduto : Produto) : void
 
         public bool editarProduto(Produto p)
@@ -127,8 +125,6 @@ namespace AppGestor
         //+alterarInfoEmpresa(novaInfo : lista string) : void
 
         //+adicionarEmpregado(idEmpregado : int) : void
-
-        //+removerEmpregado(idEmpregado : int) : void
 
         //+IniciarSessao(email : string, password : string) : void
 

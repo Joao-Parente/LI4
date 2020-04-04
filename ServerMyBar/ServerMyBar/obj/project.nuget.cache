@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JLhx0PFoG7LN4sdfYZtfcrq4Bc5oHntkraaQ8b+M1w2/GaEP6NdktQQ/jMplaC+4p3hIqHhUZLHS4j2smoI3lw==",
+  "dgSpecHash": "/QfurpPxKpuFMLjtDNCHTQIPl0FFvVMtSFGTp4bAVFWf1BO2Ik57gaMDQgrnN7RyekMeAmyztInykimo2VSUfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gonçalo Pinto\\Source\\Repos\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
+  "projectFilePath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
