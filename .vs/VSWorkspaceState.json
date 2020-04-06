@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AppCliente"
+    "\\AppCliente",
+    "\\ServerMyBar"
   ],
-  "SelectedNode": "\\AppCliente\\AppCliente.sln",
+  "SelectedNode": "\\ServerMyBar\\ServerMyBar.sln",
   "PreviewInSolutionExplorer": false
 }

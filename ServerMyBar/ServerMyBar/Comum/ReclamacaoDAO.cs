@@ -20,8 +20,8 @@ namespace ServerMyBar.comum
 
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-               
-                string query = "SELECT * FROM reclamacao WHERE idPedido='" + idPedido+"';";
+
+                string query = "SELECT * FROM reclamacao WHERE idPedido='" + idPedido + "';";
 
                 cmd.CommandText = query;
                 cmd.Prepare();
@@ -32,7 +32,7 @@ namespace ServerMyBar.comum
                 {
                     while (reader.Read())
                     {
-                        Reclamacao ret=new Reclamacao((int)reader.GetInt64(0), reader.GetString(1), reader.GetString(2),reader.GetDateTime(3));
+                        Reclamacao ret = new Reclamacao((int)reader.GetInt64(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3));
                         return ret;
                     }
                 }
@@ -47,7 +47,7 @@ namespace ServerMyBar.comum
             {
                 Console.WriteLine("Exception " + ex.Message);
                 return null;
-            }          
+            }
         }
 
 
@@ -64,7 +64,7 @@ namespace ServerMyBar.comum
 
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO reclamacao values("+idPedido+",'" + motivo + "','" + reclamacao + "',now());";
+                cmd.CommandText = "INSERT INTO reclamacao values(" + idPedido + ",'" + motivo + "','" + reclamacao + "',now());";
                 cmd.Prepare();
 
                 cmd.ExecuteNonQuery();
@@ -77,6 +77,6 @@ namespace ServerMyBar.comum
                 return false;
             }
         }
-        
+
     }
 }

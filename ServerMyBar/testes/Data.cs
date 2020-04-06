@@ -12,13 +12,13 @@ namespace testes
         public string Name { get; set; }
         [DataMember]
         public List<Data2> pois { get; set; }
-          
+
 
         public Data()
         {
-            Data2 k= new Data2();
-            pois=new List<Data2>();            
-            pois.Add(k);pois.Add(k);pois.Add(k);
+            Data2 k = new Data2();
+            pois = new List<Data2>();
+            pois.Add(k); pois.Add(k); pois.Add(k);
         }
 
 
@@ -27,18 +27,18 @@ namespace testes
             using (FileStream stream = new FileStream(filename, FileMode.Create))
             {
                 XmlSerializer XML = new XmlSerializer(typeof(Data));
-                XML.Serialize(stream,this);
+                XML.Serialize(stream, this);
             }
         }
-        
+
 
         public static Data loadFromFile(string filename)
         {
             using (FileStream stream = new FileStream(filename, FileMode.Open))
             {
                 XmlSerializer XML = new XmlSerializer(typeof(Data));
-                return (Data) XML.Deserialize(stream);
+                return (Data)XML.Deserialize(stream);
             }
-        }        
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace ServerMyBar.comum
             quantidades = 0;
         }
 
-        public ProdutoPedido(Produto pr,int qua)
+        public ProdutoPedido(Produto pr, int qua)
         {
             p = pr;
             quantidades = qua;

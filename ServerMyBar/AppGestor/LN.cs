@@ -38,7 +38,7 @@ namespace AppGestor
 
             EnviaProdutoManual(p);
 
-            master.Receive(num,4,SocketFlags.None);
+            master.Receive(num, 4, SocketFlags.None);
             int res = BitConverter.ToInt32(num, 0);
             if (res == 1)
             {
@@ -105,7 +105,7 @@ namespace AppGestor
         }
 
         //+consultasEstatisticas() : lista string
-        public List<Pedido> consultasEstatisticas(DateTime i,DateTime f)
+        public List<Pedido> consultasEstatisticas(DateTime i, DateTime f)
         {
             byte[] num = new byte[4], msg;
             //envia id operacao
@@ -119,7 +119,7 @@ namespace AppGestor
             master.Send(msg);
 
 
-            return RecebePedidosManual();            
+            return RecebePedidosManual();
         }
 
         //+alterarInfoEmpresa(novaInfo : lista string) : void

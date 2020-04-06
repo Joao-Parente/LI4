@@ -12,7 +12,7 @@ namespace ServerMyBar.comum
         public string idEmpregado { get; set; }
         public DateTime datahora { get; set; }
 
-        public AnterioresAuxiliar(int i,string ic, string ie, DateTime da)
+        public AnterioresAuxiliar(int i, string ic, string ie, DateTime da)
         {
             idPedido = i;
             idCliente = ic;
@@ -24,7 +24,7 @@ namespace ServerMyBar.comum
     public class PedidoDAO
     {
 
-        public static List<Pedido> consultaEstatisticas(DateTime inicio,DateTime fim)
+        public static List<Pedido> consultaEstatisticas(DateTime inicio, DateTime fim)
         {
             List<Pedido> ret = new List<Pedido>();
             MySqlConnection conn;
@@ -59,7 +59,7 @@ namespace ServerMyBar.comum
                     List<AnterioresAuxiliar> auxy = new List<AnterioresAuxiliar>();
                     while (reader.Read())
                     {
-                        auxy.Add(new AnterioresAuxiliar(reader.GetInt32(0),reader.GetString(1), reader.GetString(2), reader.GetDateTime(3)));
+                        auxy.Add(new AnterioresAuxiliar(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3)));
                     }
 
                     reader.Close();
@@ -157,7 +157,7 @@ namespace ServerMyBar.comum
                                 int idProduto = reader.GetInt32(1);
                                 int quantidade = reader.GetInt32(2);
                                 Produto produto = ProdutoDAO.getProduto(idProduto);
-                                ListaProdutos.Add(new ProdutoPedido(produto,quantidade));
+                                ListaProdutos.Add(new ProdutoPedido(produto, quantidade));
                             }
                             reader.Close();
                         }
@@ -166,7 +166,7 @@ namespace ServerMyBar.comum
                             Console.WriteLine("Um pedido sem produtos hum..................");
                         }
 
-                        ret.Add(new Pedido(auxy[i].idPedido, idCliente,auxy[i].idEmpregado, "null", auxy[i].datahora, ListaProdutos));
+                        ret.Add(new Pedido(auxy[i].idPedido, idCliente, auxy[i].idEmpregado, "null", auxy[i].datahora, ListaProdutos));
                     }
 
                     return ret;

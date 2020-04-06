@@ -20,16 +20,3 @@ C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.A
 C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.AssemblyInfo.cs
 C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.dll
 C:\Users\ze_nu\Desktop\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.pdb
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.exe
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.deps.json
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.runtimeconfig.json
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.runtimeconfig.dev.json
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.dll
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.pdb
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.csprojAssemblyReference.cache
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.csproj.CoreCompileInputs.cache
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.AssemblyInfoInputs.cache
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.AssemblyInfo.cs
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.dll
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.pdb
-C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.genruntimeconfig.cache

@@ -60,7 +60,7 @@ namespace AppClient
             int size = 100;
             byte[] data = new byte[size];
 
-      
+
             master.Receive(data, 0, 4, SocketFlags.None);
             int numero_total = BitConverter.ToInt32(data, 0);
 
@@ -93,7 +93,7 @@ namespace AppClient
 
                 //recebe os bytes da string
                 byte[] nome = new byte[tamanho];
-                master.Receive(nome,tamanho,SocketFlags.None);
+                master.Receive(nome, tamanho, SocketFlags.None);
                 string nomeCategoria = Encoding.UTF8.GetString(nome);
 
                 byte[] tamN = new byte[4];
@@ -128,7 +128,7 @@ namespace AppClient
 
             master.Receive(data, 0, 4, SocketFlags.None); // 4bytes ->1 int que � o tamanho de bytes a recebr
             int numero_total = BitConverter.ToInt32(data, 0);
-            
+
             data = new byte[numero_total];
             master.Receive(data, numero_total, SocketFlags.None);
 
@@ -163,13 +163,13 @@ namespace AppClient
                 int numProdutos = BitConverter.ToInt32(num, 0);
 
                 List<ProdutoPedido> apr = new List<ProdutoPedido>(numProdutos);
-                for(int j = 0; j < numProdutos; j++)
+                for (int j = 0; j < numProdutos; j++)
                 {
                     master.Receive(num, 4, SocketFlags.None);
                     int tamanhoProduto = BitConverter.ToInt32(num, 0);
                     byte[] aux = new byte[tamanhoProduto];
                     master.Receive(aux, tamanhoProduto, SocketFlags.None);
-                   
+
                     master.Receive(num, 4, SocketFlags.None);
                     int quantidades = BitConverter.ToInt32(num, 0);
 
@@ -302,11 +302,12 @@ namespace AppClient
 
             byte[] infoBytes = new byte[128];
 
-            for(int i=0; i < 5; i++) {
+            for (int i = 0; i < 5; i++)
+            {
                 master.Receive(infoBytes);
                 info[i] = BitConverter.ToString(infoBytes);
             }
-            
+
             return info;
         }
 

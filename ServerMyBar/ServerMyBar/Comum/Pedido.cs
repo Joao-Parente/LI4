@@ -18,7 +18,7 @@ namespace ServerMyBar.comum
         public List<ProdutoPedido> produtos { get; set; }
 
 
-        public Pedido(int id, string idCliente,string idEmpregado, string detalhes, DateTime dataHora, List<ProdutoPedido> produto)
+        public Pedido(int id, string idCliente, string idEmpregado, string detalhes, DateTime dataHora, List<ProdutoPedido> produto)
         {
             this.id = id;
             this.idCliente = idCliente;

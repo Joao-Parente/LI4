@@ -12,17 +12,17 @@ namespace ServerMyBar
         {
 
             Gestor gestor = new Gestor();
-  
-            ServerClient x= new ServerClient(gestor);
-            //x.run();
-            StarterClient st= new StarterClient(gestor);
 
-            ServerFunc func = new ServerFunc(gestor,st);
-            Thread tf = new Thread(func.run); 
-          
-            ServerGestor sges= new ServerGestor(gestor,st);
+            ServerClient x = new ServerClient(gestor);
+            //x.run();
+            StarterClient st = new StarterClient(gestor);
+
+            ServerFunc func = new ServerFunc(gestor, st);
+            Thread tf = new Thread(func.run);
+
+            ServerGestor sges = new ServerGestor(gestor, st);
             Thread tg = new Thread(sges.run);
-            
+
             //tf.Start();
             tg.Start();
 
