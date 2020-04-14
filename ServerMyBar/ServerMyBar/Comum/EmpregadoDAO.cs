@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using MySql.Data.MySqlClient;
 
 namespace ServerMyBar.comum
@@ -12,7 +13,38 @@ namespace ServerMyBar.comum
 
         public static bool editEmpregado(string email, Empregado e)
         {
-            return true;
+                MySqlConnection conn;
+                string myConnectionString;
+                myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                     "pwd=password;database=LI_Database";
+                try
+                {
+                    conn = new MySqlConnection(myConnectionString);
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand();
+
+                    cmd.Connection = conn;
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("UPDATE Empregado SET email = '").Append(e.email)
+                        .Append("', password = '").Append(e.password).Append("', nome = '").Append(e.nome)
+                        .Append("', eGestor = ").Append(e.egestor)
+                        .Append("' WHERE(email = ").Append(email).Append(");");
+                    string query = sb.ToString();
+                    cmd.CommandText = query;
+
+                    cmd.Prepare();
+
+                    cmd.ExecuteNonQuery();
+
+                    return true;
+                }
+                catch (MySql.Data.MySqlClient.MySqlException ex)
+                {
+                    Console.WriteLine("Exception " + ex.Message);
+                    return false;
+                }
+
+            
         }
 
         public static bool autenticaGestor(string email, string pw)

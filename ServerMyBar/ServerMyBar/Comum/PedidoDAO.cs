@@ -183,6 +183,97 @@ namespace ServerMyBar.comum
             }
             return ret;
         }
+
+        public static Pedido getPedido(int id)
+        {
+            List<Pedido> ret = new List<Pedido>();
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                 "pwd=password;database=LI_Database";
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+
+                string query = "SELECT idCliente,idEmpregado,data_hora FROM pedido WHERE idPedido='" + id + "';";
+
+                cmd.CommandText = query;
+                cmd.Prepare();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                string idCliente = "";
+                string idEmpregado = "";
+                DateTime datahora = new DateTime();
+
+
+                if (reader.HasRows)
+                {
+                   
+                    while (reader.Read())
+                    {
+
+                        idCliente = reader.GetString(0);
+                        idEmpregado = reader.GetString(1);
+                        datahora = reader.GetDateTime(2); 
+                    }
+
+                    reader.Close();
+                }
+
+                else return null;
+
+
+                
+                
+                        query = "SELECT * FROM listapedidos WHERE idPedido=" + id + ";";
+                        cmd.CommandText = query;
+                        cmd.Prepare();
+                        reader = cmd.ExecuteReader();
+
+                List<ProdutoPedido> ListaProdutos = new List<ProdutoPedido>();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int idProduto = reader.GetInt32(1);
+                        int quantidade = reader.GetInt32(2);
+                        Produto produto = ProdutoDAO.getProduto(idProduto);
+                        ListaProdutos.Add(new ProdutoPedido(produto, quantidade));
+                    }
+                    reader.Close();
+
+
+                    return new Pedido(id, idCliente, idEmpregado, "null", datahora, ListaProdutos);
+                }
+
+                else
+                {
+                    Console.WriteLine("Um pedido sem produtos hum..................");
+                }
+
+
+                
+
+
+
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine("Exception " + ex.Message);
+            }
+            return null;
+        }
+
+
+
+
+
+
     }
 }
 

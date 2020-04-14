@@ -21,9 +21,35 @@ namespace AppGestor
         }
 
 
-        //+visualizarPedido(idPedido : int) : Pedido
+        public Pedido visualizarPedido(int idPedido)
+        {
 
-        //+alternarEstadoSistema() : void
+
+
+            byte[] num = new byte[4];
+            //envia id operacao
+            num = BitConverter.GetBytes(1);
+            master.Send(num);
+
+            num = BitConverter.GetBytes(idPedido);
+            master.Send(num);
+
+            return RecebePedido();
+        }
+
+        public bool  alternarEstadoSistema()
+        {
+            byte[] num = new byte[4];
+            //envia id operacao
+            num = BitConverter.GetBytes(3);
+            master.Send(num);
+
+            byte[] log = new byte[30];
+            master.Receive(log);
+            bool val = BitConverter.ToBoolean(log, 0);
+
+            return val;
+        }
 
         //+mudarEstadoPedido(idPedido : int) : void
 
@@ -229,6 +255,22 @@ namespace AppGestor
             return val;
         }
 
+        public bool removerProduto(int idr)
+        {
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(13);
+            master.Send(id);
+
+            id = BitConverter.GetBytes(idr);
+            master.Send(id);
+
+            byte[] log = new byte[30];
+            master.Receive(log);
+            bool val = BitConverter.ToBoolean(log, 0);
+
+            return val;
+        }
+
 
         public void EnviaProdutoManual(Produto p)
         {
@@ -273,6 +315,37 @@ namespace AppGestor
 
         }
 
-    }
 
+
+
+
+        public  void enviaPedido(Pedido p)
+        {
+            byte[] pedido = p.SavetoBytes();
+            master.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
+            master.Send(pedido);
+        }
+
+        public Pedido RecebePedido()
+        {
+            int posicao = 0;
+            int size = 100;
+            byte[] data = new byte[size];
+            int readBytes = -1;
+            master.Receive(data, 0, 4, SocketFlags.None); // 4bytes ->1 int que é o tamanho de bytes a recebr
+            int numero_total = BitConverter.ToInt32(data, 0);
+            while (readBytes != 0 && numero_total - 1 > posicao)
+            {
+                readBytes = master.Receive(data, posicao, size - posicao, SocketFlags.None);
+                posicao += readBytes;
+                if (posicao >= size - 1)
+                {
+                    System.Array.Resize(ref data, size * 2);
+                    size *= 2;
+                }
+            }
+            return Pedido.loadFromBytes(data);
+        }
+
+    }
 }

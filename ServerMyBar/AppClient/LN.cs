@@ -286,8 +286,15 @@ namespace AppClient
             byte[] id = new byte[4];
             id = BitConverter.GetBytes(4);
             master.Send(id);
+
             enviaPedido(p);
-            return 1;
+
+
+            master.Receive(id, 4, SocketFlags.None);
+            return  BitConverter.ToInt32(id, 0);
+
+
+         
         }
 
 

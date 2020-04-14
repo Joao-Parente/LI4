@@ -70,6 +70,15 @@ namespace AppFunc
                             if (login) Console.WriteLine("i'm in you crazy bastard");
                             else Console.WriteLine("we will get em next time");
                             break;
+
+                        case 3: //Alternar Estado Sistema
+
+
+                            bool estado = ln.alternarEstadoSistema();
+                            if (estado) Console.WriteLine("Os cliente já se podem conectar");
+                            else Console.WriteLine("Fechou a apalicação para os clientes");
+
+                            break;
                         case 4: //Notificar Clientes
                             Console.WriteLine("Insira o id do cliente");
                             string idCliente = Console.ReadLine();

@@ -31,3 +31,14 @@ C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.A
 C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfo.cs
 C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.dll
 C:\Users\ze_nu\Desktop\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.pdb
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.exe
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.deps.json
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.runtimeconfig.json
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.runtimeconfig.dev.json
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.pdb
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.csprojAssemblyReference.cache
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfoInputs.cache
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfo.cs
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.pdb

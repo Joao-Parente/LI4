@@ -26,7 +26,19 @@ namespace AppFunc
 
         //+mudarEstadoPedido(idPedido : int) : void
 
-        //+alternarEstadoDoSistema() : void
+        public bool alternarEstadoSistema()
+        {
+            byte[] num = new byte[4];
+            //envia id operacao
+            num = BitConverter.GetBytes(3);
+            master.Send(num);
+
+            byte[] log = new byte[30];
+            master.Receive(log);
+            bool val = BitConverter.ToBoolean(log, 0);
+
+            return val;
+        }
 
         //+notificarClientes(idCliente : int, mensagem : string)
 

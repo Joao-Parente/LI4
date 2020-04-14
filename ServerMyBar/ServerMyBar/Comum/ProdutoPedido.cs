@@ -19,6 +19,18 @@ namespace ServerMyBar.comum
         {
             p = pr;
             quantidades = qua;
+    
+        
         }
-    }
+
+
+
+        public override string ToString()
+        {
+
+            return ("        Quantidade: "+quantidades.ToString() +" Produto: " +p.ToString());
+        }
+        }
+
+
 }

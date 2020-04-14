@@ -25,7 +25,8 @@ namespace AppGestor
             // 9 IniciarSessao
             // 10 TerminarSessao
             // 11 EditarEmpregado
-            // 12 RemoverProduto
+            // 12 Remover Empregado
+            // 13 RemoverProduto
 
             int input;
             byte[] msg = new byte[4];
@@ -49,10 +50,13 @@ namespace AppGestor
                     input = Convert.ToInt32(Console.ReadLine());
                     switch (input)
                     {
-                        case 1: //Novo_Pedido
-                            msg = BitConverter.GetBytes(input); // diz o comando 
-                            master.Send(msg);
-                            enviaPedido(new Pedido());
+                        case 1: //Visaulizar Pedido
+
+                            Console.WriteLine(" Insira id do pedido");
+                            int id = int.Parse(Console.ReadLine());
+                            Pedido pe= ln.visualizarPedido(id);
+                            pe.imprimePedido();
+
                             break;
                         case 2: // Login
                             Console.WriteLine("Starting authentication");
@@ -65,6 +69,14 @@ namespace AppGestor
                             else Console.WriteLine("we will get em next time");
                             break;
 
+                        case 3: //Alternar Estado Sistema
+
+
+                            bool estado = ln.alternarEstadoSistema();
+                            if (estado) Console.WriteLine("Os cliente já se podem conectar");
+                            else Console.WriteLine("Fechou a apalicação para os clientes");
+
+                            break;
                         case 5: //addProduto
                             Console.WriteLine("# Starting adicionarProduto #");
                             Console.WriteLine("Insira o tipo:");
@@ -144,9 +156,25 @@ namespace AppGestor
                             bool res = ln.removerEmpregado(removemail);
                             Console.WriteLine(res);
                             break;
+                       
+
+                        case 13: //Remover Produto
+
+                            Console.WriteLine("# Starting remover produto #");
+                            Console.WriteLine("Insira o id do produto a remover");
+                            int idr = int.Parse(Console.ReadLine());
+                            bool resp = ln.removerProduto(idr);
+                            Console.WriteLine(resp);
+                            break;
+
                         default:
                             flag = false;
                             break;
+
+
+
+
+
                     }
                     msg = new byte[100];
                 }
@@ -156,11 +184,6 @@ namespace AppGestor
         }
 
 
-        public static void enviaPedido(Pedido p)
-        {
-            byte[] pedido = p.SavetoBytes();
-            master.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
-            master.Send(pedido);
-        }
+     
     }
 }

@@ -93,6 +93,29 @@ namespace ServerMyBar.serverFunc
 
 
                         break;
+
+                    case 3:  // 3 AlternarEstadoSistema
+
+
+                        bool res10 = false;
+                        byte[] resultado10 = new byte[30];
+
+
+                        if (this.start_client.estado == true)
+                        { this.start_client.offCliente(); }
+
+
+                        else
+                        {
+                            res10 = true;
+                            this.start_client.onCliente();
+
+                        }
+
+                        socket.Send(resultado10, 30, SocketFlags.None); // true ligou false desligou
+
+
+                        break; 
                     case 4: // Notificar Clientes                       
                         byte[] numNC = new byte[4], msgNC;
 

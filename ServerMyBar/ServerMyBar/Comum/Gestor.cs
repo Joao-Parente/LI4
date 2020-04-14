@@ -54,7 +54,15 @@ namespace ServerMyBar.comum
         }
 
 
-        //+getProduto(id : int) : Produto
+        public Produto getProduto(int id )
+        {
+
+                lock (this)
+                {
+                    return ProdutoDAO.getProduto(id);
+                }
+        }
+        
 
 
 
@@ -85,7 +93,16 @@ namespace ServerMyBar.comum
         }
 
 
-        //+removeProduct(id : int)
+       public Boolean removeProduct(int id)
+        {
+
+            bool res = false;
+            lock (this)
+            {
+                if (ProdutoDAO.removeProduto(id) != false) res = true;
+            }
+            return res;
+        }
 
 
         public void removerProdutos(int idPedido, string[] produtos)
@@ -129,7 +146,35 @@ namespace ServerMyBar.comum
             }
         }
 
-        //+getPedido(id : int) : Server.Pedido
+        public Pedido getPedido(int idPedido) {
+            lock (this)
+            {
+                foreach (Pedido x in por_preparar)
+                {
+                    if (x.id == idPedido)
+                    {
+                        return x;
+                    }
+                }
+                foreach (Pedido x in em_preparacao)
+                {
+                    if (x.id == idPedido)
+                    {
+                        return x;
+                    }
+                }
+                foreach (Pedido x in preparado)
+                {
+                    if (x.id == idPedido)
+                    {
+                        return x;
+                    }
+                }
+
+                return PedidoDAO.getPedido(idPedido);
+                
+            }
+        }
 
 
         public bool changePedido(int idPedido, Pedido np)

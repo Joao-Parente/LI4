@@ -43,6 +43,7 @@ namespace ServerMyBar.serverCliente
 
         public void notificarCliente(int idCliente, string msg)
         {
+
         }
     }
 }

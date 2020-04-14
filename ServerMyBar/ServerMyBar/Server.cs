@@ -14,7 +14,7 @@ namespace ServerMyBar
             Gestor gestor = new Gestor();
 
             ServerClient x = new ServerClient(gestor);
-            //x.run();
+            x.run();
             StarterClient st = new StarterClient(gestor);
 
             ServerFunc func = new ServerFunc(gestor, st);

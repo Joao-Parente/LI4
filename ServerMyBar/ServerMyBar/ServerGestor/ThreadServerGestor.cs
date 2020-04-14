@@ -48,11 +48,44 @@ namespace ServerMyBar.serverGestor
                 // 9 IniciarSessao
                 // 10 TerminarSessao
                 // 11 EditarEmpregado
-                // 12 RemoverProduto
+                // 12 Remover Empregado
+                // 13 RemoverProduto
 
                 switch (msg)
                 {
 
+                    case 1: //VisualizarPedido // supoe-se que o utilizador so consegue dar ids validos
+
+                        socket.Receive(data, 4, SocketFlags.None);
+                        msg = BitConverter.ToInt32(data, 0);
+
+                        Pedido aux = gestor.getPedido(msg);
+                        if (aux != null) enviaPedido(aux);
+                       
+
+                        break;
+                    case 3:  // 3 AlternarEstadoSistema
+
+
+                        bool res10 = false;
+                        byte[] resultado10 = new byte[30];
+                     
+
+                        if (this.start_client.estado == true)
+                        { this.start_client.offCliente(); }
+
+
+                        else
+                        {
+                            res10 = true;
+                            this.start_client.onCliente();
+
+                        }
+
+                        socket.Send(resultado10, 30, SocketFlags.None); // true ligou false desligou
+
+
+                        break;
                     case 5: //adicionar produto
                         Produto p = RecebeProduto();
 
@@ -199,6 +232,21 @@ namespace ServerMyBar.serverGestor
                         resultado2 = BitConverter.GetBytes(res2);
                         socket.Send(resultado2, 30, SocketFlags.None);
                         break;
+
+                    case 13: //removerProduto
+
+
+
+                        socket.Receive(data, 4, SocketFlags.None);
+                        msg = BitConverter.ToInt32(data, 0);
+
+                        bool res3 = gestor.removeProduct(msg);
+
+                        byte[] resultado3 = new byte[30];
+                        resultado3 = BitConverter.GetBytes(res3);
+                        socket.Send(resultado3, 30, SocketFlags.None);
+
+                        break;
                     default:
                         flag = false;
                         break;
@@ -341,6 +389,12 @@ namespace ServerMyBar.serverGestor
                 }
             }
             return Pedido.loadFromBytes(data);
+        }
+        public void enviaPedido(Pedido p)
+        {
+            byte[] pedido = p.SavetoBytes();
+            socket.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
+            socket.Send(pedido);
         }
 
         public Produto RecebeProduto()

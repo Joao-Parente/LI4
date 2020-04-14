@@ -195,5 +195,49 @@ namespace ServerMyBar.comum
             }
             return null;
         }
+
+
+
+
+        public static bool removeProduto(int id)
+        {
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                    "pwd=password;database=LI_Database";
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+
+                cmd.CommandText = "DELETE FROM LI_Database.Produto where LI_Database.Produto.idProduto='" + id + "'";
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+                MySqlCommand cmd2 = new MySqlCommand();
+                cmd2.CommandText = "DELETE FROM LI_Database.produtosfavoritos where LI_Database.produtosfavoritos.idProduto='" + id + "'";
+                cmd2.Prepare();
+
+                cmd2.ExecuteNonQuery();
+
+
+
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("MySqlException: " + ex.Message);
+                return false;
+            }
+            return true;
+        }
+
+
+
+
     }
 }

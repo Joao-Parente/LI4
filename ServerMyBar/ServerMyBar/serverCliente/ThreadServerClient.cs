@@ -168,7 +168,10 @@ namespace ServerMyBar.serverCliente
                         break;
                     case 4: //Novo pedido
                         Pedido x = RecebePedido();
+                        int idp=gestor.addPedido(x);
                         x.imprimePedido();
+                        socket.Send(BitConverter.GetBytes(idp));
+
                         break;
                     case 5: // NoUlitmoPedido
                         List<int> r = gestor.NoUltimoPedido();
