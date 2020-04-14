@@ -78,8 +78,7 @@ namespace AppFunc
                             ln.notificarCliente(idCliente, mensagem);
                             Console.WriteLine("Sucesso!!!");
                             break;
-
-                        case 10:
+                        case 6:
                             flag = ln.TerminarSessao();
                             break;
                         default:
