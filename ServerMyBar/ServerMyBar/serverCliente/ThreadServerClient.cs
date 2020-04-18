@@ -168,7 +168,7 @@ namespace ServerMyBar.serverCliente
                         break;
                     case 4: //Novo pedido
                         Pedido x = RecebePedido();
-                        int idp=gestor.addPedido(x);
+                        int idp = gestor.addPedido(x);
                         x.imprimePedido();
                         socket.Send(BitConverter.GetBytes(idp));
 

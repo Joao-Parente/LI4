@@ -42,3 +42,16 @@ C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3
 C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfo.cs
 C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.dll
 C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.exe
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.deps.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.runtimeconfig.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.runtimeconfig.dev.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\bin\Debug\netcoreapp3.1\AppClient.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.csprojAssemblyReference.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.csproj.CoreCompileInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfoInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.AssemblyInfo.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppClient\obj\Debug\netcoreapp3.1\AppClient.genruntimeconfig.cache

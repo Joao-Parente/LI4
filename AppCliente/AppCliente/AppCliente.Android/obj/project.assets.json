@@ -5756,24 +5756,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jnuno\\.nuget\\packages\\": {},
+    "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VStudio\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj",
       "projectName": "AppCliente.Android",
-      "projectPath": "D:\\VStudio\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj",
-      "packagesPath": "C:\\Users\\jnuno\\.nuget\\packages\\",
-      "outputPath": "D:\\VStudio\\AppCliente\\AppCliente\\AppCliente.Android\\obj\\",
+      "projectPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\AppCliente.Android.csproj",
+      "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jnuno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -5787,8 +5787,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\VStudio\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj": {
-              "projectPath": "D:\\VStudio\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj"
+            "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj": {
+              "projectPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\AppCliente\\AppCliente\\AppCliente\\AppCliente.csproj"
             }
           }
         }

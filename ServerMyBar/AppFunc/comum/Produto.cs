@@ -17,23 +17,23 @@ namespace AppFunc
 
         public Produto()
         {
-            id = 0;
-            tipo = "";
-            nome = "";
-            detalhes = "";
-            disponibilidade = 0;
-            preco = 0;
-            imagem = "";
+            this.id = 0;
+            this.tipo = "";
+            this.nome = "";
+            this.detalhes = "";
+            this.disponibilidade = 0;
+            this.preco = 0;
+            this.imagem = "";
         }
 
         public Produto(int i, string t, string n, string de, int di, float p)
         {
-            id = i;
-            tipo = t;
-            nome = n;
-            detalhes = de;
-            disponibilidade = di;
-            preco = p;
+            this.id = i;
+            this.tipo = t;
+            this.nome = n;
+            this.detalhes = de;
+            this.disponibilidade = di;
+            this.preco = p;
         }
 
         public byte[] SavetoBytes()
@@ -56,13 +56,13 @@ namespace AppFunc
 
         public override string ToString()
         {
-            return ("Id: " + id +
-                        "\n Tipo: " + tipo +
-                        "\n Nome: " + nome +
-                        "\n Detalhes: " + detalhes +
-                        "\n Disponibilidade: " + disponibilidade +
-                        "\n Preço: " + preco +
-                        "\n Imagem: " + imagem);
+            return ("Id: " + this.id +
+                        "\n Tipo: " + this.tipo +
+                        "\n Nome: " + this.nome +
+                        "\n Detalhes: " + this.detalhes +
+                        "\n Disponibilidade: " + this.disponibilidade +
+                        "\n Preco: " + this.preco +
+                        "\n Imagem: " + this.imagem);
         }
     }
 }

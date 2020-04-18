@@ -61,7 +61,7 @@ namespace ServerMyBar.serverGestor
 
                         Pedido aux = gestor.getPedido(msg);
                         if (aux != null) enviaPedido(aux);
-                       
+
 
                         break;
                     case 3:  // 3 AlternarEstadoSistema
@@ -69,7 +69,7 @@ namespace ServerMyBar.serverGestor
 
                         bool res10 = false;
                         byte[] resultado10 = new byte[30];
-                     
+
 
                         if (this.start_client.estado == true)
                         { this.start_client.offCliente(); }

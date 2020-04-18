@@ -2,6 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\AppCliente",
+    "\\AppCliente\\AppCliente",
+    "\\AppCliente\\AppCliente\\AppCliente",
+    "\\AppCliente\\AppCliente\\AppCliente\\Views",
     "\\ServerMyBar"
   ],
   "SelectedNode": "\\AppCliente\\AppCliente.sln",

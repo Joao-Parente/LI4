@@ -9,3 +9,16 @@
 /home/jpedro/RiderProjects/ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.AssemblyInfo.cs
 /home/jpedro/RiderProjects/ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.dll
 /home/jpedro/RiderProjects/ServerMyBar/testes/obj/Debug/netcoreapp3.1/testes.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\bin\Debug\netcoreapp3.1\testes.exe
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\bin\Debug\netcoreapp3.1\testes.deps.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\bin\Debug\netcoreapp3.1\testes.runtimeconfig.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\bin\Debug\netcoreapp3.1\testes.runtimeconfig.dev.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\bin\Debug\netcoreapp3.1\testes.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\bin\Debug\netcoreapp3.1\testes.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\obj\Debug\netcoreapp3.1\testes.csprojAssemblyReference.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\obj\Debug\netcoreapp3.1\testes.csproj.CoreCompileInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\obj\Debug\netcoreapp3.1\testes.AssemblyInfoInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\obj\Debug\netcoreapp3.1\testes.AssemblyInfo.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\obj\Debug\netcoreapp3.1\testes.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\obj\Debug\netcoreapp3.1\testes.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\testes\obj\Debug\netcoreapp3.1\testes.genruntimeconfig.cache

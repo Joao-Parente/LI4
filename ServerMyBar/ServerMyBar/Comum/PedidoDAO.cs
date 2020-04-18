@@ -213,13 +213,13 @@ namespace ServerMyBar.comum
 
                 if (reader.HasRows)
                 {
-                   
+
                     while (reader.Read())
                     {
 
                         idCliente = reader.GetString(0);
                         idEmpregado = reader.GetString(1);
-                        datahora = reader.GetDateTime(2); 
+                        datahora = reader.GetDateTime(2);
                     }
 
                     reader.Close();
@@ -228,12 +228,12 @@ namespace ServerMyBar.comum
                 else return null;
 
 
-                
-                
-                        query = "SELECT * FROM listapedidos WHERE idPedido=" + id + ";";
-                        cmd.CommandText = query;
-                        cmd.Prepare();
-                        reader = cmd.ExecuteReader();
+
+
+                query = "SELECT * FROM listapedidos WHERE idPedido=" + id + ";";
+                cmd.CommandText = query;
+                cmd.Prepare();
+                reader = cmd.ExecuteReader();
 
                 List<ProdutoPedido> ListaProdutos = new List<ProdutoPedido>();
                 if (reader.HasRows)
@@ -257,7 +257,7 @@ namespace ServerMyBar.comum
                 }
 
 
-                
+
 
 
 

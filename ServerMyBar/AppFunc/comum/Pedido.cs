@@ -14,7 +14,6 @@ namespace AppFunc
         public string idEmpregado { get; set; }
         public string detalhes { get; set; }
         public DateTime data_hora { get; set; }
-        [DataMember]
         public List<ProdutoPedido> produtos { get; set; }
 
 
@@ -31,12 +30,12 @@ namespace AppFunc
 
         public Pedido()
         {
-            id = 0;
-            idCliente = "" + 0;
-            idEmpregado = "null";
-            detalhes = "";
-            data_hora = new DateTime();
-            produtos = new List<ProdutoPedido>();
+            this.id = 0;
+            this.idCliente = "" + 0;
+            this.idEmpregado = "null";
+            this.detalhes = "";
+            this.data_hora = new DateTime();
+            this.produtos = new List<ProdutoPedido>();
         }
 
 
@@ -57,7 +56,6 @@ namespace AppFunc
             //produtos.Remove(p);
         }
 
-
         public void imprimePedido()
         {
             Console.Write(this.ToString());
@@ -68,7 +66,6 @@ namespace AppFunc
             }
 
         }
-
 
         public string toString()
         {

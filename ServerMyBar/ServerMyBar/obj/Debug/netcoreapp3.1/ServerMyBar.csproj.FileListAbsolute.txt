@@ -92,3 +92,5 @@ C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreap
 C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csproj.CopyComplete
 C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
 C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb

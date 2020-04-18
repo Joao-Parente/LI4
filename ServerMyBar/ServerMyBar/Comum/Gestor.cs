@@ -54,15 +54,15 @@ namespace ServerMyBar.comum
         }
 
 
-        public Produto getProduto(int id )
+        public Produto getProduto(int id)
         {
 
-                lock (this)
-                {
-                    return ProdutoDAO.getProduto(id);
-                }
+            lock (this)
+            {
+                return ProdutoDAO.getProduto(id);
+            }
         }
-        
+
 
 
 
@@ -93,7 +93,7 @@ namespace ServerMyBar.comum
         }
 
 
-       public Boolean removeProduct(int id)
+        public Boolean removeProduct(int id)
         {
 
             bool res = false;
@@ -146,7 +146,8 @@ namespace ServerMyBar.comum
             }
         }
 
-        public Pedido getPedido(int idPedido) {
+        public Pedido getPedido(int idPedido)
+        {
             lock (this)
             {
                 foreach (Pedido x in por_preparar)
@@ -172,7 +173,7 @@ namespace ServerMyBar.comum
                 }
 
                 return PedidoDAO.getPedido(idPedido);
-                
+
             }
         }
 

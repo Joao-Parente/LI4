@@ -15,62 +15,17 @@ namespace AppFunc
 
         private Socket master;
 
+
         public LN(Socket s)
         {
-            master = s;
-        }
-
-
-
-        //+visualizarPedido(idPedido : int) : Diagrama Classes Funcionario.Pedido
-
-        //+mudarEstadoPedido(idPedido : int) : void
-
-        public bool alternarEstadoSistema()
-        {
-            byte[] num = new byte[4];
-            //envia id operacao
-            num = BitConverter.GetBytes(3);
-            master.Send(num);
-
-            byte[] log = new byte[30];
-            master.Receive(log);
-            bool val = BitConverter.ToBoolean(log, 0);
-
-            return val;
-        }
-
-        //+notificarClientes(idCliente : int, mensagem : string)
-
-        public void notificarCliente(string idCliente, string mensagem) //goncalo, eu nuno, fiz este porque era suposto fazer o notificar clientes da parte do gestor, e depois vi que aquilo nao fazia sentido nenhum
-        {                                                               // ok, eu ggg,
-            byte[] num = new byte[4], msg;
-            //envia id operacao
-            num = BitConverter.GetBytes(4);
-            master.Send(num);
-
-            //envia numero bytes id cliente
-            num = BitConverter.GetBytes(idCliente.Length);
-            master.Send(num);
-            //envia a string
-            msg = new byte[idCliente.Length];
-            msg = Encoding.UTF8.GetBytes(idCliente);
-            master.Send(msg, idCliente.Length, SocketFlags.None);
-
-            //envia numero bytes mensagem
-            num = BitConverter.GetBytes(mensagem.Length);
-            master.Send(num);
-            //envia a string
-            msg = new byte[mensagem.Length];
-            msg = Encoding.UTF8.GetBytes(mensagem);
-            master.Send(msg, mensagem.Length, SocketFlags.None);
+            this.master = s;
         }
 
         public bool iniciarSessao(string email, string password)
         {
             byte[] num = new byte[4], msg;
-            //envia id operacao
-            num = BitConverter.GetBytes(2);
+
+            num = BitConverter.GetBytes(1);
             master.Send(num);
 
             //envia numero bytes email
@@ -102,10 +57,57 @@ namespace AppFunc
             }
         }
 
+
+        public bool alternarEstadoSistema()
+        {
+            byte[] num = new byte[4];
+
+            num = BitConverter.GetBytes(2);
+            master.Send(num);
+
+            byte[] log = new byte[30];
+            master.Receive(log);
+            bool val = BitConverter.ToBoolean(log, 0);
+
+            return val;
+        }
+
+
+        //+visualizarPedido(idPedido : int) : Diagrama Classes Funcionario.Pedido
+
+
+        public void notificarCliente(string idCliente, string mensagem)
+        {
+            byte[] num = new byte[4], msg;
+
+            num = BitConverter.GetBytes(4);
+            master.Send(num);
+
+            //envia numero bytes id cliente
+            num = BitConverter.GetBytes(idCliente.Length);
+            master.Send(num);
+            //envia a string
+            msg = new byte[idCliente.Length];
+            msg = Encoding.UTF8.GetBytes(idCliente);
+            master.Send(msg, idCliente.Length, SocketFlags.None);
+
+            //envia numero bytes mensagem
+            num = BitConverter.GetBytes(mensagem.Length);
+            master.Send(num);
+            //envia a string
+            msg = new byte[mensagem.Length];
+            msg = Encoding.UTF8.GetBytes(mensagem);
+            master.Send(msg, mensagem.Length, SocketFlags.None);
+        }
+
+
+        //+mudarEstadoPedido(idPedido : int) : void
+
+
         public bool TerminarSessao()
         {
             byte[] id = new byte[4];
-            id = BitConverter.GetBytes(10);
+            id = BitConverter.GetBytes(7);
             master.Send(id);
             return false;
         }

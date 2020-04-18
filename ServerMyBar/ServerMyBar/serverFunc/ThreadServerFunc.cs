@@ -13,18 +13,16 @@ namespace ServerMyBar.serverFunc
         private Socket socket;
         private StarterClient start_client;
 
-
-        public ThreadServerFunc(Gestor g, Socket s, StarterClient sa)
+        public ThreadServerFunc(Gestor g, Socket s, StarterClient sc)
         {
-            gestor = g;
-            socket = s;
-            start_client = sa;
+            this.gestor = g;
+            this.socket = s;
+            this.start_client = sc;
         }
-
 
         public void run()
         {
-            Console.WriteLine("Server Thread a Correr!");
+            Console.WriteLine("ThreadServerFunc running...");
 
             byte[] data = new byte[512];
             bool flag = true;
@@ -32,54 +30,44 @@ namespace ServerMyBar.serverFunc
 
             while (flag)
             {
+                //Receber o ID da operacao
                 socket.Receive(data, 4, SocketFlags.None);
                 msg = BitConverter.ToInt32(data, 0);
-                Console.WriteLine("Comando pedido foi o de id : " + msg);
+                Console.WriteLine("Command requested was ID : " + msg);
 
-                // 1 Visualizar Pedido
-                // 2 MudarEstadoPedido
-                // 3 AlternarEstadodoSistema
-                // 4 NotificarClientes
-                // 5 consultasEstatisticas
-                // 10 IniciarSessao
-                // 11 TerminarSessao
+                // 1 LOGIN
+                // 2 ALTERAR ESTADO DO SISTEMA
+                // 3 VISUALIZAR PEDIDO
+                // 4 NOTIFICAR CLIENTE
+                // 5 MUDAR ESTADO DO PEDIDO
+                // 6 CONSULTAS ESTATISTICAS ??
+                // 7 LOGOUT
 
                 switch (msg)
                 {
-                    case 1: // Start/Off CLiente Server
-                        if (start_client.estado == false) start_client.onCliente();
-                        else
-                        {
-                            Console.WriteLine("HELLLLO"); start_client.offCliente();
-                        }
-                        break;
-                    case 2: // Login
-                        Console.WriteLine("Starting authentication" + msg);
-                        /*
-                         socket.Receive(data,0,512,SocketFlags.None); 
-                         string email_pw = System.Text.Encoding.UTF8.GetString(data);
-                         string[] credenciais = email_pw.Split('|');
-                         Console.WriteLine("Credencias : '" + credenciais[0] + "'  --- '" + credenciais[1]+ "'");
-                         if (gestor.loginFunc(credenciais[0], credenciais[1])) {Console.WriteLine("Authentication succeed");socket.Send(BitConverter.GetBytes(true));}
-                         else {Console.WriteLine("Authentication failed");socket.Send(BitConverter.GetBytes(false));}*/
+                    case 1: //LOGIN
+                        Console.WriteLine("Starting authentication...");
                         byte[] numL = new byte[4], msgL;
 
-                        //recebe tamanho email
+                        // tamanho do campo email
                         socket.Receive(numL, 0, 4, SocketFlags.None);
                         int sizeL = BitConverter.ToInt32(numL, 0);
-                        //recebe email
+
+                        //campo email
                         msgL = new byte[sizeL];
                         socket.Receive(msgL, sizeL, SocketFlags.None);
                         string emaiL = Encoding.UTF8.GetString(msgL);
 
-                        //recebe tamanho password
+                        // tamanho do campo password
                         socket.Receive(numL, 0, 4, SocketFlags.None);
                         sizeL = BitConverter.ToInt32(numL, 0);
-                        //recebe password
+
+                        // campo password 
                         msgL = new byte[sizeL];
                         socket.Receive(msgL, sizeL, SocketFlags.None);
                         string passL = Encoding.UTF8.GetString(msgL);
 
+                        // login
                         if (gestor.loginFunc(emaiL, passL) == true)
                         {
                             numL = BitConverter.GetBytes(1);
@@ -90,21 +78,16 @@ namespace ServerMyBar.serverFunc
                             numL = BitConverter.GetBytes(0);
                             socket.Send(numL);
                         }
-
-
                         break;
 
-                    case 3:  // 3 AlternarEstadoSistema
-
-
+                    case 2:  //ALTERAR ESTADO DO SISTEMA
                         bool res10 = false;
                         byte[] resultado10 = new byte[30];
 
-
                         if (this.start_client.estado == true)
-                        { this.start_client.offCliente(); }
-
-
+                        {
+                            this.start_client.offCliente();
+                        }
                         else
                         {
                             res10 = true;
@@ -112,34 +95,46 @@ namespace ServerMyBar.serverFunc
 
                         }
 
-                        socket.Send(resultado10, 30, SocketFlags.None); // true ligou false desligou
+                        socket.Send(resultado10, 30, SocketFlags.None);
+                        break;
+                    case 3: // VISUALIZAR PEDIDO
 
+                        break;
 
-                        break; 
-                    case 4: // Notificar Clientes                       
+                    case 4: // NOTIFICAR CLIENTE
                         byte[] numNC = new byte[4], msgNC;
 
-                        //recebe tamanho idcliente
+                        // tamanho IDCliente
                         socket.Receive(numNC, 0, 4, SocketFlags.None);
                         int sizeS = BitConverter.ToInt32(numNC, 0);
-                        //recebe idcliente
+
+                        // IDCliente
                         msgNC = new byte[sizeS];
                         socket.Receive(msgNC, sizeS, SocketFlags.None);
                         string idc = Encoding.UTF8.GetString(msgNC);
 
-                        //recebe tamanho mensagem
+                        // tamanho da Mensagem
                         socket.Receive(numNC, 0, 4, SocketFlags.None);
                         sizeS = BitConverter.ToInt32(numNC, 0);
-                        //recebe mensagem
+
+                        // Mensagem
                         msgNC = new byte[sizeS];
                         socket.Receive(msgNC, sizeS, SocketFlags.None);
                         string mens = Encoding.UTF8.GetString(msgNC);
 
                         gestor.notificarCliente(idc, mens);
                         break;
-                    case 10:
+
+                    case 5: // MUDAR ESTADO DO PEDIDO
+                        break;
+
+                    case 6: //CONSULTAS ESTATISTICAS ??
+                        break;
+
+                    case 7: // LOGOUT
                         flag = false;
                         break;
+
                     default:
                         flag = false;
                         break;
@@ -147,7 +142,7 @@ namespace ServerMyBar.serverFunc
                 msg = -1;
                 data = new byte[512];
             }
-            Console.WriteLine("Thread: Terminei o comunicação com o cliente, a desligar.");
+            Console.WriteLine("Thread: I ended the communication with the client, disconnecting...");
         }
 
 
@@ -157,7 +152,7 @@ namespace ServerMyBar.serverFunc
             int size = 100;
             byte[] data = new byte[size];
             int readBytes = -1;
-            socket.Receive(data, 0, 4, SocketFlags.None); // 4bytes ->1 int que é o tamanho de bytes a recebr
+            socket.Receive(data, 0, 4, SocketFlags.None);
             int numero_total = BitConverter.ToInt32(data, 0);
             while (readBytes != 0 && numero_total - 1 > posicao)
             {
@@ -168,7 +163,6 @@ namespace ServerMyBar.serverFunc
                     System.Array.Resize(ref data, size * 2);
                     size *= 2;
                 }
-
             }
             return Pedido.loadFromBytes(data);
         }

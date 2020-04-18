@@ -6,19 +6,19 @@ namespace AppFunc
 {
     public class ProdutoPedido
     {
-        public Produto p { get; set; }
-        public int quantidades { get; set; }
+        public Produto prod { get; set; }
+        public int quantidade { get; set; }
 
         public ProdutoPedido()
         {
-            p = new Produto();
-            quantidades = 0;
+            this.prod = new Produto();
+            this.quantidade = 0;
         }
 
-        public ProdutoPedido(Produto pr, int qua)
+        public ProdutoPedido(Produto p, int q)
         {
-            p = pr;
-            quantidades = qua;
+            this.prod = p;
+            this.quantidade = q;
         }
     }
 }
