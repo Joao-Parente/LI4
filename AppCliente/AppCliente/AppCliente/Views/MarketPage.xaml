@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local = "clr-namespace:AppCliente"
+             xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="AppCliente.MarketPage">
+
+
+
+    <ContentPage.Content>
+
+        <!-- 1. Market body-->
+        <Grid BackgroundColor="#ffd719">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+
+            <PanCake:PancakeView Grid.Row="0" BackgroundColor="White" CornerRadius="0,0,50,50" IsClippedToBounds="true" HorizontalOptions="FillAndExpand">
+
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <Grid Padding="0,65,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- 2. Header-->
+                        <Label x:Name="Hello" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Olá *username*" FontSize="30" FontAttributes="Bold" Padding="20,0"/>
+                        <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="Produtos Favoritos" FontSize="15" TextColor="Gray" Padding="20,0"/>
+                        <Button Grid.Column="1" Grid.Row="0" ImageSource="HamburgerMenu" Clicked="ButtonHamburguer_Clicked" Grid.RowSpan="2" BackgroundColor="#fed300" WidthRequest="{OnPlatform iOS='40', Android='50'}" HeightRequest="{OnPlatform iOS='40', Android='50'}" VerticalOptions="CenterAndExpand" HorizontalOptions="End" Margin="0,0,20,0"/>
+                        <Grid x:Name="picker" IsVisible="False" Grid.Row="1" Grid.Column="0" Padding="20,20,0,0" VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height=".1*"/>
+                                <RowDefinition Height=".3*"/>
+                                <RowDefinition Height=".1*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".3*"/>
+                                <ColumnDefinition Width=".3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text="Informações" BackgroundColor="#ffd719" 
+                                    HeightRequest="50" WidthRequest="20"
+                                    Grid.Row="1" Grid.Column="0"/>
+                            <Button Text="Histórico" BackgroundColor="#ffd719" 
+                                    HeightRequest="50" WidthRequest="20"
+                                    Grid.Row="1" Grid.Column="1"/>
+                        </Grid>
+                        
+                        <CollectionView Grid.Column="0"
+                                HorizontalScrollBarVisibility="Never"
+                                Grid.Row="2" Grid.ColumnSpan="2"
+                                Margin="20"
+                                ItemsSource="{Binding prods}"
+                                VerticalOptions="StartAndExpand"
+                                ItemsLayout="HorizontalList"    
+                                HeightRequest="270">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Margin="8,0">
+                                        <Frame HasShadow="False" CornerRadius="20" BackgroundColor="#f5dfba" WidthRequest="130" VerticalOptions="FillAndExpand" HorizontalOptions="Start">
+                                            <Grid HorizontalOptions="Center">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalOptions="Center" Source="prodclassicosatum.png"/>
+                                                <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Nome}" FontAttributes="Bold" TextColor="#48423c" FontSize="21"/>
+                                                <Label Grid.Column="0" Grid.Row="2" Text="{Binding Preco}" TextColor="#b48363"/>
+                                                <Button Grid.Column="1" Grid.Row="2" Text="" ImageSource="plusIcon.png" 
+                                                        BorderColor="#f5dfba" BorderWidth="1" TextColor="Black" BackgroundColor="#f5dfba" 
+                                                        CornerRadius="13" WidthRequest="26" HeightRequest="26" 
+                                                        FontSize="{OnPlatform iOS='14', Android='7'}" Clicked="plusButton"/>
+                                            </Grid>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        <!-- 4. Market list -->
+                        <Label Grid.Row="3" Padding="20,0" Text="Categorias" FontSize="30" TextColor="#332f2e" FontAttributes="Bold"/>
+                        <Label Grid.Row="4" Padding="20,0" Text="7+ markets near you" FontSize="18" TextColor="#a1a0a0" FontAttributes="Bold"/>
+
+                        <ListView Grid.Row="5" Grid.ColumnSpan="2"
+                                VerticalScrollBarVisibility="Never"
+                                Margin="20" HorizontalScrollBarVisibility="Never"
+                                ItemsSource="{Binding cats}" RefreshControlColor="Transparent"
+                                SeparatorVisibility="None" ItemTapped="ListView_ItemTapped"  
+                                VerticalOptions="CenterAndExpand"
+                                HeightRequest="260" HasUnevenRows="True">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame HasShadow="True" Margin="5">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <PanCake:PancakeView Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" BackgroundColor="White" CornerRadius="15,15,15,15"  Margin="0,0,15,0" VerticalOptions="FillAndExpand" WidthRequest="100" HeightRequest="90">
+
+                                                    <Image Source="prodclassicosatum.png" Aspect="Fill" />
+
+                                                </PanCake:PancakeView>
+
+
+                                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Nome}" FontAttributes="Bold"/>
+                                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding NumeroProdutos}" TextColor="Silver"/>
+                                                <!--Label Grid.Row="2" Grid.Column="1" Text="{Binding Description}" TextColor="#a97352" FontAttributes="Bold"/-->
+
+                                            </Grid>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </Grid>
+                </ScrollView>
+            </PanCake:PancakeView>
+            <!-- 5. Market bar-->
+            <Grid Grid.Row="1" Margin="40,20" VerticalOptions="Center" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <CollectionView Grid.Row="0" HorizontalScrollBarVisibility="Never"
+                             VerticalOptions="StartAndExpand" ItemsLayout="HorizontalList" WidthRequest="180"
+                                ItemsSource="{Binding carrinho}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="0,0,20,0">
+                                <ImageButton Source="prodclassicosatum.png" BackgroundColor="#ffe35d" HorizontalOptions="Start" WidthRequest="40" HeightRequest="40" CornerRadius="20" BorderColor="Transparent" BorderWidth="10"/>
+                                <Button Text="{Binding Quantidades}" TranslationY="-20" TranslationX="12" BackgroundColor="#ffe35d" WidthRequest="12" HeightRequest="{OnPlatform iOS='15', Android='28'}" FontSize="{OnPlatform iOS='14', Android='8'}" TextColor="#4D4B4B" CornerRadius="10" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Label x:Name="labelTotal" Grid.Column="1" HorizontalOptions="End" Text="" FontAttributes="Bold" TextColor="#4D4B4B" FontSize="20"/>
+                <ImageButton Grid.Column="2" Source="Arrow" WidthRequest="30" Clicked="carrinhoCompras" BackgroundColor="Transparent"/>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

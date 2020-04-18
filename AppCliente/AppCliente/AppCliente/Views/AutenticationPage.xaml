@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="#ffe35d"
+             x:Class="AppCliente.AutenticationPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".5*"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Seja Bem-Vindo." FontSize="30" FontAttributes="Bold" 
+               VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"
+               Padding="40,0" Grid.Row="1"/>
+
+        <Label Text="   Email" FontSize="20" FontAttributes="Bold"
+               HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" 
+               Grid.Row="2" Padding="20,0"/>
+
+        <Frame IsClippedToBounds="true" BackgroundColor="DimGray" Grid.Row="3" CornerRadius="25" WidthRequest="350"
+               Padding="0"
+               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Entry x:Name="editorEmail" TextColor="White" BackgroundColor="Transparent" Visual="Material"/>
+        </Frame>
+
+        <Label Text="   Password" FontSize="20" FontAttributes="Bold"
+               HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" 
+               Grid.Row="4" Padding="20,0"/>
+
+        <Frame IsClippedToBounds="true" BackgroundColor="DimGray" Grid.Row="5" CornerRadius="25" WidthRequest="350"
+               Padding="0"
+               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Entry x:Name="editorPassword" TextColor="White" IsPassword="True" BackgroundColor="Transparent" Visual="Material"/>
+        </Frame>
+
+        <Button Text="Confirmar" BackgroundColor="Gray" TextColor="White" Grid.Row="6" 
+                VerticalOptions="End" Padding="20,0" Margin="10" CornerRadius="25"
+                HorizontalOptions="End" WidthRequest="120" Clicked="botaoConfirmar"/>
+
+        <Button Text="Clique Aqui Para Efetuar o Registo." BackgroundColor="Transparent" FontSize="20" FontAttributes="Bold" 
+               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               Padding="20,0" WidthRequest="350" Grid.Row="7" Clicked="criarcontaBotao"/>
+
+    </Grid>
+    
+</ContentPage>
