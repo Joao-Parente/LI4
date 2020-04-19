@@ -33,3 +33,14 @@ C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcore
 C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.dll
 C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.pdb
 C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.genruntimeconfig.cache
+F:\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.exe
+F:\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.deps.json
+F:\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.runtimeconfig.json
+F:\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.runtimeconfig.dev.json
+F:\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.dll
+F:\LI4\ServerMyBar\AppGestor\bin\Debug\netcoreapp3.1\AppGestor.pdb
+F:\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.csprojAssemblyReference.cache
+F:\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.AssemblyInfoInputs.cache
+F:\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.AssemblyInfo.cs
+F:\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.dll
+F:\LI4\ServerMyBar\AppGestor\obj\Debug\netcoreapp3.1\AppGestor.pdb

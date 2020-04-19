@@ -258,6 +258,33 @@ namespace ServerMyBar.comum
             }
         }
 
+        public bool proximoEstado(int idPedido)
+        {
+            lock (this)
+            {
+                foreach(Pedido p in por_preparar)
+                {
+                    if (p.id == idPedido)
+                    {
+                        por_preparar.Remove(p);
+                        em_preparacao.Add(p);
+                        return true;
+                    }
+                }
+
+                foreach(Pedido p in em_preparacao)
+                {
+                    if (p.id == idPedido)
+                    {
+                        em_preparacao.Remove(p);
+                        preparado.Add(p);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+
         public bool AddReclamacao(int idPedido, string motivo, string reclamacao)
         {
             lock (this)

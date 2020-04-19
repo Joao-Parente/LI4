@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj": {}
+    "F:\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj": {
+    "F:\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
+        "projectUniqueName": "F:\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
         "projectName": "ServerMyBar",
-        "projectPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
-        "packagesPath": "C:\\Users\\Gonçalo Pinto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gonçalo Pinto\\Desktop\\Work\\LI4\\ServerMyBar\\ServerMyBar\\obj\\",
+        "projectPath": "F:\\LI4\\ServerMyBar\\ServerMyBar\\ServerMyBar.csproj",
+        "packagesPath": "C:\\Users\\RicardoFilipeDantasC\\.nuget\\packages\\",
+        "outputPath": "F:\\LI4\\ServerMyBar\\ServerMyBar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gonçalo Pinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\RicardoFilipeDantasC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
