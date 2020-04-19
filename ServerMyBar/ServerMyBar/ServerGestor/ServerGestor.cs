@@ -29,10 +29,10 @@ namespace ServerMyBar.serverGestor
 
             while (true)
             {
-                Console.WriteLine("ServerGestor á espera de chamadas!\n ");
+                Console.WriteLine("ServerGestor waiting...\n");
                 socket = server.AcceptSocket();
 
-                Console.WriteLine("Ligaram-me, a criar uma thread para tratar do gestor. \n ");
+                Console.WriteLine("They called me, creating a thread to take care of the manager...\n");
 
                 ThreadServerGestor obj = new ThreadServerGestor(gestor, socket, start_client);
                 Thread a = new Thread(obj.run);

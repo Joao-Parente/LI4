@@ -8,6 +8,25 @@ namespace ServerMyBar.comum
     {
         public static bool addEmpregado(Empregado e)
         {
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                 "pwd=password;database=LI_Database";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "INSERT INTO Emregado VALUES('" + e.email + "','" + e.password + "','" + e.nome + "'," + e.egestor + ")";
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine("Exception " + ex.Message);
+                return false;
+            }
             return true;
         }
 

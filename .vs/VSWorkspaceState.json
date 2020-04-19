@@ -1,12 +1,17 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AppCliente",
     "\\AppCliente\\AppCliente",
     "\\AppCliente\\AppCliente\\AppCliente",
     "\\AppCliente\\AppCliente\\AppCliente\\Views",
-    "\\ServerMyBar"
+    "\\ServerMyBar",
+    "\\ServerMyBar\\AppClient",
+    "\\ServerMyBar\\AppFunc",
+    "\\ServerMyBar\\AppFunc\\comum",
+    "\\ServerMyBar\\AppGestor",
+    "\\ServerMyBar\\ServerMyBar",
+    "\\ServerMyBar\\ServerMyBar\\serverFunc"
   ],
-  "SelectedNode": "\\AppCliente\\AppCliente.sln",
+  "SelectedNode": "\\ServerMyBar\\ServerMyBar.sln",
   "PreviewInSolutionExplorer": false
 }

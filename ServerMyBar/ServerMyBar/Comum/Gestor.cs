@@ -207,8 +207,13 @@ namespace ServerMyBar.comum
         //+editProduct(id : in, p : Server.Produto) : bool
 
 
-        //+addEmpregado(emp : Server.Empregado) : int
-
+        public bool addEmpregado(Empregado e)
+        {
+            lock (this)
+            {
+                return EmpregadoDAO.addEmpregado(e);
+            }
+        }
 
         public bool editEmpregado(string email, Empregado e)
         {

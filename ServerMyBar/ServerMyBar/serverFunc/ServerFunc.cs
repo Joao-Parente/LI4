@@ -12,11 +12,13 @@ namespace ServerMyBar.serverFunc
         private StarterClient start_client;
         private Gestor gestor;
 
+
         public ServerFunc(Gestor g, StarterClient sc)
         {
             this.gestor = g;
             this.start_client = sc;
         }
+
 
         public void run()
         {
@@ -27,10 +29,10 @@ namespace ServerMyBar.serverFunc
 
             while (true)
             {
-                Console.WriteLine("ServerFunc waiting...\n ");
+                Console.WriteLine("ServerFunc waiting...\n");
                 socket = server.AcceptSocket();
 
-                Console.WriteLine("They called me, creating a thread to take care of the employee... \n");
+                Console.WriteLine("They called me, creating a thread to take care of the employee...\n");
 
                 ThreadServerFunc obj = new ThreadServerFunc(gestor, socket, start_client);
                 Thread a = new Thread(obj.run);

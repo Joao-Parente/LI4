@@ -21,6 +21,7 @@ namespace AppFunc
             this.master = s;
         }
 
+
         public bool iniciarSessao(string email, string password)
         {
             byte[] num = new byte[4], msg;
@@ -72,15 +73,53 @@ namespace AppFunc
             return val;
         }
 
+        public Pedido RecebePedido()
+        {
+            int posicao = 0;
+            int size = 100;
+            byte[] data = new byte[size];
+            int readBytes = -1;
 
-        //+visualizarPedido(idPedido : int) : Diagrama Classes Funcionario.Pedido
+            master.Receive(data, 0, 4, SocketFlags.None);
+            int numero_total = BitConverter.ToInt32(data, 0);
+
+            while (readBytes != 0 && numero_total - 1 > posicao)
+            {
+                readBytes = master.Receive(data, posicao, size - posicao, SocketFlags.None);
+                posicao += readBytes;
+                if (posicao >= size - 1)
+                {
+                    System.Array.Resize(ref data, size * 2);
+                    size *= 2;
+                }
+            }
+
+            return Pedido.loadFromBytes(data);
+        }
+
+
+        public Pedido visualizarPedido(int idPedido)
+        {
+            byte[] num = new byte[4];
+
+            num = BitConverter.GetBytes(3);
+            master.Send(num);
+
+            num = BitConverter.GetBytes(idPedido);
+            master.Send(num);
+
+            return RecebePedido();
+        }
+
+
+        //+mudarEstadoPedido(idPedido : int) : void
 
 
         public void notificarCliente(string idCliente, string mensagem)
         {
             byte[] num = new byte[4], msg;
 
-            num = BitConverter.GetBytes(4);
+            num = BitConverter.GetBytes(5);
             master.Send(num);
 
             //envia numero bytes id cliente
@@ -101,13 +140,10 @@ namespace AppFunc
         }
 
 
-        //+mudarEstadoPedido(idPedido : int) : void
-
-
         public bool TerminarSessao()
         {
             byte[] id = new byte[4];
-            id = BitConverter.GetBytes(7);
+            id = BitConverter.GetBytes(6);
             master.Send(id);
             return false;
         }

@@ -291,10 +291,10 @@ namespace AppClient
 
 
             master.Receive(id, 4, SocketFlags.None);
-            return  BitConverter.ToInt32(id, 0);
+            return BitConverter.ToInt32(id, 0);
 
 
-         
+
         }
 
 

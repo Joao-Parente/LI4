@@ -29,14 +29,13 @@ namespace AppFunc
                 // 1 LOGIN
                 // 2 ALTERAR ESTADO DO SISTEMA
                 // 3 VISUALIZAR PEDIDO
-                // 4 NOTIFICAR CLIENTES
-                // 5 MUDAR ESTADO DO PEDIDO
-                // 6 CONSULTAS ESTATISTICAS ??
-                // 7 LOGOUT
+                // 4 MUDAR ESTADO DO PEDIDO
+                // 5 NOTIFICAR CLIENTE
+                // 6 LOGOUT
 
                 while (flag)
                 {
-                    Console.WriteLine("INSERT: \n 1 LOGIN \n 2 ALTERAR ESTADO DO SISTEMA \n 3 VISUALIZAR PEDIDO \n 4 NOTIFICAR CLIENTES \n 5 MUDAR ESTADO DO PEDIDO \n 6 CONSULTAS ESTATISTICAS \n 7 LOGOUT");
+                    Console.WriteLine("INSERT: \n 1 LOGIN \n 2 ALTERAR ESTADO DO SISTEMA \n 3 VISUALIZAR PEDIDO  \n 4 MUDAR ESTADO DO PEDIDO \n 5 NOTIFICAR CLIENTE \n 6 LOGOUT");
                     input = Convert.ToInt32(Console.ReadLine());
 
                     switch (input)
@@ -66,9 +65,19 @@ namespace AppFunc
                             break;
 
                         case 3: // VISUALIZAR PEDIDO
+                            Console.WriteLine("Enter the order id:");
+                            int id = int.Parse(Console.ReadLine());
+
+                            Pedido pe = ln.visualizarPedido(id);
+
+                            pe.imprimePedido();
+
                             break;
 
-                        case 4: // NOTIFICAR CLIENTE
+                        case 4: // MUDAR ESTADO DO PEDIDO
+                            break;
+
+                        case 5: // NOTIFICAR CLIENTE
                             Console.WriteLine("Enter the id of client of who wants to upset: ");
                             string idCliente = Console.ReadLine();
                             Console.WriteLine("Insert the message: ");
@@ -79,13 +88,7 @@ namespace AppFunc
                             Console.WriteLine("Success!!!");
                             break;
 
-                        case 5: // MUDAR ESTADO DO PEDIDO
-                            break;
-
-                        case 6: // CONSULTAS ESTATISTICAS
-                            break;
-
-                        case 7: // LOGOUT                
+                        case 6: // LOGOUT                
                             flag = ln.TerminarSessao();
                             break;
 

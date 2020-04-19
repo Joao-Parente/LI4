@@ -70,7 +70,7 @@ namespace AppClient
                         }
                         break;
                     case 4: //Novo_Pedido
-                        int idpp=ln.EfetuarPedido(new Pedido());
+                        int idpp = ln.EfetuarPedido(new Pedido());
                         Console.WriteLine("Id do pedido é " + idpp);
                         break;
                     case 5: // NoUlitmoPedido

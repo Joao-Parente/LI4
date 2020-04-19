@@ -17,31 +17,52 @@ namespace AppGestor
 
         public LN(Socket s)
         {
-            master = s;
+            this.master = s;
         }
 
 
-        public Pedido visualizarPedido(int idPedido)
+        public bool iniciarSessao(string email, string password)
         {
+            byte[] num = new byte[4], msg;
 
-
-
-            byte[] num = new byte[4];
-            //envia id operacao
             num = BitConverter.GetBytes(1);
             master.Send(num);
 
-            num = BitConverter.GetBytes(idPedido);
+            //envia numero bytes email
+            num = BitConverter.GetBytes(email.Length);
             master.Send(num);
+            //envia o email
+            msg = new byte[email.Length];
+            msg = Encoding.UTF8.GetBytes(email);
+            master.Send(msg, email.Length, SocketFlags.None);
 
-            return RecebePedido();
+            //envia numero bytes password
+            num = BitConverter.GetBytes(password.Length);
+            master.Send(num);
+            //envia a password
+            msg = new byte[password.Length];
+            msg = Encoding.UTF8.GetBytes(password);
+            master.Send(msg, password.Length, SocketFlags.None);
+
+            master.Receive(num, 4, SocketFlags.None);
+            int ret = BitConverter.ToInt32(num, 0);
+
+            if (ret == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public bool  alternarEstadoSistema()
+
+        public bool alternarEstadoSistema()
         {
             byte[] num = new byte[4];
-            //envia id operacao
-            num = BitConverter.GetBytes(3);
+
+            num = BitConverter.GetBytes(2);
             master.Send(num);
 
             byte[] log = new byte[30];
@@ -51,21 +72,79 @@ namespace AppGestor
             return val;
         }
 
+
+        public Pedido visualizarPedido(int idPedido)
+        {
+            byte[] num = new byte[4];
+
+            num = BitConverter.GetBytes(3);
+            master.Send(num);
+
+            num = BitConverter.GetBytes(idPedido);
+            master.Send(num);
+
+            return RecebePedido();
+        }
+
+
         //+mudarEstadoPedido(idPedido : int) : void
 
-        //+editarProduto(idProduto : int, novoProduto : Produto) : void
+
+        public void notificarCliente(string idCliente, string mensagem)
+        {
+            byte[] num = new byte[4], msg;
+
+            num = BitConverter.GetBytes(5);
+            master.Send(num);
+
+            //envia numero bytes id cliente
+            num = BitConverter.GetBytes(idCliente.Length);
+            master.Send(num);
+            //envia a string
+            msg = new byte[idCliente.Length];
+            msg = Encoding.UTF8.GetBytes(idCliente);
+            master.Send(msg, idCliente.Length, SocketFlags.None);
+
+            //envia numero bytes mensagem
+            num = BitConverter.GetBytes(mensagem.Length);
+            master.Send(num);
+            //envia a string
+            msg = new byte[mensagem.Length];
+            msg = Encoding.UTF8.GetBytes(mensagem);
+            master.Send(msg, mensagem.Length, SocketFlags.None);
+        }
+
+        public int adicionarProduto(Produto p)
+        {
+            byte[] id = new byte[4];
+
+            id = BitConverter.GetBytes(6);
+            master.Send(id);
+
+            byte[] emp = p.SavetoBytes();
+            master.Send(BitConverter.GetBytes(emp.Length));
+            master.Send(emp);
+
+            byte[] data = new byte[4];
+            master.Receive(data, 4, SocketFlags.None);
+            int idP = BitConverter.ToInt32(data, 0);
+
+            return idP;
+        }
+
 
         public bool editarProduto(Produto p)
         {
             byte[] num = new byte[4];
-            //envia id operacao
-            num = BitConverter.GetBytes(6);
+
+            num = BitConverter.GetBytes(7);
             master.Send(num);
 
             EnviaProdutoManual(p);
 
             master.Receive(num, 4, SocketFlags.None);
             int res = BitConverter.ToInt32(num, 0);
+
             if (res == 1)
             {
                 return true;
@@ -75,6 +154,119 @@ namespace AppGestor
                 return false;
             }
         }
+
+
+        public bool removerProduto(int idr)
+        {
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(8);
+            master.Send(id);
+
+            id = BitConverter.GetBytes(idr);
+            master.Send(id);
+
+            byte[] log = new byte[30];
+            master.Receive(log);
+            bool val = BitConverter.ToBoolean(log, 0);
+
+            return val;
+        }
+
+
+        public bool adicionarEmpregado(Empregado e)
+        {
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(9);
+            master.Send(id);
+
+            byte[] emp = e.SavetoBytes();
+            master.Send(BitConverter.GetBytes(emp.Length));
+            master.Send(emp);
+
+            byte[] num = new byte[4];
+            master.Receive(num, 4, SocketFlags.None);
+            int res = BitConverter.ToInt32(num, 0);
+
+            if (res == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public bool editarEmpregado(string email, Empregado e)
+        {
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(10);
+            master.Send(id);
+
+            byte[] msg = new byte[512];
+            msg = Encoding.ASCII.GetBytes(email);
+            master.Send(msg);
+
+            byte[] emp = e.SavetoBytes();
+            master.Send(BitConverter.GetBytes(emp.Length));
+            master.Send(emp);
+
+            byte[] log = new byte[30];
+            master.Receive(log);
+            bool val = BitConverter.ToBoolean(log, 0);
+
+            return val;
+        }
+
+
+        public bool removerEmpregado(string email)
+        {
+            byte[] id = new byte[4];
+
+            id = BitConverter.GetBytes(11);
+            master.Send(id);
+
+            byte[] msg = new byte[512];
+            msg = Encoding.ASCII.GetBytes(email);
+            master.Send(msg);
+
+            byte[] log = new byte[30];
+            master.Receive(log);
+            bool val = BitConverter.ToBoolean(log, 0);
+
+            return val;
+        }
+
+
+        // +alterarInfoEmpresa(novaInfo : lista string) : void
+
+
+        public List<Pedido> consultasEstatisticas(DateTime i, DateTime f)
+        {
+            byte[] num = new byte[4], msg;
+
+            num = BitConverter.GetBytes(13);
+            master.Send(num);
+
+            msg = BitConverter.GetBytes(i.ToBinary());
+            master.Send(msg);
+
+            msg = BitConverter.GetBytes(f.ToBinary());
+            master.Send(msg);
+
+
+            return RecebePedidosManual();
+        }
+
+        public bool TerminarSessao()
+        {
+            byte[] id = new byte[4];
+            id = BitConverter.GetBytes(14);
+            master.Send(id);
+            return false;
+        }
+
 
         public List<Pedido> RecebePedidosManual()
         {
@@ -130,147 +322,6 @@ namespace AppGestor
 
         }
 
-        //+consultasEstatisticas() : lista string
-        public List<Pedido> consultasEstatisticas(DateTime i, DateTime f)
-        {
-            byte[] num = new byte[4], msg;
-            //envia id operacao
-            num = BitConverter.GetBytes(7);
-            master.Send(num);
-
-            msg = BitConverter.GetBytes(i.ToBinary());
-            master.Send(msg);
-
-            msg = BitConverter.GetBytes(f.ToBinary());
-            master.Send(msg);
-
-
-            return RecebePedidosManual();
-        }
-
-        //+alterarInfoEmpresa(novaInfo : lista string) : void
-
-        //+adicionarEmpregado(idEmpregado : int) : void
-
-        //+IniciarSessao(email : string, password : string) : void
-
-        public bool iniciarSessao(string email, string password)
-        {
-            byte[] num = new byte[4], msg;
-            //envia id operacao
-            num = BitConverter.GetBytes(9);
-            master.Send(num);
-
-            //envia numero bytes email
-            num = BitConverter.GetBytes(email.Length);
-            master.Send(num);
-            //envia o email
-            msg = new byte[email.Length];
-            msg = Encoding.UTF8.GetBytes(email);
-            master.Send(msg, email.Length, SocketFlags.None);
-
-            //envia numero bytes password
-            num = BitConverter.GetBytes(password.Length);
-            master.Send(num);
-            //envia a password
-            msg = new byte[password.Length];
-            msg = Encoding.UTF8.GetBytes(password);
-            master.Send(msg, password.Length, SocketFlags.None);
-
-            master.Receive(num, 4, SocketFlags.None);
-            int ret = BitConverter.ToInt32(num, 0);
-
-            if (ret == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public int adicionarProduto(Produto p)
-        {
-            byte[] id = new byte[4];
-            id = BitConverter.GetBytes(5);
-            master.Send(id);
-
-            byte[] emp = p.SavetoBytes();
-            master.Send(BitConverter.GetBytes(emp.Length));
-            master.Send(emp);
-
-            byte[] data = new byte[4];
-            master.Receive(data, 4, SocketFlags.None);
-            int idP = BitConverter.ToInt32(data, 0);
-
-            return idP;
-        }
-
-        //+TerminarSessao()
-
-        public bool TerminarSessao()
-        {
-            byte[] id = new byte[4];
-            id = BitConverter.GetBytes(10);
-            master.Send(id);
-            return false;
-        }
-
-        public bool editarEmpregado(string email, Empregado e)
-        {
-            byte[] id = new byte[4];
-            id = BitConverter.GetBytes(11);
-            master.Send(id);
-
-            byte[] msg = new byte[512];
-            msg = Encoding.ASCII.GetBytes(email);
-            master.Send(msg);
-
-            byte[] emp = e.SavetoBytes();
-            master.Send(BitConverter.GetBytes(emp.Length));
-            master.Send(emp);
-
-            byte[] log = new byte[30];
-            master.Receive(log);
-            bool val = BitConverter.ToBoolean(log, 0);
-
-            return val;
-        }
-
-        public bool removerEmpregado(string email)
-        {
-            byte[] id = new byte[4];
-            id = BitConverter.GetBytes(12);
-            master.Send(id);
-
-            byte[] msg = new byte[512];
-            msg = Encoding.ASCII.GetBytes(email);
-            master.Send(msg);
-
-            byte[] log = new byte[30];
-            master.Receive(log);
-            bool val = BitConverter.ToBoolean(log, 0);
-
-            return val;
-        }
-
-        public bool removerProduto(int idr)
-        {
-            byte[] id = new byte[4];
-            id = BitConverter.GetBytes(13);
-            master.Send(id);
-
-            id = BitConverter.GetBytes(idr);
-            master.Send(id);
-
-            byte[] log = new byte[30];
-            master.Receive(log);
-            bool val = BitConverter.ToBoolean(log, 0);
-
-            return val;
-        }
-
 
         public void EnviaProdutoManual(Produto p)
         {
@@ -312,19 +363,16 @@ namespace AppGestor
             master.Send(dataFloat, dataFloat.Length, SocketFlags.None);//envia os bytes
 
             //envia imagem --- por completar
-
         }
 
 
-
-
-
-        public  void enviaPedido(Pedido p)
+        public void enviaPedido(Pedido p)
         {
             byte[] pedido = p.SavetoBytes();
             master.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
             master.Send(pedido);
         }
+
 
         public Pedido RecebePedido()
         {
@@ -346,6 +394,5 @@ namespace AppGestor
             }
             return Pedido.loadFromBytes(data);
         }
-
     }
 }

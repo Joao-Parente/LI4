@@ -15,17 +15,17 @@ namespace ServerMyBar.serverGestor
         private StarterClient start_client;
 
 
-        public ThreadServerGestor(Gestor g, Socket s, StarterClient sa)
+        public ThreadServerGestor(Gestor g, Socket s, StarterClient sc)
         {
-            gestor = g;
-            socket = s;
-            start_client = sa;
+            this.gestor = g;
+            this.socket = s;
+            this.start_client = sc;
         }
 
 
         public void run()
         {
-            Console.WriteLine("Server Thread a Correr!");
+            Console.WriteLine("ThreadServerGestor running...");
 
             byte[] data = new byte[512];
             bool flag = true;
@@ -35,46 +35,65 @@ namespace ServerMyBar.serverGestor
             {
                 socket.Receive(data, 4, SocketFlags.None);
                 msg = BitConverter.ToInt32(data, 0);
-                Console.WriteLine("Comando pedido foi o de id : " + msg);
+                Console.WriteLine("Command requested was ID : " + msg);
 
-                // 1 VisualizarPedido
-                // 2 MudarEstadoPedido
-                // 3 AlternarEstadoSistema
-                // 4 NotificarCliente
-                // 5 AdicionarProduto
-                // 6 EditarProduto
-                // 7 ConsultasEstatisticas
-                // 8 AlterarInfoEmpresa
-                // 9 IniciarSessao
-                // 10 TerminarSessao
-                // 11 EditarEmpregado
-                // 12 Remover Empregado
-                // 13 RemoverProduto
+                // 1 LOGIN
+                // 2 ALTERAR ESTADO DO SISTEMA
+                // 3 VISUALIZAR PEDIDO
+                // 4 MUDAR ESTADO DO PEDIDO
+                // 5 NOTIFICAR CLIENTE
+                // 6 ADICIONAR PRODUTO
+                // 7 EDITAR    PRODUTO
+                // 8 REMOVER   PRODUTO
+                // 9  ADICIONAR EMPREGADO
+                // 10 EDITAR    EMPREGADO
+                // 11 REMOVER   EMPREGADO
+                // 12 ALTERAR INFO EMPRESA
+                // 13 CONSULTAS ESTATISTICAS
+                // 14 LOGOUT
 
                 switch (msg)
                 {
+                    case 1: // LOGIN
+                        Console.WriteLine("Starting authentication" + msg);
+                        byte[] numL = new byte[4], msgL;
 
-                    case 1: //VisualizarPedido // supoe-se que o utilizador so consegue dar ids validos
+                        //recebe tamanho email
+                        socket.Receive(numL, 0, 4, SocketFlags.None);
+                        int sizeL = BitConverter.ToInt32(numL, 0);
+                        //recebe email
+                        msgL = new byte[sizeL];
+                        socket.Receive(msgL, sizeL, SocketFlags.None);
+                        string emaiL = Encoding.UTF8.GetString(msgL);
 
-                        socket.Receive(data, 4, SocketFlags.None);
-                        msg = BitConverter.ToInt32(data, 0);
+                        //recebe tamanho password
+                        socket.Receive(numL, 0, 4, SocketFlags.None);
+                        sizeL = BitConverter.ToInt32(numL, 0);
+                        //recebe password
+                        msgL = new byte[sizeL];
+                        socket.Receive(msgL, sizeL, SocketFlags.None);
+                        string passL = Encoding.UTF8.GetString(msgL);
 
-                        Pedido aux = gestor.getPedido(msg);
-                        if (aux != null) enviaPedido(aux);
-
-
+                        if (gestor.loginGestor(emaiL, passL) == true)
+                        {
+                            numL = BitConverter.GetBytes(1);
+                            socket.Send(numL);
+                        }
+                        else
+                        {
+                            numL = BitConverter.GetBytes(0);
+                            socket.Send(numL);
+                        }
                         break;
-                    case 3:  // 3 AlternarEstadoSistema
 
-
+                    case 2:  // ALTERAR ESTADO DO SISTEMA
                         bool res10 = false;
                         byte[] resultado10 = new byte[30];
 
-
                         if (this.start_client.estado == true)
-                        { this.start_client.offCliente(); }
-
-
+                        {
+                            this.start_client.offCliente();
+                        }
                         else
                         {
                             res10 = true;
@@ -82,11 +101,47 @@ namespace ServerMyBar.serverGestor
 
                         }
 
-                        socket.Send(resultado10, 30, SocketFlags.None); // true ligou false desligou
+                        socket.Send(resultado10, 30, SocketFlags.None);
+                        break;
 
+                    case 3: // VISUALIZAR PEDIDO
+                        socket.Receive(data, 4, SocketFlags.None);
+                        msg = BitConverter.ToInt32(data, 0);
+
+                        Pedido aux = gestor.getPedido(msg);
+
+                        if (aux != null) enviaPedido(aux);
 
                         break;
-                    case 5: //adicionar produto
+
+                    case 4: // MUDAR ESTADO DO PEDIDO
+                        break;
+
+                    case 5: // NOTIFICAR CLIENTE
+                        byte[] numNC = new byte[4], msgNC;
+
+                        // tamanho IDCliente
+                        socket.Receive(numNC, 0, 4, SocketFlags.None);
+                        int sizeS = BitConverter.ToInt32(numNC, 0);
+
+                        // IDCliente
+                        msgNC = new byte[sizeS];
+                        socket.Receive(msgNC, sizeS, SocketFlags.None);
+                        string idc = Encoding.UTF8.GetString(msgNC);
+
+                        // tamanho da Mensagem
+                        socket.Receive(numNC, 0, 4, SocketFlags.None);
+                        sizeS = BitConverter.ToInt32(numNC, 0);
+
+                        // Mensagem
+                        msgNC = new byte[sizeS];
+                        socket.Receive(msgNC, sizeS, SocketFlags.None);
+                        string mens = Encoding.UTF8.GetString(msgNC);
+
+                        gestor.notificarCliente(idc, mens);
+                        break;
+
+                    case 6: // ADICIONAR PRODUTO
                         Produto p = RecebeProduto();
 
                         int idP = gestor.addProduto(p);
@@ -97,7 +152,7 @@ namespace ServerMyBar.serverGestor
 
                         break;
 
-                    case 6: //Editar Produto
+                    case 7: // EDITAR PRODUTO
                         byte[] numEP = new byte[4];
 
                         Produto p2 = RecebeProdutoManual();
@@ -114,8 +169,65 @@ namespace ServerMyBar.serverGestor
                         }
 
                         break;
-                    case 7://consultas estatisticas
 
+                    case 8: //REMOVER PRODUTO
+                        socket.Receive(data, 4, SocketFlags.None);
+                        msg = BitConverter.ToInt32(data, 0);
+
+                        bool res3 = gestor.removeProduct(msg);
+
+                        byte[] resultado3 = new byte[30];
+                        resultado3 = BitConverter.GetBytes(res3);
+                        socket.Send(resultado3, 30, SocketFlags.None);
+
+                        break;
+
+                    case 9: // ADICIONAR EMPREGADO
+                        Empregado em = RecebeEmpregado();
+
+                        if (gestor.addEmpregado(em) == true)
+                        {
+                            numEP = BitConverter.GetBytes(1);
+                            socket.Send(numEP);
+                        }
+                        else
+                        {
+                            numEP = BitConverter.GetBytes(0);
+                            socket.Send(numEP);
+                        }
+
+                        break;
+
+                    case 10: // EDITAR EMPREGADO
+                        socket.Receive(data, 0, 512, SocketFlags.None);
+                        string email1 = System.Text.Encoding.UTF8.GetString(data);
+
+                        Empregado e = RecebeEmpregado();
+
+                        bool res1 = gestor.editEmpregado(email1, e);
+
+                        byte[] resultado1 = new byte[30];
+                        resultado1 = BitConverter.GetBytes(res1);
+                        socket.Send(resultado1, 30, SocketFlags.None);
+
+                        break;
+
+                    case 11: // REMOVER EMPREGADO
+                        socket.Receive(data, 0, 512, SocketFlags.None);
+                        string email2 = System.Text.Encoding.UTF8.GetString(data);
+
+                        bool res2 = gestor.removeEmpregado(email2);
+
+                        byte[] resultado2 = new byte[30];
+                        resultado2 = BitConverter.GetBytes(res2);
+                        socket.Send(resultado2, 30, SocketFlags.None);
+
+                        break;
+
+                    case 12: // ALTERAR INFO EMPRESA
+                        break;
+
+                    case 13: // CONSULTAS ESTATISTICAS
                         byte[] num7 = new byte[4], msg7;
 
                         msg7 = new byte[8];
@@ -168,85 +280,13 @@ namespace ServerMyBar.serverGestor
                             }
 
                         }
-
                         Console.WriteLine("Enviei os pedidos todos");
-
                         break;
 
-                    case 9: // Login
-                        Console.WriteLine("Starting authentication" + msg);
-                        byte[] numL = new byte[4], msgL;
-
-                        //recebe tamanho email
-                        socket.Receive(numL, 0, 4, SocketFlags.None);
-                        int sizeL = BitConverter.ToInt32(numL, 0);
-                        //recebe email
-                        msgL = new byte[sizeL];
-                        socket.Receive(msgL, sizeL, SocketFlags.None);
-                        string emaiL = Encoding.UTF8.GetString(msgL);
-
-                        //recebe tamanho password
-                        socket.Receive(numL, 0, 4, SocketFlags.None);
-                        sizeL = BitConverter.ToInt32(numL, 0);
-                        //recebe password
-                        msgL = new byte[sizeL];
-                        socket.Receive(msgL, sizeL, SocketFlags.None);
-                        string passL = Encoding.UTF8.GetString(msgL);
-
-                        if (gestor.loginGestor(emaiL, passL) == true)
-                        {
-                            numL = BitConverter.GetBytes(1);
-                            socket.Send(numL);
-                        }
-                        else
-                        {
-                            numL = BitConverter.GetBytes(0);
-                            socket.Send(numL);
-                        }
-                        break;
-
-                    case 10: //TerminarSessao
+                    case 14: // LOGOUT
                         flag = false;
                         break;
 
-                    case 11: //editarEmpregado
-                        socket.Receive(data, 0, 512, SocketFlags.None);
-                        string email1 = System.Text.Encoding.UTF8.GetString(data);
-
-                        Empregado e = RecebeEmpregado();
-
-                        bool res1 = gestor.editEmpregado(email1, e);
-
-                        byte[] resultado1 = new byte[30];
-                        resultado1 = BitConverter.GetBytes(res1);
-                        socket.Send(resultado1, 30, SocketFlags.None);
-                        break;
-
-                    case 12: //removerEmpregado
-                        socket.Receive(data, 0, 512, SocketFlags.None);
-                        string email2 = System.Text.Encoding.UTF8.GetString(data);
-
-                        bool res2 = gestor.removeEmpregado(email2);
-
-                        byte[] resultado2 = new byte[30];
-                        resultado2 = BitConverter.GetBytes(res2);
-                        socket.Send(resultado2, 30, SocketFlags.None);
-                        break;
-
-                    case 13: //removerProduto
-
-
-
-                        socket.Receive(data, 4, SocketFlags.None);
-                        msg = BitConverter.ToInt32(data, 0);
-
-                        bool res3 = gestor.removeProduct(msg);
-
-                        byte[] resultado3 = new byte[30];
-                        resultado3 = BitConverter.GetBytes(res3);
-                        socket.Send(resultado3, 30, SocketFlags.None);
-
-                        break;
                     default:
                         flag = false;
                         break;
@@ -255,7 +295,7 @@ namespace ServerMyBar.serverGestor
                 data = new byte[512];
 
             }
-            Console.WriteLine("Thread: Terminei o comunicação com o cliente, a desligar.");
+            Console.WriteLine("Thread: I ended the communication with the GESTOR, disconnecting...");
         }
 
         public void EnviaProdutoManual(Produto p)
@@ -370,6 +410,7 @@ namespace ServerMyBar.serverGestor
             return Empregado.loadFromBytes(data);
         }
 
+
         public Pedido RecebePedido()
         {
             int posicao = 0;
@@ -390,12 +431,15 @@ namespace ServerMyBar.serverGestor
             }
             return Pedido.loadFromBytes(data);
         }
+
+
         public void enviaPedido(Pedido p)
         {
             byte[] pedido = p.SavetoBytes();
             socket.Send(BitConverter.GetBytes(pedido.Length)); // envia numero bytes    
             socket.Send(pedido);
         }
+
 
         public Produto RecebeProduto()
         {

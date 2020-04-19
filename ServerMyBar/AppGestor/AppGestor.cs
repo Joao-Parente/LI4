@@ -11,27 +11,26 @@ namespace AppGestor
     {
         private static Socket master;
 
-
         static void Main(string[] args)
         {
-            // 1 VisualizarPedido
-            // 2 MudarEstadoPedido
-            // 3 AlternarEstadoSistema
-            // 4 NotificarCliente
-            // 5 AdicionarProduto
-            // 6 EditarProduto
-            // 7 ConsultasEstatisticas
-            // 8 AlterarInfoEmpresa
-            // 9 IniciarSessao
-            // 10 TerminarSessao
-            // 11 EditarEmpregado
-            // 12 Remover Empregado
-            // 13 RemoverProduto
+            // 1 LOGIN
+            // 2 ALTERAR ESTADO DO SISTEMA
+            // 3 VISUALIZAR PEDIDO
+            // 4 MUDAR ESTADO DO PEDIDO
+            // 5 NOTIFICAR CLIENTE
+            // 6 ADICIONAR PRODUTO
+            // 7 EDITAR    PRODUTO
+            // 8 REMOVER   PRODUTO
+            // 9  ADICIONAR EMPREGADO
+            // 10 EDITAR    EMPREGADO
+            // 11 REMOVER   EMPREGADO
+            // 12 ALTERAR INFO EMPRESA
+            // 13 CONSULTAS ESTATISTICAS
+            // 14 LOGOUT
 
             int input;
             byte[] msg = new byte[4];
             bool flag = true;
-
 
             master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12346);
@@ -40,45 +39,64 @@ namespace AppGestor
             {
                 master.Connect(ipe);
                 LN ln = new LN(master);
-                // testes  
-                // master.Send(BitConverter.GetBytes(1));
-                // enviaPedido(new Pedido());
 
                 while (flag)
                 {
-                    Console.WriteLine("Insira: \n 1 para Fazer um pedido \n 2 para Fazer login \n 5 addProduto \n 6 editarproduto \n 7 consultas estatisticas");
+                    Console.WriteLine("INSERT...");
                     input = Convert.ToInt32(Console.ReadLine());
+
                     switch (input)
                     {
-                        case 1: //Visaulizar Pedido
+                        case 1: // LOGIN
+                            Console.WriteLine("Starting authentication...");
 
-                            Console.WriteLine(" Insira id do pedido");
+                            Console.WriteLine("Insert email:");
+                            string email = Console.ReadLine();
+
+                            Console.WriteLine("Insert password:");
+                            string pw = Console.ReadLine();
+
+                            bool login = ln.iniciarSessao(email, pw);
+
+                            if (login) Console.WriteLine("Are you in...");
+                            else Console.WriteLine("Try again...");
+
+                            break;
+
+                        case 2: // ALTERAR ESTADO DO SISTEMA
+                            bool estado = ln.alternarEstadoSistema();
+
+                            if (estado) Console.WriteLine("Can serve customers...");
+                            else Console.WriteLine("Go home is closed...");
+
+                            break;
+
+                        case 3: // VISUALIZAR PEDIDO
+                            Console.WriteLine("Enter the order id:");
                             int id = int.Parse(Console.ReadLine());
-                            Pedido pe= ln.visualizarPedido(id);
+
+                            Pedido pe = ln.visualizarPedido(id);
+
                             pe.imprimePedido();
 
                             break;
-                        case 2: // Login
-                            Console.WriteLine("Starting authentication");
-                            Console.WriteLine("Insira email");
-                            string email = Console.ReadLine();
-                            Console.WriteLine("Insira pw");
-                            string pw = Console.ReadLine();
-                            bool login = ln.iniciarSessao(email, pw);
-                            if (login) Console.WriteLine("i'm in you crazy bastard");
-                            else Console.WriteLine("we will get em next time");
+
+                        case 4: // MUDAR ESTADO DO PEDIDO
                             break;
 
-                        case 3: //Alternar Estado Sistema
+                        case 5: // NOTIFICAR CLIENTE
+                            Console.WriteLine("Enter the id of client of who wants to upset: ");
+                            string idCliente = Console.ReadLine();
+                            Console.WriteLine("Insert the message: ");
+                            string mensagem = Console.ReadLine();
 
+                            ln.notificarCliente(idCliente, mensagem);
 
-                            bool estado = ln.alternarEstadoSistema();
-                            if (estado) Console.WriteLine("Os cliente já se podem conectar");
-                            else Console.WriteLine("Fechou a apalicação para os clientes");
-
+                            Console.WriteLine("Success!!!");
                             break;
-                        case 5: //addProduto
-                            Console.WriteLine("# Starting adicionarProduto #");
+
+                        case 6: // ADICIONAR PRODUTO
+                            Console.WriteLine("# ADD PRODUCT #");
                             Console.WriteLine("Insira o tipo:");
                             string tipo = Console.ReadLine();
                             Console.WriteLine("Insira o nome:");
@@ -91,12 +109,15 @@ namespace AppGestor
                             float preco = float.Parse(Console.ReadLine());
                             Console.WriteLine("Insira a imagem:");
                             string imagem = Console.ReadLine();
+
                             Produto p = new Produto(0, tipo, nome, detalhes, disp, preco);
+
                             int idP = ln.adicionarProduto(p);
                             Console.WriteLine("ID = " + idP);
-                            break;
-                        case 6: //editar produto
 
+                            break;
+
+                        case 7: // EDITAR PRODUTO
                             Console.WriteLine("Id do produto please:");
                             int id6 = Convert.ToInt32(Console.ReadLine());
 
@@ -125,15 +146,37 @@ namespace AppGestor
                             {
                                 Console.WriteLine("FOXE");
                             }
+
                             break;
-                        case 7: //consultas estatisticas
-                            List<Pedido> a = ln.consultasEstatisticas(new DateTime(2019, 7, 21, 14, 47, 25), new DateTime(2020, 2, 1, 14, 47, 25));
-                            int kk = 99;
+
+                        case 8: //REMOVER PRODUTO
+                            Console.WriteLine("# DELETE PRODUCT #");
+                            Console.WriteLine("Insira o id do produto a remover");
+                            int idr = int.Parse(Console.ReadLine());
+
+                            bool resp = ln.removerProduto(idr);
+                            Console.WriteLine(resp);
+
                             break;
-                        case 10:
-                            flag = ln.TerminarSessao();
+
+                        case 9: // ADICIONAR EMPREGADO
+                            Console.WriteLine("EMAIL: ");
+                            string mail = Console.ReadLine();
+                            Console.WriteLine("PASSWORD:");
+                            string pass = Console.ReadLine();
+                            Console.WriteLine("NOME:");
+                            string name = Console.ReadLine();
+                            Console.WriteLine("Vai ser gestor? (true/false)");
+                            string isman = Console.ReadLine();
+                            bool v = false;
+                            if (isman.Equals("true")) v = true;
+
+                            Empregado emp = new Empregado(mail, pass, name, v);
+                            bool r = ln.adicionarEmpregado(emp);
+                            Console.WriteLine(r);
                             break;
-                        case 11:
+
+                        case 10: // EDITAR EMPREGADO
                             Console.WriteLine("# Starting editarEmpregado #");
                             Console.WriteLine("Insira o email do empregado a alterar");
                             string actualmail = Console.ReadLine();
@@ -149,41 +192,36 @@ namespace AppGestor
                             bool op = ln.editarEmpregado(actualmail, e);
                             Console.WriteLine(op);
                             break;
-                        case 12: //removerEmpregado
+
+                        case 11: // REMOVER EMPREGADO
                             Console.WriteLine("# Starting removerEmpregado #");
                             Console.WriteLine("Insira o email do empregado a remover");
                             string removemail = Console.ReadLine();
                             bool res = ln.removerEmpregado(removemail);
                             Console.WriteLine(res);
                             break;
-                       
 
-                        case 13: //Remover Produto
+                        case 12: // ALTERAR INFO EMPRESA
+                            break;
 
-                            Console.WriteLine("# Starting remover produto #");
-                            Console.WriteLine("Insira o id do produto a remover");
-                            int idr = int.Parse(Console.ReadLine());
-                            bool resp = ln.removerProduto(idr);
-                            Console.WriteLine(resp);
+                        case 13: // CONSULTAS ESTATISTICAS
+                            List<Pedido> a = ln.consultasEstatisticas(new DateTime(2019, 7, 21, 14, 47, 25), new DateTime(2020, 2, 1, 14, 47, 25));
+                            int kk = 99;
+                            break;
+
+                        case 14: // LOGOUT
+                            flag = ln.TerminarSessao();
                             break;
 
                         default:
                             flag = false;
                             break;
-
-
-
-
-
                     }
                     msg = new byte[100];
                 }
             }
-            catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
+            catch (Exception e) { Console.WriteLine("UPS...Exception: " + e.Message); }
             master.Close();
         }
-
-
-     
     }
 }

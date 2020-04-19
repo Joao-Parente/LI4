@@ -38,10 +38,9 @@ namespace ServerMyBar.serverFunc
                 // 1 LOGIN
                 // 2 ALTERAR ESTADO DO SISTEMA
                 // 3 VISUALIZAR PEDIDO
-                // 4 NOTIFICAR CLIENTE
-                // 5 MUDAR ESTADO DO PEDIDO
-                // 6 CONSULTAS ESTATISTICAS ??
-                // 7 LOGOUT
+                // 4 MUDAR ESTADO DO PEDIDO
+                // 5 NOTIFICAR CLIENTE
+                // 6 LOGOUT
 
                 switch (msg)
                 {
@@ -80,7 +79,7 @@ namespace ServerMyBar.serverFunc
                         }
                         break;
 
-                    case 2:  //ALTERAR ESTADO DO SISTEMA
+                    case 2:  // ALTERAR ESTADO DO SISTEMA
                         bool res10 = false;
                         byte[] resultado10 = new byte[30];
 
@@ -97,11 +96,21 @@ namespace ServerMyBar.serverFunc
 
                         socket.Send(resultado10, 30, SocketFlags.None);
                         break;
+
                     case 3: // VISUALIZAR PEDIDO
+                        socket.Receive(data, 4, SocketFlags.None);
+                        msg = BitConverter.ToInt32(data, 0);
+
+                        Pedido aux = gestor.getPedido(msg);
+
+                        if (aux != null) enviaPedido(aux);
 
                         break;
 
-                    case 4: // NOTIFICAR CLIENTE
+                    case 4: // MUDAR ESTADO DO PEDIDO
+                        break;
+
+                    case 5: // NOTIFICAR CLIENTE
                         byte[] numNC = new byte[4], msgNC;
 
                         // tamanho IDCliente
@@ -125,13 +134,7 @@ namespace ServerMyBar.serverFunc
                         gestor.notificarCliente(idc, mens);
                         break;
 
-                    case 5: // MUDAR ESTADO DO PEDIDO
-                        break;
-
-                    case 6: //CONSULTAS ESTATISTICAS ??
-                        break;
-
-                    case 7: // LOGOUT
+                    case 6: // LOGOUT
                         flag = false;
                         break;
 
@@ -142,7 +145,7 @@ namespace ServerMyBar.serverFunc
                 msg = -1;
                 data = new byte[512];
             }
-            Console.WriteLine("Thread: I ended the communication with the client, disconnecting...");
+            Console.WriteLine("Thread: I ended the communication with the FUNC, disconnecting...");
         }
 
 
@@ -165,6 +168,14 @@ namespace ServerMyBar.serverFunc
                 }
             }
             return Pedido.loadFromBytes(data);
+        }
+
+
+        public void enviaPedido(Pedido p)
+        {
+            byte[] pedido = p.SavetoBytes();
+            socket.Send(BitConverter.GetBytes(pedido.Length));
+            socket.Send(pedido);
         }
     }
 }

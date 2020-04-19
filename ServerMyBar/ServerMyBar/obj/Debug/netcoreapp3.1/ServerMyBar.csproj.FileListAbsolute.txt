@@ -94,3 +94,13 @@ C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreap
 C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
 C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
 C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.exe
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.deps.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.dev.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csprojAssemblyReference.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfoInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.genruntimeconfig.cache
