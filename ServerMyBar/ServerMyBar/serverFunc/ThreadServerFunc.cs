@@ -108,6 +108,17 @@ namespace ServerMyBar.serverFunc
                         break;
 
                     case 4: // MUDAR ESTADO DO PEDIDO
+                        byte[] numP = new byte[4];
+                        socket.Receive(numP, 4, SocketFlags.None);
+
+                        int idPedido = BitConverter.ToInt32(numP, 0);
+                        bool b = gestor.proximoEstado(idPedido);
+
+                        byte[] res = new byte[1];
+                        res = BitConverter.GetBytes(b);
+
+                        socket.Send(res, 1, SocketFlags.None);
+
                         break;
 
                     case 5: // NOTIFICAR CLIENTE

@@ -75,6 +75,13 @@ namespace AppFunc
                             break;
 
                         case 4: // MUDAR ESTADO DO PEDIDO
+                            Console.WriteLine("Insira o id do pedido que pretende alterar:");
+                            int idPedido = int.Parse(Console.ReadLine());
+
+                            bool b = ln.mudarEstadoPedido(idPedido);
+                            if (b) Console.WriteLine("Estado de pedido mudado!");
+                            else Console.WriteLine("Estado do pedido não alterado");
+
                             break;
 
                         case 5: // NOTIFICAR CLIENTE

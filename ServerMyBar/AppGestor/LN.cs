@@ -87,7 +87,6 @@ namespace AppGestor
         }
 
 
-        //+mudarEstadoPedido(idPedido : int) : void
         public bool mudarEstadoPedido(int idPedido)
         {
             byte[] num = new byte[4];

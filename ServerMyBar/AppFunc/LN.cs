@@ -112,7 +112,22 @@ namespace AppFunc
         }
 
 
-        //+mudarEstadoPedido(idPedido : int) : void
+        public bool mudarEstadoPedido(int idPedido)
+        {
+            byte[] num = new byte[4];
+
+            num = BitConverter.GetBytes(4);
+            master.Send(num);
+
+            num = BitConverter.GetBytes(idPedido);
+            master.Send(num);
+
+            byte[] res = new byte[1];
+            master.Receive(res, 1, SocketFlags.None);
+            bool b = BitConverter.ToBoolean(res, 0);
+
+            return b;
+        }
 
 
         public void notificarCliente(string idCliente, string mensagem)
