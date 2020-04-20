@@ -1,0 +1,111 @@
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar.deps.json
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar.runtimeconfig.json
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar.runtimeconfig.dev.json
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/ServerMyBar.pdb
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.csprojAssemblyReference.cache
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.AssemblyInfoInputs.cache
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.AssemblyInfo.cs
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.pdb
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/obj/Debug/netcoreapp3.1/ServerMyBar.csproj.CopyComplete
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/MySqlConnector.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/System.Drawing.Common.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/System.Security.AccessControl.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/System.Security.Permissions.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/System.Security.Principal.Windows.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/System.Windows.Extensions.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+/home/jpedro/RiderProjects/ServerMyBar/ServerMyBar/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.exe
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.deps.json
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.json
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.dev.json
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.pdb
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+F:\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csprojAssemblyReference.cache
+F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfoInputs.cache
+F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.cs
+F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csproj.CopyComplete
+F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+F:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
+D:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+D:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\Gonçalo Pinto\Source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csproj.CoreCompileInputs.cache
+C:\Users\Gonçalo Pinto\Source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfoInputs.cache
+C:\Users\Gonçalo Pinto\Source\Repos\Joao-Parente\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.cs
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.exe
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.deps.json
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.json
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.dev.json
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csprojAssemblyReference.cache
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfoInputs.cache
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.cs
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csproj.CopyComplete
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\ze_nu\Desktop\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csprojAssemblyReference.cache
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfoInputs.cache
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.cs
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.exe
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.deps.json
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.json
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.dev.json
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csproj.CopyComplete
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\jpedro\Documents\GitHub\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.exe
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.deps.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.runtimeconfig.dev.json
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.dll
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\bin\Debug\netcoreapp3.1\ServerMyBar.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csprojAssemblyReference.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfoInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.cs
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.genruntimeconfig.cache
+E:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.csprojAssemblyReference.cache
+E:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfoInputs.cache
+E:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.AssemblyInfo.cs
+E:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.dll
+E:\LI4\ServerMyBar\ServerMyBar\obj\Debug\netcoreapp3.1\ServerMyBar.pdb

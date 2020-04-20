@@ -1,0 +1,15 @@
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/bin/Debug/netcoreapp3.1/AppFunc
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/bin/Debug/netcoreapp3.1/AppFunc.deps.json
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/bin/Debug/netcoreapp3.1/AppFunc.runtimeconfig.json
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/bin/Debug/netcoreapp3.1/AppFunc.runtimeconfig.dev.json
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/bin/Debug/netcoreapp3.1/AppFunc.dll
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/bin/Debug/netcoreapp3.1/AppFunc.pdb
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.csprojAssemblyReference.cache
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.AssemblyInfoInputs.cache
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.AssemblyInfo.cs
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.dll
+/home/jpedro/RiderProjects/ServerMyBar/AppFunc/obj/Debug/netcoreapp3.1/AppFunc.pdb
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppFunc\obj\Debug\netcoreapp3.1\AppFunc.csprojAssemblyReference.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppFunc\obj\Debug\netcoreapp3.1\AppFunc.csproj.CoreCompileInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppFunc\obj\Debug\netcoreapp3.1\AppFunc.AssemblyInfoInputs.cache
+C:\Users\Gonçalo Pinto\Desktop\Work\LI4\ServerMyBar\AppFunc\obj\Debug\netcoreapp3.1\AppFunc.AssemblyInfo.cs
