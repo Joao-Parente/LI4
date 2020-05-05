@@ -1,0 +1,10 @@
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Baguetes', 'Baguete de Atum','Baixo teor calórico',1,2.6,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Baguetes', 'Baguete de Delicias','Gluten Free',1,2.1,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Baguetes', 'Baguete de Frango','Gluten Free',1,2.1,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Hamburgueres', 'Hamburguer Vegetariano','Vegan',1,3,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Hamburgueres', 'Hamburguer de Frango Especial','Gluten Free',1, 2.9,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Hamburgueres', 'Hamburguer Especial','Vegan', 1, 2.9 ,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Bebidas', 'Compal Pera','Bebida concentrada',1, 1,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Bebidas', 'Sumo Laranja Natural','Sem açucar adicional',1,1.5,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Folhados', 'Folhado Misto','Gluten Free',1,0.9,null);
+insert into produto (tipo, nome, detalhes, disponibilidade, preco, imagem) values ('Folhados', 'Folhado de Cogumelos','Vegan',1,1.2,null);
