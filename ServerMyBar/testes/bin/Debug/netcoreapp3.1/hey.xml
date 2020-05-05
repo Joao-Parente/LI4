@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Age>10</Age>
+  <Male>false</Male>
+  <Name>brian</Name>
+  <pois>
+    <Data2>
+      <arroz>3</arroz>
+    </Data2>
+    <Data2>
+      <arroz>3</arroz>
+    </Data2>
+    <Data2>
+      <arroz>3</arroz>
+    </Data2>
+  </pois>
+</Data>
