@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppGestor.GerirEmpregados">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".4*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Margin="10" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+            <ListView ItemsSource="{Binding Empregados}" 
+                      ItemTapped="Handle_ItemTapped" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="true" Margin="10" HeightRequest="60"
+                                   WidthRequest="100" BackgroundColor="#f5dfba">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".5*"/>
+                                        <ColumnDefinition Width=".6*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding nome}" Grid.Column="0" Margin="5"/>
+                                    <Label Text="{Binding email}" Grid.Column="1" Margin="5"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <Button Text="Adicionar Empregado" Grid.Row="1" Grid.Column="0" Clicked="AddEmpregadoButton_Clicked" Margin="10,10,10,10"/>
+        <Button Text="Editar Empregado" Grid.Row="1" Grid.Column="1" Margin="10,10,10,10"/>
+        <Button Text="Remover Empregado" Grid.Row="2" Grid.Column="0" Margin="10,10,10,10"/>
+        
+
+    </Grid>
+    
+    
+</ContentPage>

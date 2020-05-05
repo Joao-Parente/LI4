@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "6XfxQv3X6fVTiNJ+C9nHMeG2xxCcFR5gjpwjLfyZ2nA3mbmdgfcIqTTH430zxCIKKSAEXdyM6fhX4cCKsMlRZQ==",
+  "success": true,
+  "projectFilePath": "D:\\VStudio\\AppGestor\\AppGestor\\AppGestor\\AppGestor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jnuno\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\rg.plugins.popup\\2.0.0.2\\rg.plugins.popup.2.0.0.2.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\xamarin.essentials\\1.5.3.1\\xamarin.essentials.1.5.3.1.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512"
+  ],
+  "logs": []
+}

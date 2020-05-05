@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "b6WWEBIa4meRnMfuekbHc3aXvjxSMQvwOydZ47JPPG1RHmT1ImPe4ubngFv51AveKfmLiH4Bpp/MrgZZtfZZSQ==",
+  "success": true,
+  "projectFilePath": "D:\\VStudio\\AppGestor\\AppGestor\\AppGestor.iOS\\AppGestor.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jnuno\\.nuget\\packages\\rg.plugins.popup\\2.0.0.2\\rg.plugins.popup.2.0.0.2.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\xamarin.essentials\\1.5.3.1\\xamarin.essentials.1.5.3.1.nupkg.sha512",
+    "C:\\Users\\jnuno\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512"
+  ],
+  "logs": []
+}

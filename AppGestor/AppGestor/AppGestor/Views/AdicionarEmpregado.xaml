@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage    xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                    mc:Ignorable="d"
+                    x:Class="AppGestor.AdicionarEmpregado">
+
+    <Grid Margin="32" BackgroundColor="Azure">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Nome" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="2" Margin="25,40,10,10"/>
+        <Entry x:Name="entryNome" Grid.Row="1" Grid.ColumnSpan="2" Margin="10,10,10,10"/>
+
+        <Label Text="Email" FontAttributes="Bold" Grid.Row="2" Grid.ColumnSpan="2" Margin="25,40,10,10"/>
+        <Entry x:Name="entryEmail" Grid.Row="3" Grid.ColumnSpan="2" Margin="10,10,10,10"/>
+
+        <Label Text="Password" FontAttributes="Bold" Grid.Row="4" Grid.ColumnSpan="2" Margin="25,40,10,10"/>
+        <Entry x:Name="entryPassword" Grid.Row="5" Grid.ColumnSpan="2" Margin="10,10,10,10"/>
+
+        <Button Text="Confirmar" Clicked="Button_Clicked" Grid.Row="6" Grid.Column="1" Margin="10,10,10,10"/>
+        <Button Text="Cancelar" Clicked="Button_Clicked_1" Grid.Row="6" Grid.Column="0" Margin="10,10,10,10"/>
+        
+    </Grid>
+    
+</pages:PopupPage>

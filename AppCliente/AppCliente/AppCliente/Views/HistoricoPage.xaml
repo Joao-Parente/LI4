@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="AppCliente.HistoricoPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height="1.8*"/>
+            </Grid.RowDefinitions>
+
+            <PanCake:PancakeView Grid.Row="0" HeightRequest="50" CornerRadius="0,0,50,50" BackgroundColor="#ffd719">
+                <StackLayout>
+                    <Label Text="Histórico de Pedidos" VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="25"/>
+                </StackLayout>
+            </PanCake:PancakeView>
+
+            <StackLayout Margin="10" Grid.Row="1">
+                <ListView x:Name="listapedidos" ItemsSource="{Binding pedidos}" HasUnevenRows="True" 
+                          SeparatorVisibility="None" RefreshControlColor="Transparent" 
+                          ItemTapped="listapedidos_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame HasShadow="true" Margin="10" HeightRequest="100" CornerRadius="20" 
+                                   WidthRequest="120" BackgroundColor="#f5dfba">
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width=".8*"/>
+                                            <ColumnDefinition Width=".1*"/>
+                                            <ColumnDefinition Width=".4*"/>
+                                            <ColumnDefinition Width=".1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{Binding preco}" Grid.Row="1" Grid.Column="0"/>
+                                        <Label Text="{Binding data_hora}" Grid.Row="0" Grid.Column="0"/>
+                                        <Label Text="{Binding numProdutos}" Grid.Row="0" Grid.Column="2"/>
+
+                                </Grid>
+
+
+                            </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
