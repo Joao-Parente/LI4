@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 
 namespace ServerMyBar.comum
 {
@@ -141,6 +142,70 @@ namespace ServerMyBar.comum
         public void inicializaSocketPedidos(Socket s)
         {
             pedidos = s;
+            new Thread(run).Start();
+        }
+
+        public void run()
+        {
+            byte[] data = new byte[512];
+            bool flag = true;
+
+            while (flag)
+            {
+                pedidos.Receive(data, 4, SocketFlags.None);
+                int numero = BitConverter.ToInt32(data, 0);
+                switch (numero)
+                {
+                    case 1: //mudar estado pedido
+
+                        pedidos.Receive(data, 4, SocketFlags.None);
+                        int estado_atual = BitConverter.ToInt32(data, 0);
+
+                        pedidos.Receive(data, 4, SocketFlags.None);
+                        int id = BitConverter.ToInt32(data, 0);
+
+                        pedidos.Receive(data, 8, SocketFlags.None);
+                        DateTime dt = DateTime.FromBinary(BitConverter.ToInt64(data, 0));
+
+                        switch (estado_atual)
+                        {
+                            case 0:
+
+                                for(int i = 0; i < por_preparar.Count; i++)
+                                {
+                                    if(por_preparar[i].id == id && por_preparar[i].data_hora.CompareTo(dt) == 0)
+                                    {
+                                        em_preparacao.Add(por_preparar[i]);
+                                        por_preparar.RemoveAt(i);
+                                        break;
+                                    }
+                                }
+
+                                break;
+                            case 1:
+
+                                for (int i = 0; i < em_preparacao.Count; i++)
+                                {
+                                    if (em_preparacao[i].id == id && em_preparacao[i].data_hora.CompareTo(dt) == 0)
+                                    {
+                                        preparado.Add(em_preparacao[i]);
+                                        em_preparacao.RemoveAt(i);
+                                        break;
+                                    }
+                                }
+
+                                break;
+
+                            default:
+                                break;
+                        }
+
+                        break;
+                    default:
+                        flag = false;
+                        break;
+                }
+            }
         }
 
         public int addPedido(Pedido p)
@@ -412,6 +477,14 @@ namespace ServerMyBar.comum
             }
         }
 
+        public bool removerFavoritos(int idProduto, string idCliente)
+        {
+            lock (this)
+            {
+                return ProdutoDAO.removeProdutoFavorito(idProduto, idCliente);
+            }
+        }
+
         public List<int> produtosFavoritos(string idCliente)
         {
             lock (this)
@@ -419,6 +492,37 @@ namespace ServerMyBar.comum
                 return ProdutoDAO.getProdutosFavoritos(idCliente);
             }
         }
+
+        public int estadoPedido(string idCliente,DateTime dt)
+        {
+            for(int i = 0; i < por_preparar.Count; i++)
+            {
+                if(por_preparar[i].idCliente.Equals(idCliente) && por_preparar[i].data_hora.Equals(dt))
+                {
+                    return 1;
+                }
+            }
+
+            for (int i = 0; i < em_preparacao.Count; i++)
+            {
+                if (em_preparacao[i].idCliente.Equals(idCliente) && em_preparacao[i].data_hora.Equals(dt))
+                {
+                    return 2;
+                }
+            }
+
+            for (int i = 0; i < preparado.Count; i++)
+            {
+                if (preparado[i].idCliente.Equals(idCliente) && preparado[i].data_hora.Equals(dt))
+                {
+                    return 3;
+                }
+            }
+
+            return 0;
+
+        }
+
     }
 
 

@@ -28,7 +28,7 @@ namespace ServerMyBar.comum
 
                 cmd.ExecuteNonQuery();
 
-                long id = cmd.LastInsertedId; //A Testar...
+                long id = cmd.LastInsertedId; 
                 return Convert.ToInt32(id);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -117,6 +117,35 @@ namespace ServerMyBar.comum
                 Console.WriteLine("Exception " + ex.Message);
             }
             return null;
+        }
+
+        public static bool removeProdutoFavorito(int idProduto,string idCliente)
+        {
+            MySqlConnection conn;
+            string myConnectionString;
+            myConnectionString = @"server=127.0.0.1;uid=root;" +
+                                 "pwd=password;database=LI_Database";
+            try
+            {
+                conn = new MySqlConnection(myConnectionString);
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+
+                string query = "delete from produtosfavoritos where idCliente = '" + idCliente + "' and idProduto = '" + idProduto + "';";
+                cmd.CommandText = query;
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+                return true;
+
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine("Exception " + ex.Message);
+                return false;
+            }
         }
 
         public static bool addProdutoFavorito(int idProduto, string idCliente)

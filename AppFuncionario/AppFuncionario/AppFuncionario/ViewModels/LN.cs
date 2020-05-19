@@ -15,6 +15,7 @@ namespace AppFuncionario
         private List<Pedido> por_preparar;
 
         private Socket master;
+        private Socket socket_thread_pedidos;
 
         private string idFuncionario;
 
@@ -28,6 +29,7 @@ namespace AppFuncionario
 
         public LN()
         {
+            socket_thread_pedidos = null;
             master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("192.168.1.69"), 12345);
             
@@ -306,6 +308,7 @@ namespace AppFuncionario
             BitConverter.ToInt32(numero, 0);
 
             Socket ret = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("192.168.1.69"), 12350);
             try
             {
@@ -319,6 +322,39 @@ namespace AppFuncionario
             ThreadPedidosHandlers hello = new ThreadPedidosHandlers(ret, produtosMAP, pedidosMAP, categorias, peidos);
             Thread goodbie = new Thread(hello.run);
             goodbie.Start();
+
+            this.socket_thread_pedidos = ret;
+        }
+
+        public void muda_estado_pedido(PedidoInfo pi)
+        {
+            if(this.socket_thread_pedidos != null)
+            {
+
+                this.socket_thread_pedidos.Send(BitConverter.GetBytes(1), 4, SocketFlags.None);
+
+                switch (pi.estado)
+                {
+                    case "Por Preparar":
+                        this.socket_thread_pedidos.Send(BitConverter.GetBytes(0), 4, SocketFlags.None);
+
+                        this.socket_thread_pedidos.Send(BitConverter.GetBytes(pi.idPedido), 4, SocketFlags.None);
+
+                        this.socket_thread_pedidos.Send(BitConverter.GetBytes(this.pedidosMAP[pi.idPedido].data_hora.ToBinary()), 8, SocketFlags.None);
+                        pi.estado = "Em Preparação";
+                        break;
+
+                    case "Em Preparação":
+                        this.socket_thread_pedidos.Send(BitConverter.GetBytes(1), 4, SocketFlags.None);
+
+                        this.socket_thread_pedidos.Send(BitConverter.GetBytes(pi.idPedido), 4, SocketFlags.None);
+
+                        this.socket_thread_pedidos.Send(BitConverter.GetBytes(this.pedidosMAP[pi.idPedido].data_hora.ToBinary()), 8, SocketFlags.None);
+                        pi.estado = "Pronto a Levantar";
+                        break;
+                    
+                }
+            }
         }
 
         public Pedido GetPedido(int id)
@@ -329,6 +365,17 @@ namespace AppFuncionario
         public ObservableCollection<PedidoInfo> getObCPedidos() 
         {
             return this.peidos;
+        }
+
+        public ObservableCollection<ProdutoInfo> getProdutos_Pedido(PedidoInfo p)
+        {
+            List<ProdutoPedido> produtoPedidos = pedidosMAP[p.idPedido].produtos;
+            ObservableCollection<ProdutoInfo> ret = new ObservableCollection<ProdutoInfo>();
+            for(int i = 0; i < produtoPedidos.Count; i++)
+            {
+                ret.Add(new ProdutoInfo(produtoPedidos[i].p.id, produtoPedidos[i].p.nome, "" + produtoPedidos[i].p.preco + "€", produtoPedidos[i].quantidades, null));
+            }
+            return ret;
         }
     }
 }

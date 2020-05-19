@@ -29,7 +29,10 @@
             <RowDefinition Height=".6*"/>
             <RowDefinition Height=".1*"/>
         </Grid.RowDefinitions>
-        <Image Source="logo.jpg" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+        
+        <Label Text="MyBar" FontSize="60" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+               Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" FontAttributes="Bold"/>
+
 
         <Label Text="Inicio de Sessão" FontSize="60" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="2" TextColor="Brown" FontAttributes="Bold"/>
 

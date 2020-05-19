@@ -17,13 +17,6 @@ application_config:
 	.byte	1
 	/* is_a_bundled_app */
 	.byte	0
-	/* broken_exception_transitions */
-	.byte	0
-	/* bound_exception_type */
-	.byte	1
-	/* package_naming_policy */
-	.zero	2
-	.long	3
 	/* environment_variable_count */
 	.long	12
 	/* system_property_count */
@@ -31,12 +24,12 @@ application_config:
 	.zero	4
 	/* android_package_name */
 	.quad	.L.str.1
-	.size	application_config, 32
+	.size	application_config, 24
 	.section	.rodata..L.str.2,"aMS",@progbits,1
 	.type	.L.str.2, @object
 .L.str.2:
-	.asciz	"none"
-	.size	.L.str.2, 5
+	.asciz	"0"
+	.size	.L.str.2, 2
 	.section	.data.mono_aot_mode_name,"aw",@progbits
 	.global	mono_aot_mode_name
 mono_aot_mode_name:
@@ -69,7 +62,7 @@ mono_aot_mode_name:
 	.section	.rodata..L.str.8,"aMS",@progbits,1
 	.type	.L.str.8, @object
 .L.str.8:
-	.asciz	"7069951b-d882-4a4a-86a8-6a383d9f7546"
+	.asciz	"6790cac9-318a-4b37-b013-a64a2ac3c037"
 	.size	.L.str.8, 37
 	.section	.rodata..L.str.9,"aMS",@progbits,1
 	.type	.L.str.9, @object

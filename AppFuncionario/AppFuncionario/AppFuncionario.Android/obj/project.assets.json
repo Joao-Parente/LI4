@@ -1980,24 +1980,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jnuno\\.nuget\\packages\\": {},
+    "C:\\Users\\ze_nu\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VStudio\\AppFuncionario\\AppFuncionario\\AppFuncionario.Android\\AppFuncionario.Android.csproj",
+      "projectUniqueName": "C:\\Users\\ze_nu\\Desktop\\Nova pasta (2)\\AppFuncionario\\AppFuncionario\\AppFuncionario.Android\\AppFuncionario.Android.csproj",
       "projectName": "AppFuncionario.Android",
-      "projectPath": "D:\\VStudio\\AppFuncionario\\AppFuncionario\\AppFuncionario.Android\\AppFuncionario.Android.csproj",
-      "packagesPath": "C:\\Users\\jnuno\\.nuget\\packages\\",
-      "outputPath": "D:\\VStudio\\AppFuncionario\\AppFuncionario\\AppFuncionario.Android\\obj\\",
+      "projectPath": "C:\\Users\\ze_nu\\Desktop\\Nova pasta (2)\\AppFuncionario\\AppFuncionario\\AppFuncionario.Android\\AppFuncionario.Android.csproj",
+      "packagesPath": "C:\\Users\\ze_nu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ze_nu\\Desktop\\Nova pasta (2)\\AppFuncionario\\AppFuncionario\\AppFuncionario.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jnuno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ze_nu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2011,8 +2011,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\VStudio\\AppFuncionario\\AppFuncionario\\AppFuncionario\\AppFuncionario.csproj": {
-              "projectPath": "D:\\VStudio\\AppFuncionario\\AppFuncionario\\AppFuncionario\\AppFuncionario.csproj"
+            "C:\\Users\\ze_nu\\Desktop\\Nova pasta (2)\\AppFuncionario\\AppFuncionario\\AppFuncionario\\AppFuncionario.csproj": {
+              "projectPath": "C:\\Users\\ze_nu\\Desktop\\Nova pasta (2)\\AppFuncionario\\AppFuncionario\\AppFuncionario\\AppFuncionario.csproj"
             }
           }
         }

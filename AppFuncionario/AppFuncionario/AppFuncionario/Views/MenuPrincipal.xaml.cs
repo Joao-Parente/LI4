@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -21,16 +22,6 @@ namespace AppFuncionario
         {
             ln = l;
             Pedidos = ln.getObCPedidos();            
-            /*
-            Pedidos = new ObservableCollection<Pedido>();
-            List<ProdutoPedido> produtoPedidos = new List<ProdutoPedido>
-            {
-                new ProdutoPedido(ln.getProduto(10), 2),
-                new ProdutoPedido(ln.getProduto(11), 2)
-            };
-            Pedidos.Add(new Pedido(1, "felix", "zuzu", "Sem Alface", DateTime.Now, produtoPedidos));
-            Pedidos.Add(new Pedido(2, "filex", "uzuz", "Sem pão", DateTime.Now, produtoPedidos));*/
-
 
             InitializeComponent();
 
@@ -42,22 +33,18 @@ namespace AppFuncionario
             if (e.Item == null)
                 return;
 
-            //await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+            PedidoInfo pi = (PedidoInfo)e.Item;
 
-            //var p = ((ListView)sender).SelectedItem;
 
-            //Produto PSelecionado = (Produto)e.Item;
-
-            //PopupNavigation.Instance.PushAsync(new ProdutoInfoPopUp(PSelecionado));
-
-            //Deselect Item
+            PopupNavigation.Instance.PushAsync(new InfoPedido(ln, pi, ln.getProdutos_Pedido(pi)));
+            
             ((ListView)sender).SelectedItem = null;
         }
 
-        private void CarregueiBotaoMagico(object sender, EventArgs e)
+        private void MudarEstadoButton_Clicked(object sender, EventArgs e)
         {
-                       
-            BotaoMagico.IsVisible = false;
+            PedidoInfo pi = (PedidoInfo)((Button)sender).BindingContext;
+            ln.muda_estado_pedido(pi);
         }
     }
 }

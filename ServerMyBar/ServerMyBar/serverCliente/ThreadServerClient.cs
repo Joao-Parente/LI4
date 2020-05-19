@@ -328,6 +328,52 @@ namespace ServerMyBar.serverCliente
                         socket.Send(emailb, emailb.Length, SocketFlags.None);
 
                         break;
+                    case 15: //removerProdutoFavorito
+
+                        //recebe id produto
+                        socket.Receive(data, 4, SocketFlags.None);
+                        int idprodutorpf = BitConverter.ToInt32(data, 0);
+
+                        //recebe email
+                        socket.Receive(data, 4, SocketFlags.None);
+                        int tamanhorpf = BitConverter.ToInt32(data, 0);
+                        byte[] emailrpf = new byte[tamanhorpf];
+                        socket.Receive(emailrpf, tamanhorpf, SocketFlags.None);
+                        string idClienterpf = Encoding.UTF8.GetString(emailrpf);
+
+                        byte[] foiremovido = new byte[4];
+                        if (gestor.removerFavoritos(idprodutorpf,idClienterpf) == true)
+                        {
+                            foiremovido = BitConverter.GetBytes(1);
+                            socket.Send(foiremovido);
+                        }
+                        else
+                        {
+                            foiremovido = BitConverter.GetBytes(0);
+                            socket.Send(foiremovido);
+                        }
+
+                        break;
+
+                    case 16: //estado pedido
+
+                        //recebe email
+                        socket.Receive(data, 4, SocketFlags.None);
+                        int tamanhoep = BitConverter.ToInt32(data, 0);
+                        byte[] emailep = new byte[tamanhoep];
+                        socket.Receive(emailep, tamanhoep, SocketFlags.None);
+                        string idClienteep = Encoding.UTF8.GetString(emailep);
+
+                        //recebe data
+                        byte[] longgy = new byte[8];
+                        socket.Receive(longgy, 8, SocketFlags.None);
+                        DateTime datapedido = DateTime.FromBinary(BitConverter.ToInt64(longgy, 0));
+                        
+                        int esta = gestor.estadoPedido(idClienteep, datapedido);
+                        socket.Send(BitConverter.GetBytes(esta));
+
+
+                        break;
 
                     default:
                         flag = false;
