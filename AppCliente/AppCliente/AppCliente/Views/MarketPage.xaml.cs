@@ -104,6 +104,11 @@ namespace AppCliente
             await Navigation.PushModalAsync(new HistoricoPage(ln));
         }
 
+        private async void EstadoPedidosButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new EstadoPedidos(ln));
+        }
+
         private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.CurrentSelection == null) return;

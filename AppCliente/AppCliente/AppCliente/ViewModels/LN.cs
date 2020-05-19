@@ -31,6 +31,10 @@ namespace AppCliente
         private ObservableCollection<ProdutoInfo> carrinho;
         private float precoCarrinho;
 
+        private ObservableCollection<PedidoInfo> pedidosEmProcessamentoInfo;
+        private ObservableCollection<Pedido> pedidosEmProcessamento;
+
+
         public LN()
         {
             master = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -49,7 +53,8 @@ namespace AppCliente
             carrinhoInfoMAP = new Dictionary<int, ProdutoInfo>();
             carrinho = new ObservableCollection<ProdutoInfo>();
             favoritosInfo = new ObservableCollection<ProdutoInfo>();
-
+            pedidosEmProcessamentoInfo = new ObservableCollection<PedidoInfo>();
+            pedidosEmProcessamento = new ObservableCollection<Pedido>();
         }
 
         public void setNomeCliente()
@@ -119,7 +124,6 @@ namespace AppCliente
             if (carrinhoInfoMAP.ContainsKey(p.id))
             {
                 carrinhoInfoMAP[p.id].Quantidades++;
-                //this.precoCarrinho += p.preco;
                 setPrecoTotal(this.getPrecoTotal() + p.preco);
             }
             else
@@ -128,7 +132,6 @@ namespace AppCliente
                 carrinhoMAP.Add(p.id, p);
                 carrinhoInfoMAP.Add(pi.Id, pi);
                 carrinho.Add(pi);
-                //this.precoCarrinho += p.preco;
                 setPrecoTotal(this.getPrecoTotal() + p.preco);
             }
         }
@@ -565,6 +568,45 @@ namespace AppCliente
             }
         }
 
+        public bool removerProdFavorito(int idProduto)
+        {
+            byte[] id = new byte[4];
+
+            id = BitConverter.GetBytes(15);
+            master.Send(id, 4, SocketFlags.None);
+
+            //envia idProduto
+            id = BitConverter.GetBytes(idProduto);
+            master.Send(id,4,SocketFlags.None);
+
+            //envia idCliente
+            byte[] msg = Encoding.UTF8.GetBytes(this.email_idCliente);
+            master.Send(BitConverter.GetBytes(msg.Length), 4, SocketFlags.None);
+            master.Send(msg,msg.Length,SocketFlags.None);
+
+            //recebe confirmacao se o produto foi adicionado com sucesso ou nao
+            master.Receive(id, 0, 4, SocketFlags.None);
+            int confirmacao = BitConverter.ToInt32(id, 0);
+
+            if (confirmacao == 1)
+            {
+                for(int i = 0; i < favoritosInfo.Count; i++)
+                {
+                    if (favoritosInfo[i].Id == idProduto)
+                    {
+                        favoritosInfo.RemoveAt(i);
+                        break;
+                    }
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public int EfetuarPedido(Pedido p)
         {
             /*
@@ -576,6 +618,15 @@ namespace AppCliente
             return 1;*/
             master.Send(BitConverter.GetBytes(4));
             EnviaPedidoManual(p);
+            this.pedidosEmProcessamento.Add(p);
+            int numero = 0;
+            float preco = 0;
+            for(int i = 0; i < p.produtos.Count; i++)
+            {
+                preco += p.produtos[i].p.preco * p.produtos[i].quantidades;
+                numero += p.produtos[i].quantidades;
+            }
+            this.pedidosEmProcessamentoInfo.Add(new PedidoInfo(p.id, p.data_hora, preco, numero));
             return 1;
         }
 
@@ -728,7 +779,63 @@ namespace AppCliente
             return this.favoritosInfo;
         }
 
-        
+        public ObservableCollection<Pedido> getPedidosPorPreparar()
+        {
+            return this.pedidosEmProcessamento;
+        }
+
+        public ObservableCollection<PedidoInfo> getPedidosPorPrepararInfo()
+        {
+            return this.pedidosEmProcessamentoInfo;
+        }
+
+        public void atualizaEstadoPedidos()
+        {
+            for(int i = 0; i < pedidosEmProcessamento.Count; i++)
+            {
+                pedidosEmProcessamentoInfo[i].setEstado(getEstado(pedidosEmProcessamento[i]));
+            }
+        }
+
+        public string getEstado(Pedido p)
+        {
+            //int li_estes = master.Receive(new byte[100], 100, SocketFlags.None);
+            int felix = master.Available;
+            if(felix > 0)
+            {
+                master.Receive(new byte[felix], felix, SocketFlags.None);
+            }
+            master.Send(BitConverter.GetBytes(16), 4, SocketFlags.None);
+
+            //envia o id do cliente que fez o pedido
+            byte[] idCliente = Encoding.UTF8.GetBytes(email_idCliente);
+            master.Send(BitConverter.GetBytes(idCliente.Length),4,SocketFlags.None);
+            master.Send(idCliente, idCliente.Length, SocketFlags.None);
+
+            //envia a data de quando foi feito
+            long dataa = p.data_hora.ToBinary();
+            master.Send(BitConverter.GetBytes(dataa), 8, SocketFlags.None);
+
+            byte[] resposta = new byte[4];
+            int quantos_Leu = master.Receive(resposta, 4, SocketFlags.None);
+            int r = BitConverter.ToInt32(resposta, 0);
+
+            if (r == 1)
+            {
+                return "Por Preparar";
+            }
+            else if(r == 2)
+            {
+                return "Em Preparação";
+            }
+            else if (r == 3)
+            {
+                return "Pronto a Levantar";
+            }
+
+            return "null";
+
+        }
         
 
     }

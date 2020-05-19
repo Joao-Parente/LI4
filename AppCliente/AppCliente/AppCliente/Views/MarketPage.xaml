@@ -39,7 +39,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height=".1*"/>
                                 <RowDefinition Height=".3*"/>
-                                <RowDefinition Height=".1*"/>
+                                <RowDefinition Height=".3*"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width=".3*"/>
@@ -51,6 +51,9 @@
                             <Button Text="Histórico" BackgroundColor="#ffd719" 
                                     HeightRequest="50" WidthRequest="20"
                                     Grid.Row="1" Grid.Column="1" Clicked="HistoricoButton_Clicked"/>
+                            <Button Text="EstadoPedidos" BackgroundColor="#ffd719"
+                                    HeightRequest="50" WidthRequest="20"
+                                    Grid.Row="2" Grid.Column="0" Clicked="EstadoPedidosButton_Clicked"/>
                         </Grid>
                         
                         <CollectionView Grid.Column="0"

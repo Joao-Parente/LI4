@@ -36,7 +36,14 @@ namespace AppCliente
 
         private void RemoveFavButton_Clicked(object sender, EventArgs e)
         {
-
+            if (ln.removerProdFavorito(this.p.id) == true)
+            {
+                DisplayAlert("Sucesso", "Produto Removido dos Favoritos com Sucesso!", "OK");
+            }
+            else
+            {
+                DisplayAlert("Erro", "Ocorreu um erro ao tentar eliminar o produto dos favoritos.", "OK");
+            }
         }
 
         private void AdicionarCarrinho_Clicked(object sender, EventArgs e)
