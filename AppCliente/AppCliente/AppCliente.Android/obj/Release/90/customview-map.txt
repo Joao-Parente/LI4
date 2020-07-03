@@ -1,0 +1,142 @@
+@string/appbar_scrolling_view_behavior;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\rootlayout.xml
+adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\icon.xml
+adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\icon_round.xml
+alpha;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\2\jl\res\anim\onesignal_fade_in.xml
+alpha;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\2\jl\res\anim\onesignal_fade_out.xml
+alpha;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\enterfromleft.xml
+alpha;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\rootlayout.xml
+android.support.design.widget.TabLayout;obj\Release\90\res\layout\tabbar.xml
+android.support.v7.widget.RecyclerView;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\shellcontent.xml
+android.support.v7.widget.Toolbar;obj\Release\90\res\layout\toolbar.xml
+animated-selector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox.xml
+animated-vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_checked_to_indeterminate_animation.xml
+animated-vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_checked_to_unchecked_animation.xml
+animated-vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_indeterminate_to_checked_animation.xml
+animated-vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_indeterminate_to_unchecked_animation.xml
+animated-vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_unchecked_to_checked_animation.xml
+animated-vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_unchecked_to_indeterminate_animation.xml
+attr;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\values\attrs.xml
+attr;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\values\styles.xml
+background;obj\Release\90\res\mipmap-anydpi-v26\icon.xml
+background;obj\Release\90\res\mipmap-anydpi-v26\icon_round.xml
+cache-path;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\43\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+color;obj\Release\90\res\values\colors.xml
+corners;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable\materialprogressbar.xml
+declare-styleable;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\values\attrs.xml
+enum;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\values\attrs.xml
+external-cache-path;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\43\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\43\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+foreground;obj\Release\90\res\mipmap-anydpi-v26\icon.xml
+foreground;obj\Release\90\res\mipmap-anydpi-v26\icon_round.xml
+FrameLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\bottomtablayout.xml
+group;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_checked.xml
+group;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_indeterminate.xml
+group;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_unchecked.xml
+ImageView;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\2\jl\res\layout\onesignal_bgimage_notif_layout.xml
+item;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox.xml
+item;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\values\values.xml
+item;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable\materialprogressbar.xml
+item;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\values\styles.xml
+item;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\values-v21\styles.xml
+item;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\values\styles.xml
+item;obj\Release\90\res\values\styles.xml
+layer-list;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable\materialprogressbar.xml
+LinearLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\2\jl\res\layout\onesignal_bgimage_notif_layout.xml
+LinearLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\bottomtablayout.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_indeterminate_to_checked_box_inner_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_indeterminate_to_checked_box_outer_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_indeterminate_to_checked_icon_null_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_checked_box_inner_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_checked_box_outer_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_checked_icon_null_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_checked_icon_null_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_box_inner_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_check_path_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation.xml
+objectAnimator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_icon_null_animation.xml
+path;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_checked.xml
+path;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_indeterminate.xml
+path;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_unchecked.xml
+pathInterpolator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\interpolator\btn_checkbox_checked_animation_interpolator_0.xml
+pathInterpolator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\interpolator\btn_checkbox_checked_animation_interpolator_1.xml
+pathInterpolator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\interpolator\btn_checkbox_indeterminate_animation_interpolator_1.xml
+pathInterpolator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\interpolator\btn_checkbox_unchecked_animation_interpolator_0.xml
+pathInterpolator;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\interpolator\btn_checkbox_unchecked_animation_interpolator_1.xml
+paths;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\43\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+RelativeLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\2\jl\res\layout\onesignal_bgimage_notif_layout.xml
+resources;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\values\attrs.xml
+resources;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\values\values.xml
+resources;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\values\styles.xml
+resources;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\values-v21\styles.xml
+resources;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\values\styles.xml
+resources;obj\Release\90\res\values\colors.xml
+resources;obj\Release\90\res\values\styles.xml
+scale;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable\materialprogressbar.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_indeterminate_to_checked_box_inner_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_indeterminate_to_checked_box_outer_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_indeterminate_to_checked_icon_null_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_checked_box_inner_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_checked_box_outer_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_checked_icon_null_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_checked_icon_null_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_box_inner_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_check_path_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\anim\btn_checkbox_to_unchecked_icon_null_animation.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\enterfromleft.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\enterfromright.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\exittoleft.xml
+set;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\exittoright.xml
+shape;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable\materialactivityindicatorbackground.xml
+shape;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable\materialprogressbar.xml
+shape;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable-v24\materialactivityindicatorbackground.xml
+solid;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable\materialactivityindicatorbackground.xml
+solid;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable\materialprogressbar.xml
+solid;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\drawable-v24\materialactivityindicatorbackground.xml
+style;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\values\styles.xml
+style;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\values-v21\styles.xml
+style;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\values\styles.xml
+style;obj\Release\90\res\values\styles.xml
+target;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_checked_to_indeterminate_animation.xml
+target;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_checked_to_unchecked_animation.xml
+target;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_indeterminate_to_checked_animation.xml
+target;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_indeterminate_to_unchecked_animation.xml
+target;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_unchecked_to_checked_animation.xml
+target;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_unchecked_to_indeterminate_animation.xml
+TextView;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\2\jl\res\layout\onesignal_bgimage_notif_layout.xml
+transition;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox.xml
+translate;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\enterfromleft.xml
+translate;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\enterfromright.xml
+translate;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\exittoleft.xml
+translate;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\anim\exittoright.xml
+vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_checked.xml
+vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_indeterminate.xml
+vector;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\4\jl\res\drawable\btn_checkbox_unchecked.xml
+xamarin.forms.material.android.MaterialFormsEditText;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\layout\textinputlayoutfilledbox.xml
+xamarin.forms.material.android.MaterialFormsTextInputLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\layout\textinputlayoutfilledbox.xml
+xamarin.forms.material.android.MaterialPickerEditText;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\layout\materialpickertextinput.xml
+xamarin.forms.material.android.MaterialPickerTextInputLayout;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\49\jl\res\layout\materialpickertextinput.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente.Android\obj\Release\90\lp\51\jl\res\layout\rootlayout.xml

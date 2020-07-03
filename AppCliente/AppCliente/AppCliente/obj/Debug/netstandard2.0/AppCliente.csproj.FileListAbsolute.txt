@@ -1,0 +1,53 @@
+D:\VStudio\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.deps.json
+D:\VStudio\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.dll
+D:\VStudio\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\ref\AppCliente.dll
+D:\VStudio\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.pdb
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\App.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\AutenticationPage.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\CarrinhoCompras.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\CategoriaProdutos.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\CriarConta.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\DetalhesPedido.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\HistoricoPage.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\MarketPage.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\ProdutoPage.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\ProdutoPageFav.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.AssemblyInfoInputs.cache
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.AssemblyInfo.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.dll
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\ref\AppCliente.dll
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.pdb
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\PedidosPage.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\EstadoPedidos.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.csproj.CoreCompileInputs.cache
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\XamlC.stamp
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\BarraLateral.xaml.g.cs
+D:\VStudio\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.csprojAssemblyReference.cache
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.deps.json
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.dll
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\ref\AppCliente.dll
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\bin\Debug\netstandard2.0\AppCliente.pdb
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\App.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\AutenticationPage.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\BarraLateral.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\CarrinhoCompras.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\CategoriaProdutos.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\CriarConta.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\DetalhesPedido.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\EstadoPedidos.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\HistoricoPage.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\MarketPage.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\PedidosPage.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\ProdutoPage.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\ProdutoPageFav.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.AssemblyInfoInputs.cache
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.AssemblyInfo.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.dll
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\ref\AppCliente.dll
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.pdb
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\InformacaoEmpresa.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\Views\ReclamacaoPage.xaml.g.cs
+C:\Users\ze_nu\Desktop\Nova pasta (2)\AppCliente\AppCliente\AppCliente\obj\Debug\netstandard2.0\AppCliente.csprojAssemblyReference.cache

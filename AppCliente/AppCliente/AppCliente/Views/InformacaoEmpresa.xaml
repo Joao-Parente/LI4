@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="AppCliente.InformacaoEmpresa">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+       
+        <PanCake:PancakeView BackgroundColor="#ffd719" Grid.RowSpan="2">
+            <Label Text="MyBar" FontSize="60" TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </PanCake:PancakeView>
+
+        <Label Text="   Segunda a Sexta-Feira: 8:00h - 19:00h" FontSize="20" TextColor="Black" Grid.Row="3"/>
+        <Label Text="   Sábado: 9:00h - 14:00h" TextColor="Black" FontSize="20" Grid.Row="4"/>
+        <Label Text=" Morada: Rua da Universidade nº50,   4710-365 Gualtar, Braga" Margin="10,0,0,0" FontSize="20" TextColor="Black" Grid.Row="5"/>
+        <Label Text="   Website: www.bargualtar.pt" TextColor="Black" FontSize="20" Grid.Row="6"/>
+        <Label Text="   Telefone: 253 000 111" TextColor="Black" FontSize="20" Grid.Row="7"/>
+
+    </Grid>
+    
+</ContentPage>

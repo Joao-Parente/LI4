@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             mc:Ignorable="d"
+             x:Class="AppFuncionario.InfoPedido">
+
+    <Grid Margin="48" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Margin="10" Grid.RowSpan="4" Grid.Column="0">
+            <ListView x:Name="listaCarrinho" ItemsSource="{Binding Produtos}" HasUnevenRows="True" 
+                          SeparatorVisibility="None" RefreshControlColor="Transparent" ItemTapped="listaPedidos_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="true" Margin="10" HeightRequest="60" CornerRadius="20" WidthRequest="120" BackgroundColor="#f5dfba">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height=".1*"/>
+                                        <RowDefinition Height=".005*"/>
+                                        <RowDefinition Height=".1*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".5*"/>
+                                        <ColumnDefinition Width=".1*"/>
+                                        <ColumnDefinition Width=".1*"/>
+                                        <ColumnDefinition Width=".1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Nome}" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+                                    <Label Text="     Q:" FontSize="15" Grid.Row="2" Grid.Column="2"/>
+                                    <Label Text="{Binding Quantidades}" FontSize="15" Grid.Row="2" Grid.Column="3"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <StackLayout Margin="24" Grid.RowSpan="4" Grid.Column="1">
+            <Label Text="{Binding detalhes}" FontSize="30"/>
+        </StackLayout>
+
+        <StackLayout Margin="24" Grid.Row="1" Grid.Column="2">
+            <Label Text="{Binding estado}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="30"/>
+        </StackLayout>
+        
+    </Grid>
+    
+</pages:PopupPage>
